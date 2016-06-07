@@ -1,5 +1,7 @@
 # 分块式拼图效果
 
+[特效预览](http://vrbvillor.github.io/effects/blocks/blocks.html)
+
 ## 函数使用
 
 ```javascript
