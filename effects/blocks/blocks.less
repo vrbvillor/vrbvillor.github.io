@@ -1,0 +1,36 @@
+@import url(../../libs/_funs);
+
+*{
+	.m(0);
+	.p(0);
+}
+.Container{
+	.wh(800px,600px);
+	.ma(20px);
+	.relative();
+	div{
+		.absolute();
+	}
+}
+.Indices{
+	.ma(10px);
+	.t-c();
+	li{
+		.whline(20px);
+		.round();
+		.inblock();
+		&.cur{
+			.bg-c(black);
+			.c(white);
+		}
+	}
+}
+.Buttons{
+	.t-c();
+	input{
+		.wh(100px,30px);
+		.size(16px);
+		.bd(0);
+		.radius(3px);
+	}
+}

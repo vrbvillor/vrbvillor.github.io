@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/> 
+<meta name="renderer" content="webkit">
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no,email=no" name="format-detection" />
+<meta name="apple-touch-fullscreen" content="yes">
+<title>图片拼块效果</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="blocks.css" rel="stylesheet">
+</head>
+<body>
+<div class="Container">
+	<img src="../../images/1.jpg" alt="">
+	<img src="../../images/2.jpg" alt="">
+	<img src="../../images/3.jpg" alt="">
+</div>
+<ol class="Indices">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ol>
+<p class="Buttons">
+	<input type="button" value="开始" class="start">
+	<input type="button" value="停止" class="stop">
+	<input type="button" value="上一个" class="prev">
+	<input type="button" value="下一个" class="next">
+</p>
+</body>
+</html>
+<script src="../../libs/jquery-2.1.3.min.js"></script>
+<script src="blocks.js"></script>
+<script>
+CHIblocks(".Container","img",{
+	indices:".Indices li",
+	start: ".start",
+	stop: ".stop",
+	prev: ".prev",
+	next: ".next"
+},{
+	h:4,v:3
+})
+</script>
