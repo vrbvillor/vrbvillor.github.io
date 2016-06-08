@@ -7,7 +7,6 @@
 ```javascript
 var object = CHIblocks(sJQcontainer, sJQimgs, oControllers, oOptions, oCallbacks);
 ```
-
 ## 构造参数
 
 ### sJQcontainer 容器
@@ -31,7 +30,7 @@ var object = CHIblocks(sJQcontainer, sJQimgs, oControllers, oOptions, oCallbacks
 + **stop**，停止的控制器的JQ选择器字符串  
 + **start**，开始的控制器的JQ选择器字符串  
 
-### oOptions，附加参数对象  
+### oOptions，附加配置对象  
 
 默认为空对象，JSON对象，用来配置当前的特效，可以使用的属性有：  
 
