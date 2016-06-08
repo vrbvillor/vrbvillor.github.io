@@ -105,7 +105,7 @@ function CHIblocks(sJQcontainer, sJQimgs, oControllers, oOptions, oCallbacks) {
 				left: piEachWidth * aXY[0]
 			}, 500, "", function() {
 				niLock--;
-				if (oCallbacks.each) oCallbacks.each.call(this,$(this).index());
+				if (oCallbacks.each) oCallbacks.each.call(this, $(this).index());
 				if (!niLock) {
 					if (bAuto) on();
 					if (oCallbacks.all) oCallbacks.all(oJQblocks);
