@@ -1,0 +1,79 @@
+@import url(../../libs/_funs);
+
+*{
+	.m(0);
+	.p(0);
+}
+
+.container{
+	.ma(20px);
+	.bd(1px,solid,black);
+	.clear();
+	&:after{
+		.cnt();
+		.block();
+		.clear();
+	}
+}
+
+h1,h2,h3,h4{
+	.size(30px);
+	.t-c();
+	.mb(10px);
+	.mt(30px);
+}
+.v,.h{
+	dt{
+		.size(14px);
+		.bg-c(gray);
+		.t-c();
+		.c(white);
+		&:first-child{
+			.bd(0);
+		}
+	}
+	dd{
+		.wh(760px,560px);
+		.p(20px);
+		.t-shadow(1px,1px,0px,white);
+		.o();
+	}
+}
+
+.v{
+	.w(800px);
+	dt{
+		.hline(30px);
+		.bd-t(1px,solid,black);
+	}
+}
+
+.h{
+	.w(90px + 800px);
+	dt,dd{
+		.fl();
+	}
+	dt{
+		.w(30px);
+		.p(200px,5px);
+		.bbox();
+		.h(600px);
+		.line(60px);
+		.bd-l(1px,solid,black);
+	}
+	dd div{
+		.w(760px);
+	}
+}
+
+.first{
+	.bg-i("../../images/1.jpg");
+}
+
+.second{
+	.bg-i("../../images/2.jpg");
+}
+
+.third{
+	.bg-i("../../images/3.jpg");
+}

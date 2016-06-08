@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/> 
+<meta name="renderer" content="webkit">
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no,email=no" name="format-detection" />
+<meta name="apple-touch-fullscreen" content="yes">
+<title>抽屉效果</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="drawer.css" rel="stylesheet">
+</head>
+<body>
+<h1>模式一：自由式</h1>
+<dl class="container v d1">
+	<dt>标题一</dt>
+    <dd class="first">模式一，点哪个展开哪个，如果是已经展开的则缩回，不影响其它（可以展开任意多个，也可以关闭任意多个）</dd>
+	<dt>标题二</dt>
+    <dd class="second">模式一，点哪个展开哪个，如果是已经展开的则缩回，不影响其它（可以展开任意多个，也可以关闭任意多个）</dd>
+	<dt>标题三</dt>
+    <dd class="third">模式一，点哪个展开哪个，如果是已经展开的则缩回，不影响其它（可以展开任意多个，也可以关闭任意多个）</dd>
+</dl>
+
+<h2>模式二：唯一式</h2>
+<dl class="container v d2">
+	<dt>标题一</dt>
+    <dd class="first">模式二，点哪个展开哪个，其它缩回，如果是已经展开的则不动，缩回与展开同时进行（只展开一个，不可全部关闭）</dd>
+	<dt>标题二</dt>
+    <dd class="second">模式二，点哪个展开哪个，其它缩回，如果是已经展开的则不动，缩回与展开同时进行（只展开一个，不可全部关闭）</dd>
+	<dt>标题三</dt>
+    <dd class="third">模式二，点哪个展开哪个，其它缩回，如果是已经展开的则不动，缩回与展开同时进行（只展开一个，不可全部关闭）</dd>
+</dl>
+
+<h3>模式三：限一式</h3>
+<dl class="container v d3">
+	<dt>标题一</dt>
+    <dd class="first">模式三，点哪个展开哪个，其它缩回，如果是已经展开的则缩回，缩回与展开同时进行（最多展开一个，可以全部关闭）</dd>
+	<dt>标题二</dt>
+    <dd class="second">模式三，点哪个展开哪个，其它缩回，如果是已经展开的则缩回，缩回与展开同时进行（最多展开一个，可以全部关闭）</dd>
+	<dt>标题三</dt>
+    <dd class="third">模式三，点哪个展开哪个，其它缩回，如果是已经展开的则缩回，缩回与展开同时进行（最多展开一个，可以全部关闭）</dd>
+</dl>
+
+<h4>模式四：唯一式</h4>
+<dl class="container h d4">
+	<dt>标题一</dt>
+    <dd class="first"><div>横向模式，一般只用这一种，其它两种模式横向都很丑。加了一个DIV是让内容不变形，不被窄容器破坏布局。</div></dd>
+	<dt>标题二</dt>
+    <dd class="second"><div>横向模式，一般只用这一种，其它两种模式横向都很丑。加了一个DIV是让内容不变形，不被窄容器破坏布局。</div></dd>
+	<dt>标题三</dt>
+    <dd class="third"><div>横向模式，一般只用这一种，其它两种模式横向都很丑。加了一个DIV是让内容不变形，不被窄容器破坏布局。</div></dd>
+</dl>
+</body>
+</html>
+<script src="../../libs/jquery-2.1.3.min.js"></script>
+<script src="drawer.js"></script>
+<script>
+(function(){
+	CHIdrawer(".d1",'dt','dd',{type:1,dir:'v'},{
+		show:function(oTitle,oContent,piTitle,piContent){
+			console.log("现在展开的是第",piTitle,"个标题和第",piContent,"个内容");
+		}
+	});
+	CHIdrawer(".d2",'dt','dd',{type:2,dir:'v'},{
+		hide:function(oTitle,oContent){
+			//因为这里的内容跟标题是并列的，而且被缩回的内容不止一个，所以不能直接使用oTitle.index()，这里显示的数字是错误的
+			console.log("隐藏第",oTitle.index(),"个标题和内容");
+			//但是这个对象还是对的，只不过是一个元素不为1的集合
+			console.log("隐藏了",oTitle.length,"个标题和",oContent.length,"个内容");
+			console.warn(oTitle.html());
+		}
+	});
+	CHIdrawer(".d3",'dt','dd',{type:3,dir:'v'});
+	CHIdrawer(".d4",'dt','dd',{type:2,dir:'h'});
+	var n=1;
+	setInterval(function(){
+		$(".d4 dt").eq(n%3).click();
+		n++;
+	},3000);
+})();
+</script>
