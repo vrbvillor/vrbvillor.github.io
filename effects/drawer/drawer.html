@@ -65,15 +65,7 @@
 			console.log("现在展开的是第",piTitle,"个标题和第",piContent,"个内容");
 		}
 	});
-	CHIdrawer(".d2",'dt','dd',{type:2,dir:'v'},{
-		hide:function(oTitle,oContent){
-			//因为这里的内容跟标题是并列的，而且被缩回的内容不止一个，所以不能直接使用oTitle.index()，这里显示的数字是错误的
-			console.log("隐藏第",oTitle.index(),"个标题和内容");
-			//但是这个对象还是对的，只不过是一个元素不为1的集合
-			console.log("隐藏了",oTitle.length,"个标题和",oContent.length,"个内容");
-			console.warn(oTitle.html());
-		}
-	});
+	CHIdrawer(".d2",'dt','dd',{type:2,dir:'v'});
 	CHIdrawer(".d3",'dt','dd',{type:3,dir:'v'});
 	CHIdrawer(".d4",'dt','dd',{type:2,dir:'h'});
 	var n=1;
