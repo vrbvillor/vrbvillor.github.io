@@ -1,7 +1,7 @@
 # 层静止化效果（支持IE6，但不支持响应）
 
-[特效预览-横向](http://vrbvillor.github.io/effects/fixed/fixed-h.html)
-[特效预览-纵向](http://vrbvillor.github.io/effects/fixed/fixed-v.html)
+[特效预览-横向](http://vrbvillor.github.io/effects/fixed/fixed-h.html)  
+[特效预览-纵向](http://vrbvillor.github.io/effects/fixed/fixed-v.html)  
 
 ## 函数使用
 
