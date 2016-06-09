@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/> 
+<meta name="renderer" content="webkit">
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no,email=no" name="format-detection" />
+<meta name="apple-touch-fullscreen" content="yes">
+<title>放大镜效果</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="magnifier.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+	<div class="photo first"><img src="../../images/1.jpg" data-original="../../images/1.jpg" alt=""></div>
+	<div class="photo second"><img src="../../images/2.jpg" data-primary="../../images/2.jpg" alt=""></div>
+	<div class="photo third"><img src="../../images/3.jpg" data-primary="../../images/3.jpg" alt=""></div>
+</div>
+</body>
+</html>
+<script src="../../libs/jquery-2.1.3.min.js"></script>
+<script src="magnifier.js"></script>
+<script>
+var
+mag1=CHImagnifier(".first img",{
+	position:'left',
+	data:'original',
+	width: 200,
+	height: 200,
+	x: -1,
+	y: -1
+}),
+mag2=CHImagnifier(".second img",{
+	position:'top',
+	width: 300,
+	height: 300,
+	x: -1,
+	y: -1
+}),
+mag3=CHImagnifier(".third img",{
+	position:'right',
+	x: -100,
+	y: -100,
+	width: 300,
+	height: 200
+});
+</script>
