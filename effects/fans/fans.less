@@ -1,0 +1,43 @@
+@import url(../../libs/_funs);
+
+*{
+	.m(0);
+	.p(0);
+	list-style: none;
+}
+
+.container{
+	.ma(20px);
+	.bd(1px,solid,black);
+	.clear();
+	&:after{
+		.cnt();
+		.block();
+		.clear();
+	}
+}
+
+ul{
+	.wh(1000px,600px);
+	.o();
+	.relative();
+}
+li{
+	.wh(800px,600px);
+	.absolute();
+	.bbox();
+	.p(20px);
+	.t-shadow(1px,1px,0,white);
+}
+
+.first{
+	.bg-i("../../images/1.jpg");
+}
+
+.second{
+	.bg-i("../../images/2.jpg");
+}
+
+.third{
+	.bg-i("../../images/3.jpg");
+}

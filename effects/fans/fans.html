@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/> 
+<meta name="renderer" content="webkit">
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no,email=no" name="format-detection" />
+<meta name="apple-touch-fullscreen" content="yes">
+<title>扇子式伸缩效果</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="fans.css" rel="stylesheet">
+</head>
+<body>
+<ul class="relax container">
+	<li class="first">舒展模式下，不会自动播放</li>
+	<li class="second">舒展模式下，不会自动播放</li>
+	<li class="third">舒展模式下，不会自动播放</li>
+	<li class="first">舒展模式下，不会自动播放</li>
+	<li class="second">舒展模式下，不会自动播放</li>
+	<li class="third">舒展模式下，不会自动播放</li>
+</ul>
+<ul class="normal container">
+	<li class="first">普通模式下，可以自动播放</li>
+	<li class="second">且一定有一个是展开状态的</li>
+	<li class="third">普通模式下，可以自动播放</li>
+	<li class="first">且一定有一个是展开状态的</li>
+	<li class="second">普通模式下，可以自动播放</li>
+	<li class="third">且一定有一个是展开状态的</li>
+</ul>
+</body>
+</html>
+<script src="../../libs/jquery-2.1.3.min.js"></script>
+<script src="fans.js"></script>
+<script>
+$(function(){
+	CHIfans(".relax",'',{relax:true});
+	CHIfans(".normal",'',{relax:false,auto:true});
+});
+</script>
