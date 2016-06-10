@@ -42,6 +42,7 @@ var object = CHIfans(sJQcontainer, sJQkids, oOptions, oCallbacks);
 如果生成实例的话，可以调用的方法有  
 
 ### 当`relax==true`时可以使用的方法有
++ `.init()`，初始化完成时调用，函数的`this`是容器的JQ对象
 + `.relax()`，调用舒展模式  
 + `.show(n)`，播放第n帧
 

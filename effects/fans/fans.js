@@ -135,5 +135,6 @@ function CHIfans(sJQcontainer, sJQkids, oOptions, oCallbacks) {
 		});
 		if (bAuto) oResult.start();
 	}
+	if(oCallbacks.init) oCallbacks.init.call(oJQcontainer);
 	return oResult;
 }
