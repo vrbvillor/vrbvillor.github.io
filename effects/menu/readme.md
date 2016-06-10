@@ -1,6 +1,6 @@
 # 多级伸缩导航效果
 
-[特效预览](http://vrbvillor.github.io/effects/magnifier/magnifier.html)
+[特效预览](http://vrbvillor.github.io/effects/menu/menu.html)
 
 ## 函数使用
 
