@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>左导航（理论上无限级深度）</title>
+</head>
+<style>
+*{ margin:0px; padding:0px; list-style: none;}
+a{ color:#fff; display: block; line-height: 30px; border-bottom: 1px solid silver; padding:0 10px;}
+body > ul{ list-style:none; width:200px; margin:20px auto;}
+li{ background:#000; font-size:12px; line-height:20px;}
+li li{ background:#333;}
+li li li{ background:#666;}
+li li li li{ background:#999;}
+li li li li a{ color:#000;}
+li li li li li{ background:#ccc;}
+li li li li li li{ background:#fff;}
+.kids{ font-size:14px; font-weight:bold; color:#ff0;}/*在JS中，有下级的li及li的最直接子元素a被自动附加本类，以方便观察*/
+a.kids:before{ content:'↓'; float: right;}
+</style>
+<body>
+<ul class="menu">
+	<li><a href="#">第一级</a>
+    	<ul>
+        	<li><a href="#">第二级</a></li>
+        	<li><a href="#">第二级</a>
+            	<ul>
+                	<li><a href="#">第三级</a></li>
+                	<li><a href="#">第三级</a>
+                    	<ul>
+                        	<li><a href="#">第四级</a></li>
+                        	<li><a href="#">第四级</a></li>
+                        	<li><a href="#">第四级</a>
+                            	<ul>
+                                	<li><a href="#">第五级</a></li>
+                                	<li><a href="#">第五级</a></li>
+                                	<li><a href="#">第五级</a>
+                                    	<ul>
+                                        	<li><a href="#">第六级</a></li>
+                                        	<li><a href="#">第六级</a></li>
+                                        	<li><a href="#">第六级</a></li>
+                                        	<li><a href="#">第六级</a></li>
+                                        </ul>
+                                    </li>
+                                	<li><a href="#">第五级</a></li>
+                                </ul>
+                            </li>
+                        	<li><a href="#">第四级</a></li>
+                        </ul>
+                    </li>
+                	<li><a href="#">第三级</a></li>
+                	<li><a href="#">第三级</a></li>
+                </ul>
+            </li>
+        	<li><a href="#">第二级</a></li>
+        	<li><a href="#">第二级</a></li>
+        </ul>
+    </li>
+	<li><a href="#">第一级</a></li>
+	<li><a href="#">第一级</a>
+    	<ul>
+        	<li><a href="#">第二级</a></li>
+        	<li><a href="#">第二级</a></li>
+        </ul>
+    </li>
+	<li><a href="#">第一级</a></li>
+</ul>
+</body>
+</html>
+<script src="../../libs/jquery-2.1.3.min.js"></script>
+<script src="menu.js"></script>
+<script>
+$(function(){
+	CHImenu(".menu",true,{
+		show:function(oJQa,oJQli){
+			oJQa.css('fontStyle','italic')
+		},
+		hide:function(oJQa,oJQli){
+			oJQa.css('fontStyle','normal')
+		}
+	});
+	CHIblur();
+});
+</script>
