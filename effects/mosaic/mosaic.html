@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>马赛克拼图背景效果</title>
+</head>
+<style>
+*{ margin:0; padding:0;}
+.Photo{ width:800px; height:600px; margin:20px auto; background-image:url(../../images/1.jpg);}
+.Photo a{ display:block; border:1px solid #000; box-sizing:border-box;}
+.a1{ width:200px; height:200px; float:left;}
+.a2{ width:590px; height:200px; float:right;}
+.a1,.a2{ margin-bottom: 10px;}
+.a3,.a6{ width:300px; height:190px;}
+.a3{ float:left;}
+.a4{ width:200px; height:390px; float:right;}
+.a5{ width:280px; height:390px; float:right; margin-right:10px;}
+.a6{ float:right; margin:10px 10px 0 0;}
+</style>
+<body>
+<div class="Photo">
+	<a href="#" class="a1"></a>
+	<a href="#" class="a2"></a>
+	<a href="#" class="a3"></a>
+	<a href="#" class="a4"></a>
+	<a href="#" class="a5"></a>
+	<a href="#" class="a6"></a>
+</div>
+</body>
+</html>
+<script src="../../libs/jquery-2.1.3.min.js"></script>
+<script src="mosaic.js"></script>
+<script>
+CHImosaic(".Photo");
+$(".Photo a").hover(function(){
+	$(this).stop(1,1).fadeTo(300,1);
+},function(){
+	$(this).stop(1,1).fadeTo(300,.8);
+}).fadeTo(1,.8);
+</script>
