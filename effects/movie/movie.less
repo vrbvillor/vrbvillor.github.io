@@ -1,0 +1,88 @@
+@import url(../../libs/_funs);
+
+*{
+	.m(0);
+	.p(0);
+	list-style: none;
+}
+
+h1{
+	.size(30px);
+	.hline(60px);
+	.t-c();
+}
+.container{
+	.ma(20px);
+	.bd(1px,solid,black);
+	.clear();
+	&:after{
+		.cnt();
+		.block();
+		.clear();
+	}
+}
+.movie{
+	.wh(900px,200px);
+	.o();
+	li{
+		.wh(300px,200px);
+		.fl();
+		.opacity(.5);
+		.trans();
+		.t-c();
+		.p(80px,0);
+		.bbox();
+		.bg-s(cover);
+		.t-shadow(1px,1px,0,white);
+		&.cur{
+			.opacity(1);
+		}
+	}
+}
+
+.indices{
+	.t-c();
+	li{
+		.inblock();
+		.whline(20px);
+		.size(14px);
+		.t-c();
+		.c-p();
+		.m(0,4px);
+		.round();
+		.trans();
+		&.cur{
+			.bg-c(black);
+			.c(white);
+		}
+	}
+}
+
+.buttons{
+	.t-c();
+	.pt(20px);
+	input{
+		.wh(100px,30px);
+		.size(14px);
+		.radius(5px);
+		.c-p();
+		.m(0,10px);
+		.bd(0);
+		&.disabled{
+			.c-n();
+			.opacity(.5);
+		}
+	}
+}
+
+.first{
+	.bg-i("../../images/1.jpg");
+}
+
+.second{
+	.bg-i("../../images/2.jpg");
+}
+
+.third{
+	.bg-i("../../images/3.jpg");
+}
