@@ -44,7 +44,7 @@ var object = CHIblocks(sJQcontainer, sJQimgs, oControllers, oOptions, oCallbacks
 
 默认为空对象，JSON对象，用来在特效执行到某一步的时候，执行一个事件处理函数，可以使用的属性有： 
 
-+ `init(oJQcontainer)`，完成初始化时执行的函数，参数是容器的JQ对象  
++ `init()`，完成初始化时执行的函数，函数的`this`是容器的JQ对象  
 + `all(oJQblocks)`，这一帧的所有块完成移动时执行的函数，参数是所有块的JQ对象  
 + `each(piIndex)`，每一块移动完成时执行的函数，参数是完成移动的那一块的JQ对象索引，函数的`this`指针是移动完成的那一块的元素对象  
 

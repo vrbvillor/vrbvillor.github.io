@@ -159,7 +159,7 @@ function CHIblocks(sJQcontainer, sJQimgs, oControllers, oOptions, oCallbacks) {
 	if (FIND(oControllers.next)) $(oControllers.next).click(oResult.next);
 	if (FIND(oControllers.stop)) $(oControllers.stop).click(oResult.stop);
 	if (FIND(oControllers.start)) $(oControllers.start).click(oResult.start);
-	if (oCallbacks.init) oCallbacks.init(oJQcontainer);
+	if (oCallbacks.init) oCallbacks.init.call(oJQcontainer);
 	if (bAuto) oResult.start();
 	return oResult
 }
