@@ -1,0 +1,72 @@
+@import url(../../libs/_funs);
+
+*{
+	.m(0);
+	.p(0);
+	list-style: none;
+}
+
+h1{
+	.size(30px);
+	.hline(60px);
+	.t-c();
+}
+
+.page,.other{
+	.bd(1px,solid,silver);
+	.o();
+	.fl();
+}
+
+.page{
+	.wh(300px,400px);
+	.ml(100px);
+}
+
+.other{
+	.wh(600px,200px);
+	.ml(100px);
+	li{
+		.fl();
+	}
+}
+
+li{
+	.wh(300px,200px);
+	.bbox();
+	.p(20px);
+	.t-shadow(1px,1px,0,white);
+	.bg-s(cover);
+}
+
+.first{
+	.bg-i("../../images/1.jpg");
+}
+
+.second{
+	.bg-i("../../images/2.jpg");
+}
+
+.third{
+	.bg-i("../../images/3.jpg");
+}
+
+.buttons{
+	.w(600px);
+	.fl();
+	.ml(100px);
+	.mt(100px);
+	.pt(20px);
+	input{
+		.wh(100px,30px);
+		.size(14px);
+		.radius(5px);
+		.c-p();
+		.m(0,10px);
+		.bd(0);
+		&.disabled{
+			.c-n();
+			.opacity(.5);
+		}
+	}
+}
