@@ -1,3 +1,30 @@
+/*
+sJQcontainer，要使用本特效的容器的JQ选择器字符串
+sJQkid，在$(sJQcontainer)基础上，使用find查找需要被滚动的整体部分的选择器字符串，默认为使用第一子元素
+oControllers，Controllers控制器对象，可以使用的属性有
+	.prev，向前播放的控制器的选择器字符串
+	.next，向后播放的控制器的选择器字符串
+	.indices，索引的选择器字符串（1/2/3/4/5...），索引的当前页码会被附加class="cur"
+	.stop，停止的控制器的选择器字符串
+	.start，开始的控制器的选择器字符串
+oOptions，附加参数列表对象，可以使用的属性有
+	.dir，为滚动方向，只可以为u/d/l/r
+	.delay，为滚动时间间隔，默认为30，不为0，越大滚动越慢
+	.mstop，鼠标指向时停止开关，默认为true
+	.minLi，为最少的显示数量，如果少于这个数量就不执行特效，默认为1
+	.auto，是否自动播放，默认为true
+oCallbacks，回调函数列表对象，可以使用的属性有
+	.init(oJQcontainer)，完成初始化时执行的函数，参数为容器的JQ对象
+	.move(oJQaimKid)，每一次滚动时执行的函数，参数当前指示的子元素的JQ对象
+如果生成有名对象的话，可以调用的方法有
+	.on()，开始滚动，使用后，auto被设置为true
+	.off()，停止滚动
+	.run(ind)，播放到指定索引的位置
+	.prev()，向前滚动一个
+	.next()，向后滚动一个
+	.size()，返回子元素个数
+	.cur()，返回当前作为标志的子元素索引
+*/
 function CHImovie(sJQcontainer, sJQkid, oControllers, oOptions, oCallbacks) {
 	function FIND(sJQ) {
 		return sJQ && $(sJQ).size();
@@ -14,9 +41,8 @@ function CHImovie(sJQcontainer, sJQkid, oControllers, oOptions, oCallbacks) {
 	var oResult = {},
 		oJQcontainer = $(sJQcontainer).eq(0),
 		oJQkid = sJQkid ? oJQcontainer.find(sJQkid).eq(0) : oJQcontainer.children().eq(0),
-		timer = 0;
-
-	var oJQkids = oJQkid.children(),
+		timer = 0,
+		oJQkids = oJQkid.children(),
 		piTotal = oJQkids.size(),
 		piMaxLi = piTotal;
 	if (piTotal < 2) return; //如果子元素不到2个则不滚动
@@ -31,9 +57,8 @@ function CHImovie(sJQcontainer, sJQkid, oControllers, oOptions, oCallbacks) {
 		bAuto = "auto" in oOptions ? !! oOptions.auto : true,
 		niCurrent = 0,
 		niAimIndex = 0,
-		bLimit = "limit" in oOptions ? !! oOptions.limit : true;
-
-	var sMarginName, sSizeName, sOutSizeName;
+		bLimit = "limit" in oOptions ? !! oOptions.limit : true,
+		sMarginName, sSizeName, sOutSizeName;
 	if (cDir == 'l' || cDir == 'r') {
 		sMarginName = "marginLeft";
 		sSizeName = "width";
@@ -63,7 +88,6 @@ function CHImovie(sJQcontainer, sJQkid, oControllers, oOptions, oCallbacks) {
 		oJQkids.eq(niCurrent).addClass('cur').siblings().removeClass('cur');
 		//如果设置了限制边界，则需要切换控制器prev和next的类disabled
 		run(niCurrent);
-		if (oCallbacks.move) oCallbacks.move(oJQkids.eq(niCurrent));
 	}
 
 	function run(index) {
@@ -89,6 +113,7 @@ function CHImovie(sJQcontainer, sJQkid, oControllers, oOptions, oCallbacks) {
 					if (oControllers.prev) $(oControllers.prev)[index ? "removeClass" : "addClass"]("disabled");
 					if (oControllers.next) $(oControllers.next)[index + 1 == oJQkids.length ? "addClass" : "removeClass"]("disabled");
 				}
+				if (oCallbacks.move) oCallbacks.move.call(oJQkids.eq(niCurrent));
 			}
 		if (bNeedScroll) {
 			var oAnimate = {};
