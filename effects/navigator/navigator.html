@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no" name="format-detection" />
+<title>纵向导航监听效果</title>
+<style>
+*{ margin:0; padding:0;}
+body{ background-color:#2673ec; color:#fff; font-family:"微软雅黑"; padding-top: 30px;}
+html,body{ font-size:20px;}
+.indices{ position:fixed; left:0; top:0; width:100%; list-style:none; background-color:#2673ec; clear:both; border-bottom:2px solid white;}
+.indices:after{ content:""; clear:both; display:table;}
+.indices li{ line-height:30px; text-align:center; width:16.66%; float: left;}
+.indices a{ color:#fff; display:block; text-decoration:none;}
+.indices a.cur{ background-color:#fff; color:#2673ec;}
+
+.main{ margin:0 auto; width:800px;}
+.main div{ width:800px; height:600px; border:1px solid #fff;}
+.tail{ height:400px;}
+</style>
+</head>
+<body>
+<ul class="indices">
+    <li><a href="#one">一</a></li>
+    <li><a href="#two">二</a></li>
+    <li><a href="#three">三</a></li>
+    <li><a href="#four">四</a></li>
+    <li><a href="#five">五</a></li>
+    <li><a href="#six">六</a></li>
+</ul>
+<div class="main">
+    <div id="one">一</div>
+    <div id="two">二</div>
+    <div id="three">三</div>
+    <div id="four">四</div>
+    <div id="five">五</div>
+    <div id="six">六</div>
+</div>
+<div class="tail"></div>
+</body>
+</html>
+<script src="../../libs/jquery-2.1.3.min.js"></script>
+<script src="navigator.js"></script>
+<script>
+$(function(){
+	var sJQnav=$(".indices li a")
+	CHInavigator(sJQnav,".main div",{
+		offset:-30, //导航的高，使导航能在正确的位置响应内容
+		dir:'v'//纵向
+	},{
+		init:function(){
+			console.log("初始化完成");
+		},
+		show:function(){
+            console.log("被显示出来的是第"+sJQnav.index(this));
+        },
+        hide:function(){
+			console.log("被取消掉的是第"+sJQnav.index(this));
+        }
+	});
+});
+</script>
