@@ -17,8 +17,8 @@ oCallbacks，回调函数列表对象，可以使用的属性有
 	.init(oJQcontainer)，完成初始化时执行的函数，参数为容器的JQ对象
 	.move(oJQaimKid)，每一次滚动时执行的函数，参数当前指示的子元素的JQ对象
 如果生成有名对象的话，可以调用的方法有
-	.on()，开始滚动，使用后，auto被设置为true
-	.off()，停止滚动
+	.start()，开始滚动，使用后，auto被设置为true
+	.stop()，停止滚动，使用后，auto被设置为false
 	.run(ind)，播放到指定索引的位置
 	.prev()，向前滚动一个
 	.next()，向后滚动一个

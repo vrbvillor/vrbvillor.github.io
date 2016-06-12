@@ -18,6 +18,16 @@ var object = CHImovie(sJQcontainer, sJQkid, oControllers, oOptions, oCallbacks);
 ### sJQkid 子容器
 **可选**，在$(sJQcontainer)基础上，使用`$().find()`查找需要被滚动的整体部分的选择器字符串，默认为使用第一子元素
 
+### oControllers 控制器参数 对象
+
+控制特效进行的控制器配置对象，对象中的属性值可以为JQ选择器或JQ对象
+
++ `indices`，控制播放索引列表，一般为特效中有多个子元素时使用，用来播放第n个元素
++ `start`，开启特效的元素，用来播放特效
++ `stop`，暂停特效的元素，用来暂停特效
++ `prev`，向前播放，用来播放上一帧
++ `next`，向后播放，用来播放下一帧
+
 ### oOptions 附加配置对象  
 
 默认为空对象，JSON对象，用来配置当前的特效，可以使用的属性有：  
