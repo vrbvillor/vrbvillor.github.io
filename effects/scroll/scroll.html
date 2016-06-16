@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/> 
+<meta name="renderer" content="webkit">
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no,email=no" name="format-detection" />
+<meta name="apple-touch-fullscreen" content="yes">
+<title>无限循环滚动效果</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="scroll.css" rel="stylesheet">
+</head>
+<body>
+<div class="Scroll">
+	<ul>
+		<li><img src="../../images/1.jpg" alt=""></li>
+		<li><img src="../../images/2.jpg" alt=""></li>
+		<li><img src="../../images/3.jpg" alt=""></li>
+		<li><img src="../../images/2.jpg" alt=""></li>
+		<li><img src="../../images/1.jpg" alt=""></li>
+		<li><img src="../../images/2.jpg" alt=""></li>
+		<li><img src="../../images/3.jpg" alt=""></li>
+	</ul>
+</div>
+<p class="buttons">
+	<input type="button" value="开始" class="start">
+	<input type="button" value="停止" class="stop">
+	<input type="button" value="转向" class="roll">
+</p>
+</body>
+</html>
+<script src="../../libs/jquery-2.1.3.min.js"></script>
+<script src="scroll.js"></script>
+<script>
+(function(){
+	var scroll=CHIscroll(".Scroll", "ul", {
+		start:".buttons .start",
+		stop:".buttons .stop",
+	}, {}, {
+		init:function(){
+			console.log("finish initializing")
+		},
+		move:function(container){
+			var x=container.css("marginLeft");
+			if(parseInt(x)%50) return;
+			document.title=x;
+		}
+	});
+	$(".roll").click(function(event) {
+		scroll.roll();
+	});
+})();
+</script>

@@ -1,0 +1,40 @@
+@import url(../../libs/_funs);
+
+*{
+	.m(0);
+	.p(0);
+	list-style: none;
+}
+
+.Scroll{
+	.wh(100%,400px);
+	.ma(100px);
+	.o();
+	.bd(3px,solid,silver);
+	.bbox();
+	li{
+		.wh(600px,400px);
+		.fl();
+		.o();
+	}
+	img{
+		.full();
+	}
+}
+
+.buttons{
+	.ma();
+	.t-c();
+	input{
+		.wh(100px,30px);
+		.size(14px);
+		.radius(5px);
+		.c-p();
+		.m(0,10px);
+		.bd(0);
+		&.disabled{
+			.c-n();
+			.opacity(.5);
+		}
+	}
+}
