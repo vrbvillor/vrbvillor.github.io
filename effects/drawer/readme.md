@@ -12,7 +12,7 @@ var object = CHIdrawer(sJQcontainer, sJQtitles, sJQcontents, oOptions, oCallback
 
 ### sJQcontainer 容器
 
-**必需**，**String**或**JQobject**：要执行本效果的图片列表的JQ选择器字符串或JQ对象，只对该JQ集合内第一个对象有效。
+**必需**，**String**或**JQobject**：要执行本效果的JQ选择器字符串或JQ对象，只对该JQ集合内第一个对象有效。
 > 使用横向的时候，一定要计算容器的宽，并使容器正常包裹浮动的子元素及其内容（清除内容浮动，及设置overflow:hidden）。  
 
 ### sJQtitles 标题

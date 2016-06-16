@@ -1,4 +1,4 @@
-# 抽屉式标题内容伸缩效果
+# 分页循环滚动效果
 
 [特效预览](http://vrbvillor.github.io/effects/page/page.html)
 

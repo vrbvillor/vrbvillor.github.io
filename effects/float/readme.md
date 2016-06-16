@@ -1,4 +1,4 @@
-# 页面任意位置浮动框
+# 有界式滚动跟随浮动框
 
 [特效预览](http://vrbvillor.github.io/effects/float/float.html)
 

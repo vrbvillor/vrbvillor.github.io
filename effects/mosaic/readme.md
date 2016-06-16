@@ -1,4 +1,4 @@
-# 多级伸缩导航效果
+# 背景马赛克平铺效果
 
 [特效预览](http://vrbvillor.github.io/effects/mosaic/mosaic.html)
 
