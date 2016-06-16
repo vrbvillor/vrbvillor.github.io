@@ -1,0 +1,42 @@
+@import url(../../libs/_funs);
+
+*{
+	.m(0);
+	.p(0);
+	list-style: none;
+}
+
+.Tabs{
+	.ma(100px);
+	.wh(840px,600px);
+	.bd(3px,solid,silver);
+	> div{
+		.fl();
+		.h(600px);
+	}
+	.topics{
+		.wh(40px,600px);
+		div{
+			.wh(40px,200px);
+			.bbox();
+			.p(80px,10px);
+			.t-c();
+			.bd-t(1px,solid,silver);
+			.trans();
+			&:first-child{
+				.bd(0);
+			}
+			&.cur{
+				.bg-c(silver);
+				.c(white);
+			}
+		}
+	}
+	.contents{
+		.w(800px);
+		div{
+			.wh(800px,600px);
+			.fl();
+		}
+	}
+}

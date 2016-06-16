@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/> 
+<meta name="renderer" content="webkit">
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no,email=no" name="format-detection" />
+<meta name="apple-touch-fullscreen" content="yes">
+<title>标签切换效果</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="tabs.css" rel="stylesheet">
+</head>
+<body>
+<div class="Tabs">
+	<div class="topics">
+		<div>第<br>一<br>帧</div>
+		<div>第<br>二<br>帧</div>
+		<div>第<br>三<br>帧</div>
+	</div>
+	<div class="contents">
+		<div><img src="../../images/1.jpg" height="600" width="800" alt=""></div>
+		<div><img src="../../images/2.jpg" height="600" width="800" alt=""></div>
+		<div><img src="../../images/3.jpg" height="600" width="800" alt=""></div>
+	</div>
+</div>
+</body>
+</html>
+<script src="../../libs/jquery-2.1.3.min.js"></script>
+<script src="tab.js"></script>
+<script>
+(function(){
+	CHItab(".Tabs", ".topics div", ".contents div",{
+		way:"click"
+	},{
+		show:function(a,b,index){
+			console.log(arguments);
+			console.log("显示的是",index);
+		},
+		hide:function(c,d,index){
+			console.warn("隐藏的是",index);
+		}
+	});
+})();
+</script>
