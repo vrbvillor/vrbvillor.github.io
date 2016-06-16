@@ -1,0 +1,48 @@
+@import url(../../libs/_funs);
+
+*{
+	.m(0);
+	.p(0);
+	list-style: none;
+}
+.PPT{
+	.wh(800px,600px);
+	.ma(20px);
+	.relative();
+	li{
+		.absolute();
+		.lt();
+		.full();
+		.o();
+	}
+}
+.Indices{
+	.ma(10px);
+	.t-c();
+	li{
+		.whline(20px);
+		.round();
+		.inblock();
+		&.cur{
+			.bg-c(black);
+			.c(white);
+		}
+	}
+}
+
+.buttons{
+	.ma();
+	.t-c();
+	input{
+		.wh(100px,30px);
+		.size(14px);
+		.radius(5px);
+		.c-p();
+		.m(0,10px);
+		.bd(0);
+		&.disabled{
+			.c-n();
+			.opacity(.5);
+		}
+	}
+}
