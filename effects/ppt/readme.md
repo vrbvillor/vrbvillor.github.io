@@ -12,8 +12,7 @@ var object = CHIppt(sJQcontainer, sJQkids, oControllers, oOptions, oCallbacks);
 
 ### sJQcontainer 容器
 
-**必需**，**String**或**JQobject**：要执行本效果的图片列表的JQ选择器字符串或JQ对象，只对该JQ集合内第一个对象有效。
-> 使用横向的时候，一定要计算容器的宽，并使容器正常包裹浮动的子元素及其内容（清除内容浮动，及设置overflow:hidden）。  
+**必需**，**String**或**JQobject**：要执行本效果的JQ选择器字符串或JQ对象，只对该JQ集合内第一个对象有效。  
 
 ### sJQkids 子元素
 **可选**，在$(sJQcontainer)基础上，使用`$().find()`查找所有的子元素，默认为`li`。

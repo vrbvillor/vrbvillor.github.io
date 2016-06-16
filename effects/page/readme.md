@@ -12,8 +12,7 @@ var object = CHIpage(sJQcontainer, sJQkid, oControllers, oOptions, oCallbacks);
 
 ### sJQcontainer 容器
 
-**必需**，**String**或**JQobject**：要执行本效果的图片列表的JQ选择器字符串或JQ对象，只对该JQ集合内第一个对象有效。
-> 使用横向的时候，一定要计算容器的宽，并使容器正常包裹浮动的子元素及其内容（清除内容浮动，及设置overflow:hidden）。  
+**必需**，**String**或**JQobject**：要执行本效果的容器的JQ选择器字符串或JQ对象，只对该JQ集合内第一个对象有效。
 
 ### sJQkid 子容器
 **可选**，在$(sJQcontainer)基础上，使用`$().find()`查找需要被滚动的整体部分的选择器字符串，默认为使用第一子元素
@@ -22,8 +21,8 @@ var object = CHIpage(sJQcontainer, sJQkid, oControllers, oOptions, oCallbacks);
 
 默认为空对象，JSON对象，用来配置当前的特效，可以使用的属性有：  
 
-+ `dir`，方向，默认为`r`，还可以为`u`或`d`或`l`  
-+ `delay`，默认为`30`，必须为正数，为滚动时间间隔，越大滚动越慢
++ `dir`，方向，默认为`l`，还可以为`u`或`d`或`r`  
++ `delay`，默认为`3000`，必须为正数，为滚动时间间隔，越大滚动越慢
 + `mstop`，默认为`true`，鼠标指向时停止滚动
 + `auto`，默认为true，是否自动播放
 
