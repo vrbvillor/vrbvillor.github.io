@@ -1,0 +1,33 @@
+@import url(../../libs/_funs);
+*{
+	.m(0);
+	.p(0);
+	list-style: none;
+}
+.Sprite{
+	.wh(200px);
+	.ma(20px);
+	.bd(1px,solid,silver);
+	.relative();
+	img{
+		.absolute();
+		.lt();
+	}
+}
+.buttons{
+	.ma();
+	.t-c();
+	.size(0);
+	input{
+		.wh(120px,30px);
+		.size(14px);
+		.radius(5px);
+		.c-p();
+		.m(10px);
+		.bd(0);
+		&.disabled{
+			.c-n();
+			.opacity(.5);
+		}
+	}
+}

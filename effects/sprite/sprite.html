@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/> 
+<meta name="renderer" content="webkit">
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no,email=no" name="format-detection" />
+<meta name="apple-touch-fullscreen" content="yes">
+<title>序列帧播放效果</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="sprite.css" rel="stylesheet">
+</head>
+<body>
+<div class="Sprite"></div>
+<div class="buttons">
+	<input type="button" class="playOnce" value="正向快播放一次">
+	<input type="button" class="rewindOnce" value="反向慢播放一次">
+	<input type="button" class="playInfinite" value="正向循环播放">
+	<input type="button" class="rewindInfinite" value="反向循环间隔播放">
+	<br>
+	<input type="button" class="stop" value="停止播放">
+	<input type="button" class="current" value="当前帧数">
+</div>
+</body>
+</html>
+<script src="../../libs/jquery-2.1.3.min.js"></script>
+<script src="sprite.js"></script>
+<script>
+(function(){
+	var sprite=$(".Sprite").sprite({
+		loading:function(n,all){
+			console.log("调用了"+n+'/'+all+"张图片");
+		},
+		loaded:function(all){
+			console.info("完成调用"+all+"张图片");
+		}
+	});
+
+	sprite.fill("{n}.jpg",8);
+
+	sprite.on("stopped",function(dir){
+		switch(dir){
+			case 1: console.warn("正向播放完成！"); break;
+			case -1: console.warn("负向播放完成！"); break;
+		}
+	});
+
+	$(".playOnce").click(function(event) {
+		sprite.play(50);
+	});
+
+	$(".rewindOnce").click(function(event) {
+		sprite.rewind(100);
+	});
+
+	$(".playInfinite").click(function(event) {
+		sprite.play(50,-1);
+	});
+
+	$(".rewindInfinite").click(function(event) {
+		sprite.rewind(50,-1,1000);
+	});
+
+	$(".stop").click(function(event) {
+		sprite.stop();
+	});
+
+	$(".current").click(function(event) {
+		alert("当前为第"+sprite.at+"帧")
+	});
+})();
+</script>
