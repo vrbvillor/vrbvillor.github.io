@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/> 
+<meta name="renderer" content="webkit">
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no,email=no" name="format-detection" />
+<meta name="apple-touch-fullscreen" content="yes">
+<title>文字扩散效果</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<style>
+*{
+	padding: 0;
+	text-align: center;
+	font-size: 20px;
+	overflow: hidden;
+	font-family: Microsoft Yahei;
+}
+div{
+	margin: 20px;
+}
+</style>
+</head>
+<body>
+<div class="RandomOut">这一行会使用随机效果出镜。出镜的效果只能播放一次。</div>
+<div class="RandomIn">这一行会使用随机效果入镜。入镜的效果可以播放多次。</div>
+<div class="TopOut">可以指定从上方出镜。出镜的效果只能播放一次。</div>
+<div class="BottomIn">也可以指定从下方入镜。入镜的效果可以播放多次。</div>
+<div class="LeftOut">还可以让它从左边倒着出去。出镜的效果只能播放一次。</div>
+<div class="RightIn">更能让它从右边进来。入镜的效果可以播放多次。</div>
+</body>
+</html>
+<script src="../../libs/jquery-2.1.3.min.js"></script>
+<script src="wave.js"></script>
+<script>
+(function(){
+	$(".RandomOut").mouseenter(function(){
+		$(this).wave({
+			mode:'text',
+			direction:'random',
+			action:'leave'
+		});
+	})
+
+	$(".RandomIn").mouseenter(function(event) {
+		$(this).wave({
+			mode:'text',
+			direction:'here',
+			action:'come'
+		});
+	});
+
+	$(".TopOut").mouseenter(function(event) {
+		$(this).wave({
+			mode:'text',
+			direction:'up',
+			action:'leave',
+			delay:100
+		});
+	});
+
+	$(".BottomIn").mouseenter(function(event) {
+		$(this).wave({
+			mode:'text',
+			direction:'down',
+			action:'come',
+		});
+	});
+
+	$(".LeftOut").mouseenter(function(event) {
+		$(this).wave({
+			mode:'text',
+			direction:'left',
+			action:'leave',
+			times:3,
+			delay:-100
+		});
+	});
+
+	$(".RightIn").one('mouseenter', function(event) {
+		alert("请打开控制台")
+	});
+	$(".RightIn").mouseenter(function(event) {
+		$(this).wave({
+			mode:'text',
+			direction:'right',
+			action:'come',
+			each:function(index){
+				console.log(index);
+			},
+			done:function(){
+				console.warn(arguments);
+			}
+		});
+	});
+})();
+</script>
