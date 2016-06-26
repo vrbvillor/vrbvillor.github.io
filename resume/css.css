@@ -1,0 +1,128 @@
+/* 简历模型 */
+
+*{ margin:0; padding:0; list-style:none; border-collapse:collapse; quotes:none; font-family:"微软雅黑";}
+html,body{ width:100%; height:100%; text-align:center; vertical-align:middle;}
+html{ display:table;}
+body{ display:table-cell; background-color:#b81b1b;}
+.stage{ width:1280px; height:600px; margin:0 auto; background-color:rgba(0,0,0,0.5); position:relative; text-align:left; overflow:hidden;}
+
+nav,#Nav{ position:absolute; height:430px; top:80px;}
+nav{ right:70px;}
+nav li{ position:relative; height:150px; height:40px; background-color:#fff; border-radius:10px; padding:5px 15px; text-shadow:1px 1px 0 #000; margin-top:10px; cursor:pointer; opacity:0;}
+nav li *{ display:block;}
+nav h3{ font-size:16px; font-weight:normal; line-height:25px;}
+nav small{ font-size:12px; font-family:Arial, Helvetica, sans-serif; line-height:15px;}
+nav li i{ position:absolute; width:0; height:0; border:5px solid transparent; border-left-color:#fff; right:-10px; top:20px;}
+#Nav{ width:50px; right:10px;}
+
+.scene{ width:1100px; height:600px; position:absolute; left:0; top:0; color:#fff; overflow:hidden; visibility:hidden;}
+
+#First{}
+#First .photo{ float:left; margin:50px 0px 20px 50px; border:1px solid #ccc;}
+#First h1,#First h2,#First .attrs{ margin-right:40px;}
+#First h1{ float:right; width:650px; font-size:52px; font-weight:normal; color:#fff; margin:40px 40px 15px 0; padding-bottom:20px; border-bottom:1px solid #fff;}
+#First h1 small{ padding-left:1em; font-size:42px;}
+#First h2{ width:650px; float:right; font-size:16px; height:20px; line-height:20px; color:#ccc; font-weight:normal; margin-bottom:30px; white-space:nowrap;}
+#First .attrs{ width:650px; height:355px; display:table; float:right;}
+#First .attrs li{ width:310px; margin-bottom:5px;}
+#First .attrs li:nth-of-type(even){ float:right;}
+#First .attrs li:nth-of-type(odd){ float:left;}
+#First .attrs li *{ display:block; float:left;}
+#First .attrs span{ font-size:14px; width:100px; text-align:right; background-color:rgba(255,255,255,0.2); border-radius:5px 0 0 5px; padding-right:10px; color:#ccc; line-height:40px;}
+#First .attrs b{ width:188px; font-weight:normal; border:1px solid rgba(255,255,255,0.2); padding-left:10px; border-radius:0 5px 5px 0; line-height:38px;}
+#First .attrs li.full{ float:none; clear:both; width:100%;}
+#First .attrs li.full b{ width:528px;}
+#First .level{ float:left; width:300px; margin:5px 0 0 50px;}
+#First .level li{ height:30px; margin-bottom:5px; line-height:30px;}
+#First .level li *{ display:inline-block; vertical-align:middle;}
+#First .level samp{ width:256px; border:1px solid rgba(255,255,255,0.2); border-radius:5px; height:20px; margin-left:10px;}
+#First .level s{ font-size:12px; height:20px; border-radius:5px; text-decoration:none; line-height:20px; color:#fff; text-shadow:1px 1px 0 #000; text-align:right; padding-right:10px;}
+
+#Second{}
+#Second .intro{ clear:both; margin:50px; line-height:200%;}
+#Second .intro p{ margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid rgba(255,255,255,0.2);}
+#Second .intro p:last-child{ border-bottom:0;}
+#Second .intro h6{ font-size:36px; background-color:#e56c19; font-weight:normal; line-height:50px; padding:0px 20px; border-radius:10px;}
+#Second .intro h6:nth-of-type(odd){ float:left; margin-right:20px;}
+#Second .intro h6:nth-of-type(even){ float:right; margin-left:20px;}
+
+#Third{ box-sizing:border-box; padding:50px;}
+#Third dl{ height:100%;}
+#Third dl:first-child{ width:46%; border-right:1px solid #fff; float:left; padding-right:5%;}
+#Third dl:last-child{ width:44%; float:right;}
+#Third dl:last-child dt{ padding-top:10px; text-align:right;}
+#Third dt{ font-size:36px;}
+#Third ul{ margin-top:30px;}
+#Third li{ clear:both; margin:8px 0 8px 100px; line-height:30px;}
+#Third li::before{ content:attr(data-item); color:#632f00; text-shadow:1px 1px 0px #f4b300; background-color:#d39d09; padding:0px 10px; border-radius:5px; float:left; margin-left:-100px; font-size:14px;}
+#Third p{ line-height:25px; margin-bottom:20px;}
+#Third p span{ font-size:24px; color:#f4b300;}
+
+#Fourth{ position:relative;}
+#Fourth > *{ height:30px; position:absolute; top:280px; width:900px; left:100px;}
+.time dt{ display:block; position:absolute; width:14px; height:14px; border:1px solid #fff; background-color:#199900; border-radius:20px; z-index:1; cursor:pointer; overflow:visible !important; line-height:20px; font-size:14px; text-align:center; opacity:0.5;}
+.time dt.y2005{ top:-7px; left:2%;}
+.time dt.y2006{ top:-7px; left:21%;}
+.time dt.y2007{ top:-7px; left:40%;}
+.time dt.y2008{ top:-7px; left:59%;}
+.time dt.y2009{ top:-7px; left:78%;}
+.time dt.y2010{ top:-7px; left:97%;}
+.time dt.y2011{ bottom:-7px; left:97%;}
+.time dt.y2012{ bottom:-7px; left:78%;}
+.time dt.y2013{ bottom:-7px; left:59%;}
+.time dt.y2014{ bottom:-7px; left:40%;}
+.time dt.y2015{ bottom:-7px; left:21%;}
+.time dt.y2016{ bottom:-7px; left:2%;}
+.time dd{ display:none; position:absolute; border-radius:10px; border:5px solid #fff; padding:10px 20px; line-height:25px; z-index:2; background-color:#15992a;}
+.time h5{ font-size:18px; font-weight:normal; border-bottom:1px dashed #fff; padding-bottom:10px; margin-bottom:10px;}
+.time dd s{ display:block; position:absolute; width:0; height:0; border:10px solid transparent;}
+.time dd.up{ display:block;}
+.time dd.up s{ border-top-color:#fff; top:calc(100% + 5px);}
+.time dd.down{ display:block;}
+.time dd.down s{ border-bottom-color:#fff; bottom:calc(100% + 5px);}
+.time dd p{ text-indent:2em;}
+
+#Fifth{ margin:30px; height:540px; width:1050px;}
+#Fifth div.list{ display:table; width:1038px;}
+#Fifth dl{ width:346px; float:left; box-sizing:border-box; padding:10px; line-height:20px;}
+#Fifth dt,#Fifth dd{ float:left; box-sizing:border-box; padding:5px 10px; font-size:14px;}
+#Fifth dt{ width:30%; text-align:right; background-color:rgba(255,255,255,0.2); border-bottom:1px solid rgba(27,88,184,,0.5);}
+#Fifth dt:first-of-type{ border-top:1px solid rgba(255,255,255,0.2); border-radius:5px 0 0 0;}
+#Fifth dt:last-of-type{ border-bottom-color:rgba(255,255,255,0.2);}
+#Fifth dd{ width:70%; border:1px solid rgba(255,255,255,0.2); border-width:0 1px 1px 0;}
+#Fifth dd:first-of-type{ border-top-width:1px; border-radius:0 5px 0 0;}
+#Fifth dd:last-child{ border:1px solid rgba(255,255,255,0.2); border-top:0; width:100%; border-radius:0 0 5px 5px;}
+.iScrollIndicator{ background-color:rgba(27,88,184,0.5) !important;}
+#Fifth .warn *{ font-size:16px; text-shadow:2px 2px 1px #000;}
+
+#Sixth{ margin:30px 50px; width:1010px; position:relative;}
+#Sixth li{ border:10px solid rgba(255,255,255,0.5); border-radius:10px; box-sizing:border-box; position:absolute; padding:8px 30px;}
+#Sixth .bar{ width:550px; height:100px; opacity:0.5; cursor:pointer;}
+#Sixth .bar.cur{ opacity:1;}
+#Sixth .li1{ top:0; left:0; background-color:#1faeff; color:#001e4e;}
+#Sixth .li2{ top:110px; left:110px; background-color:#e1b700; color:#632f00;}
+#Sixth .li3{ top:220px; left:220px; background-color:#78ba00; color:#004a00;}
+#Sixth .li4{ top:330px; left:330px; background-color:#1b58b8;}
+#Sixth .li5{ top:440px; left:440px; background-color:#4617b4;}
+#Sixth .content{ width:440px; height:540px; right:-440px; background-color:rgba(0,0,0,0.5); overflow:hidden;}
+#Sixth .bar h4{ font-size:32px; font-weight:normal;}
+#Sixth .bar h5{ font-size:14px; font-weight:normal;}
+#Sixth caption{ font-size:24px; line-height:80px; overflow:hidden; opacity:inherit;}
+#Sixth span{ font-size:16px;}
+#Sixth .t1 caption{ color:#1faeff;}
+#Sixth .t2 caption{ color:#e1b700;}
+#Sixth .t3 caption{ color:#78ba00;}
+#Sixth .t4 caption{ color:#1b58b8;}
+#Sixth .t5 caption{ color:#aa40ff;}
+#Sixth table{ position:absolute; opacity:0; width:360px;}
+#Sixth tr *{ font-weight:normal;}
+#Sixth thead *{ font-size:16px; line-height:50px; border-bottom:1px solid #fff;}
+#Sixth tbody *{ text-align:left; font-size:14px; padding:10px 0; word-break:break-strict;}
+
+#Seventh{ position:relative; width:980px; height:540px; margin:30px 50px;}
+#Seventh *{ display:block; position:absolute; font-size:16px; border:2px solid #fff; line-height:30px; padding:0px 20px; border-radius:5px; text-decoration:none; font-style:normal; z-index:1; opacity:0;}
+#Seventh ins{ background-color:#2673ec;}
+#Seventh del{ background-color:#696969;}
+#Seventh kbd{ background-color:#15992a;}
+#Seventh var{ background-color:#e56c19;}
+#Seventh dfn{ background-color:#ff76bc;}
