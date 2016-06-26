@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>像素字幕生成程序</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css.css">
+<body>
+<dl id="Menus">
+	<dt>
+    	<b><i>¤</i><br>系<br>统<br>设<br>置</b>
+        <b><i>◎</i><br>所<br>有<br>帧</b>
+        <b><i>☆</i><br>当<br>前<br>帧</b>
+        <b><i>⊙</i><br>调<br>色<br>盘</b>
+    </dt>
+    <dd>
+    	<div id="Options">
+            <p>像素尺寸：<input type="number" min="1" max="99" step="1" id="PixelUnit"></p>
+            <p>画布尺寸：<input type="number" min="1" max="1280" step="1" id="CanvasWidth">
+                &times; <input type="number" min="1" max="800" step="1" id="CanvasHeight"></p>
+            <p><input type="button" class="btn" id="OptionSet" value="设置"> <input type="button" class="btn" id="OptionReset" value="重置"></p>
+        </div>
+        <div id="AllScenes"><div>
+            <ol id="ThumbsList"><!--
+            	<li>
+                	<canvas id="Canvas2" title="2" width=180 height=120></canvas>
+                    <menu>
+                    	<a><i>↑</i>上移</a>
+                    	<a><i>↓</i>下移</a>
+                    	<a><i>×</i>删除</a>
+                    </menu>
+                </li>
+            --></ol>
+        	<p><input type="button" class="btn" id="SceneNew" value="创建新帧"> <input type="button" class="btn" id="ScenesPreview" value="播放预览"></p>
+            <p><input type="button" class="btn" id="ScenesImport" value="导入数据"> <input type="button" class="btn" id="ScenesExport" value="导出数据"></p>
+            <p><input type="button" class="btn" id="ScenesClear" value="清空数据"></p>
+        </div></div>
+        <div id="CurrentScene">
+            <p>画面背景：<input type="text" size="7" maxlength="7" id="ScreenColor" class="needColorPicker" readonly> <samp id="SceneBackground"></samp></p>
+            <p>默认颜色：<input type="text" size="7" maxlength="7" id="CanvasColor" class="needColorPicker" readonly> <samp id="SceneDefault"></samp></p>
+            <p><input type="button" class="btn" id="SceneColorReset" value="重设颜色"></p>
+            <p id="ActionModes">动画模式：
+            	<label><input type="radio" name="ActionMode" value="t" id="Action-t"> 从上到下</label>
+            	<label><input type="radio" name="ActionMode" value="b" id="Action-b"> 从下到上</label>
+            	<label><input type="radio" name="ActionMode" value="l" id="Action-l"> 从左到右</label>
+            	<label><input type="radio" name="ActionMode" value="r" id="Action-r"> 从右到左</label>
+            	<label><input type="radio" name="ActionMode" value="lt" id="Action-lt"> 从左上到右下</label>
+            	<label><input type="radio" name="ActionMode" value="rb" id="Action-rb"> 从右下到左上</label>
+            	<label><input type="radio" name="ActionMode" value="lb" id="Action-lb"> 从左下到右上</label>
+            	<label><input type="radio" name="ActionMode" value="rt" id="Action-rt"> 从右上到左下</label>
+            	<label><input type="radio" name="ActionMode" value="lr-m" id="Action-lr-m"> 从左右到中间</label>
+            	<label><input type="radio" name="ActionMode" value="m-lr" id="Action-m-lr"> 从中间到左右</label>
+            	<label><input type="radio" name="ActionMode" value="tb-m" id="Action-tb-m"> 从上下到中间</label>
+            	<label><input type="radio" name="ActionMode" value="m-tb" id="Action-m-tb"> 从中间到上下</label>
+            </p>
+            <p><input type="button" class="btn" id="SceneCopy" value="复制本帧"> <input type="button" class="btn" id="SceneDel" value="删除本帧"></p>
+        </div>
+        <div id="Colorpad">
+            <div class="colors"><!--<em title="透明">预留的透明，目前未找到开发的必要</em>--></div>
+            <div>
+            	<p>当前颜色：<input type="text" size="7" maxlength="7" class="needColorRoller" id="CurrentColor" readonly>
+                	<samp id="ColorNew"><i>★</i>NEW</samp></p>
+            	<p><input type="button" class="btn" id="ColorAdd" value="可添加颜色" disabled> <input type="button" class="btn" id="ColorDel" value="删除颜色"></p>
+                <p><input type="button" class="btn" id="ColorAddBatch" value="批量添加"> <input type="button" class="btn" id="ColorClear" value="清空调色盘"></p>
+            	<p><input type="button" class="btn" id="ColorImport" value="导入调色盘"> <input type="button" class="btn" id="ColorExport" value="导出调色盘"></p>
+            </div>
+        </div>
+    </dd>
+</dl>
+
+<div id="Canvas"></div>
+
+<dl id="ColorPicker">
+	<dt>颜色选择器<q>&times;</q></dt>
+    <dd>
+        <div class="colors"></div>
+        <p id="RedChannel">红通道：<input type="range" id="RedRange" min="0" max="255" step="1"> / <input id="RedValue" type="number" size="3" maxlength="3" step="1" min="0" max="255"> R</p>
+        <p id="GreenChannel">绿通道：<input type="range" id="GreenRange" min="0" max="255" step="1"> / <input id="GreenValue" type="number" size="3" maxlength="3" step="1" min="0" max="255"> G</p>
+        <p id="BlueChannel">蓝通道：<input type="range" id="BlueRange" min="0" max="255" step="1"> / <input id="BlueValue" type="number" size="3" maxlength="3" step="1" min="0" max="255"> B</p>
+        <samp id="ColorPickerView"></samp>
+        <q>
+            <label for="ColorValue">HEX色彩值</label>
+            <input type="text" id="ColorValue" size="7" maxlength="7">
+            <input type="submit" class="btn" id="GetColorValue" value="确定颜色">
+        </q>
+    </dd>
+</dl>
+
+<div id="Information">
+	<q>&times;</q>
+	<p>点击半透明背景可关闭</p>
+	<textarea readonly></textarea>
+    <input type="button" class="btn" value="导入数据">
+</div>
+
+<div class="contextMenu" id="Helps"><ul>
+	<li id="Help"><i>？</i>这是什么？</li>
+</ul></div>
+
+</html>
+<script src="../libs/jquery-2.1.3.min.js"></script>
+<script src="../libs/iscroll5.2.0.js"></script>
+<script src="../libs/raphael2.2.0.min.js"></script>
+<script src="math.js"></script>
+<script src="pixels.js"></script>
+<script src="settings.js"></script>
+<script src="helps.js"></script>
+<script>
+var myscroll;
+$(function(){
+})
+$(window).load(function(){
+	myscroll=new IScroll("#AllScenes",{
+		hScrollbar:false,
+		vScrollbar:false,
+		// checkDOMChanges:true,
+		// topOffset: 0,
+	});
+});
+</script>
+

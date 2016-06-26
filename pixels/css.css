@@ -1,0 +1,72 @@
+/* CSS Document */
+
+*{ margin:0px; padding:0px; font-family:"微软雅黑"; font-size:14px; quotes:none; font-style:normal; list-style:none;}
+*:focus{ outline:none;}
+input:disabled{ opacity:0.3;}
+input[readonly]{ background-color:#252525; border:1px solid #252525; color:#fff;}
+#CHIbackgroundDiv{ display:none; background-color:rgba(0,0,0,0.5); position:absolute; left:0px; top:0px; width:100%; height:100%; z-index:11111;}
+#Canvas{ text-align:center; font-size:0px; padding:20px;}
+#Canvas svg{ border:1px solid #000;}
+/*左菜单*/
+#Menus{ position:absolute; width:230px; height:100%; z-index:11;}
+#Menus > dt{ float:right; width:30px;}
+#Menus > dt b{ background-color:#252525; padding:5px 0px 10px; color:#696969; border-bottom:1px solid #696969; display:block; cursor:pointer; text-align:center;}
+#Menus > dt i{ font-size:1.5em;}
+#Menus > dt b.cur{ background-color:#696969; color:#fff;}
+#Menus > dd{ float:left; width:200px; background-color:#696969; height:100%; color:#fff; overflow:hidden;}
+#Menus > dd p{ clear:both; line-height:30px; margin:5px; min-height:30px;}
+#Menus > dd > div{ height:100%;}
+#Menus .btn{ border:0px; width:92px; height:30px; text-align:center; color:#fff; font-size:14px; background-color:#252525; cursor:pointer; float:left;}
+#Menus .btn + .btn{ margin-left:5px;}
+/*系统设置*/
+#Options input[type=number]{ width:45px; vertical-align:middle;}
+
+/*画布列表*/
+#CanvasList{}
+#ThumbsList{}
+#ThumbsList.freeze{ position:relative;}
+#ThumbsList:before{ content:""; z-index:111; position:absolute; width:100%; height:100%; display:none; left:0px; top:0px; background-color:rgba(255,255,255,0.1);}
+#ThumbsList.freeze:before{ display:block;}
+#ThumbsList li{ position:relative; overflow:hidden;}
+#ThumbsList canvas{ display:block; margin:10px; outline:1px solid #ccc;}
+#ThumbsList li.cur canvas{ outline-width:5px;}
+#ThumbsList menu{ display:none; position:absolute; width:180px; left:10px; top:10px; background-color:rgba(0,0,0,0.5); line-height:20px;}
+#ThumbsList menu a{ display:block; padding:5px 0px; width:33.33%; float:left; cursor:pointer;}
+#ThumbsList menu a i{ display:inline-block; width:20px; text-align:center;}
+#ThumbsList menu a:hover{ background-color:rgba(255,0,0,0.5);}
+#ThumbsList li:hover menu{ display:block;}
+#ThumbsList li:only-child menu{ display:none;}
+#ThumbsList li:first-child menu a:first-child{ display:none;}
+#ThumbsList li:last-child menu a:nth-of-type(2){ display:none;}
+/*当前帧*/
+#CurrentScene label{ display:block; cursor:pointer; padding-left:2em;}
+#CurrentScene samp{ display:inline-block; border:1px solid #000; outline:1px solid #fff; width:20px; height:20px; vertical-align:text-top; cursor:pointer;}
+/*调色板列表*/
+.colors{ padding:1px 0px 0px 1px; display:table; margin-bottom:10px;}
+.colors i,.colors em{ display:inline-block; width:20px; height:20px; float:left; border:1px solid #333; cursor:pointer;}
+.colors em{ line-height:20px; text-align:center;}
+.colors i.cur{ border-color:#666; outline:1px solid #fff; position:relative;}
+/*选色器*/
+#ColorPicker{ display:none; position:absolute; width:285px; border:1px solid #000; background:#ccc; top:0px; right:10px; z-index:111;}
+#ColorPicker dt{ clear:both; height:30px; background-color:#696969; line-height:30px; padding:0px 10px; color:#fff;}
+#ColorPicker dt q{ position:absolute; right:0px; top:0px; font-size:24px; width:30px; display:block; text-align:center; cursor:pointer;}
+#ColorPicker dd{ padding:10px; display:table; box-sizing:border-box; width:100%;}
+#ColorPicker dd samp{ width:100px; height:100px; display:block; float:left; border:1px solid #fff; outline:1px solid #000; margin-top:10px;}
+#ColorPicker dd .btn{ border:0px; width:80px; height:30px; text-align:center; color:#fff; font-size:14px; background-color:#252525; cursor:pointer;}
+#ColorPicker dd q{ float:right; width:100px; text-align:right; display:block; margin-top:20px;}
+#ColorPicker dd q > *{ float:right; margin-bottom:5px; display:block;}
+#ColorPicker input[type=range]{ width:120px; vertical-align:middle;}
+#ColorPicker input[type=number]{ width:50px; vertical-align:middle;}
+#ColorNew{ display:none;}
+/*信息窗*/
+#Information{ display:none; position:fixed; width:90%; height:90%; margin:3% 5%; top:0px; left:0px; z-index:22222; text-align:center;}
+#Information p,#Information textarea{ width:90%; padding:0px 20px; border:10px solid #ccc;}
+#Information p{ text-align:center; line-height:50px; font-size:24px; background:#ccc; margin:0 auto;}
+#Information textarea{ width:90%; height:80%; font-size:12px; padding:20px; line-height:25px; text-align:left; word-break:break-all;}
+#Information .btn{ left:5%; margin-left:-20px; border:0px; width:100px; font-size:14px;}
+#Information q{ display:block; right:5%; margin-right:-20px; font-size:24px; width:30px; line-height:30px;}
+#Information .btn,#Information q{ position:absolute; top:10px; background-color:#252525; height:30px; text-align:center; cursor:pointer; color:#fff;}
+#Information .btn:hover,#Information q:hover{ background-color:#696969;}
+
+.contextMenuIcon{ width:20px !important; text-align:center;}
+.CHIbg{ position: fixed; left:0; top:0; background-color: rgba(0,0,0,.5); width:100%; height:100%; z-index: 555; display:none;}
