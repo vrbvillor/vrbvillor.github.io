@@ -8,6 +8,7 @@
 + [Type 类型](https://github.com/vrbvillor/vrbvillor.github.io/issues/99)
 + [Service 服务](https://github.com/vrbvillor/vrbvillor.github.io/issues/124)
 + [Provider 供应器](https://github.com/vrbvillor/vrbvillor.github.io/issues/137)
++ [auto 自动化](https://github.com/vrbvillor/vrbvillor.github.io/issues/138)
 
 ### Angular其它模块
 + [ngAnimate](https://github.com/vrbvillor/vrbvillor.github.io/issues/142)
