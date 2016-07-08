@@ -9,6 +9,7 @@
 + [Service 服务](https://github.com/vrbvillor/vrbvillor.github.io/issues/124)
 + [Provider 供应器](https://github.com/vrbvillor/vrbvillor.github.io/issues/137)
 + [auto 自动化](https://github.com/vrbvillor/vrbvillor.github.io/issues/138)
++ [Filter 过滤器](https://github.com/vrbvillor/vrbvillor.github.io/issues/224)
 
 ### Angular其它模块
 + [ngAnimate](https://github.com/vrbvillor/vrbvillor.github.io/issues/142)
@@ -23,6 +24,10 @@
 ### Angular主要文档
 + [开发者指引（目录）](https://github.com/vrbvillor/vrbvillor.github.io/issues/222)
 + [教程（目录）](https://github.com/vrbvillor/vrbvillor.github.io/issues/248)
++ [入门手册](https://github.com/vrbvillor/vrbvillor.github.io/issues/219)
++ [问答](https://github.com/vrbvillor/vrbvillor.github.io/issues/220)
++ [下载](https://github.com/vrbvillor/vrbvillor.github.io/issues/221)
++ [错误信息](https://github.com/vrbvillor/vrbvillor.github.io/issues/223)
 
 ----------
 
