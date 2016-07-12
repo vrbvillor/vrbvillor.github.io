@@ -20,9 +20,9 @@ var CurrentScene=-1;
 var CurrentActionMode='l';
 var CurrentActionWay='|';
 var CurrentColorNumber=0;
-var picker/*选色器*/,infor/*信息窗*/;
+var picker/*选色器*/,infor/*信息窗*/,CHIbg;
 $(function(){
-	var win=$(window),CHIbg;
+	var win=$(window);
 	CHIbg=$("<div>").addClass("CHIbg");
 	CHIbg.appendTo("body");
 	CHIbg.open=function(cbfun){
@@ -525,7 +525,6 @@ function PaintThumb()
 	if(arg.length<3)
 	{
 		thumb.css('backgroundColor',colors[scene.CanvasColor]);
-		console.log(scene.CanvasColor);
 		if(!arg[1])	return true;
 		//默认重绘所有像素
 		for(var i=0;i<datas.length;i++)
@@ -650,12 +649,12 @@ function CreateNewScene(ind)
 	{//复制则直接获取原图
 		var str=$("#Canvas"+ind).parent().html();
 		str='<li class="cur">'+
-			str.replace("#Canvas"+ind,"#Canvas"+CurrentScene).replace('title="'+ind+'"','title="'+CurrentScene+'"')
+			str.replace("Canvas"+ind,"Canvas"+CurrentScene).replace('title="'+ind+'"','title="'+CurrentScene+'"')
 			+'</li>';
 	}
 	$("#ThumbsList").find("li").removeClass("cur")
 		.end().append(str);
-	PaintThumb();
+	ind===undefined ? PaintThumb() : PaintThumb(CurrentScene,true);
 	typeof myscroll!='undefined' && setTimeout(function(){
 		myscroll.refresh();
 	});
