@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<title>非CSS3的3D坐标系统-第一视角</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+#Stage ,body,html{
+	width: 100%;
+	height: 100%;
+}
+#Stage .obj{
+	width: 100px;
+	height: 100px;
+	outline: 1px solid black;
+}
+#Infor{
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+</style>
+<body>
+<div id="Infor"></div>
+<div id="Stage">
+	<div style="background-color:#f00;" class="obj red"></div>
+	<div style="background-color:#0f0;" class="obj green"></div>
+	<div style="background-color:#00f;" class="obj blue"></div>
+	<div style="background-color:#ff0;" class="obj yellow"></div>
+	<div style="background-color:#f0f;" class="obj cyan"></div>
+	<div style="background-color:#0ff;" class="obj rose"></div>
+	<div style="background-color:#000;" class="obj black"></div>
+	<div style="background-color:purple;" class="obj purple"></div>
+	<div style="background-color:#fff;" class="obj white"></div>
+	<div style="background-color:pink;" class="obj pink"></div>
+	<div style="background-color:#f00;" class="obj red"></div>
+	<div style="background-color:#0f0;" class="obj green"></div>
+	<div style="background-color:#00f;" class="obj blue"></div>
+	<div style="background-color:#ff0;" class="obj yellow"></div>
+	<div style="background-color:#f0f;" class="obj cyan"></div>
+	<div style="background-color:#0ff;" class="obj rose"></div>
+	<div style="background-color:#000;" class="obj black"></div>
+	<div style="background-color:purple;" class="obj purple"></div>
+	<div style="background-color:#fff;" class="obj white"></div>
+	<div style="background-color:pink;" class="obj pink"></div>
+	<div style="background-color:#f00;" class="obj red"></div>
+	<div style="background-color:#0f0;" class="obj green"></div>
+	<div style="background-color:#00f;" class="obj blue"></div>
+	<div style="background-color:#ff0;" class="obj yellow"></div>
+	<div style="background-color:#f0f;" class="obj cyan"></div>
+	<div style="background-color:#0ff;" class="obj rose"></div>
+	<div style="background-color:#000;" class="obj black"></div>
+	<div style="background-color:purple;" class="obj purple"></div>
+	<div style="background-color:#fff;" class="obj white"></div>
+	<div style="background-color:pink;" class="obj pink"></div>
+</div>
+</body>
+</html>
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+/*! Copyright (c) 2013 Brandon Aaron (http://brandon.aaron.sh)
+ * Licensed under the MIT License (LICENSE.txt).
+ *
+ * Version: 3.1.12
+ *
+ * Requires: jQuery 1.2.2+
+ */
+!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?module.exports=a:a(jQuery)}(function(a){function b(b){var g=b||window.event,h=i.call(arguments,1),j=0,l=0,m=0,n=0,o=0,p=0;if(b=a.event.fix(g),b.type="mousewheel","detail"in g&&(m=-1*g.detail),"wheelDelta"in g&&(m=g.wheelDelta),"wheelDeltaY"in g&&(m=g.wheelDeltaY),"wheelDeltaX"in g&&(l=-1*g.wheelDeltaX),"axis"in g&&g.axis===g.HORIZONTAL_AXIS&&(l=-1*m,m=0),j=0===m?l:m,"deltaY"in g&&(m=-1*g.deltaY,j=m),"deltaX"in g&&(l=g.deltaX,0===m&&(j=-1*l)),0!==m||0!==l){if(1===g.deltaMode){var q=a.data(this,"mousewheel-line-height");j*=q,m*=q,l*=q}else if(2===g.deltaMode){var r=a.data(this,"mousewheel-page-height");j*=r,m*=r,l*=r}if(n=Math.max(Math.abs(m),Math.abs(l)),(!f||f>n)&&(f=n,d(g,n)&&(f/=40)),d(g,n)&&(j/=40,l/=40,m/=40),j=Math[j>=1?"floor":"ceil"](j/f),l=Math[l>=1?"floor":"ceil"](l/f),m=Math[m>=1?"floor":"ceil"](m/f),k.settings.normalizeOffset&&this.getBoundingClientRect){var s=this.getBoundingClientRect();o=b.clientX-s.left,p=b.clientY-s.top}return b.deltaX=l,b.deltaY=m,b.deltaFactor=f,b.offsetX=o,b.offsetY=p,b.deltaMode=0,h.unshift(b,j,l,m),e&&clearTimeout(e),e=setTimeout(c,200),(a.event.dispatch||a.event.handle).apply(this,h)}}function c(){f=null}function d(a,b){return k.settings.adjustOldDeltas&&"mousewheel"===a.type&&b%120===0}var e,f,g=["wheel","mousewheel","DOMMouseScroll","MozMousePixelScroll"],h="onwheel"in document||document.documentMode>=9?["wheel"]:["mousewheel","DomMouseScroll","MozMousePixelScroll"],i=Array.prototype.slice;if(a.event.fixHooks)for(var j=g.length;j;)a.event.fixHooks[g[--j]]=a.event.mouseHooks;var k=a.event.special.mousewheel={version:"3.1.12",setup:function(){if(this.addEventListener)for(var c=h.length;c;)this.addEventListener(h[--c],b,!1);else this.onmousewheel=b;a.data(this,"mousewheel-line-height",k.getLineHeight(this)),a.data(this,"mousewheel-page-height",k.getPageHeight(this))},teardown:function(){if(this.removeEventListener)for(var c=h.length;c;)this.removeEventListener(h[--c],b,!1);else this.onmousewheel=null;a.removeData(this,"mousewheel-line-height"),a.removeData(this,"mousewheel-page-height")},getLineHeight:function(b){var c=a(b),d=c["offsetParent"in a.fn?"offsetParent":"parent"]();return d.length||(d=a("body")),parseInt(d.css("fontSize"),10)||parseInt(c.css("fontSize"),10)||16},getPageHeight:function(b){return a(b).height()},settings:{adjustOldDeltas:!0,normalizeOffset:!0}};a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})});
+</script>
+<script>
+(function(){
+
+})();
+//M*N的矩阵mat1，左乘，N*P的矩阵mat2，返回一个M*P的矩阵
+function premultiply(mat1,mat2){
+	if(!mat1 || !mat2) return false;
+	var M=mat1.length,N=mat2.length;
+	if(!M || !N) return false;
+	var N2=mat1[0].length,P=mat2[0].length;
+	if(!P || !N2 || N2!=N) return false;
+	var newv=[],step=N;
+
+	for(var i=0;i<M;i++)
+	{
+		if(mat1[i].length!=step) return false;
+		newv[i]=[];
+		for(var j=0;j<step;j++)
+		{
+			newv[i][j]=(function(){
+				var s=0;
+				for(var n=0;n<step;n++)
+					s+= mat1[i][n] * mat2[n][j];
+				return s;
+			})();
+		}
+	}
+	return newv;
+}
+//返回3D旋转的四阶方阵
+function rotate3D(vector,angle){
+	var theta=angle*Math.PI/180,
+		ct=Math.cos(theta),
+		st=Math.sin(theta),
+		ct_=1-ct,
+		x=vector[0],
+		y=vector[1],
+		z=vector[2];
+	return [
+		[
+			x*x*ct_+ct,
+			x*y*ct_+z*st,
+			x*z*ct_-y*st,
+			0
+		],[
+			x*y*ct_-z*st,
+			y*y*ct_+ct,
+			y*z*ct_+x*st,
+			0
+		],[
+			x*z*ct_+y*st,
+			y*z*ct_-x*st,
+			z*z*ct_+ct,
+			0
+		],[0,0,0,1]
+	];
+}
+//禁止拖选 
+function refuse(obj){
+	if(typeof obj.onselectstart!='undefined')
+	{
+		obj.onselectstart=new Function("return false");
+	}
+	else
+	{
+		obj.onmousedown=new Function("return false");
+		obj.onmouseup=new Function("return true");
+	}
+}
+$.fn.stage3D=function(){
+	var wrapper=$('<div/>')
+		.css({
+			width:0,
+			height:0,
+			position:'relative',
+			left:this.width()/2,
+			top:this.height()/2,
+			overflow:'visible'
+		}),
+	//所有子元素
+		kids=this.css('overflow','hidden')
+			.children().each(function(index, el) {
+				this.size=[$(this).width(),$(this).height()];
+				this.xyz=[0,0,0];
+				$(this).css({
+					position:'absolute'
+				});
+			}),
+	//透视量，Z轴上灭点z坐标的倒数
+		q=0.002,
+	//镜头世界的标准正交基
+		camera=[
+			[1,0,0,0],//X轴
+			[0,1,0,0],//Y轴
+			[0,0,1,0],//Z轴
+			[0,0,0,1]
+		],
+		original=[0,0,0,1], //原点
+	//镜头到容器的转换矩阵
+		container=[
+			[1,0,0,0],
+			[0,-1,0,0],
+			[0,0,-1,q],
+			[0,0,1/q,1]
+		],
+		DOM=this,
+	//一度对应的弧度数
+		deg=1/Math.PI,
+	//事件库
+		events/*{
+			rotate:[],
+			rotateX/Y/Z:[],
+			trans:[],
+			transX/Y/Z:[]
+		}*/,
+	//鼠标控制器
+		mouse/*={
+			//可用镜头模式
+			modes:{
+				global:{
+					left:fun,
+					right:fun,
+					wheel:fun
+				},
+				normal:{
+					left:fun,
+					right:fun,
+					wheel:fun
+				}
+			}
+			//鼠标处理器，所使用的模式，指向可用模式中的一个
+			handler:modes['global,normal'],
+			//鼠标三键的灵敏度
+			senses:{
+				left:1,
+				right:1,
+				middle:1
+			},
+		}*/;
+	kids.wrapAll(wrapper);
+	return {
+		//沿X轴平移镜头
+		transX:function(x,bStatic){
+			for(var n in original) original[n]+=camera[0][n]*x;
+			return bStatic ? this : this.refresh();
+		},
+		//沿Y轴平移镜头
+		transY:function(y,bStatic){
+			for(var n in original) original[n]+=camera[1][n]*y;
+			return bStatic ? this : this.refresh();
+		},
+		//沿Z轴平移镜头
+		transZ:function(z,bStatic){
+			for(var n in original) original[n]+=camera[2][n]*z;
+			return bStatic ? this : this.refresh();
+		},
+		//竖直方向上旋转镜头
+		rotateX:function(angle,bStatic){
+			var matrix=rotate3D([1,0,0,1],angle);
+			camera=premultiply(camera,matrix);
+			// console.log(camera.join())
+			return bStatic ? this : this.refresh();
+		},
+		//水平方向上旋转镜头
+		rotateY:function(angle,bStatic){
+			var matrix=rotate3D([0,1,0,1],angle);
+			camera=premultiply(camera,matrix);
+			return bStatic ? this : this.refresh();
+		},
+		//在投影面上旋转镜头
+		rotateZ:function(angle,bStatic){
+			var matrix=rotate3D([0,0,1,1],angle);
+			camera=premultiply(camera,matrix);
+			return bStatic ? this : this.refresh();
+		},
+		//镜头绕“焦点”横转
+		rotateH:function(angle,bStatic){
+
+			return bStatic ? this : this.refresh();
+		},
+		//刷新全景
+		refresh:function(){
+			var ME=this;
+			kids.each(function(index, el) {
+				var xyz=this.xyz;
+				ME.setObject(this,xyz[0],xyz[1],xyz[2]);
+			});
+			return ME;
+		},
+		//重置镜头
+		reset:function(){
+			for(var i=0;i<4;i++)
+				for(var j=0;j<4;j++)
+					camera[i][j]=i==j ? 1:0;
+			var o=original;
+			o[0]=o[1]=o[2]=0;
+			return this.refresh();
+		},
+		//扩大/缩小视角，这个效果不太好看
+		// zoom:function(dq){
+		// 	var q=container[2][3] + dq*1;
+		// 	container[2][3]=q;
+		// 	container[3][2]=1/q;
+		// 	return this.refresh();
+		// },
+		/*
+		设置一个子元素的“**盒中心**”位置
+		因为是透视，所以远小近大
+		1.q为透视量，Z轴上灭点z值的倒数，正常为负，默认取-0.002（即灭点为用户坐标(0,0,-500)）
+		2.当在0点上时为正常大小且完全不透明，越向灭点或镜头靠拢，透明度越大，离镜头远小近大
+		3.缩放度公式 Scale= q * z + 1，最小为0
+		4.透明度公式 Opacity= 1 - q * Math.abs(z)，最小为0
+		*/
+		setObject:function(o,x,y,z){
+			$(o,kids).each(function(index, el) {
+				var xyz=this.xyz,
+					q=container[2][3];
+				if(!xyz) xyz=[0,0,0],this.xyz=xyz;
+				xyz[0]=x,xyz[1]=y,xyz[2]=z;
+				var o=original,
+					project=[[xyz[0]-o[0],xyz[1]-o[1],xyz[2]-o[2],1]];
+				project=premultiply(project,camera);
+				project=premultiply(project,container);
+				project=project[0];
+				for(var n=0;n<3;n++) project[n]=project[n]/project[3];
+				x=project[0],y=project[1],z=project[2];
+
+				var ow=this.size[0],
+					oh=this.size[1],
+					scale=Math.max(q * z +1,0),
+					w=ow*scale,
+					h=oh*scale,
+					opacity=Math.max(1-q*Math.abs(z),0);
+				$(this).css({
+					width:w,
+					height:h,
+					left:-w/2 + x,
+					top:-h/2 + y,
+					opacity:opacity,
+					zIndex:Math.round(z)
+				});
+			});
+			return this;
+		},
+		/*
+		开启鼠标控制镜头或更改镜头模式，开启镜头后无法在舞台元素上使用鼠标拖选及右键菜单，mode参数，可以为
+		1.normal，默认，普通镜头，鼠标左键拖拽平移/旋转镜头，滚轮向上向前移动/向下向后移动或顺逆时针旋转镜头，单按滚轮切换平移/旋转模式
+		2.global，球面镜头，以灭点一半为球心，在球面上移动，镜头与球心距离不变，只是改变经纬度，左键拖拽上下改变纬度，左右改变经度，滚轮顺逆时针旋转
+		3.none，关闭控制
+		*/
+		mouse:function(mode){
+			var stage=this;
+			//解绑过程
+			if(mode=='none')
+			{
+				mouse=null;
+				//其实应该只off事件down跟wheel就行了，但为了防止意外就都写
+				return $(DOM).off('mousedown',startDrag)
+					.off('mousemove',dragging)
+					.off('mouseup',stopDrag)
+					.off('mousewheel',wheeling);
+			}
+			//如果已有配置对象则不重复绑定
+			var bound=false;
+			mode=='global' || (mode='normal');
+			//没有配置则生成配置
+			!mouse && (mouse={
+				//鼠标可用模式
+				modes:{
+					//普通镜头的处理器
+					normal:{
+						init:function(DOM){
+							$(DOM).on('click',this,mouse.modes.normal.change);
+						},
+						change:function(event){
+							if(event.which==2) event.data.trans=!event.data.trans;
+						},
+						trans:true,
+						left:function(h,v){
+							!isNaN(h) && this.trans ? stage.transX(h,false) : stage.rotateY(-h/2,false);
+							!isNaN(v) && this.trans ? stage.transY(-v,false)  : stage.rotateX(-v/2,false);
+							stage.refresh();
+						},
+						wheel:function(v){
+							!isNaN(v) && this.trans ? stage.transZ(v,false) : stage.rotateZ(v/2,false);
+							stage.refresh();
+						}
+					},
+					//球面镜头的处理器
+					global:{
+						init:function(){
+							stage.reset();
+							$(DOM).off('click',mouse.modes.normal.change);
+						},
+						left:function(h,v){
+							!isNaN(h) && 
+							stage.refresh();
+						},
+						wheel:function(v){
+
+							stage.refresh();
+						}
+					},
+				},
+				//鼠标处理器，会指向modes下的normal或global
+				handler:null,
+				//鼠标三个键的灵敏度
+				senses:{
+					left:1,
+					right:1,
+					middle:10
+				}
+			})
+			//有配置则为已经启用了
+			|| (bound=true);
+			//改变镜头模式
+			mouse.handler=mouse.modes[mode];
+			mouse.handler.init(DOM);
+			if(bound) return true;
+			//绑定鼠标按下事件，及鼠标滚轮事件
+			$(DOM).on('mousedown',startDrag)
+				.on('mousewheel',wheeling);
+			//相对于浏览器的最后一次鼠标坐标
+			var lastx=0,lasty=0,
+			//是否可以移动
+				bMove=false;
+			//鼠标按下行为，启动拖拽
+			function startDrag(event){
+				if(!mouse || bMove) return false;
+				event.preventDefault();
+				event.stopPropagation();
+				switch(event.which)
+				{
+					case 3://右键复原
+					console.log('right')
+						stage.reset();
+						return;
+					case 1: break;
+					default: return;
+				}
+				bMove=true;
+				lastx=event.clientX;
+				lasty=event.clientY;
+				$(document).mousemove(dragging)
+					.one('mouseup',stopDrag);
+			}
+			//鼠标移动行为，开始拖拽
+			function dragging(event){
+				if(!mouse || !bMove || event.which!=1) return false;
+				event.preventDefault();
+				event.stopPropagation();
+				refuse(DOM);
+				mouse.handler.left((event.clientX-lastx) * mouse.senses.left,(event.clientY-lasty) * mouse.senses.left);
+				lastx=event.clientX;lasty=event.clientY;
+			}
+			//鼠标释放行为，停止拖拽
+			function stopDrag(event){
+				if(!mouse || !bMove || event.which!=1) return false;
+				event.preventDefault();
+				event.stopPropagation();
+				lastx=event.clientX;
+				lasty=event.clientY;
+				bMove=false;
+				$(document).off('mousemove',dragging);
+			}
+			//鼠标滚轮行为，旋转镜头
+			function wheeling(event){
+				event.preventDefault();
+				event.stopPropagation();
+				mouse.handler.wheel(event.deltaY * mouse.senses.middle);
+			}
+			return this;
+		},
+		//为了方便像JQ一样使用，而扩展出来的方法
+		//遍历所有子元素
+		each:function(fun){
+			kids.each(fun);
+			return this;
+		},
+		//加入一个新元素并放在原点
+		append:function(o){
+			wrapper.append(o);
+			kids.add(o);
+			return this.set(o,0,0,0);
+		},
+		//彻底删除一个元素
+		remove:function(o){
+			wrapper.find(o).remove();
+			kids=kids.not(o);
+			return this;
+		},
+		/*
+		设置鼠标灵敏度，可以分别设置各方向的灵敏度
+		transX/Y/Z，平移灵敏度，单位为像素（普通镜头）
+		rotateX/Y/Z，旋转灵敏度，单位为度（普通镜头及球面镜头）
+		*/
+		setSense:function(option,value){
+			mouse && value && mouse.senses[options] && (mouse.senses[options]=parseFloat(value));
+			return this;
+		},
+		/*
+		绑定/解绑/触发事件，可以使用的事件名及其参数有（函数中的所有this语境都为stage对象本身）
+		rotate(direction,degree)及rotateX/Y/Z(degree)
+		trans(direction,degree)及transX/Y/Z(pixel)
+		*/
+		on:function(eventName,fun){
+			eventName && $.isFunction(fun) && (
+				events[eventName] && events[eventName].push(fun) || (events[eventName]=[fun])
+			);
+			return this;
+		},
+		off:function(eventName,fun){
+			var index;
+			eventName && (
+				events[eventName] && (
+					fun && (
+						(index=$.inArray(fun,events[eventName]),~index) && events[eventName].splice(index,1) || true
+					) || (events[eventName]=null,true)
+				) || true
+			) || (events=null);
+			return this;
+		},
+		trigger:function(eventName,args){
+			if(events[eventName])
+				for(var n in events[eventName])
+					//把参数中的第0项删除后，剩余的参数用在事件函数上
+					events[eventName][n].apply(this,Array.prototype.shift.call(arguments));
+			return this;
+		}
+	};
+}
+var stage=$("#Stage").stage3D();
+stage.each(function(index, el) {
+	stage.setObject(this,index%2 ? -500:500,0,index*100);
+});
+stage.mouse('normal');
+// setInterval(function(){
+// 	stage.rotateX(1/Math.PI);
+// },10);
+</script>

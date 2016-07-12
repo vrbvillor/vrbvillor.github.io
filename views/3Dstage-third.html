@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<title>非CSS3的3D坐标系统-第三视角</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+}
+#Stage ,body,html{
+	width: 100%;
+	height: 100%;
+}
+#Stage .obj{
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	border-radius:50%;
+}
+#Refer:before{
+	content: '';
+	position: absolute;
+	width: 2000px;
+	top: 50%;
+	left: -1000px;
+	height: 0;
+	border-top: 1px solid black;
+}
+#Refer:after{
+	content: '';
+	position: absolute;
+	width: 0;
+	top: -1000px;
+	left: 50%;
+	height: 2000px;
+	border-left: 1px solid black;
+}
+#Infor{
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+</style>
+<body>
+<div id="Infor"></div>
+<div id="Stage">
+	<div style="background-color:#f00;" class="obj red" id="Refer"></div>
+	<div style="background-color:#0f0;" class="obj green" id="Xpos"></div>
+	<div style="background-color:#00f;" class="obj blue" id="Xneg"></div>
+	<div style="background-color:#ff0;" class="obj yellow" id="Ypos"></div>
+	<div style="background-color:#f0f;" class="obj cyan" id="Yneg"></div>
+	<div style="background-color:#0ff;" class="obj rose" id="Zpos"></div>
+	<div style="background-color:#000;" class="obj black" id="Zneg"></div>
+	<div style="background-color:purple;" class="obj purple"></div>
+	<div style="background-color:#fff;" class="obj white"></div>
+	<div style="background-color:pink;" class="obj pink"></div>
+	<div style="background-color:#f00;" class="obj red"></div>
+	<div style="background-color:#0f0;" class="obj green"></div>
+	<div style="background-color:#00f;" class="obj blue"></div>
+	<div style="background-color:#ff0;" class="obj yellow"></div>
+	<div style="background-color:#f0f;" class="obj cyan"></div>
+	<div style="background-color:#0ff;" class="obj rose"></div>
+	<div style="background-color:#000;" class="obj black"></div>
+	<div style="background-color:purple;" class="obj purple"></div>
+	<div style="background-color:#fff;" class="obj white"></div>
+	<div style="background-color:pink;" class="obj pink"></div>
+	<div style="background-color:#f00;" class="obj red"></div>
+	<!-- <div style="background-color:#0f0;" class="obj green"></div>
+	<div style="background-color:#00f;" class="obj blue"></div>
+	<div style="background-color:#ff0;" class="obj yellow"></div>
+	<div style="background-color:#f0f;" class="obj cyan"></div>
+	<div style="background-color:#0ff;" class="obj rose"></div>
+	<div style="background-color:#000;" class="obj black"></div>
+	<div style="background-color:purple;" class="obj purple"></div>
+	<div style="background-color:#fff;" class="obj white"></div>
+	<div style="background-color:pink;" class="obj pink"></div> -->
+</div>
+</body>
+</html>
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+/*! Copyright (c) 2013 Brandon Aaron (http://brandon.aaron.sh)
+ * Licensed under the MIT License (LICENSE.txt).
+ *
+ * Version: 3.1.12
+ *
+ * Requires: jQuery 1.2.2+
+ */
+!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?module.exports=a:a(jQuery)}(function(a){function b(b){var g=b||window.event,h=i.call(arguments,1),j=0,l=0,m=0,n=0,o=0,p=0;if(b=a.event.fix(g),b.type="mousewheel","detail"in g&&(m=-1*g.detail),"wheelDelta"in g&&(m=g.wheelDelta),"wheelDeltaY"in g&&(m=g.wheelDeltaY),"wheelDeltaX"in g&&(l=-1*g.wheelDeltaX),"axis"in g&&g.axis===g.HORIZONTAL_AXIS&&(l=-1*m,m=0),j=0===m?l:m,"deltaY"in g&&(m=-1*g.deltaY,j=m),"deltaX"in g&&(l=g.deltaX,0===m&&(j=-1*l)),0!==m||0!==l){if(1===g.deltaMode){var q=a.data(this,"mousewheel-line-height");j*=q,m*=q,l*=q}else if(2===g.deltaMode){var r=a.data(this,"mousewheel-page-height");j*=r,m*=r,l*=r}if(n=Math.max(Math.abs(m),Math.abs(l)),(!f||f>n)&&(f=n,d(g,n)&&(f/=40)),d(g,n)&&(j/=40,l/=40,m/=40),j=Math[j>=1?"floor":"ceil"](j/f),l=Math[l>=1?"floor":"ceil"](l/f),m=Math[m>=1?"floor":"ceil"](m/f),k.settings.normalizeOffset&&this.getBoundingClientRect){var s=this.getBoundingClientRect();o=b.clientX-s.left,p=b.clientY-s.top}return b.deltaX=l,b.deltaY=m,b.deltaFactor=f,b.offsetX=o,b.offsetY=p,b.deltaMode=0,h.unshift(b,j,l,m),e&&clearTimeout(e),e=setTimeout(c,200),(a.event.dispatch||a.event.handle).apply(this,h)}}function c(){f=null}function d(a,b){return k.settings.adjustOldDeltas&&"mousewheel"===a.type&&b%120===0}var e,f,g=["wheel","mousewheel","DOMMouseScroll","MozMousePixelScroll"],h="onwheel"in document||document.documentMode>=9?["wheel"]:["mousewheel","DomMouseScroll","MozMousePixelScroll"],i=Array.prototype.slice;if(a.event.fixHooks)for(var j=g.length;j;)a.event.fixHooks[g[--j]]=a.event.mouseHooks;var k=a.event.special.mousewheel={version:"3.1.12",setup:function(){if(this.addEventListener)for(var c=h.length;c;)this.addEventListener(h[--c],b,!1);else this.onmousewheel=b;a.data(this,"mousewheel-line-height",k.getLineHeight(this)),a.data(this,"mousewheel-page-height",k.getPageHeight(this))},teardown:function(){if(this.removeEventListener)for(var c=h.length;c;)this.removeEventListener(h[--c],b,!1);else this.onmousewheel=null;a.removeData(this,"mousewheel-line-height"),a.removeData(this,"mousewheel-page-height")},getLineHeight:function(b){var c=a(b),d=c["offsetParent"in a.fn?"offsetParent":"parent"]();return d.length||(d=a("body")),parseInt(d.css("fontSize"),10)||parseInt(c.css("fontSize"),10)||16},getPageHeight:function(b){return a(b).height()},settings:{adjustOldDeltas:!0,normalizeOffset:!0}};a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})});
+</script>
+<script>
+/*
+第三视角镜头，用户坐标系为：x+向右，y+向上，z+向屏幕外，原点在容器中心
+*/
+(function(){
+
+	var sin=Math.sin,
+		cos=Math.cos,
+		acos=Math.acos,
+		asin=Math.asin,
+		atan=Math.atan,
+		round=Math.round,
+		abs=Math.abs,
+		max=Math.max,
+		min=Math.min,
+		sqrt=Math.sqrt,
+		PI=Math.PI,
+		a2t=function(a){return isNaN(a) ? false : a/180*PI;},
+		t2a=function(t){return isNaN(t) ? false : t*180/PI;},
+		sgn=function(n){return isNaN(n) ? false : n>0 ? 1: n<0 ? -1 : 0};
+	//M*N的矩阵mat1，左乘，N*P的矩阵mat2，返回一个M*P的矩阵
+	function premultiply(mat1,mat2){
+		if(!mat1 || !mat2) return false;
+		var M=mat1.length,N=mat2.length;
+		if(!M || !N) return false;
+		var N2=mat1[0].length,P=mat2[0].length;
+		if(!P || !N2 || N2!=N) return false;
+		var newv=[],step=N;
+
+		for(var i=0;i<M;i++)
+		{
+			if(mat1[i].length!=step) return false;
+			newv[i]=[];
+			for(var j=0;j<step;j++)
+			{
+				newv[i][j]=(function(){
+					var s=0;
+					for(var n=0;n<step;n++)
+						s+= mat1[i][n] * mat2[n][j];
+					return s;
+				})();
+			}
+		}
+		return newv;
+	}
+	//返回3D旋转的四阶方阵，第三参默认为false，返回左手系旋转矩阵
+	function rotate3D(vector,angle,rightHand){
+		var theta=a2t(angle),
+			ct=cos(theta),
+			st=sin(theta),
+			ct_=1-ct,
+			s=rightHand ? -1:1,
+			x=vector[0],
+			y=vector[1],
+			z=vector[2];
+		return [
+			[
+				x*x*ct_+ct,
+				x*y*ct_+z*st*s,
+				x*z*ct_-y*st*s,
+				0
+			],[
+				x*y*ct_-z*st*s,
+				y*y*ct_+ct,
+				y*z*ct_+x*st*s,
+				0
+			],[
+				x*z*ct_+y*st*s,
+				y*z*ct_-x*st*s,
+				z*z*ct_+ct,
+				0
+			],[0,0,0,1]
+		];
+	}
+	//禁止拖选 
+	function refuse(obj){
+		if(typeof obj.onselectstart!='undefined')
+		{
+			obj.onselectstart=new Function("return false");
+		}
+		else
+		{
+			obj.onmousedown=new Function("return false");
+			obj.onmouseup=new Function("return true");
+		}
+	}
+	!($.fn.stage3D) && ($.fn.stage3D=function(mode){
+		return stage3D[mode]? stage3D[mode].call(this) : false;
+	});
+	var stage3D={};
+	stage3D.third=function(){
+		var wrapper=$('<div/>')
+			.css({
+				width:0,
+				height:0,
+				position:'relative',
+				left:this.width()/2,
+				top:this.height()/2,
+				overflow:'visible'
+			}),
+		//所有子元素
+			kids=this.css('overflow','hidden')
+				.children().each(function(index, el) {
+					this.size=[$(this).outerWidth(),$(this).outerHeight()];
+					this.xyz=[0,0,0];
+					$(this).css({
+						position:'absolute',
+						left:-this.size[0]/2,
+						top:-this.size[1]/2,
+						opacity:1
+					});
+				}),
+		//透视量，Z轴上灭点z坐标的倒数
+			q=-0.002,
+			DOM=this,
+		//事件库，暂时不启用
+			/*events{
+				rotate:[],
+				rotateX/Y/Z:[],
+				trans:[],
+				transX/Y/Z:[],
+				refresh:[],
+				reset:[],
+				set:[],
+				put:[],
+				append:[],
+				remove:[],
+				sense:[]
+			},*/
+		//鼠标控制器是否开启
+			mouse=false,
+		//记录转换矩阵
+			transform=[
+				[1,0,0,0],
+				[0,1,0,0],
+				[0,0,1,0],
+				[0,0,0,1]
+			],
+		//容器的转换矩阵
+			container=[
+				[1,0,0,0],//X轴
+				[0,-1,0,0],//Y轴
+				[0,0,1,q],//Z轴
+				[0,0,0,1]
+			];
+		kids.wrapAll(wrapper);
+		return {
+			length:kids.length,
+			//设置镜头的坐标及三个旋转角，基于世界坐标系
+			set:function(theta,phi,gamma){
+				transform=[
+					[1,0,0,0],
+					[0,1,0,0],
+					[0,0,1,0],
+					[0,0,0,1]
+				];
+				!isNaN(theta) && (camera=premultiply(camera,rotate3D(camera[1],theta)));
+				!isNaN(phi) && (camera=premultiply(camera,rotate3D(camera[0],phi)));
+				!isNaN(gamma) && (camera=premultiply(camera,rotate3D(camera[2],gamma)));
+				return this.refresh();
+			},
+			//竖直方向上旋转镜头
+			rotateX:function(theta,bStatic){
+				if(isNaN(theta)) return false;
+				var matRot=rotate3D([1,0,0],theta);
+				transform=premultiply(transform,matRot);
+				matRot=null;
+				return bStatic ? this : this.refresh();
+			},
+			//水平方向上旋转镜头
+			rotateY:function(phi,bStatic){
+				if(isNaN(phi)) return false;
+				var matRot=rotate3D([0,1,0],phi);
+				transform=premultiply(transform,matRot);
+				matRot=null;
+				return bStatic ? this : this.refresh();
+			},
+			//在投影面上旋转镜头
+			rotateZ:function(gamma,bStatic){
+				if(isNaN(gamma)) return false;
+				var matRot=rotate3D([0,0,1],gamma);
+				transform=premultiply(transform,matRot);
+				matRot=null;
+				return bStatic ? this : this.refresh();
+			},
+			//刷新全景
+			refresh:function(){
+				var ME=this;
+				kids.each(function(index, el) {
+					var xyz=this.xyz;
+					ME.put(this,xyz[0],xyz[1],xyz[2]);
+				});
+				ME=null;
+				return this;
+			},
+			//重置镜头
+			reset:function(){
+				transform=[
+					[1,0,0,0],
+					[0,1,0,0],
+					[0,0,1,0],
+					[0,0,0,1]
+				];
+				return this.refresh();
+			},
+			/*
+			设置一个子元素的“**盒中心**”用户坐标位置
+			因为是透视，所以远小近大
+			1.q为透视量，Z轴上灭点z值的倒数，正常为负，默认取-0.002（即灭点为用户坐标(0,0,-500)）
+			2.当在0点上时为正常大小且完全不透明，越向灭点或镜头靠拢，透明度越大，离镜头远小近大
+			3.缩放度公式 Scale= q * z + 1，最小为0
+			4.透明度公式 Opacity= 1 - q * abs(z)，最小为0
+			*/
+			put:function(obj,x,y,z,bAnimate,sOptions){
+				var xyz,
+					project,
+					ow,oh,scale,
+					w,h,opacity;
+				$(obj,kids).each(function(index, el) {
+					xyz=this.xyz;
+					if(!xyz) xyz=[0,0,0],this.xyz=xyz;
+					xyz[0]=x,xyz[1]=y,xyz[2]=z;
+					//直接向容器坐标系转化（元素边框盒中心为容器坐标）
+					project=[[x,y,z,1]];
+					project=premultiply(project,transform);
+					project=premultiply(project,container);
+					project=project[0];
+					for(var n=0;n<3;n++) project[n]=project[n]/project[3];
+					project[3]=1;
+					x=project[0],y=project[1],z=project[2];
+
+					ow=this.size[0],
+					oh=this.size[1],
+					scale=max(1-q * z,0),
+					w=ow*scale,
+					h=oh*scale,
+					opacity=min(max(1-abs(q)*abs(z),0),1);
+
+					bAnimate && !sOptions && (sOptions={});
+					$(this)[bAnimate ? "animate":"css"]({
+						width:w,
+						height:h,
+						left:-w/2 + x,
+						top:-h/2 + y,
+						opacity:opacity,
+						zIndex:round(z) + 2/q
+					},sOptions)
+					//.html([x.toFixed(2),y.toFixed(2),z.toFixed(2)].join('<br>'));
+				});
+				project=null;
+				return this;
+			},
+			/*
+			开启鼠标控制镜头，默认参数为true，不会重复开启
+			如果为false则关闭鼠标控制
+			*/
+			mouse:function(on){
+				//如果绑定了的话，就会生成鼠标控制对象，则不重复绑定
+				if(mouse) return this;
+				var stage=this;
+				//解绑过程
+				if(on===false)
+				{
+					mouse=null;
+					//其实应该只off事件down跟wheel就行了，但为了防止意外就都写
+					$(DOM).off('mousedown',startDrag)
+						.off('mousemove',dragging)
+						.off('mouseup',stopDrag)
+						.off('mousewheel',wheeling)
+						.off('click',change);
+					return this;
+				}
+				mouse={
+					drag:function(h,v){
+						!isNaN(h) && stage.rotateY(h/2,false);
+						!isNaN(v) && stage.rotateX(-v/2,false);
+						stage.refresh();
+					},
+					wheel:function(v){
+						!isNaN(v) && stage.rotateZ(-v/2,false);
+						stage.refresh();
+					},
+					//鼠标三个键的灵敏度
+					left:1,
+					right:1,
+					middle:10
+				};
+				//绑定鼠标按下事件，及鼠标滚轮事件
+				$(DOM).on('mousedown',startDrag)
+					.on('mousewheel',wheeling);
+				//相对于浏览器的最后一次鼠标坐标
+				var lastx=0,lasty=0,
+				//是否可以移动
+					bMove=false;
+				//鼠标按下行为，启动拖拽
+				function startDrag(event){
+					if(!mouse || bMove) return false;
+					event.preventDefault();
+					event.stopPropagation();
+					switch(event.which)
+					{
+						case 3://右键复原
+						console.log('right')
+							stage.reset();
+							return;
+						case 1: break;
+						default: return;
+					}
+					bMove=true;
+					lastx=event.clientX;
+					lasty=event.clientY;
+					$(document).mousemove(dragging)
+						.one('mouseup',stopDrag);
+				}
+				//鼠标移动行为，开始拖拽
+				function dragging(event){
+					if(!mouse || !bMove || event.which!=1) return false;
+					event.preventDefault();
+					event.stopPropagation();
+					refuse(DOM);
+					mouse.drag((event.clientX-lastx) * mouse.left,(lasty-event.clientY) * mouse.left);
+					lastx=event.clientX;lasty=event.clientY;
+				}
+				//鼠标释放行为，停止拖拽
+				function stopDrag(event){
+					if(!mouse || !bMove || event.which!=1) return false;
+					event.preventDefault();
+					event.stopPropagation();
+					lastx=event.clientX;
+					lasty=event.clientY;
+					bMove=false;
+					$(document).off('mousemove',dragging);
+				}
+				//鼠标滚轮行为，旋转镜头
+				function wheeling(event){
+					event.preventDefault();
+					event.stopPropagation();
+					mouse.wheel(event.deltaY * mouse.middle);
+				}
+				return this;
+			},
+			//为了方便像JQ一样使用，而扩展出来的方法
+			//遍历所有子元素
+			each:function(fun){
+				kids.each(fun);
+				return this;
+			},
+			//加入一个新元素并放在原点
+			append:function(o){
+				wrapper.append(o);
+				kids.add(o);
+				this.length=kids.length;
+				return this.set(o,0,0,0);
+			},
+			//彻底删除一个元素
+			remove:function(o){
+				wrapper.find(o).remove();
+				kids=kids.not(o);
+				this.length=kids.length;
+				return this;
+			},
+			/*
+			设置鼠标灵敏度，可以分别设置各方向的灵敏度
+			transX/Y/Z，平移灵敏度，单位为像素（普通镜头）
+			rotateX/Y/Z，旋转灵敏度，单位为度（普通镜头及球面镜头）
+			*/
+			sense:function(option,value){
+				mouse && value && mouse.senses[options] && (mouse.senses[options]=parseFloat(value));
+				return this;
+			},
+			/*
+			绑定/解绑/触发事件，可以使用的事件名及其参数有（函数中的所有this语境都为stage对象本身）
+			rotate(direction,degree)及rotateX/Y/Z(degree)
+			trans(direction,degree)及transX/Y/Z(pixel)
+			set(o,x,y,z)
+			append/remove(o)
+			sense(opt,val)
+			reset/refresh()
+			*/
+			// on:function(eventName,fun){
+			// 	eventName && $.isFunction(fun) && (
+			// 		events[eventName] && events[eventName].push(fun) || (events[eventName]=[fun])
+			// 	);
+			// 	return this;
+			// },
+			// off:function(eventName,fun){
+			// 	var index;
+			// 	eventName && (
+			// 		events[eventName] && (
+			// 			fun && (
+			// 				(index=$.inArray(fun,events[eventName]),~index) && events[eventName].splice(index,1) || true
+			// 			) || (events[eventName]=null,true)
+			// 		) || true
+			// 	) || (events=null);
+			// 	return this;
+			// },
+			// trigger:function(eventName,args){
+			// 	if(events[eventName])
+			// 		for(var n in events[eventName])
+			// 			//把参数中的第0项删除后，剩余的参数用在事件函数上
+			// 			events[eventName][n].apply(this,Array.prototype.shift.call(arguments));
+			// 	return this;
+			// }
+		};
+	}
+
+})();
+
+var stage=$("#Stage").stage3D('third'),
+	cur=$("#Stage").children().eq(0).children().eq(0);
+stage.put(cur,0,0,0);
+cur=cur.next();
+var r=250;
+
+var R=r/Math.sqrt(3);
+r=(Math.sqrt(5)-1)/2;
+var r_=1/r;
+r*=R,r_*=R;
+var xyz=[
+	[0,r_,r],[0,-r_,r],[0,r_,-r],[0,-r_,-r],
+	[r_,r,0],[-r_,r,0],[r_,-r,0],[-r_,-r,0],
+	[r,0,r_],[r,0,-r_],[-r,0,r_],[-r,0,-r_],
+	[R,R,R],[-R,R,R],[R,-R,R],[R,R,-R],
+	[-R,-R,R],[-R,R,-R],[R,-R,-R],[-R,-R,-R],
+];
+stage.each(function(index, el) {
+	var pos=index ? xyz[index-1] : [0,0,0];
+	pos.unshift(this);
+	stage.put.apply(null,pos);
+});
+
+
+
+
+
+// function a2t(a){return a/180*Math.PI;}
+// var count=1;
+// for(var phi=90;phi>=-90;phi-=30)
+// {
+// 	var num=Math.round(3-Math.abs(phi/30)),
+// 		offset=num*90;
+// 	num ? (num*=2) : (num=1);
+// 	for(var theta=-180;theta<180;theta+=360/num)
+// 	{
+// 		var p=a2t(phi),
+// 			t=a2t(theta+offset),
+// 			sp=Math.sin(p),
+// 			cp=Math.cos(p),
+// 			st=Math.sin(t),
+// 			ct=Math.cos(t),
+// 			x=r*st*cp,
+// 			z=r*ct*cp,
+// 			y=r*sp;
+// 		stage.put(cur,x,y,z);
+// 		cur.html([phi,theta,num].join('<br>'));
+// 		console.log(phi,theta,num,cur.get(0));
+// 		count++;
+// 	cur=cur.next();
+// 		// console.warn(x,y,z);
+// 	}
+// }
+stage.mouse();
+// setInterval(function(){
+// 	stage.rotateX(1/PI);
+// },10);
+</script>
