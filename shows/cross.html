@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no" name="format-detection" />
+<title>展示形式-十字分割四屏</title>
+<style>
+*{ margin:0; padding:0;}
+html,body,#Stage{ width:100%; height:100%; overflow:hidden; min-height:700px; min-width:1000px;}
+body{}
+.Indices{ position:absolute; width:50%; height:50%; z-index:1;}
+.Indices b{ width:100%; height:100%; text-align:center; display:table-cell; vertical-align:middle; font-size:100px; color:#fff;}
+.Indices q{ display:block; position:absolute; right:0; top:0; color:#fff; font-size:40px; display:none; quotes:none;}
+#First{ left:0; top:0; background-color:#f4b300;}
+#Second{ right:0; top:0; background-color:#2673ec;}
+#Third{ left:0; bottom:0; background-color:#199900;}
+#Fourth{ right:0; bottom:0; background-color:#7200ac;}
+</style>
+</head>
+<body>
+<div id="First" class="Indices"><q>&times;</q><b>&spades;</b></div>
+<div id="Second" class="Indices"><q>&times;</q><b>&hearts;</b></div>
+<div id="Third" class="Indices"><q>&times;</q><b>&clubs;</b></div>
+<div id="Fourth" class="Indices"><q>&times;</q><b>&diams;</b></div>
+</body>
+</html>
+<script src="../libs/jquery-2.1.3.min.js"></script>
+<!--<script src="77mobile/js/jq/easing.js"></script>
+<script src="77mobile/js/math/math.js"></script>
+<script src="77mobile/js/raphael/raphael-min.js"></script>
+<script src="77mobile/js/raphael/raphael.2Dmodel.js"></script>
+<script src="77mobile/js/raphael/3Dstage.js"></script>-->
+<script>
+$(".Indices")
+.find("b").click(function(){
+	$(this).fadeOut(function(){
+		$(this).closest(".Indices").css('z-index',2)
+		.animate({width:'100%'},1000)
+		.animate({
+			height:'100%'
+		},1000,function(){
+			$(this).find("q").fadeIn();
+		});
+	});
+}).end()
+.find("q").click(function(){
+	$(this).fadeOut(function(){
+		$(this).closest(".Indices")
+		.animate({width:'50%'},1000)
+		.animate({
+			height:'50%'
+		},1000,function(){
+			$(this).css('z-index',1)
+			.find("b").fadeIn();
+		});
+	});
+});
+</script>

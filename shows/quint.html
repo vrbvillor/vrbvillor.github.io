@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no" name="format-detection" />
+<title>展示形式-竖直分割五屏-可扩展</title>
+<style>
+*{ margin:0; padding:0;}
+html,body,#Stage{ width:100%; height:100%; overflow:hidden; min-height:700px; min-width:1000px;}
+body{}
+.Indices{ position:absolute; width:20%; height:100%; top:0;}
+.Indices b{ display:block; position:absolute; width:100%; height:100%; text-align:center; font-size:100px; color:#fff; z-index:2;}
+.Indices q{ display:block; position:absolute; right:0; top:0; color:#fff; font-size:40px; display:none; quotes:none;}
+.Indices em{ display:block; position:absolute; bottom:20%; text-align:center; width:100%; font-size:80px; color:#fff; font-style:normal; z-index:1; font-family:"Arial Black", Gadget, sans-serif;}
+.Indices em:hover{ text-decoration:underline;}
+#First{ background-color:#632f00; left:0;}
+#First b{ background-color:#f4b300;}
+#Second{ background-color:#004a00; left:20%;}
+#Second b{ background-color:#199900;}
+#Third{ background-color:#006ac1; left:40%;}
+#Third b{ background-color:#2673ec;}
+#Fourth{ background-color:#2d004e; left:60%;}
+#Fourth b{ background-color:#7200ac;}
+#Fifth{ background-color:#ae113d; left:80%;}
+#Fifth b{ background-color:#b81b1b;}
+</style>
+</head>
+<body>
+<div id="First" class="Indices"><q>&times;</q><b>&spades;</b><em>OPEN</em></div>
+<div id="Second" class="Indices"><q>&times;</q><b>&hearts;</b><em>OPEN</em></div>
+<div id="Third" class="Indices"><q>&times;</q><b>&clubs;</b><em>OPEN</em></div>
+<div id="Fourth" class="Indices"><q>&times;</q><b>&diams;</b><em>OPEN</em></div>
+<div id="Fifth" class="Indices"><q>&times;</q><b>&diams;</b><em>OPEN</em></div>
+</body>
+</html>
+<script src="../libs/jquery-2.1.3.min.js"></script>
+<script src="../libs/easing.js"></script>
+<!--<script src="77mobile/js/math/math.js"></script>
+<script src="77mobile/js/raphael/raphael-min.js"></script>
+<script src="77mobile/js/raphael/raphael.2Dmodel.js"></script>
+<script src="77mobile/js/raphael/3Dstage.js"></script>-->
+<script>
+var wh=$(window).height(),
+expanding=false;
+$(".Indices").hover(function(){
+	if(!$(this).data('onshow') && !expanding)
+	$(this).find('b').stop(true).animate({marginTop:wh*-.8},1000,'easeInQuad')
+},function(){
+	if(!$(this).data('onshow') && !expanding)
+	$(this).find('b').stop(true).animate({marginTop:0},1000,'easeOutBounce')
+})
+.find("em").click(function(){
+	if(expanding)return;
+	expanding=true;
+	var root=$(this).closest(".Indices");
+	root.find('b').animate({marginTop:-wh},200,'easeInQuad');
+	$(this).fadeOut(1000,'easeOutElastic',function(){
+		root.css({zIndex:20}).animate({
+			left:0,
+			width:'100%'
+		},3000,function(){
+			$(this).find("q").fadeIn();
+		}).data('onshow',true);
+	});
+}).end()
+.find("q").click(function(){
+	var root=$(this).closest(".Indices");
+	$(this).fadeOut(1000,function(){
+		root.animate({
+			left:20*root.index()+'%',
+			width:'20%'
+		},3000,function(){
+			$(this).css('z-index',0).data('onshow',false)
+				.find("b").animate({marginTop:0},1200,'easeOutBounce').end()
+				.find("em").fadeIn(1000,'easeInElastic')
+			;
+			expanding=false;
+		});
+	});
+})
+;
+
+</script>

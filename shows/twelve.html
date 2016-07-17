@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no" name="format-detection" />
+<title>展示形式-网格十二屏-可扩展</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+html,body,#Stage{ width:100%; height:100%; overflow:hidden; min-height:700px; min-width:1000px;}
+body{ background-color:#000;}
+.Scene{ width:25%; height:25%; position:absolute;}
+.Scene q{ display:block; position:absolute; right:0; top:0; color:#fff; font-size:40px; display:none; quotes:none;}
+.Scene b{ display:block; position:absolute; width:100%; height:100%; text-align:center; font-size:40px; color:#fff; z-index:2; font-family:"Arial Black", Gadget, sans-serif;}
+#s1{ background-color:#b81b1b; top:0; left:0;}
+#s2{ background-color:#e56c19; top:0; left:25%;}
+#s3{ background-color:#91d100; top:0; left:50%;}
+#s4{ background-color:#00a4a4; top:0%; left:75%;}
+#s5{ background-color:#1faeff; top:25%; left:0%;}
+#s6{ background-color:#2673ec; top:25%; left:75%;}
+#s7{ background-color:#7200ac; top:50%; left:0;}
+#s8{ background-color:#c1004f; top:50%; left:75%;}
+#s9{ background-color:#ff76bc; top:75%; left:0%;}
+#s10{ background-color:#632f00; top:75%; left:25%;}
+#s11{ background-color:#ff981d; top:75%; left:50%;}
+#s12{ background-color:#ff7d23; top:75%; left:75%;}
+</style>
+</head>
+<body>
+<div class="Scene" id="s1"><b>OPEN</b><q>&times;</q></div>
+<div class="Scene" id="s2"><b>OPEN</b><q>&times;</q></div>
+<div class="Scene" id="s3"><b>OPEN</b><q>&times;</q></div>
+<div class="Scene" id="s4"><b>OPEN</b><q>&times;</q></div>
+<div class="Scene" id="s5"><b>OPEN</b><q>&times;</q></div>
+<div class="Scene" id="s6"><b>OPEN</b><q>&times;</q></div>
+<div class="Scene" id="s7"><b>OPEN</b><q>&times;</q></div>
+<div class="Scene" id="s8"><b>OPEN</b><q>&times;</q></div>
+<div class="Scene" id="s9"><b>OPEN</b><q>&times;</q></div>
+<div class="Scene" id="s10"><b>OPEN</b><q>&times;</q></div>
+<div class="Scene" id="s11"><b>OPEN</b><q>&times;</q></div>
+<div class="Scene" id="s12"><b>OPEN</b><q>&times;</q></div>
+</body>
+</html>
+<script src="../libs/jquery-2.1.3.min.js"></script>
+<!--<script src="77mobile/js/jq/easing.js"></script>
+<script src="77mobile/js/math/math.js"></script>
+<script src="77mobile/js/raphael/raphael-min.js"></script>
+<script src="77mobile/js/raphael/raphael.2Dmodel.js"></script>
+<script src="77mobile/js/raphael/3Dstage.js"></script>-->
+<script>
+var showon=false,showoff=false;
+$(".Scene").each(function(index, element) {
+    $(this).data({
+		primaryTop:$(this).css('top'),
+		primaryLeft:$(this).css('left')
+	});
+})
+.find("b").click(function(){
+	if(showon || $(this).closest('.Scene').hasClass("active"))return;
+	showon=true;
+	$(".active q").click();
+	$(this).fadeOut(function(){
+		$(this).closest(".Scene").addClass('active')
+		.css('z-index',2)
+		.animate({
+			width:'50%',
+			height:'50%',
+			left:'25%',
+			top:'25%'
+		},function(){
+			$(this).find("q").fadeIn(function(){
+				showon=false;
+				$(this).closest(".Scene");
+			});
+		});
+	});
+}).end()
+.find('q').click(function(){
+	if(showoff || !$(this).closest('.Scene').hasClass("active"))return;
+	showoff=true;
+	$(this).fadeOut(function(){
+		var scene=$(this).closest('.Scene').css('z-index',1);
+		scene.animate({
+			width:'25%',
+			height:'25%',
+			left:scene.data('primaryLeft'),
+			top:scene.data('primaryTop')
+		},function(){
+			$(this).css('z-index',0)
+			.find('b').fadeIn(function(){
+				showoff=false;
+				scene.removeClass('active');
+			});
+		})
+	})
+});
+</script>
