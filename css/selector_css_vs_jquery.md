@@ -33,13 +33,13 @@
 		<tr><td>:root </td><td> 文档根元素（即html元素） </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
 		<tr><td>:target </td><td> 当前URL中`#`所对应的元素 </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
 		<tr><td>:first-child </td><td> 是其父元素的`第一子元素`的所有元素 </td><td> 2 </td><td> √ </td><td> 9+</td></tr>
-		<tr><td>:first-of-type </td><td> 是`同标签名的同代元素`中`<br>第一次出现`的所有元素 </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
+		<tr><td>:first-of-type </td><td> 是`同标签名的同代元素`中`第一次出现`的所有元素 </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
 		<tr><td>:last-child </td><td> 是其父元素的`最后子元素`的所有元素 </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
-		<tr><td>:last-of-type </td><td> 是`同标签名的同代元素`中`<br>最后一次出现`的所有元素 </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
-		<tr><td>:nth-child(n) </td><td> 在父元素中是第`n`个子元素<br>的所有元素（可以使用公式`an+b`） </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
-		<tr><td>:nth-last-child(n) </td><td> 在父元素中是`倒数`第`n`个<br>子元素的所有元素（可以使用公式`an+b`） </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
-		<tr><td>:nth-of-type(n) </td><td> 是`同标签名的同代元素`中<br>第`n`个出现的所有元素（可以使用公式`an+b`） </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
-		<tr><td>:nth-last-of-type(n) </td><td> 是`同标签名的同代元素`中`<br>倒数`第`n`个出现的所有元素（可以使用公式`an+b`） </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
+		<tr><td>:last-of-type </td><td> 是`同标签名的同代元素`中`最后一次出现`的所有元素 </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
+		<tr><td>:nth-child(n) </td><td> 在父元素中是第`n`个子元素的所有元素（可以使用公式`an+b`） </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
+		<tr><td>:nth-last-child(n) </td><td> 在父元素中是`倒数`第`n`个子元素的所有元素（可以使用公式`an+b`） </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
+		<tr><td>:nth-of-type(n) </td><td> 是`同标签名的同代元素`中第`n`个出现的所有元素（可以使用公式`an+b`） </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
+		<tr><td>:nth-last-of-type(n) </td><td> 是`同标签名的同代元素`中`倒数`第`n`个出现的所有元素（可以使用公式`an+b`） </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
 		<tr><td>:first </td><td> 所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
 		<tr><td>:last </td><td> 所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
 		<tr><td>:eq(x) </td><td> 所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
@@ -70,8 +70,8 @@
 		<tr><td>:hover </td><td> 鼠标指向的元素（在IE6中只有`a`标签可以使用这个伪类） </td><td> 1 </td><td> × </td><td> 6+</td></tr>
 		<tr><td>:active </td><td> 鼠标按下时所指向的元素（在IE6中只有`a`标签可以使用这个伪类） </td><td> 1 </td><td> × </td><td> 6+</td></tr>
 		<tr><td><b>注意</b> </td><td colspan="4"> 在CSS中必须以`:link`-`:visited`-`:hover`-`:active`的顺序写才能保证所有这4个样式都有效 </td></tr>
-		<tr><td>:before </td><td> 伪元素，在元素内容前边加内容，<br>有了CSS的`content`属性后可以当作一个DOM元素使用 </td><td> 2 </td><td> × </td><td> 6+</td></tr>
-		<tr><td>:after </td><td> 伪元素，在元素内容后边加内容，<br>有了CSS的`content`属性后可以当作一个DOM元素使用 </td><td> 2 </td><td> × </td><td> 6+</td></tr>
+		<tr><td>:before </td><td> 伪元素，在元素内容前边加内容，有了CSS的`content`属性后可以当作一个DOM元素使用 </td><td> 2 </td><td> × </td><td> 6+</td></tr>
+		<tr><td>:after </td><td> 伪元素，在元素内容后边加内容，有了CSS的`content`属性后可以当作一个DOM元素使用 </td><td> 2 </td><td> × </td><td> 6+</td></tr>
 		<tr><td>:first-letter </td><td> 文本内容的首字母 </td><td> 1 </td><td> × </td><td> 6+</td></tr>
 		<tr><td>:first-line </td><td> 文本内容的第一行 </td><td> 1 </td><td> × </td><td> 6+</td></tr>
 		<tr><td><b>注意</b> </td><td colspan="4"> 以上的伪元素都无法使用JS控制 </td></tr>
