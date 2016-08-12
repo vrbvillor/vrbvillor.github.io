@@ -69,7 +69,7 @@
 		<tr><td>:visited </td><td> 历史记录中（被访问过的）的所有`a`元素 </td><td> 1 </td><td> × </td><td> 6+</td></tr>
 		<tr><td>:hover </td><td> 鼠标指向的元素（在IE6中只有`a`标签可以使用这个伪类） </td><td> 1 </td><td> × </td><td> 6+</td></tr>
 		<tr><td>:active </td><td> 鼠标按下时所指向的元素（在IE6中只有`a`标签可以使用这个伪类） </td><td> 1 </td><td> × </td><td> 6+</td></tr>
-		<tr><td>__注意__ </td><td colspan="4"> 在CSS中必须以`:link`-`:visited`-`:hover`-`:active`<br>的顺序写才能保证所有这4个样式都有效 </td></tr>
+		<tr><td>__注意__ </td><td colspan="4"> 在CSS中必须以`:link`-`:visited`-`:hover`-`:active`的顺序写才能保证所有这4个样式都有效 </td></tr>
 		<tr><td>:before </td><td> 伪元素，在元素内容前边加内容，<br>有了CSS的`content`属性后可以当作一个DOM元素使用 </td><td> 2 </td><td> × </td><td> 6+</td></tr>
 		<tr><td>:after </td><td> 伪元素，在元素内容后边加内容，<br>有了CSS的`content`属性后可以当作一个DOM元素使用 </td><td> 2 </td><td> × </td><td> 6+</td></tr>
 		<tr><td>:first-letter </td><td> 文本内容的首字母 </td><td> 1 </td><td> × </td><td> 6+</td></tr>
