@@ -47,7 +47,7 @@
 		<tr><td>:lt(x) </td><td> 所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
 		<tr><td>:even </td><td> 所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
 		<tr><td>:odd </td><td> 所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
-		<tr><td>__注意__ </td><td colspan="4"> 使用`nth`系列可能不会得到预期的效果，尤其是在`nth`前边有其它选择器时 </td></tr>
+		<tr><td><b>注意</b> </td><td colspan="4"> 使用`nth`系列可能不会得到预期的效果，尤其是在`nth`前边有其它选择器时 </td></tr>
 		<tr><td>:only-child </td><td> 是其父元素中`唯一子元素`的所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
 		<tr><td>:only-of-type </td><td> 是其父元素中`唯一标签子元素`的所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
 		<tr><td>:button </td><td> `butotn`标签及`input[type="button"]`的所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
@@ -69,12 +69,12 @@
 		<tr><td>:visited </td><td> 历史记录中（被访问过的）的所有`a`元素 </td><td> 1 </td><td> × </td><td> 6+</td></tr>
 		<tr><td>:hover </td><td> 鼠标指向的元素（在IE6中只有`a`标签可以使用这个伪类） </td><td> 1 </td><td> × </td><td> 6+</td></tr>
 		<tr><td>:active </td><td> 鼠标按下时所指向的元素（在IE6中只有`a`标签可以使用这个伪类） </td><td> 1 </td><td> × </td><td> 6+</td></tr>
-		<tr><td>__注意__ </td><td colspan="4"> 在CSS中必须以`:link`-`:visited`-`:hover`-`:active`的顺序写才能保证所有这4个样式都有效 </td></tr>
+		<tr><td><b>注意</b> </td><td colspan="4"> 在CSS中必须以`:link`-`:visited`-`:hover`-`:active`的顺序写才能保证所有这4个样式都有效 </td></tr>
 		<tr><td>:before </td><td> 伪元素，在元素内容前边加内容，<br>有了CSS的`content`属性后可以当作一个DOM元素使用 </td><td> 2 </td><td> × </td><td> 6+</td></tr>
 		<tr><td>:after </td><td> 伪元素，在元素内容后边加内容，<br>有了CSS的`content`属性后可以当作一个DOM元素使用 </td><td> 2 </td><td> × </td><td> 6+</td></tr>
 		<tr><td>:first-letter </td><td> 文本内容的首字母 </td><td> 1 </td><td> × </td><td> 6+</td></tr>
 		<tr><td>:first-line </td><td> 文本内容的第一行 </td><td> 1 </td><td> × </td><td> 6+</td></tr>
-		<tr><td>__注意__ </td><td colspan="4"> 以上的伪元素都无法使用JS控制 </td></tr>
+		<tr><td><b>注意</b> </td><td colspan="4"> 以上的伪元素都无法使用JS控制 </td></tr>
 		<tr><td>::selection </td><td> 被选中的文本内容 </td><td> 3 </td><td> × </td><td> 9+</td></tr>
 		<tr><td>:optional </td><td> 没有`required`的所有表单控件 </td><td> 3 </td><td> × </td><td> 10+</td></tr>
 		<tr><td>:required </td><td> 有`required`的所有表单控件 </td><td> 3 </td><td> × </td><td> 10+</td></tr>
