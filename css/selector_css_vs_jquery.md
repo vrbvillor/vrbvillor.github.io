@@ -40,13 +40,13 @@
 		<tr><td>:nth-last-child(n) </td><td> 在父元素中是`倒数`第`n`个子元素的所有元素（可以使用公式`an+b`） </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
 		<tr><td>:nth-of-type(n) </td><td> 是`同标签名的同代元素`中第`n`个出现的所有元素（可以使用公式`an+b`） </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
 		<tr><td>:nth-last-of-type(n) </td><td> 是`同标签名的同代元素`中`倒数`第`n`个出现的所有元素（可以使用公式`an+b`） </td><td> 3 </td><td> √ </td><td> 9+</td></tr>
-		<tr><td>:first </td><td> 所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
-		<tr><td>:last </td><td> 所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
-		<tr><td>:eq(x) </td><td> 所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
-		<tr><td>:gt(x) </td><td> 所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
-		<tr><td>:lt(x) </td><td> 所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
-		<tr><td>:even </td><td> 所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
-		<tr><td>:odd </td><td> 所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
+		<tr><td>:first </td><td> 集合中的第一个元素，不同于`:first-child` </td><td> × </td><td> √ </td><td> ×</td></tr>
+		<tr><td>:last </td><td> 集合中的最后一个元素，不同于`:last-child` </td><td> × </td><td> √ </td><td> ×</td></tr>
+		<tr><td>:eq(x) </td><td> 集合中的第`n`个元素（从`0`开始） </td><td> × </td><td> √ </td><td> ×</td></tr>
+		<tr><td>:gt(x) </td><td> 集合中的第`n`个元素`之后`的元素（从`0`开始，不包括`n`） </td><td> × </td><td> √ </td><td> ×</td></tr>
+		<tr><td>:lt(x) </td><td> 集合中的第`n`个元素`之前`的元素（从`0`开始，不包括`n`） </td><td> × </td><td> √ </td><td> ×</td></tr>
+		<tr><td>:even </td><td> 集合中的所有`偶数`序号的元素（从`0`开始） </td><td> × </td><td> √ </td><td> ×</td></tr>
+		<tr><td>:odd </td><td> 集合中的所有`奇数`序号的元素（从`0`开始） </td><td> × </td><td> √ </td><td> ×</td></tr>
 		<tr><td><b>注意</b> </td><td colspan="4"> 使用`nth`系列可能不会得到预期的效果，尤其是在`nth`前边有其它选择器时 </td></tr>
 		<tr><td>:only-child </td><td> 是其父元素中`唯一子元素`的所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
 		<tr><td>:only-of-type </td><td> 是其父元素中`唯一标签子元素`的所有元素 </td><td> × </td><td> √ </td><td> ×</td></tr>
