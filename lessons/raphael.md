@@ -302,9 +302,9 @@ var arc=paper.arc(50,50,-90,0,50).animate({
 有的时候，我们不仅仅是要画一条弧线，还有可能是需要画一个扇形，所以我们需要让弧线在正确的位置闭合。闭合的方法就是：画完弧之后，让它画一条直线回到圆心，再使用`z`指令闭合这个路径。
 
 ```javascript
-Raphael.fn.arc=function(cx,cy,startAngle,overAngle,radius){
-    //因为只有这个形状需要用到自定义属性arc，所以把自定义属性也移进来
-    //因为自定义属性只需要定义一次，所以先判断它是否存在，再决定是否定义
+//把是否闭合也参数化
+Raphael.fn.arc=function(cx,cy,startAngle,overAngle,radius,closed){
+    //因为图形是否闭合是布尔值属性，不是数字型属性，所以不写入自定义属性内。
     if(!this.ca.arc){
         this.ca.arc=function(cx,cy,startAngle,overAngle,radius){
             while(overAngle-startAngle>360) overAngle-=360;
@@ -321,10 +321,10 @@ Raphael.fn.arc=function(cx,cy,startAngle,overAngle,radius){
                 large=overAngle-startAngle>180 ? 1:0,
                 path=[
                     'M',startX,',',startY,
-                    'A',radius,',',radius,',0,',large,',1,',overX,',',overY,
-                    'L',cx,',',cy,'Z'
-                ].join('');
-            return {path:path};
+                    'A',radius,',',radius,',0,',large,',1,',overX,',',overY
+                ];
+            closed && path.push('L',cx,',',cy,'Z');
+            return {path:path.join('')};
         }
     }
     return paper.path('M0,0').attr({
@@ -332,7 +332,7 @@ Raphael.fn.arc=function(cx,cy,startAngle,overAngle,radius){
     });
 }
 //除了角度外，还可以让它的圆心位置及半径也动起来
-var arc=paper.arc(50,50,-90,0,50).animate({
+var arc=paper.arc(50,50,-90,0,50,true).animate({
     arc:[100,100,-90,180,100]
 },3000);
 ```
