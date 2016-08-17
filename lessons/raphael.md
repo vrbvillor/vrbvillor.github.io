@@ -23,26 +23,39 @@
 
 ## 使用Raphael
 
+### 引入Raphael
+
+我们可以去CDN上直接复制库的地址，也可以去本库的官网上下载源文件   
+
+```html
+<script src="//cdn.bootcss.com/raphael/2.2.1/raphael.min.js"></script>
+```
+
 ### 生成画布
+
+首先我们需要一个DOM来充当画布的容器。  
 
 ```html
 <div id="Canvas"></div>
 ```
+
+然后可以在一个DOM上，利用它的ID，生成一个画布，以便在画布上绘制图形。  
+
 ```javascript
 var paper=Raphael('Canvas',400,400);
 ```
 
-可以在一个DOM上，利用它的ID，生成一个画布，以便在画布上绘制图形。
 
 ### 移动画布
+
+默认的画布的坐标原点（0,0）是在左上角的，用这个方法可以将原点移动到画布中央，以方便计算坐标。  
 
 ```javascript
 paper.setViewBox(-200,-200,400,400);
 ```
 
-默认的画布的坐标原点（0,0）是在左上角的，用这个方法可以将原点移动到画布中央，以方便计算坐标。
+`paper.setViewBox(xnumber,ynumber,wnumber,hnumber[,fitboolean])`  
 
-`paper.setViewBox(xnumber,ynumber,wnumber,hnumber[,fitboolean])`
 
 **参数**  
 + `xnumber`：必选，新的左上角x位置，以原画布的坐标系为准  
@@ -87,7 +100,7 @@ A指令用于画椭圆（或圆）上的一部分圆弧，它的指令格式为
     > 当`rx==ry`时，就是画的圆弧，否则就是椭圆弧
 
 + `xRot`：x轴的转角，以**顺时针**方向为正方向的**角度值**  
-+ `large`：大弧标志，可以是`0/1`，为`0`时画较小方向上的弧，为`1`时画较大方向上的弧  
++ `large`：大弧标志，可以是`0/1`，为`0`时画长度较小的弧，为`1`时画长度较的弧  
 
     > 当是**180**度时，大小弧重叠，最后画的结果，由`sweep`参数决定
 
@@ -173,7 +186,8 @@ function getArc(startAngle,overAngle,radius){
 }
 ```
 
-然后画一个1/4弧，让它自动变化成3/4弧
+然后画一个1/4弧，让它自动变化成3/4弧  
+
 ```javascript
 var arc=paper.path(getArc(-90,0,100))
     .animate({
@@ -187,6 +201,7 @@ var arc=paper.path(getArc(-90,0,100))
 ### `animate`方法
 
 图形可以使用`animate`方法来将它们的`数字型`属性做成动画并演示出来。我们画的弧形，需要增加一个可以作为`数字型`演示动画的属性，来让它按照圆弧的形式伸缩。
+
 
 ### 自定义属性
 
@@ -264,10 +279,9 @@ var arc=paper.arc(-90,0,100).animate({
 
 ```javascript
 Raphael.fn.arc=function(cx,cy,startAngle,overAngle,radius){
-    //因为只有这个形状需要用到自定义属性arc，所以把自定义属性也移进来
-    //因为自定义属性只需要定义一次，所以先判断它是否存在，再决定是否定义
     if(!this.ca.arc){
         this.ca.arc=function(cx,cy,startAngle,overAngle,radius){
+            //要将终止角与起始角的差，保持在一个周角之内
             while(overAngle-startAngle>360) overAngle-=360;
             while(overAngle-startAngle<0) overAngle+=360;
             var cos=Math.cos,
@@ -275,6 +289,7 @@ Raphael.fn.arc=function(cx,cy,startAngle,overAngle,radius){
                 angle2Theta=function(angle){return angle * Math.PI / 180;},
                 startTheta=angle2Theta(startAngle),
                 overTheta=angle2Theta(overAngle),
+                //因为圆心移动了，所以起始与终止点也需要随之移动
                 startX=radius * cos(startTheta) + cx,
                 startY=radius * sin(startTheta) + cy,
                 overX=radius * cos(overTheta) + cx,
