@@ -222,14 +222,7 @@
 + 更大的高清图动画，需要使用PNG或JPG格式的序列帧动画
 
     **序列帧**  
-    ![序列帧](http://vrbvillor.github.io/effects/sprite/1.jpg)  
-    ![序列帧](http://vrbvillor.github.io/effects/sprite/2.jpg)  
-    ![序列帧](http://vrbvillor.github.io/effects/sprite/3.jpg)  
-    ![序列帧](http://vrbvillor.github.io/effects/sprite/4.jpg)  
-    ![序列帧](http://vrbvillor.github.io/effects/sprite/5.jpg)  
-    ![序列帧](http://vrbvillor.github.io/effects/sprite/6.jpg)  
-    ![序列帧](http://vrbvillor.github.io/effects/sprite/7.jpg)  
-    ![序列帧](http://vrbvillor.github.io/effects/sprite/8.jpg)  
+    ![序列帧](http://vrbvillor.github.io/effects/sprite/1.jpg) ![序列帧](http://vrbvillor.github.io/effects/sprite/2.jpg) ![序列帧](http://vrbvillor.github.io/effects/sprite/3.jpg) ![序列帧](http://vrbvillor.github.io/effects/sprite/4.jpg) ![序列帧](http://vrbvillor.github.io/effects/sprite/5.jpg) ![序列帧](http://vrbvillor.github.io/effects/sprite/6.jpg) ![序列帧](http://vrbvillor.github.io/effects/sprite/7.jpg) ![序列帧](http://vrbvillor.github.io/effects/sprite/8.jpg)  
     
     [**播放效果**](http://vrbvillor.github.io/effects/sprite/sprite.html)  
     
