@@ -74,17 +74,73 @@
 
 ### 部署
 
-+ 老式的资源类型分类部署方案，方便批量管理资源，但不利于大型内容的修改
++ 老式的资源类型分类部署方案，方便批量管理资源，但不利于大型内容的修改  
+	
+	```html
+	\images---- x.jpg y.png z.gif...
+	\audios---- h.mid i.wma j.mp3...
+	\videos---- a.mp4 b.flv c.mpeg d.swf...
+	\script----           index.js
+	       ---- \ucenter
+	\style----- css.css   index.css
+	      ----- \ucenter
+	\less------ css.less  index.less
+	     ------ \uceter
+	\ucenter--- ...
+	```
+
 + 新式的模块化部署方案，任意增减所需要的模块，但不容易分配合适的静态资源
+
+	```html
+	\header---- header.html header.css header.js
+	       ---- \nav \umenu \search
+	\footer---- footer.html footer.css
+	       ---- \nav \copyright \gotop
+	\sidebar--- \nav \contact
+	\menu------ menu.html  menu.css  menu.js
+	\index----- index.html index.css index.js
+	\list------ list.html  list.css  list.js
+	```
 
 ### 切图
 
 前端收到设计师递过来的设计图后，最好要先通篇观察一下，然后再适当地将PSD图切割成所需的图片资源  
 
 + PNG/GIF/JPG格式的图片的特性，优缺点，适用范围  
-+ 制作精灵图，用处、用法  
-+ Base64码
+
+    图片格式 | 半透明 | 全透明 | 动画 | 高质量 | 用途
+    ---------| ------ | ------ | ---- | ------ | ----
+    PNG32 | 可 | 可 | 不可 | 可 | 透明图片及图标
+    PNG8 | 可 | 可 | 不可 | 不可 | 兼容IE6的PNG
+    JPG | 不可 | 不可 | 不可 | 可 | 高清高质量图
+    GIF | 不可 | 可 | 可 | 不可 | 动图、像素图标
+    
++ 制作精灵图，SPRITE图，减少图片数量即减少请求服务器次数、用作非平铺背景图片 
+
+    **精灵图示例**  
+    ![精灵图示例](http://vrbvillor.github.io/fruits/fruits.png)
+    **精灵图用法1：将精灵图用作背景**  
+    ![将精灵图用作背景](http://vrbvillor.github.io/lessons/sprite1.jpg)
+    **精灵图用:2：移动背景到指定位置**  
+    ![移动背景到指定位置](http://vrbvillor.github.io/lessons/sprite2.jpg)
+    
++ Base64码，可以编码任何类型的文件，但是文件大小会变大1/3  
+
+    ```html
+    小西瓜图片的BASE64编码：
+    <img width="100" height="100" src="http://vrbvillor.github.io/lessons/sprite1.jpg" />
+    <img width="100" height="100" src="data:image/jpeg;base64,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">
+    ```
+
 + 矢量图标字体  
+
+    图标形式 | 单色彩 | 多色彩 | 变色
+    -------- | ------ | ------ | ----
+    图片 | 可 | 可 | 不可
+    字体 | 可 | 不可 | 可
+    
+    **SVG图标字体**  
+    ![SVG图标字体](http://vrbvillor.github.io/lessons/SVGicons.png)
 
 ### 布局
 
@@ -92,16 +148,16 @@
 
 + HTML+CSS及HTML5+CSS3布局的区别  
 + HTML标签，语义性对SEO的影响，代码层级尽可能少以降低冗余并加快页面调用  
++ CSS兼容，低端兼容使用条件性注释引入兼容样式表文件，CSS HACK  
 
 	```html
 	<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
-	<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+	<!--[if gte IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
 	<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
-	<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+	<!--[if lte IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
 	<!--[if (gt IE 9)|!(IE)]><!--><html class="" lang="zh-cn"><!--<![endif]-->
 	```
 
-+ CSS兼容，低端兼容使用条件性注释引入兼容样式表文件，CSS HACK  
 
 ### 特效
 
