@@ -118,11 +118,11 @@
 + 制作精灵图，SPRITE图，减少图片数量即减少请求服务器次数、用作非平铺背景图片 
 
     **精灵图示例**  
-    ![精灵图示例](http://vrbvillor.github.io/fruits/fruits.png)  
+    ![精灵图示例](http://vrbvillor.github.io/fruits/fruits.png)
     **精灵图用法1：将精灵图用作背景**  
-    ![将精灵图用作背景](http://vrbvillor.github.io/lessons/sprite1.jpg)  
+    ![将精灵图用作背景](http://vrbvillor.github.io/lessons/sprite1.jpg)
     **精灵图用:2：移动背景到指定位置**  
-    ![移动背景到指定位置](http://vrbvillor.github.io/lessons/sprite2.jpg)  
+    ![移动背景到指定位置](http://vrbvillor.github.io/lessons/sprite2.jpg)
     
 + Base64码，可以编码任何类型的文件，但是文件大小会变大1/3  
 
@@ -147,8 +147,33 @@
 根据兼容性及适配性要求，采用适当的布局方法  
 
 + HTML+CSS及HTML5+CSS3布局的区别  
+
+    制作方法 | 低端兼容 | 高端特效 | 适配多种设备
+    -------- | -------- | -------- | ------------
+    HTML+CSS | 可 | 不可，需要用JS | 勉强可以，需要用JS
+    HTML5+CSS3 | 不可 | 可，用CSS3 | 可，用Media Query
+
 + HTML标签，语义性对SEO的影响，代码层级尽可能少以降低冗余并加快页面调用  
-+ CSS兼容，低端兼容使用条件性注释引入兼容样式表文件，CSS HACK  
+
+    HTML标签 | 语义 | 权重 | 可重复
+    -------- | ---- | ---- | ------
+    title | 网站标题 | 很重 | 不可
+    meta | 网站描述 | 很重 | 可（不同项目）
+    h1 | 内容标题 | 很重 | 不可
+    h2 | 二级标题 | 重 | 可使用2次
+    h3 | 三级标题 | 有 | 任意
+    h4~h6 | 四~六级标题 | 极小 | 任意
+    em | 强调 | 有 | 少量
+    strong | 着重 | 有 | 少量
+    b | 加粗 | 无 | 任意
+    i | 斜体 | 无 | 任意
+    dl/dt/dd | 描述列表 | 小 | 任意
+    ul/ol/li | 项目列表 | 小 | 任意
+    a | 链接 | 有 | 任意，但要控制外链数量
+    p | 段落 | 小 | 任意
+    span | 装饰文字 | 无 | 任意
+
++ CSS兼容，低端兼容使用条件性注释引入兼容样式表文件，CSS HACK的缺点  
 
 	```html
 	<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
@@ -157,6 +182,18 @@
 	<!--[if lte IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
 	<!--[if (gt IE 9)|!(IE)]><!--><html class="" lang="zh-cn"><!--<![endif]-->
 	```
+	
+	比较符 | 全称 | 含义
+	------ | ---- | ----
+	无 | 无 | 等于
+	lt | less than | 小于
+	lte | less than or equal to | 小于等于
+	gt  | greater than | 大于
+	gte | greater than or equal to | 大于等于
+	竖线 | or | 或者
+	叹号 | not | 不等于
+	
+	[点击查看CSS HACK方法](https://github.com/CHIheart/CHIanimate/blob/master/CSSHACK.html)
 
 
 ### 特效
@@ -164,18 +201,48 @@
 根据兼容性来决定，使用CSS/JS/图片来制作特效  
 
 + 最优先采用CSS制作，CSS3使用GPU计算样式的速度最快  
+
+    浏览器版本 | CSS3 | 2D转换 | 3D转换、过渡及帧动画
+    ---------- | ---- | ------ | --------------
+    IE678 | 否 | 否 | 否
+    IE9 | 是 | 是 | 否
+    IE10-11 | 是 | 是 | 是
+    四大浏览器 | 是 | 是 | 是
+
 + 如果无法达到的则采用JS制作，JS是纯文本，占用浏览器资源小  
+
+    > 使用jQuery或Zepto来操作DOM进行过渡类动画  
+    > 使用Raphael或Snap.svg来操作矢量元素进行动画
+
 + GIF动画则需要使用图片来制作  
+
+    **GIF动画**  
+    ![GIF动画](http://vrbvillor.github.io/lessons/gif.gif)
+
++ 更大的高清图动画，需要使用PNG或JPG格式的序列帧动画
+
+    **序列帧**  
+    ![序列帧](http://vrbvillor.github.io/effects/sprite/1.jpg)  
+    ![序列帧](http://vrbvillor.github.io/effects/sprite/2.jpg)  
+    ![序列帧](http://vrbvillor.github.io/effects/sprite/3.jpg)  
+    ![序列帧](http://vrbvillor.github.io/effects/sprite/4.jpg)  
+    ![序列帧](http://vrbvillor.github.io/effects/sprite/5.jpg)  
+    ![序列帧](http://vrbvillor.github.io/effects/sprite/6.jpg)  
+    ![序列帧](http://vrbvillor.github.io/effects/sprite/7.jpg)  
+    ![序列帧](http://vrbvillor.github.io/effects/sprite/8.jpg)  
+    
+    [**播放效果**](http://vrbvillor.github.io/effects/sprite/sprite.html)  
+    
 + 有些情况则需要多种方法配合使用  
 
 ### 数据
 
 需要前后端共同完成  
 
-+ 同步数据如何显示在页面上，同步数据对SEO的友好，但影响页面显示速度  
-+ 异步数据何时何处显示在页面上，异步对SEO不友好但可以加快页面显示速度  
++ 同步数据由后台程序运算后，与HTML代码同时返回客户端，显示页面上，同步数据对SEO友好，但影响页面显示速度  
++ 异步数据由前端向服务器发送请求，再经后台程序运算后返回客户端，由前端程序运算后显示在页面上，异步对SEO不友好但可以加快页面显示速度  
 + 一般使用Ajax+JSON来传输数据，使用MVVM/MVC框架来刷新页面  
-+ 数据的静态化文件
++ 数据的静态化文件，将不经常改变的数据静态化，例如全国地址库  
 
 ### 优化
 
@@ -183,9 +250,9 @@
 + 图片资源的合并与压缩  
 + 矢量图标的好处  
 + HTML标签对SEO的影响  
-+ CSS要优先于JS显示以加快速度  
-+ JS代码分块后的合并与压缩  
-+ 静态资源库的使用CDN  
++ CSS要优先于JS显示以加快速度，以页面正常显示为优先，再考虑功能性  
++ JS代码分块后的合并与压缩，分块后请求次数变多，合并后只请求1次  
++ 静态资源库的使用CDN，可以不占用本地资源，浏览时可能免下载  
 
 ## 准备工具
 
