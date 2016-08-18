@@ -118,11 +118,11 @@
 + 制作精灵图，SPRITE图，减少图片数量即减少请求服务器次数、用作非平铺背景图片 
 
     **精灵图示例**  
-    ![精灵图示例](http://vrbvillor.github.io/fruits/fruits.png)
+    ![精灵图示例](http://vrbvillor.github.io/fruits/fruits.png)  
     **精灵图用法1：将精灵图用作背景**  
-    ![将精灵图用作背景](http://vrbvillor.github.io/lessons/sprite1.jpg)
+    ![将精灵图用作背景](http://vrbvillor.github.io/lessons/sprite1.jpg)  
     **精灵图用:2：移动背景到指定位置**  
-    ![移动背景到指定位置](http://vrbvillor.github.io/lessons/sprite2.jpg)
+    ![移动背景到指定位置](http://vrbvillor.github.io/lessons/sprite2.jpg)  
     
 + Base64码，可以编码任何类型的文件，但是文件大小会变大1/3  
 
