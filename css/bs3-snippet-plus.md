@@ -28,21 +28,22 @@
 
 ## 新增插件内容
 - [Button Groups](#button-groups)
-- [Checkbox & Radios](#checkbox & radios)
+- [Checkbox & Radios](#checkbox--radios)
 - [Collapse](#collapse)
 - [dl](#dl)
-- [Dropdown & up](#dropdown & up)
+- [Dropdown & up](#dropdown--up)
 - [Feedback](#feedback)
 - [Form-h](#form-h)
 - [Modal](#modal)
 - [Nav](#nav)
 - [Popover](#popover)
 - [Texts](#texts)
+- [Tolltip](#tooltip)
 
 
 
 
-### Input Group
+### Button Group
 
 | Component                      | Snippet code                   |
 | ------------------------------ | ------------------------------ |
