@@ -1,0 +1,433 @@
+@import url(../srcs/css/_funs);
+
+@TURQUOISE: #1ABC9C;
+@GREENSEA: #16A085;
+@EMERLAND: #2ECC71;
+@NEPHRITIS: #27AE60;
+@PETERRIVER: #3498DB;
+@BELIZEHOLE: #2980B9;
+@AMETHYST: #9B59B6;
+@WISTERIA: #8E44AD;
+@WETASPHALT: #34495E;
+@MIDNIGHTBLUE: #2C3E50;
+@SUNFLOWER: #F1C40F;
+@ORANGE: #F39C12;
+@CARROT: #E67E22;
+@PUMPKIN: #D35400;
+@ALIZARIN: #E74C3C;
+@POMEGRANATE: #C0392B;
+@CLOUDS: #ECF0F1;
+@SILVER: #BDC3C7;
+@CONCRETE: #95A5A6;
+@ASBESTOS: #7F8C8D;
+
+body{
+	.family(Microsoft Yahei);
+	.bg-c(@MIDNIGHTBLUE);
+	.bg(url("images/bg.jpg") center top fixed);
+}
+//头部
+header{
+	h1{
+		.size(48px);
+		.c(@PETERRIVER);
+	}
+}
+//导航整体
+nav{
+	.mt(20px);
+	.bg-c(rgba(0,0,0,.8)) !important;
+	.bd(0) !important;
+}
+//导航项目条
+.nav{
+	@media (max-width:767px) and (min-width:480px){
+		.display(table);
+		.w(100%);
+		.ma() !important;
+		li{
+			.display(table-cell);
+			.w(20%);
+			.t-c();
+			a{
+				.p(10px);
+			}
+		}
+	}
+	li{
+		.relative();
+		.o();
+		&:before,&:after{
+			.cnt();
+			.absolute();
+			.l();
+			.transition(all linear .3s);
+			.wh(100%,50%);
+			.z(1);
+			.bg-c(@POMEGRANATE);
+		}
+		&:before{
+			.t(-50%);
+		}
+		&:after{
+			.b(-50%);
+		}
+		&:hover,&.active{
+			&:before{
+				.t(0);
+			}
+			&:after{
+				.b(0);
+			}
+		}
+		&.active{
+			a{
+				.bg-c(transparent) !important;
+			}
+		}
+	}
+	a{
+		.relative();
+		.z(2);
+		.full();
+		.c(white) !important;
+	}
+}
+//导航标题
+a.navbar-brand{
+	.c(white) !important;
+	.transition(all linear .5s);
+	&:hover{
+		.c(@SUNFLOWER) !important;
+	}
+}
+//导航搜索栏
+.navbar-form{
+	.mt(10px);
+	input,button{
+		.bg-c(@MIDNIGHTBLUE);
+		.bd-c(transparent);
+		&:focus{
+			.shadow(none);
+			.bd-c(@WETASPHALT);
+		}
+	}
+	input{
+		.c(white);
+		&:focus + span button:extend(.navbar-form input:focus){}
+	}
+	button{
+		.c(@BELIZEHOLE);
+		&:hover{
+			.bg-c(@WETASPHALT);
+			.c(@PETERRIVER);
+			.bd-c(@WETASPHALT);
+		}
+	}
+}
+//第一/三部分主体
+.Part1,.Part3{
+	.bg-c(white);
+}
+//基础技能
+.icon{
+	.block();
+	.bg-i("images/icons-half.png");
+	a:hover &{
+		.transition(all linear 1s);
+		.rotateY(360);
+	}
+}
+.BasicSkills{
+	.bg-c(white);
+	.o();
+	> div{
+		.mb(40px);
+		@media (min-width: 320px) and (max-width: 992px){
+			.mb(0);
+		}
+	}
+	.icon{
+		.m(30px,auto,10px);
+		.wh(117px);
+	}
+
+	h3{
+		.t-c();
+		.size(18px);
+	}
+	.image{
+		.ma();
+	}
+	.intro{
+		.line(2);
+	}
+	@media (min-width: 481px) {
+		.intro{
+			.mt(30px);
+		}
+	}
+	@media (min-width: 480px) and (max-width:767px){
+		.intro{
+			.clamp(5);
+		}
+	}
+	@media (max-width: 480px){
+		div{
+			.clear();
+			.fn();
+			.w(100%)
+		}
+	}
+	@media (max-width: 991px){
+		.mb(30px);
+	}
+}
+.html{
+	.c(@CARROT);
+	&:hover{
+		.c(@PUMPKIN);
+	}
+	.icon{
+		.bg-p(left,top);
+	}
+}
+.css{
+	.c(@PETERRIVER);
+	&:hover{
+		.c(@BELIZEHOLE);
+	}
+	.icon{
+		.bg-p(-234px top);
+	}
+}
+.js{
+	.c(@ALIZARIN);
+	&:hover{
+		.c(@POMEGRANATE);
+	}
+	.icon{
+		.bg-p(0 -117px);
+	}
+}
+
+//框架
+.Frames{
+	.bg-c(@CLOUDS);
+	.p(40px,0,20px);
+	h3{
+		.size(16px);
+		.t-c();
+	}
+	> div{
+		.mb(20px);
+	}
+	.icon{
+		.m(0,auto,20px);
+		.wh(60px);
+		.bg-s(240px);
+	}
+	.intro{
+		.size(12px);
+		.line(2);
+	}
+	@media (max-width: 480px){
+		h3{
+			.size(14px);
+		}
+		.image{
+			.minw(120px);
+		}
+		.intro{
+			.fn();
+			.w(100%);
+			.minh(6em);
+			.bd-b(1px solid @SILVER);
+			.pb(20px);
+		}
+	}
+	@media (min-width: 481px){
+		.intro{
+			.clamp(5);
+			.minh(12px * 2 * 5);
+		}
+	}
+}
+.dw{
+	.c(@EMERLAND);
+	&:hover{
+		.c(@NEPHRITIS);
+	}
+	.icon{
+		.bg-p(-60px,-60px);
+	}
+}
+.fw{
+	.c(@SUNFLOWER);
+	&:hover{
+		.c(@ORANGE);
+	}
+	.icon{
+		.bg-p(-120px,-60px);
+	}
+}
+.ps{
+	.c(@BELIZEHOLE);
+	&:hover{
+		.c(@PETERRIVER);
+	}
+	.icon{
+		.bg-p(-180px,-60px);
+	}
+}
+.ajax{
+	.c(@PETERRIVER);
+	&:hover{
+		.c(@BELIZEHOLE);
+	}
+	.icon{
+		.bg-p(-60px,-120px);
+	}
+}
+
+//第二部分主体
+.Part2{
+	.bg-c-a(@MIDNIGHTBLUE,.8);
+	.item{
+		.p(20px,40px,40px);
+		.t-c();
+		> div > div{
+			@media (max-width: 480px){
+				.w(50%) !important;
+			}
+		}
+	}
+	.carousel-indicators{
+		.b(5px) !important;
+	}
+	.carousel-control{
+		.w(5%) !important;
+	}
+	@shake: {
+		0% {
+			.rotate(-10);
+		}
+		20% {
+			.rotate(20);
+		}
+		40% {
+			.rotate(-20);
+		}
+		60% {
+			.rotate(20);
+		}
+		80% {
+			.rotate(-20);
+		}
+		100% {
+			.rotate(0);
+		}
+	};
+	.keyframes(shake, @shake);
+	img{
+		.rotate(0);
+		.origin(bottom,center);
+		&:hover{
+			.anim(shake .8s linear);
+		}
+	}
+	a:hover{
+		.c(@SUNFLOWER);
+	}
+}
+
+//第三部分主体
+.Part3{
+	.pt(20px);
+	> div > div{
+		.mb(30px);
+		.mt(30px);
+	}
+}
+//前端知识
+.Knowledges{
+	@media (max-width:991px){
+		hr{
+			.mb(0);
+		}
+	}
+	h2{
+		.c(@PETERRIVER);
+		.size(28px);
+		.m(10px,0,20px);
+	}
+	ul,li{
+		list-style:none;
+	}
+	li:extend(.ellipsis){
+		.line(30px);
+		.pr(.5em);
+		.transition(all linear .3s);
+		&:before{
+			.cnt(attr(title));
+			.size();
+			.c(white);
+			.bg-c(@AMETHYST);
+			.p(3px,5px);
+			.hline(20px);
+			.mr(10px);
+			.valign();
+			.relative();
+			.t(-2px);
+		}
+		@media (max-width:480px){
+			.pt(.5em);
+			&:before{
+				.block();
+				.t-c();
+				.w(100px);
+				.h(24px);
+			}
+		}
+		&:hover{
+			.pl(.5em);
+			.bg-c(@WISTERIA);
+			&:before{
+				.c(@WISTERIA);
+				.bg-c(white);
+			}
+			&,a{
+				.c(white);
+			}
+		}
+		&,a{
+			.c(@WISTERIA);
+			&:hover{
+				.decorate();
+			}
+		}
+	}
+}
+//留言板
+.Feedback{
+	@media (max-width:480px){
+		.col-xs-3,.col-xs-9{
+			.fn();
+			.clear();
+			.w(100%);
+		}
+		.submit{
+			.ml(0);
+		}
+	}
+	@media (max-width:991px){
+		.mt(0) !important;
+		.form-group{
+			.m(0,0,15px);
+		}
+		label.control-label{
+			.t-l();
+			.pt(7px);
+		}
+	}
+}

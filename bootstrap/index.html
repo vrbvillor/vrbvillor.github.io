@@ -17,7 +17,7 @@
 	<div class="container">
 		<div class="row">
 			<h1 class="col-md-3 visible-lg visible-md visible-sm">WEB前端</h1>
-			<nav class="navbar navbar-default col-md-9" role="navigation">
+			<nav class="navbar navbar-default col-md-9" role="navigation" id="MainNav">
 				<div class="container-fluid">
 					<div class="row">
 						<!-- Brand and toggle get grouped for better mobile display -->
@@ -32,13 +32,13 @@
 						</div>
 				
 						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse navbar-ex1-collapse">
+						<div class="collapse navbar-collapse navbar-ex1-collapse bs-js-navbar-scrollspy">
 							<ul class="nav navbar-nav">
-								<li class="active"><a href="#">基础学科</a></li>
-								<li><a href="#">实用框架</a></li>
-								<li><a href="#">学员相簿</a></li>
-								<li><a href="#">知识共享</a></li>
-								<li><a href="#">联系我们</a></li>
+								<li class="active"><a href="#Basis">基础学科</a></li>
+								<li><a href="#Frames">实用框架</a></li>
+								<li><a href="#Photos">学员相簿</a></li>
+								<li><a href="#Knowledges">知识共享</a></li>
+								<li><a href="#Feedback">联系我们</a></li>
 							</ul>
 							<form class="navbar-form navbar-right" role="search">
 								<div class="input-group input-group-sm">
@@ -56,8 +56,8 @@
 		</div>
 	</div>
 </header>
-<main class="container Part1">
-	<div class="row BasicSkills">
+<main class="container Part1" data-spy="scroll" data-target="#MainNav">
+	<div class="row BasicSkills" id="Basis">
 		<div class="col-md-4 col-sm-12 col-xs-12">
 			<div class="col-md-12 col-sm-4 col-xs-4 image">
 				<a href="#" class="html">
@@ -92,7 +92,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row Frames">
+	<div class="row Frames" id="Frames">
 		<div class="col-md-6 col-sm-12 col-xs-12">
 			<div class="col-sm-3 col-xs-4 image">
 				<a href="#" class="dw">
@@ -138,9 +138,7 @@
 			</div>
 		</div>
 	</div>
-</main>
-<main class="container Part2">
-	<div class="row">
+	<div class="row Part2" id="Photos">
 		<div id="Students" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#carousel-id" data-slide-to="0" class=""></li>
@@ -237,10 +235,8 @@
 			<a class="right carousel-control" href="#Students" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 		</div>
 	</div>
-</main>
-<main class="container Part3">
-	<div class="row">
-		<div class="col-md-6 col-xs-12 Knowledges">
+	<div class="row Part3">
+		<div class="col-md-6 col-xs-12 Knowledges" id="Knowledges">
 			<h2 class="col-xs-12">WEB前端实用技巧</h2>
 			<ul class="col-xs-12">
 				<li title="2016年8月26日"><a href="http://www.runoob.com/w3cnote/html-meta-intro.html">HTML 常用头部标签（meta）</a></li>
@@ -252,7 +248,7 @@
 			</ul>
 			<div class="col-xs-12 hidden-lg"><hr></div>
 		</div>
-		<div class="col-md-6 col-xs-12 Feedback">
+		<div class="col-md-6 col-xs-12 Feedback" id="Feedback">
 			<form action="" method="POST" class="form-horizontal" role="form">
 				<div class="form-group">
 					<label for="inputId" class="col-xs-3 control-label">您的称呼：</label>
