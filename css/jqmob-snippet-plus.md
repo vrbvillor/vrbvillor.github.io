@@ -41,8 +41,8 @@
 | anchor（图标，位置）           | jqmanchor:icon                 | :notext |
 | button（黑色图标）             | jqmbutton:alt-icon             | :notext |
 | anchor（黑色图标）             | jqmanchor:alt-icon             | :notext |
-| 按钮组                         | jqmanchor-group                |         |
-| 按钮组（横向）                 | jqmanchor-group:h              |         |
+| 按钮组（a）                    | jqmanchor-group                | :h      |
+| 按钮组（button）               | jqmbutton-group                | :h      |
 | 返回按钮（button）             | jqmanchor-back                 |         |
 |                                |                                |         |
 
@@ -61,7 +61,7 @@
 
 | Component                      | Snippet code                   | Options |
 | ------------------------------ | ------------------------------ | ------- |
-| 表单容器                       | jqmfieldcontain                |         |
+| 横向表单容器                   | jqmfieldcontain                |         |
 | 搜索框                         | jqmsearch                      |         |
 | 下拉列表                       | jqmselect                      |         |
 | 滑动条                         | jqmslider                      |         |
