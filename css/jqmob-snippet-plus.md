@@ -21,7 +21,7 @@
 | 头部                           | jqmheader                      |         |
 | 头部（固定）                   | jqmheader:f                    |         |
 | 头部（固定全屏）               | jqmheader:ff                   |         |
-| 头部（左右按钮）               | jqmheader:tools                |         |
+| 头部（左右按钮）               | jqmheader-tools                |         |
 | 横向导航                       | jqmnavbar                      |         |
 | 横向标签页                     | jqmhortabs                     |         |
 | 纵向标签页                     | jqmvertabs                     |         |
