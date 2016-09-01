@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/> 
+<title>JQM 首页介绍</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="incs/jquery.mobile-1.4.5.css" rel="stylesheet">
+<script src="../srcs/js/jq1.10.2.js"></script>
+<script src="incs/jquery.mobile-1.4.5.js"></script>
+<link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+<div data-role="page" id="index">
+	<header data-role="header" data-position="inline">
+	    <a href="#LeftPanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">菜单</a>
+		<h1>JQM 首页介绍</h1>
+		<button class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-user ui-btn-icon-notext">关于</button>
+	</header><!-- /header -->
+	<article role="main" class="ui-content">
+		<section class="Intro">
+			<h1>jQuery Mobile 简介</h1>
+			<p>jQuery Mobile 是一个用于创建移动端web应用的的前端框架。</p>
+		</section>
+		<dl class="KnowFirst">
+			<dt>学习本教程前你需要先了解</dt>
+			<dd>
+				<p>在开始学习 jQuery Mobile 前, 你应该了解一下基础知识：</p>
+				<ul>
+					<li><a href="http://www.runoob.com/html/html-tutorial.html">HTML</a></li>
+					<li><a href="http://www.runoob.com/css/css-tutorial.html">CSS</a></li>
+					<li><a href="http://www.runoob.com/js/js-tutorial.html">jQuery</a></li>
+				</ul>
+				<p>如果你想学习这些知识，你可以访问本站的<a href="http://www.w3cschool.cc/">首页</a>。</p>
+			</dd>
+		</dl>
+		<section class="What">
+			<h2>什么是 jQuery Mobile?</h2>
+			<p>jQuery Mobile 是针对触屏智能手机与平板电脑的网页开发框架。</p>
+			<p>jQuery Mobile 工作与所有主流的智能手机和平板电脑上：</p>
+			<img src="http://www.runoob.com/images/jqmsupport.jpg" alt="">
+			<p>jQuery Mobile 构建于 jQuery 以及 jQuery UI类库之上，如果您了解 jQuery，您可以很容易的学习 jQuery Mobile。</p>
+			<p>jQuery Mobile 使用了极少的 HTML5、CSS3、JavaScript 和 AJAX 脚本代码来完成页面的布局渲染。</p>
+		</section>
+		<section class="Why">
+			<h3>为什么使用 jQuery Mobile?</h3>
+			<p>通过使用jQuery Mobile 可以 "写更少的代码，做更多的事情" : 它可以通过一个灵活及简单的方式来布局网页，且兼容所有移动设备。</p>
+		</section>
+		<blockquote class="Device">
+			<p>不同设备使用了不同开发语言，jQuery Mobile可以很好的兼容不同的设备或操作系统：</p>
+			<ul>
+				<li>Android 和 Blackberry（黑莓） 使用JAVA语言。</li>
+				<li>iOS 使用 Objective C 语言</li>
+				<li>Windows Phone 使用 C# 和 .net, 等。</li>
+			</ul>
+			<p>jQuery Mobile 解决了不同设备兼容的问题，因为它只使用HTML，CSS和 JavaScript，这是所有移动网络浏览器的标准！</p>
+		</blockquote>
+		<section class="Experience">
+			<h3>最好的阅读体验</h3>
+			<p>尽管jQuery Mobile兼容所有的移动设备，但是并不能完全兼容PC机（由于有限的CSS3支持）。</p>
+			<p>为了更好的阅读本教程，建议您使用 Google Chrome 浏览器。</p>
+		</section>
+	</article><!-- /content -->
+	<footer data-role="footer" data-position="fixed">
+	    <div data-role="navbar">
+	        <ul>
+	       	    <li><a href="index.html" data-iconpos="top" data-icon="home" data-ajax="false" class="ui-btn-active ui-state-persist ui-nodisc-icon">首页</a></li>
+	      	    <li><a href="photos.html" data-iconpos="top" data-icon="video" data-ajax="false" class="ui-nodisc-icon ui-alt-icon">图片</a></li>
+	      	    <li><a href="news.html" data-iconpos="top" data-icon="bullets" data-ajax="false" class="ui-nodisc-icon ui-alt-icon">资讯</a></li>
+	      	    <li><a href="feedback.html" data-iconpos="top" data-icon="mail" data-ajax="false" class="ui-nodisc-icon ui-alt-icon">留言</a></li>
+	        </ul>
+	    </div>
+		<h2>备案号ICP123123-123</h2>
+	</footer><!-- /footer -->
+	<div data-role="panel" id="LeftPanel" data-theme="a" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-body-a ui-panel-animate">
+		<h3>用户登录</h3>
+	    <form action="">
+	    	<label for="user_name">用户名（必填）</label>
+    		<input id="user_name" name="user_name" type="text" required placeholder="请输入用户名">
+	    	<label for="user_name">密码（必填）</label>
+    		<input id="user_code" name="user_code" type="password" required placeholder="请输入密码">
+    		<label>
+    			<input type="checkbox" name="remember_me" id="remember_me">记住我
+    		</label>
+    		<select name="remember_days" id="remember_days" data-native-menu="false">
+    			<option value="" data-placeholder="true">请选择保存天数</option>
+    			<option value="1">1天</option>
+    			<option value="7">7天</option>
+    			<option value="30">30天</option>
+    		</select>
+    		<div class="ui-grid-a">
+    			<div class="ui-block-a">
+    				<button class="ui-btn ui-corner-all ui-icon-action">登录</button>
+    			</div>
+    			<div class="ui-block-b">
+					<a href="#" class="ui-btn ui-corner-all regist-btn" data-icon="refresh">注册</a>
+    			</div>
+    		</div>
+	    </form>
+	</div>
+</div>
+
+
+
+</body>
+</html>

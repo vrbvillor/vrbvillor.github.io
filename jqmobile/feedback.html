@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/> 
+<title>JQM 留言反馈</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="incs/jquery.mobile-1.4.5.css" rel="stylesheet">
+<script src="../srcs/js/jq1.10.2.js"></script>
+<script src="incs/jquery.mobile-1.4.5.js"></script>
+<link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+<div data-role="page" id="news">
+	<header data-role="header" data-position="inline">
+	    <a href="#LeftPanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">菜单</a>
+		<h1>JQM 留言反馈</h1>
+		<a class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-back ui-btn-icon-notext" data-rel="back">返回</a>
+	</header><!-- /header -->
+	<article role="main" class="ui-content">
+		<form action="">
+			<div class="ui-field-contain">
+				<label for="user-name">怎样称呼:</label>
+			    <input type="text" name="user-name" id="user-name" placeholder="请输入您的称呼">
+			</div>
+			<div class="ui-field-contain">
+				<label>您是一位:</label>
+			    <fieldset data-role="controlgroup" data-type="horizontal">
+			        <label for="user-sex-male">先生</label>
+			        <input type="radio" name="radio" id="user-sex-male" value="1" checked>
+			        <label for="user-sex-female">小姐</label>
+			        <input type="radio" name="radio" id="user-sex-female" value="2">
+			    </fieldset>
+			</div>
+			<div class="ui-field-contain">
+				<label for="user-email">您的邮箱:</label>
+				<input type="email" name="user-email" id="user-email" placeholder="请输入常用的邮箱">
+			</div>
+			<div class="ui-field-contain">
+				<label for="user-message">您的建议:</label>
+				<textarea name="user-message" id="user-message" placeholder="请输出留言内容"></textarea>
+			</div>
+			<div data-role="controlgroup" data-type="horizontal">
+				<button type="submit" class="ui-btn ui-corner-all ui-btn-inline ui-btn-b">提交留言</button>
+				<button type="reset" class="ui-btn ui-corner-all ui-btn-inline">清空重写</button>
+			</div>
+		</form>
+	</article><!-- /content -->
+	<footer data-role="footer" data-position="fixed">
+	    <div data-role="navbar">
+	        <ul>
+	       	    <li><a href="index.html" data-iconpos="top" data-icon="home" data-ajax="false" class="ui-nodisc-icon ui-alt-icon">首页</a></li>
+	      	    <li><a href="photos.html" data-iconpos="top" data-icon="video" data-ajax="false" class="ui-nodisc-icon ui-alt-icon">图片</a></li>
+	      	    <li><a href="news.html" data-iconpos="top" data-icon="bullets" data-ajax="false" class="ui-nodisc-icon ui-alt-icon">资讯</a></li>
+	      	    <li><a href="feedback.html" data-iconpos="top" data-icon="mail" data-ajax="false" class="ui-nodisc-icon ui-btn-active ui-state-persist">留言</a></li>
+	        </ul>
+	    </div>
+		<h2>备案号ICP123123-123</h2>
+	</footer><!-- /footer -->
+	<div data-role="panel" id="LeftPanel" data-theme="a" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-body-a ui-panel-animate">
+		<h3>用户登录</h3>
+	    <form action="">
+	    	<label for="user_name">用户名（必填）</label>
+    		<input id="user_name" name="user_name" type="text" required placeholder="请输入用户名">
+	    	<label for="user_name">密码（必填）</label>
+    		<input id="user_code" name="user_code" type="password" required placeholder="请输入密码">
+    		<label>
+    			<input type="checkbox" name="remember_me" id="remember_me">记住我
+    		</label>
+    		<select name="remember_days" id="remember_days" data-native-menu="false">
+    			<option value="" data-placeholder="true">请选择保存天数</option>
+    			<option value="1">1天</option>
+    			<option value="7">7天</option>
+    			<option value="30">30天</option>
+    		</select>
+    		<div class="ui-grid-a">
+    			<div class="ui-block-a">
+    				<button class="ui-btn ui-corner-all ui-icon-action">登录</button>
+    			</div>
+    			<div class="ui-block-b">
+					<a href="#" class="ui-btn ui-corner-all regist-btn" data-icon="refresh">注册</a>
+    			</div>
+    		</div>
+	    </form>
+	</div>
+</div>
+
+
+
+</body>
+</html>

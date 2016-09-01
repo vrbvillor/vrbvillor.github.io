@@ -1,0 +1,60 @@
+@import url("../srcs/css/_funs.less");
+
+*{
+	.family(Microsoft Yahei) !important;
+	.break();
+}
+body{
+	.size(14px);
+	.line(1.5);
+}
+#index p{
+	.indent(2em);
+}
+img{
+	.maxw(100%);
+}
+
+h1{
+	.size(28px);
+	.m(20px,0);
+}
+h2{
+	.size(20px);
+}
+h3{
+	.size(18px);
+}
+
+.KnowFirst{
+	.bd(1px solid silver);
+	.bd-w(1px 0);
+	.p(20px,14px,10px);
+	.bg-c(#f0f0f0);
+	.m(0,-14px);
+	dt{
+		.bold();
+	}
+	dd{
+		.m(0);
+		.p(0);
+	}
+}
+
+.Why,.Experience{
+	&:extend(.KnowFirst);
+	.p(10px,14px);
+}
+.Device{
+	.m(14px,auto,14px);
+	.p(10px,14px);
+	.bd(1px solid silver);
+	ul{
+		.bg(url("http://www.runoob.com/images/lamp.jpg") center left no-repeat);
+		.pl(60px);
+	}
+}
+
+.regist-btn{
+	.mr(0) !important;
+}
