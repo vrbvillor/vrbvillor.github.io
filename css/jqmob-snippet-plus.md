@@ -73,7 +73,7 @@
 | 文本框（数字）                 | jqminput:n                     |         |
 | 文本框（电话）                 | jqminput:t                     |         |
 | 文本框（地址）                 | jqminput:u                     |         |
-| 横向排列的表单                 | jqmcontrolgroup:h              |         |
+| 横向排列的表单                 | jqmform-group:h                |         |
 |                                |                                |         |
 
 
