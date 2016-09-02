@@ -72,6 +72,12 @@
 | ------------------------------ | ------------------------------ | ------- |
 | dl                             | bs3-dl                         | :h      |
 
+### blockquote
+
+| Component                      | Snippet code                   | Options |
+| ------------------------------ | ------------------------------ | ------- |
+| blockquote                     | bs3-quote                      | :r      |
+
 ### Dropdown & up
 
 | Component                      | Snippet code                   |
