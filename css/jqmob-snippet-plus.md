@@ -93,6 +93,8 @@
 | 弹出窗                         | jqmpopup                       |         |
 | 弹出窗（全屏居中）             | jqmpopup:window                |         |
 | 弹出窗（目标位置）             | jqmpopup:id                    |         |
+| 表格（回流）                   | jqmtable                       |         |
+| 表格（列切换）                 | jqmtable-column                |         |
 |                                |                                |         |
 
 ### Listview
@@ -111,4 +113,5 @@
 | 列表（小缩略图）               | jqmlistview:thumbicon          |         |
 | 列表（分割按钮）               | jqmlistview:divided            |         |
 | 可折叠列表                     | jqmlistview-collapsible        |         |
+| 行程表式的列表                 | jqmlistview:schedule           |         |
 |                                |                                |         |
