@@ -58,3 +58,22 @@ h3{
 .regist-btn{
 	.mr(0) !important;
 }
+
+#lessons{
+	p{
+		.wrap() !important;
+		.line(1.5);
+	}
+	var{
+		.inblock();
+		.p(0,5px);
+		.m(2px,3px);
+		.italic(false);
+		.bg-c(pink);
+	}
+	code:extend(#lessons var){
+		.bg-c(navy);
+		.c(white);
+		.t-shadow(none);
+	}
+}

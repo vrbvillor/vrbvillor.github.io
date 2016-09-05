@@ -14,63 +14,46 @@
 </head>
 
 <body>
-<div data-role="page" id="index">
+<div data-role="page" id="lessons">
 	<header data-role="header" data-position="inline">
 	    <a href="#LeftPanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">菜单</a>
 		<h1>JQM 首页介绍</h1>
 		<button class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-user ui-btn-icon-notext">关于</button>
 	</header><!-- /header -->
 	<article role="main" class="ui-content">
-		<section class="Intro">
-			<h1>jQuery Mobile 简介</h1>
-			<p>jQuery Mobile 是一个用于创建移动端web应用的的前端框架。</p>
-		</section>
-		<dl class="KnowFirst">
-			<dt>学习本教程前你需要先了解</dt>
-			<dd>
-				<p>在开始学习 jQuery Mobile 前, 你应该了解一下基础知识：</p>
-				<ul>
-					<li><a href="http://www.runoob.com/html/html-tutorial.html">HTML</a></li>
-					<li><a href="http://www.runoob.com/css/css-tutorial.html">CSS</a></li>
-					<li><a href="http://www.runoob.com/js/js-tutorial.html">jQuery</a></li>
-				</ul>
-				<p>如果你想学习这些知识，你可以访问本站的<a href="http://www.w3cschool.cc/">首页</a>。</p>
-			</dd>
-		</dl>
-		<section class="What">
-			<h2>什么是 jQuery Mobile?</h2>
-			<p>jQuery Mobile 是针对触屏智能手机与平板电脑的网页开发框架。</p>
-			<p>jQuery Mobile 工作与所有主流的智能手机和平板电脑上：</p>
-			<img src="http://www.runoob.com/images/jqmsupport.jpg" alt="">
-			<p>jQuery Mobile 构建于 jQuery 以及 jQuery UI类库之上，如果您了解 jQuery，您可以很容易的学习 jQuery Mobile。</p>
-			<p>jQuery Mobile 使用了极少的 HTML5、CSS3、JavaScript 和 AJAX 脚本代码来完成页面的布局渲染。</p>
-		</section>
-		<section class="Why">
-			<h3>为什么使用 jQuery Mobile?</h3>
-			<p>通过使用jQuery Mobile 可以 "写更少的代码，做更多的事情" : 它可以通过一个灵活及简单的方式来布局网页，且兼容所有移动设备。</p>
-		</section>
-		<blockquote class="Device">
-			<p>不同设备使用了不同开发语言，jQuery Mobile可以很好的兼容不同的设备或操作系统：</p>
-			<ul>
-				<li>Android 和 Blackberry（黑莓） 使用JAVA语言。</li>
-				<li>iOS 使用 Objective C 语言</li>
-				<li>Windows Phone 使用 C# 和 .net, 等。</li>
-			</ul>
-			<p>jQuery Mobile 解决了不同设备兼容的问题，因为它只使用HTML，CSS和 JavaScript，这是所有移动网络浏览器的标准！</p>
-		</blockquote>
-		<section class="Experience">
-			<h3>最好的阅读体验</h3>
-			<p>尽管jQuery Mobile兼容所有的移动设备，但是并不能完全兼容PC机（由于有限的CSS3支持）。</p>
-			<p>为了更好的阅读本教程，建议您使用 Google Chrome 浏览器。</p>
-		</section>
+		<ul data-role="listview" data-inset="false">
+		    <li data-role="list-divider">星期三, 1 月 2 日, 2013 <span class="ui-li-count">2</span></li>   
+		    <li><a href="#">   
+		        <h2>HTML5</h2>
+		        <p><b>新增的HTML5标签</b></p>
+		        <p>结构性标签，如：<var>header</var>、<var>footer</var>、<var>main</var>、<var>aside</var>等。</p>
+		        <p>功能性标签，如：<var>svg</var>、<var>canvas</var>、<var>video</var>、<var>audio</var>等。</p>
+		        <p>其它，如：<em>appcache</em>等。</p>
+		        <p class="ui-li-aside">记住这些标签</p>
+		    </a></li>
+		    <li><a href="#">
+		        <h2>CSS3</h2>
+		        <p>根据浏览器不同有所区别。</p>
+		        <br>
+		        <p>普通样式：<var>border-radius</var>、<var>text-shadow</var>、<var>box-shadow</var>等。</p>
+		        <p class="ui-li-aside">先不学2D/3D转换/过渡/动画</p>
+		    </a></li>
+		    <li data-role="list-divider">周二, 1 月 1 日, 2013 <span class="ui-li-count">1</span></li>   
+		    <li><a href="#">   
+		        <h2>Javascript</h2>
+		        <p><b>新增内置对象</b></p>
+		        <p><code>localStorage</code>、<code>sessionStorage</code>、<code>FileReader</code>等。</p>
+		        <p class="ui-li-aside">学会使用这些对象</p>
+		    </a></li>
+		</ul>
 	</article><!-- /content -->
 	<footer data-role="footer" data-position="fixed">
 	    <div data-role="navbar">
 	        <ul>
-	       	    <li><a href="index.html" data-iconpos="top" data-icon="home" data-ajax="false" class="ui-btn-active ui-state-persist ui-nodisc-icon">首页</a></li>
+	       	    <li><a href="index.html" data-iconpos="top" data-icon="home" data-ajax="false" class="ui-nodisc-icon ui-alt-icon">首页</a></li>
 	      	    <li><a href="photos.html" data-iconpos="top" data-icon="video" data-ajax="false" class="ui-nodisc-icon ui-alt-icon">图片</a></li>
 	      	    <li><a href="news.html" data-iconpos="top" data-icon="bullets" data-ajax="false" class="ui-nodisc-icon ui-alt-icon">资讯</a></li>
-	      	    <li><a href="lessons.html" data-iconpos="top" data-icon="calendar" data-ajax="false" class="ui-nodisc-icon ui-alt-icon">课程</a></li>
+	      	    <li><a href="lessons.html" data-iconpos="top" data-icon="calendar" data-ajax="false" class="ui-nodisc-icon ui-btn-active ui-state-persist">课程</a></li>
 	      	    <li><a href="feedback.html" data-iconpos="top" data-icon="mail" data-ajax="false" class="ui-nodisc-icon ui-alt-icon">留言</a></li>
 	        </ul>
 	    </div>
