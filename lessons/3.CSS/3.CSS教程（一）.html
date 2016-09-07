@@ -1,0 +1,696 @@
+# CSS教程（一）
+
+## 简介
+
+### CSS是什么？
+
+CSS 指层叠样式表 (Cascading Style Sheets)，样式定义如何显示 HTML 元素。样式通常存储在样式表中，把样式添加到 HTML 4.0 中，是为了解决内容与表现分离的问题。外部样式表可以极大提高工作效率，外部样式表通常存储在 CSS 文件中。多个样式定义可层叠为一，即写在一起。
+
+### CSS的写法
+
+![CSS语法](http://vrbvillor.github.io/lessons/3.CSS/CSS%E5%86%99%E6%B3%95.gif)  
+
+### CSS的三种形式
+
+1. 内联样式，通过`style`属性，直接写在HTML标签上的样式。内联样式不用写选择器，因为它们只对所处标签起作用。  
+
+    ```html
+    <div style="color:blue;font-size:12px;"></div>
+    ```
+    
+2. 页内样式，使用`<style>`标签写在页面（通常是`<head>`的子元素）内的样式。页内样式只对当前页面上的内容起作用，不会对页面内的框架内容起作用，也不会被其它页面所使用。  
+
+    ```html
+    <style>
+    div{
+        color : blue;
+        font-size : 12px;
+    }
+    </style>
+    ```
+    
+3. 样式表文件，独立写在一个扩展名为`.css`的文件中，在HTML页面内通过使用`<link>`标签将它引入到当前HTML文件中。样式表文件可以被任意的页面引用，只要引用了样式表，表内的样式就会作用于当前页面。同样，它也不会影响框架内的样式。
+
+    **在样式表文件当中**  
+    ```css
+    div{
+        color : blue;
+        font-size : 12px;
+    }
+    ```
+    
+    **在HTML中引入样式表文件**  
+    ```html
+    <link rel="stylesheet" href="css.css">
+    ```
+
+## 基本选择器
+
+### `*` 星号选择器
+
+它匹配指定范围内的任意元素，它没有优先级，它是CSS2选择器。
+
+```html
+<style>
+*{
+	color: red;
+}
+</style>
+<div>这个在DIV标签里</div>
+<p>这是在P标签中的段落</p>
+<a href="#">一个链接</a>
+```
+
+### `tagname` 标签选择器
+
+它匹配指定范围内的指定标签名，它是C级选择器，它是CSS1选择器。
+
+```html
+<style>
+div{
+    color : red;
+}
+</style>
+<div>abcdefg</div>
+<p>hijklmn</p>
+```
+
+### `.class` 类选择器
+
+它匹配指定范围内包含指定类名的元素，它是B级选择器，它是CSS1选择器。
+
+```html
+<style>
+.other{
+    border : 1px solid red;
+}
+.my{
+    color : red;
+}
+.your{
+    background-color : yellow;
+}
+</style>
+<div>abcd</div>
+<div class="other">efg</div>
+<div class="my">hijk</div>
+<div class="your">lmn</div>
+<div class="my other">opq</div>
+<div class="your other">rst</div>
+<div class="my your">uvw</div>
+<div class="my your other">xyz</div>
+```
+
+### `#id` ID选择器
+
+它匹配ID为指定字符串的元素，它是A级选择器，它是CSS1选择器。
+
+```html
+<style>
+#myId{
+    color : red;
+}
+</style>
+<div id="myId">abcdefg</div>
+<div id="yourId">hijklmn</div>
+```
+
+### `[attr]` 属性选择器
+
+它匹配了指定范围内含有指定属性的元素，它是B级选择器（所有的属性XX选择器都是B级选择器），它是CSS2选择器。
+
+```html
+<style>
+[title]{
+    color : red;
+}
+</style>
+<div title="xyz">abcdefg</div>
+<div>hijklmn</div>
+```
+
+### `[attr="value"]` 属性值全等选择器
+
+它匹配了指定范围内，含有属性`attr`且属性值只为`value`的元素，它是CSS2选择器。
+
+```html
+<style>
+[title="xyz"]{
+    color : red;
+}
+</style>
+<div title="xyz">abcdefg</div>
+<div title="opq">hijklmn</div>
+```
+
+### `[attr~="value"]` 属性值单词选择器
+
+它匹配了指定范围内，含有属性`attr`且属性值包含单词`value`的元素，它是CSS2选择器。只有由空格隔开的两个字符串，才被视为是两个单词，否则算是一个单词。
+
+```html
+<style>
+[title~="xyz"]{
+    color : red;
+}
+</style>
+<div title="xyz">abcdefg</div>
+<div title="xyz abc">abcdefg</div>
+<div title="abc xyz">abcdefg</div>
+<div title="xyz-abc">abcdefg</div>
+<div title="xyz|abc">abcdefg</div>
+<div title="xyz;abc">abcdefg</div>
+<div title="abcxyz">hijklmn</div>
+<div title="xyzabc">hijklmn</div>
+```
+
+### `[attr|="value"]` 属性值单词前缀选择器
+
+它匹配了指定范围内，含有属性`attr`且属性值所包含的单词中，以`value`为前缀（就是`AAA-BBB`的形式）的元素，它是CSS2选择器。它一般用于`lang`属性的子语系。
+
+```html
+<style>
+[title|="xyz"]{
+    color : red;
+}
+</style>
+<div title="xyz">abcdefg</div>
+<div title="xyz abc">abcdefg</div>
+<div title="abc xyz">abcdefg</div>
+<div title="xyz-abc">abcdefg</div>
+<div title="xyz|abc">abcdefg</div>
+<div title="xyz;abc">abcdefg</div>
+<div title="abcxyz">hijklmn</div>
+<div title="xyzabc">hijklmn</div>
+```
+
+### `[attr^="value"]` 属性值起始选择器
+
+它匹配了指定范围内，含有属性`attr`且属性值以`value`开头的元素，它是CSS3选择器。
+
+```html
+<style>
+[title^="xyz"]{
+    color : red;
+}
+</style>
+<div title="xyz">abcdefg</div>
+<div title="xyz abc">abcdefg</div>
+<div title="abc xyz">abcdefg</div>
+<div title="xyz-abc">abcdefg</div>
+<div title="xyz|abc">abcdefg</div>
+<div title="xyz;abc">abcdefg</div>
+<div title="abcxyz">hijklmn</div>
+<div title="xyzabc">hijklmn</div>
+```
+
+### `[attr$="value"]` 属性值终止选择器
+
+它匹配了指定范围内，含有属性`attr`且属性值以`value`结尾的元素，它是CSS3选择器。
+
+```html
+<style>
+[title$="xyz"]{
+    color : red;
+}
+</style>
+<div title="xyz">abcdefg</div>
+<div title="xyz abc">abcdefg</div>
+<div title="abc xyz">abcdefg</div>
+<div title="xyz-abc">abcdefg</div>
+<div title="xyz|abc">abcdefg</div>
+<div title="xyz;abc">abcdefg</div>
+<div title="abcxyz">hijklmn</div>
+<div title="xyzabc">hijklmn</div>
+```
+
+### `[attr*="value"]` 属性值包含选择器
+
+它匹配了指定范围内，含有属性`attr`且属性值中包含字样`value`的元素，它是CSS3选择器。
+
+```html
+<style>
+[title*="xyz"]{
+    color : red;
+}
+</style>
+<div title="xyz">abcdefg</div>
+<div title="xyz abc">abcdefg</div>
+<div title="abc xyz">abcdefg</div>
+<div title="xyz-abc">abcdefg</div>
+<div title="xyz|abc">abcdefg</div>
+<div title="xyz;abc">abcdefg</div>
+<div title="abcxyz">hijklmn</div>
+<div title="xyzabc">hijklmn</div>
+```
+
+## 复合选择器
+
+可以把两种或更多个选择器写在一起使用，形成更复杂更精确的选择器。
+
+### `AB` 并且选择器
+
+它匹配了指定范围内，同时拥有选择器`A`及选择器`B`的元素，它是CSS2选择器。
+
+```html
+<style>
+p.abc{
+	color : red;
+}
+p#xyz{
+	color : blue;
+}
+p[title]{
+	background-color : yellow;
+}
+p[title].abc{
+	border: 1px solid red;
+}
+.abc.opq{
+	background-color : pink;
+}
+</style>
+<p>nothing</p>
+<p class="abc">abc</p>
+<p id="xyz">xyz</p>
+<p title="topic">topic</p>
+<p title="topic" class="abc">abc and topic</p>
+<p class="abc opq">abc and opq</p>
+<p title="topic" class="abc opq">abc and opq and topic</p>
+```
+
+### `A,B` 或选择器
+
+它匹配了指定范围内，只要包含所指定选择器的任意其中一个的元素，它是CSS1选择器。
+
+```html
+<style>
+div,p{
+	color : red;
+}
+</style>
+<div>This is a div.</div>
+<p>This is a passage.</p>
+```
+
+### `A B` 后代选择器
+
+它匹配了指定范围内，选择器`A`元素的后代元素中，符合选择器`B`的元素，它是CSS1选择器。
+
+```html
+<style>
+div p{
+	color : red;
+}
+</style>
+<div>
+	This is a div.
+	<blockquote>
+		This is blockquote.
+		<p>A deep passage.</p>
+	</blockquote>
+	<p>
+		A shallow passage.
+	</p>
+</div>
+<p>This is a passage.</p>
+```
+
+### `A>B` 子代选择器
+
+它匹配了指定范围内，选择器`A`元素的子元素中，符合选择器`B`的元素，它是CSS2选择器。
+
+```html
+<style>
+div > p{
+	color : red;
+}
+</style>
+<div>
+	This is a div.
+	<blockquote>
+		This is blockquote.
+		<p>A deep passage.</p>
+	</blockquote>
+	<p>
+		A shallow passage.
+	</p>
+</div>
+<p>This is a passage.</p>
+```
+
+### `A+B` 相邻选择器
+
+它匹配了指定范围内，选择器`A`后紧跟的符合选择器`B`的元素，它是CSS2选择器。
+
+```html
+<style>
+div + p{
+	color : red;
+}
+</style>
+<div>
+	This is a div.
+	<blockquote>
+		This is blockquote.
+		<p>A deep passage.</p>
+	</blockquote>
+	<p>
+		A shallow passage.
+	</p>
+</div>
+<p>This is a passage.</p>
+<p>This is another passage.</p>
+```
+
+### `A~B` 同代后续选择器
+
+它匹配了指定范围内，选择器`A`元素的后续元素中，符合选择器`B`的元素，它是CSS3选择器。
+
+```html
+<style>
+div ~ p{
+	color : red;
+}
+</style>
+<div>
+	This is a div.
+	<blockquote>
+		This is blockquote.
+		<p>A deep passage.</p>
+	</blockquote>
+	<p>
+		A shallow passage.
+	</p>
+</div>
+<p>This is a passage.</p>
+<p>This is another passage.</p>
+```
+
+----------
+
+## 伪类选择器
+
+伪类选择器是在匹配元素本身上，进行进一步的筛选，它通常是指定了元素的某种状态。
+
+### 链接状态
+
+1. **`:link`**：它只适用于`<a>`元素，它匹配未被访问过的`<a>`元素，它是CSS1选择器。
+2. **`:visited`**：它只适用于`<a>`元素，它匹配已被访问过的`<a>`元素，它是CSS1选择器。
+3. **`:active`**：在IE6中它只适用于`<a>`元素，但更高版本的浏览器中，它可以应用到任意元素上。它匹配被鼠标点击后未松开鼠标时指向的元素，它是CSS1选择器。
+4. **`:hover`**：在IE6中它只适用于`<a>`元素，但更高版本的浏览器中，它可以应用到任意元素上。它匹配鼠标指向的元素，它是CSS1选择器。
+
+在CSS中，如果要同时设置这4种样式，则必须按照上边列表上的顺序来写，否则有些样式会被忽略。
+
+### `:focus` 获得焦点状态
+
+它匹配了指定范围内，正获得焦点的元素，它是CSS2选择器。用于交互的元素可以获得焦点，比如说链接、输入框、下拉列表、按钮等。  
+
+```html
+<style>
+:focus{
+	color: red;
+}
+</style>
+<a href="#">link</a>
+<select name="" id="">
+	<option value="">select</option>
+</select>
+<button>button</button>
+<input type="text">
+<input type="button" value="button">
+```
+
+> 在上边代码生成的页面中，连续按`tab`键，切换焦点，就可以看到字的颜色变红的效果。  
+
+### `:empty` 空状态
+
+它匹配了指定范围内，没有子元素也没有文本内容的元素，它是CSS3选择器。自闭合元素会一直匹配这个状态，因为它们永远不可能有子元素。
+
+```html
+<style>
+:empty{
+	border: 2px solid red;
+	min-height: 10px;
+}
+div{
+	border: 1px solid black;
+}
+div p{
+	border: 1px solid green;
+}
+</style>
+<p title="This is the first one."></p>
+<p title="This is the second."><!-- This is a comment --></p>
+<p>This is passage.</p>
+<div>
+	<p> </p>
+</div>
+<input type="text">
+<img src="http://vrbvillor.github.io/lessons/3.CSS/CSS%E5%86%99%E6%B3%95.gif" alt="">
+<textarea name="" id="" cols="30" rows="10"></textarea>
+```
+
+> 在上边代码生成的页面中的输入框中打一些字，输入框仍然有红色边框，说明就算给`<input>`元素输入内容，它也符合**空状态**，因为输入框的内容属于它的`value`属性，而不是它的子元素。文本域`<textarea>`却不一样，因为它是双标签元素，默认为空时会有边框，而且输入内容也不会消除边框；但默认不为空时就没有边框，把内容删干净也不会有边框。
+
+### `:target` 锚状态
+
+它匹配了URL中，在符号`#`后边的锚所代表的元素，它是CSS3选择器。
+
+```html
+<style>
+:target{
+	color : red;
+}
+</style>
+<a href="#anchor" id="anchor">link, to itself</a>
+<a href="#passage">to passage</a>
+<p id="passage">passage</p>
+```
+
+> 本选择器类似于ID选择器`#id`，但不同的是锚是可以变化的。
+
+### `:not()` 否定选择器
+
+它匹配了指定范围内，匹配冒号前选择器，但不符合括号中选择器的元素，它是CSS3选择器。
+
+```html
+<style>
+a:not(#anchor){
+	color : red;
+}
+</style>
+<a href="#anchor" id="anchor">link, to itself</a>
+<a href="#passage">to passage</a>
+<p id="passage">passage</p>
+```
+
+### 表单使用状态，都是CSS3选择器
+
++ **`:enabled`**：它匹配了一定范围内，被启用的表单组件。
++ **`:disabled`**：它匹配了一定范围内，被禁用的表单组件。
++ **`:checked`**：它匹配了一定范围内，被选中的单/复选框。
+
+```html
+<style>
+:disabled{
+	border : 1px solid red;
+}
+:enabled{
+	border : 1px solid green;
+}
+:checked + label{
+	border : 1px solid purple;
+}
+</style>
+<form action="">
+	<input type="text" disabled>
+	<input type="text">
+	<input type="checkbox" name="boxes" id="box1"> <label for="box1">1</label>
+	<input type="checkbox" name="boxes" id="box2"> <label for="box2">2</label>
+	<input type="checkbox" name="boxes" id="box3"> <label for="box3">3</label>
+	<input type="radio" name="radio" checked id="radio1"> <label for="radio1">1</label>
+	<input type="radio" name="radio" id="radio2"> <label for="radio2">2</label>
+	<input type="radio" name="radio" id="radio3"> <label for="radio3">3</label>
+</form>
+```
+
+> `:checked`后边使用`label`是因为单/复选框本身不支持写样式，所以看不出来变化，那么就借由`label`来展示一下`checkbox`的选中状态的变化。  
+
+> 还有一些其它的状态伪类，但是IE都不支持，这里就不作介绍了。  
+
+### 表单验证状态，都是CSS3选择器，IE10+支持
+
++ **`optional`**：它匹配了一定范围内，非必填的表单组件。
++ **`required`**：它匹配了一定范围内，必填的表单组件。
++ **`valid`**：它匹配了一定范围内，通过验证的表单组件。
++ **`invalid`**：它匹配了一定范围内，未通过验证的表单组件。
+
+```html
+<style>
+input:required{
+	border : 5px solid red;
+}
+input:optional{
+	border : 5px solid green;
+}
+input:valid{
+	background-color : yellow;
+}
+input:invalid{
+	background-color : pink;
+}
+</style>
+<form action="">
+	<input type="text" required>
+	<input type="text">
+</form>
+```
+
+> 代码中加了`input`是为了限制只在`<input>`元素中筛选，因为不写的话，`<form>`也会被匹配进去，因为表单本身也是有验证状态的。
+
+### 索引号选择器，基本上都是CSS3选择器
+
++ **`:first-child`**：匹配了指定范围内，是首子元素的元素，只有它是CSS2选择器。
++ **`:last-child`**：匹配了指定范围内，是尾子元素的元素。
++ **`:first-of-type`**：匹配了指定范围内，是首个同类型元素的元素。
++ **`:last-of-type`**：匹配了指定范围内，是最后一个同类型元素的元素。
++ **`:only-child`**：匹配了指定范围内，是唯一子元素的元素。
++ **`:only-of-type`**：匹配了指定范围内，是本类型唯一元素的元素。
++ **`:nth-child()`**：匹配了指定范围内，同代元素序号符合括号内公式的元素。
++ **`:nth-last-child()`**：与上条类似，只不过是从最后一个开始数。
++ **`:nth-of-type()`**：匹配了指定范围内，同代同标签元素序号符合括号内公式的元素。
++ **`:nth-last-of-type()`**：与上条类似，只不过是从最后一个开始数。
+
+> 只记住`child`系列的就可以，`type`系列的因为比较复杂，而且也不常用。  
+
+----------
+
+## 伪元素选择器
+
+伪元素选择器是匹配在元素的内容上的。一般情况下，这些内容并**不是实际存在**的，是虚拟的一部分。一般它们不能被JS操纵，但可以由CSS来控制。原W3C规范伪元素是以一个冒号`:`来表示的，新规范把单冒号给伪类使用，把双冒号`::`给伪元素使用。但大多数浏览器都支持单冒号的伪元素，同时支持新旧规范。    
+
+### `:first-letter` 首字母伪元素
+
+它匹配了对应元素内容中第一个字，它是CSS1选择器。
+
+```html
+<style>
+:first-letter{
+	color: red;
+}
+</style>
+<p>abcdefg</p>
+<p>一二三四五六七</p>
+```
+
+### `:first-line` 首行伪元素
+
+它匹配了对应元素内容中的第一行，它是CSS1选择器。
+
+```html
+<style>
+:first-line{
+	color: red;
+}
+</style>
+<p>abcdefg<br>hijklmn</p>
+<p>一二三四五六七<br>个十百千万兆亿</p>
+<p>这段只有一行。</p>
+```
+
+### `:before`和`:after`伪子元素
+
+它们不是用来匹配元素的，它们是用来在匹配元素中添加内容（子元素）的，按字面意思就能理解，`:before`是加在元素前部，`:after`是加在元素后部，但都是加在元素的内部。它们必须有`content:value;`属性，才会有效，否则会被浏览器忽略。它们通常是用来制作一些CSS效果，或显示一些不太重要的内容的。
+
+**制作效果**  
+
+```html
+<style>
+div{
+	width : 200px;
+	height : 50px;
+	line-height : 50px;
+	background : pink;
+	text-align : center;
+}
+div:before,div:after{
+	content : '';
+	display : inline-block;
+	width : 0;
+	height : 0;
+	border : 5px solid transparent;
+}
+div:before{
+	border-right-color : white;
+	margin-right : 10px;
+}
+div:after{
+	border-left-color : white;
+	margin-left : 10px;
+}
+</style>
+<div>制作两边的三角</div>
+```
+
+**添加内容**  
+
+```html
+<style>
+div:before{
+	content:'[NEW]';
+}
+div:after{
+	content:'('attr(title)')';
+}
+</style>
+<div title="2016年12月25日">分别加上[NEW]字样及日期。</div>
+```
+
+### `::selection` 选中区伪元素
+
+它匹配了指定范围内，元素的内容中被鼠标选中的部分，它是CSS3选择器。Firefox 通过其私有属性 `::-moz-selection` 支持。
+
+```html
+<style>
+#Have::selection{
+	color : red;
+	background-color : yellow;
+}
+</style>
+<div id="Have">这里边有一些文字，当你用鼠标刷它们的时候，就会选中其中一部分，被选中的内容就会变成红色字，黄色背景。</div>
+<div>这段内容是默认的样子，它没有设置::selection，所以它被选中时的样子，是由浏览器本身规定的。</div>
+```
+
+
+----------
+
+
+## 选择器优先级
+
+### ABC级选择器
++ 只有ID选择器是**A**级选择器  
++ 类选择器和属性系列的选择器是**B**级选择器
++ 标签选择器和伪类选择器是**C**级选择器
+
+### 优先级计算
+
+优先级高的样式会覆盖优先级低的样式中的同名样式。  
+
+选择器           | A | B | C | 优先级
+-----------------|---|---|---|-------
+`*`              | 0 | 0 | 0 | 0
+`LI`             | 0 | 0 | 1 | 1
+`UL LI`          | 0 | 0 | 2 | 2
+`UL OL+LI`       | 0 | 0 | 3 | 3
+`H1 + *[REL=up]` | 0 | 1 | 1 | 11
+`UL OL LI.red`   | 0 | 1 | 3 | 13
+`LI.red.level`   | 0 | 2 | 1 | 21
+`#x34y`          | 1 | 0 | 0 | 100
+`#s12:not(FOO)`  | 1 | 0 | 1 | 101
+
+## CSS选择器兼容性
+
+[点击此处，查看CSS选择器在浏览器中的兼容性，还可以查看到JQuery选择器与CSS选择器的区别。](https://github.com/vrbvillor/vrbvillor.github.io/blob/master/css/selector_css_vs_jquery.md)  
+
+----------
+end of file
