@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/> 
+<meta name="renderer" content="webkit">
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no,email=no" name="format-detection" />
+<meta name="apple-touch-fullscreen" content="yes">
+<title>项目留言</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+	<tr>
+		<td align="center">
+			<!-- 内容开始 -->
+			<table cellspacing="0" cellpadding="0" border="0" width="1000">
+				<!-- 顶部开始 -->
+				<tr>
+					<td>
+						<table cellspacing="0" cellpadding="0" border="0" width="100%">
+							<!-- BANNER开始 -->
+							<tr>
+								<td><img src="images/banner.jpg" height="114" width="1000" alt=""></td>
+							</tr>
+							<!-- BANNER结束 -->
+							<!-- 导航及搜索开始 -->
+							<tr>
+								<td>
+									<table cellspacing="0" cellpadding="0" border="0" width="100%">
+										<tr>
+											<!-- 导航开始 -->
+											<td width="80%">
+												<table cellspacing="0" cellpadding="0" border="0" width="100%">
+													<tr>
+														<td width="20%"><a href="index.html">网站首页</a></td>
+														<td width="20%"><a href="about.html">网站简介</a></td>
+														<td width="20%"><a href="news.html">新闻资讯</a></td>
+														<td width="20%"><a href="photos.html">作者自拍</a></td>
+														<td width="20%"><a href="contact.html">联系我们</a></td>
+													</tr>
+												</table>
+											</td>
+											<!-- 导航结束 -->
+											<!-- 搜索开始 -->
+											<td width="20%">
+												<form action="">
+													<input type="search" name="keyword" id="keyword" placeholder="请输入要搜索的关键字" size="10">
+													<button>
+														<img src="images/magnifier.gif" height="16" width="16" alt="">
+														搜索
+													</button>
+												</form>
+											</td>
+											<!-- 搜索结束 -->
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<!-- 导航及搜索结束 -->
+							<!-- 字幕开始 -->
+							<tr>
+								<td>
+									<marquee behavior="alternate" direction="left">
+										这是一段字幕，欢迎来到我们的网站，这个是只用HTML没有CSS的无样式网站，是我们的第一个项目。
+									</marquee>
+								</td>
+							</tr>
+							<!-- 字幕结束 -->
+						</table>
+					</td>
+				</tr>
+				<!-- 顶部结束 -->
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<!-- 主体开始 -->
+				<tr>
+					<td>
+						<table cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<!-- 视频与留言开始 -->
+								<td width="25%" valign="top">
+									<table cellspacing="0" cellpadding="0" border="0" width="100%">
+										<!-- 视频开始 -->
+										<tr>
+											<td>
+												<embed src="http://www.tudou.com/v/ySekkD0pVts/&resourceId=0_04_05_99/v.swf" type="" width="100%">
+											</td>
+										</tr>
+										<!-- 视频结束 -->
+										<tr>
+											<td>&nbsp;</td>
+										</tr>
+										<!-- 留言开始 -->
+										<tr>
+											<td>
+												<form action="">
+													<input type="text" name="user_name" id="user_name" placeholder="（必填）姓名" required size="40"><br><br>
+													<input type="email" name="user_email" id="user_email" placeholder="（必填）邮箱" required size="40"><br><br>
+													<textarea name="user_message" id="user_message" cols="36" rows="5" placeholder="（必填）留言" required></textarea><br><br>
+													<input type="submit" value="留言"> <input type="reset" value="重填">
+												</form>
+											</td>
+										</tr>
+										<!-- 留言结束 -->
+									</table>
+								</td>
+								<!-- 视频与留言结束 -->
+								<td width="2%">&nbsp;</td>
+								<!-- 简介开始 -->
+								<td width="73%" valign="top">
+									<form action="" method="post">
+										<table cellspacing="10" cellpadding="0" border="0" width="100%">
+											<caption>欢迎留言，请填写留言板上的信息。</caption>
+											<tr>
+												<th width="20%"><label for="user_name">姓名：</label></th>
+												<td width="80%"><input type="text" name="user_name" id="user_name" required maxlength="20" placeholder="请输入您的姓名"> *</td>
+											</tr>
+											<tr>
+												<th><label for="user_code">密码：</label></th>
+												<td><input type="password" name="user_code" id="user_code" required maxlength="20" placeholder="请输入密码，6-20个字符"> *</td>
+											</tr>
+											<tr>
+												<th><label for="user_email">邮箱：</label></th>
+												<td><input type="email" name="user_email" id="user_email" required maxlength="50" placeholder="请输入常用邮箱"> *</td>
+											</tr>
+											<tr>
+												<th><label for="user_tel">电话：</label></th>
+												<td><input type="tel" name="user_tel" id="user_tel" maxlength="15" placeholder="请输入常用座机或手机号码"></td>
+											</tr>
+											<tr>
+												<th><label for="user_birthday">生日：</label></th>
+												<td><input type="date" name="user_birthday" id="user_birthday"></td>
+											</tr>
+											<tr>
+												<th><label for="user_hometown">籍贯：</label></th>
+												<td>
+													<select name="user_hometown" id="user_hometown">
+												        <option value="">请选择</option>
+												        <option value="gd">广东省</option>
+												        <option value="gx">广西省</option>
+												        <option value="hn">湖南省</option>
+												        <option value="hb">湖北省</option>
+												    </select>
+												</td>
+											</tr>
+											<tr>
+												<th><label>性别：</label></th>
+												<td>
+													<label><input type="radio" name="user_sex" id="male" checked value="1"> 男</label>
+													<label><input type="radio" name="user_sex" id="female" value="2"> 女</label>
+												</td>
+											</tr>
+											<tr>
+												<th><label>爱好：</label></th>
+												<td>
+												    <label><input type="checkbox" name="user_hobby" value="1"> 文学</label>
+												    <label><input type="checkbox" name="user_hobby" value="2"> 数学</label>
+												    <label><input type="checkbox" name="user_hobby" value="3"> 外语</label>
+												    <label><input type="checkbox" name="user_hobby" value="4"> 旅游</label>
+												    <label><input type="checkbox" name="user_hobby" value="5"> 历史</label>
+												    <label><input type="checkbox" name="user_hobby" value="6"> 军事</label>
+												    <label><input type="checkbox" name="user_hobby" value="7"> 科技</label>
+												    <label><input type="checkbox" name="user_hobby" value="8"> 动漫</label>
+												    <label><input type="checkbox" name="user_hobby" value="9"> 游戏</label>
+												    <label><input type="checkbox" name="user_hobby" value="10"> 音乐</label>
+												</td>
+											</tr>
+											<tr>
+												<th><label for="user_skills">技能：</label></th>
+												<td>
+												    <select name="user_skills" id="user_skills" multiple size="10">
+													    <optgroup label="设计能力">
+													        <option value="PS">Photoshop</option>
+													        <option value="AI">Illustrator</option>
+													        <option value="CDR">Coral Draw</option>
+													        <option value="FL">Flash</option>
+													        <option value="3D">3D Max</option>
+													    </optgroup>
+													    <optgroup label="网站前端">
+													        <option value="HTML" selected>HTML/HTML5</option>
+													        <option value="CSS">CSS/CSS3</option>
+													        <option value="JS">Javascript</option>
+													        <option value="JQ">JQuery</option>
+													        <option value="NG">Angular</option>
+													    </optgroup>
+													    <optgroup label="后台脚本">
+													        <option value="ASP">ASP</option>
+													        <option value="PHP">PHP</option>
+													        <option value="Java">Java</option>
+													        <option value="C#">C#.Net</option>
+													    </optgroup>
+													    <optgroup label="其它技能">
+													        <option value="SV">服务器架设</option>
+													        <option value="II">信息录入</option>
+													        <option value="DM">论坛管理</option>
+													        <option value="SEO">SEO</option>
+													        <option value="PR">推广营销</option>
+													        <option value="OT">其它技能</option>
+													    </optgroup>
+												    </select>
+													
+												</td>
+											</tr>
+											<tr>
+												<th><label for="user_sign">签名：</label></th>
+												<td><textarea name="user_sign" id="user_sign" cols="30" rows="10" placeholder="请输入个性签名"></textarea></td>
+											</tr>
+											<tr>
+												<th>&nbsp;</th>
+												<td><input type="submit" value="留言"> <input type="reset" value="重填"></td>
+											</tr>
+										</table>
+									</form>
+
+								</td>
+								<!-- 简介、新闻与照片结束 -->
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<!-- 主体结束 -->
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<!-- 尾部开始 -->
+				<tr>
+					<td align="center">
+						<div>本站由同学自己制作，图片来自百度搜索，版权归属图片原作者所有。</div>
+						<address>站长：某同学&nbsp;&nbsp;&nbsp;&nbsp;邮箱：abcdefg@sina.com&nbsp;&nbsp;&nbsp;&nbsp;地址：广东省广州市天河区体育西路123号</address>
+					</td>
+				</tr>
+				<!-- 尾部结束 -->
+			</table>
+			<!-- 内容结束 -->
+		</td>
+	</tr>
+</table>
+</body>
+</html>
