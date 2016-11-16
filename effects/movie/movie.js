@@ -143,7 +143,7 @@ function CHImovie(sJQcontainer, sJQkid, oControllers, oOptions, oCallbacks) {
 		off();
 		bAuto = false;
 	}
-	if (bMouseStop) oJQcontainer.mouseover(stop).mouseleave(function() {
+	if (bMouseStop) oJQcontainer.mouseover(off).mouseleave(function() {
 		if (bAuto) on();
 	});
 	oResult.size = function() {

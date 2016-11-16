@@ -57,6 +57,7 @@ function CHIppt(sJQcontainer, sJQkids, oControllers, oOptions, oCallbacks) {
 		off();
 		index += piTotal;
 		index %= piTotal;
+		var lastIndex = niCurrent;
 		if (typeof oJQindices !== 'undefined') {
 			oJQindices.eq(niCurrent).removeClass('cur');
 			oJQindices.eq(index).addClass('cur');
@@ -67,7 +68,7 @@ function CHIppt(sJQcontainer, sJQkids, oControllers, oOptions, oCallbacks) {
 			if (!niLock && bAuto) on();
 		});
 		oJQkids.eq(niCurrent).fadeOut(function() {
-			if (oCallbacks.hide) oCallbacks.hide.call(oJQkids.eq(niCurrent), niCurrent);
+			if (oCallbacks.hide) oCallbacks.hide.call(oJQkids.eq(lastIndex), lastIndex);
 			niLock--;
 			if (!niLock && bAuto) on();
 		});
