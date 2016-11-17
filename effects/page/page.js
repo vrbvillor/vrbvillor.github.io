@@ -108,7 +108,7 @@ function CHIpage(sJQcontainer, sJQkid, oControllers, oOptions, oCallbacks) {
 			bLock = false;
 			if (bAuto) on();
 		});
-		if (oCallbacks.move) oCallbacks.move();
+		if (oCallbacks.move) oCallbacks.move(cSign=='-' ? 1 : -1);
 	}
 	oResult.roll = function() {
 		cSign = cSign == "-" ? "+" : "-";
@@ -137,7 +137,7 @@ function CHIpage(sJQcontainer, sJQkid, oControllers, oOptions, oCallbacks) {
 		cSign = "+";
 		run();
 		if (!bChangeDir) cSign = cOldSign;
-		if (bAuto) oResult.on();
+		if (bAuto) on();
 	}
 	oResult.next = function(bChangeDir) {
 		if (bLock) return;
@@ -146,7 +146,7 @@ function CHIpage(sJQcontainer, sJQkid, oControllers, oOptions, oCallbacks) {
 		cSign = '-';
 		run();
 		if (!bChangeDir) cSign = cOldSign;
-		if (bAuto) oResult.on();
+		if (bAuto) on();
 	}
 	if (FIND(oControllers.prev)) $(oControllers.prev).click(oResult.prev);
 	if (FIND(oControllers.next)) $(oControllers.next).click(oResult.next);
