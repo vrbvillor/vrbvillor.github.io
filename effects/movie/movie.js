@@ -13,6 +13,7 @@ oOptions，附加参数列表对象，可以使用的属性有
 	.mstop，鼠标指向时停止开关，默认为true
 	.minLi，为最少的显示数量，如果少于这个数量就不执行特效，默认为1
 	.auto，是否自动播放，默认为true
+	.limit，是否为限制边界滚动，默认为true，如果为false，则滚动到头尾时，再按前后，会滚动到另外一侧的边界上
 oCallbacks，回调函数列表对象，可以使用的属性有
 	.init(oJQcontainer)，完成初始化时执行的函数，参数为容器的JQ对象
 	.move(oJQaimKid)，每一次滚动时执行的函数，参数当前指示的子元素的JQ对象
@@ -143,7 +144,7 @@ function CHImovie(sJQcontainer, sJQkid, oControllers, oOptions, oCallbacks) {
 		off();
 		bAuto = false;
 	}
-	if (bMouseStop) oJQcontainer.mouseover(off).mouseleave(function() {
+	if (bMouseStop) oJQcontainer.mouseenter(off).mouseleave(function() {
 		if (bAuto) on();
 	});
 	oResult.size = function() {

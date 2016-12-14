@@ -4,7 +4,7 @@ sJQtitles，在$(sJQcontainer)上使用find查找，各标题栏的选择器字�
 sJQcontents，在$(sJQcontainer)上使用find查找，各内容栏的选择器字符串，它们是会显示或隐藏的部分
 oOptions，附加参数列表对象，可以使用的属性有
 	.way，激活方式，默认为mouseenter，即鼠标悬停时产生效果，还可以为click
-	.auto，自动播放，默认为false
+	.auto，自动播放，默认为true
 	.delay，自动播放的间隔，默认为3000
 	.mstop，鼠标悬停时播放停止，默认为true
 oCallbacks，回调函数列表对象，可以使用的属性有
@@ -29,6 +29,7 @@ function CHItab(sJQcontainer, sJQtitles, sJQcontents, oOptions, oCallbacks) {
 	var piDelay = isPos(oOptions.delay) ? oOptions.delay : 3000,
 		bMouseStop = "mstop" in oOptions ? Boolean(oOptions.mstop) : true,
 		bAuto = oOptions.auto ? oOptions.auto : false,
+		sWay = ~ ['click', 'mouseenter'].indexOf(oOptions.way) ? oOptions.way : 'mouseenter',
 		oResult = {},
 		oJQcontainer = $(sJQcontainer).eq(0),
 		oJQtitles = oJQcontainer.find(sJQtitles),
@@ -36,12 +37,10 @@ function CHItab(sJQcontainer, sJQtitles, sJQcontents, oOptions, oCallbacks) {
 		niCurrent = 0,
 		piLength = oJQtitles.size();
 
-	if (oOptions.way == 'click') oJQtitles.click(function() {
-		oResult.show(this)
-	});
-	else oJQtitles.mouseenter(function() {
-		oResult.show(this)
-	});
+
+	oJQtitles[sWay](function() {
+		oResult.show(oJQtitles.index($(this)));
+	})
 	oResult.show = function(index) {
 		off();
 		index += piLength;
@@ -85,7 +84,7 @@ function CHItab(sJQcontainer, sJQtitles, sJQcontents, oOptions, oCallbacks) {
 
 	oJQcontents.not(":first").hide();
 	oJQtitles.eq(0).addClass('cur');
-	oResult.start();
+	if (bAuto) oResult.start();
 	if (oCallbacks.init) oCallbacks.init(oJQtitles.eq(0), oJQcontents.eq(0));
 	return oResult;
 }
