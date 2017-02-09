@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-02-09 09:27:37
+ * @version $Id$
+ */
+
+
+@import url("../CHIanimate/_funs");
+
+.thumbnail{
+	p:first-of-type{
+		.h(5em);
+	}
+	p:last-child{
+		.h(34px);
+	}
+	&-image{
+		.wh(100%,300px);
+		.flex();
+		.flex-items(center);
+		.flex-just(center);
+		img{
+			.maxw(100%);
+			.maxh(100%);
+		}
+	}
+}
