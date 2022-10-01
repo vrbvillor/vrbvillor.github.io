@@ -1,0 +1,1076 @@
+/*
+sign ⇐ left double arrow
+sign ⇒ right double arrow
+ */
+.larr.narrow, .rarr.narrow {
+    min-width: 8.7em;
+}
+
+.larr.narrow .tangram, .larr.narrow .tangram3d {
+    margin-left: -3.3em;
+}
+
+.rarr.narrow .tangram, .rarr.narrow .tangram3d {
+    margin-left: -3.0em;
+}
+
+.larr .SL-h {
+    transform: translate(5.0em, 4.6em) scale(1, -1) rotate(-45deg);
+}
+
+.larr .LL-h {
+    transform: translate(4.6em, 6.6em) scale(1, 1) rotate(-45deg);
+}
+
+.larr .LL-mu {
+    transform: translate(6.5em, 4.8em) scale(1, 1) rotate(90deg);
+}
+
+.larr .LL-md {
+    transform: translate(6.5em, 6.3em) scale(1, -1) rotate(90deg);
+}
+
+.larr .SL-ru {
+    transform: translate(10.0em, 5.3em) scale(1, -1) rotate(-90deg);
+}
+
+.larr .SL-rd {
+    transform: translate(10.0em, 6.8em) scale(1, 1) rotate(-90deg);
+}
+
+.rarr .SL-h {
+    transform: translate(9.0em, 4.6em) scale(1, 1) rotate(135deg);
+}
+
+.rarr .LL-h {
+    transform: translate(9.4em, 6.6em) scale(1, -1) rotate(135deg);
+}
+
+.rarr .LL-mu {
+    transform: translate(7.5em, 4.8em) scale(-1, 1) rotate(90deg);
+}
+
+.rarr .LL-md {
+    transform: translate(7.5em, 6.3em) scale(1, 1) rotate(-90deg);
+}
+
+.rarr .SL-lu {
+    transform: translate(4.0em, 5.3em) scale(1, 1) rotate(90deg);
+}
+
+.rarr .SL-ld {
+    transform: translate(4.0em, 6.8em) scale(1, -1) rotate(90deg);
+}
+
+/*
+sign ⇑ up double arrow
+sign ⇓ down double arrow
+ */
+.uarr.narrow, .darr.narrow {
+    min-width: 4.2em;
+}
+
+.uarr.narrow .tangram, .uarr.narrow .tangram3d, .darr.narrow .tangram, .darr.narrow .tangram3d {
+    margin-left: -5.4em;
+}
+
+.uarr .SL-h {
+    transform: translate(5.6em, 4.0em) scale(1, 1) rotate(45deg);
+}
+
+.uarr .LL-h {
+    transform: translate(8.1em, 3.1em) scale(-1, 1) rotate(45deg);
+}
+
+.uarr .LL-lm {
+    transform: translate(6.3em, 5.0em) scale(-1, 1) rotate(180deg);
+}
+
+.uarr .LL-rm {
+    transform: translate(7.9em, 5.0em) scale(1, 1) rotate(180deg);
+}
+
+.uarr .SL-ld {
+    transform: translate(6.3em, 9.0em) scale(1, 1) rotate(0);
+}
+
+.uarr .SL-rd {
+    transform: translate(7.9em, 9.0em) scale(-1, 1) rotate(0);
+}
+
+.darr .SL-h {
+    transform: translate(5.6em, 8.0em) scale(1, -1) rotate(45deg);
+}
+
+.darr .LL-h {
+    transform: translate(8.1em, 7.9em) scale(1, 1) rotate(-135deg);
+}
+
+.darr .LL-lm {
+    transform: translate(6.3em, 6.0em) scale(1, 1) rotate(0);
+}
+
+.darr .LL-rm {
+    transform: translate(7.9em, 6.0em) scale(-1, 1) rotate(0);
+}
+
+.darr .SL-lu {
+    transform: translate(6.3em, 3.0em) scale(1, -1) rotate(0);
+}
+
+.darr .SL-ru {
+    transform: translate(7.9em, 3.0em) scale(1, 1) rotate(180deg);
+}
+
+/*
+sign ⇔ horizontal double arrow
+several types
+ */
+.harrls.narrow {
+    min-width: 9.2em;
+}
+
+.harrls.narrow .tangram, .harrls.narrow .tangram3d {
+    margin-left: -2.9em;
+}
+
+.harrls .LL-lt {
+    transform: translate(4.1em, 4.4em) scale(-1, 1) rotate(-45deg);
+}
+
+.harrls .LL-lb {
+    transform: translate(4.1em, 6.5em) scale(1, 1) rotate(135deg);
+}
+
+.harrls .SL-lu {
+    transform: translate(5.5em, 5.2em) scale(1, 1) rotate(90deg);
+}
+
+.harrls .SL-ld {
+    transform: translate(5.5em, 6.7em) scale(1, -1) rotate(90deg);
+}
+
+.harrls .SL-ru {
+    transform: translate(8.5em, 5.2em) scale(-1, 1) rotate(90deg);
+}
+
+.harrls .SL-rd {
+    transform: translate(8.5em, 6.7em) scale(1, 1) rotate(-90deg);
+}
+
+.harrls .LL-rt {
+    transform: translate(9.9em, 4.4em) scale(1, 1) rotate(-45deg);
+}
+
+.harrls .LL-rb {
+    transform: translate(9.9em, 6.5em) scale(1, -1) rotate(-45deg);
+}
+
+.harrll.narrow {
+    min-width: 11.4em;
+}
+
+.harrll.narrow .tangram, .harrll.narrow .tangram3d {
+    margin-left: -1.8em;
+}
+
+.harrll .LL-lt {
+    transform: translate(3.0em, 4.5em) scale(-1, 1) rotate(-45deg);
+}
+
+.harrll .LL-lb {
+    transform: translate(3.0em, 6.6em) scale(1, 1) rotate(135deg);
+}
+
+.harrll .SL-lu {
+    transform: translate(5.0em, 4.7em) scale(1, 1) rotate(90deg);
+}
+
+.harrll .SL-ld {
+    transform: translate(5.0em, 6.4em) scale(1, -1) rotate(90deg);
+}
+
+.harrll .SL-ru {
+    transform: translate(9.0em, 4.7em) scale(-1, 1) rotate(90deg);
+}
+
+.harrll .SL-rd {
+    transform: translate(9.0em, 6.4em) scale(1, 1) rotate(-90deg);
+}
+
+.harrll .LL-rt {
+    transform: translate(11.0em, 4.5em) scale(1, 1) rotate(-45deg);
+}
+
+.harrll .LL-rb {
+    transform: translate(11.0em, 6.6em) scale(1, -1) rotate(-45deg);
+}
+
+.harrlm.narrow {
+    min-width: 10.4em;
+}
+
+.harrlm.narrow .tangram, .harrlm.narrow .tangram3d {
+    margin-left: -2.3em;
+}
+
+.harrlm .LL-lt {
+    transform: translate(3.6em, 4.5em) scale(-1, 1) rotate(-45deg);
+}
+
+.harrlm .LL-lb {
+    transform: translate(3.6em, 6.6em) scale(1, 1) rotate(135deg);
+}
+
+.harrlm .SL-lu {
+    transform: translate(5.0em, 5.3em) scale(1, 1) rotate(90deg);
+}
+
+.harrlm .SL-ld {
+    transform: translate(5.0em, 6.8em) scale(1, -1) rotate(90deg);
+}
+
+.harrlm .LL-ru {
+    transform: translate(8.5em, 4.8em) scale(-1, 1) rotate(90deg);
+}
+
+.harrlm .LL-rd {
+    transform: translate(8.5em, 6.3em) scale(1, 1) rotate(-90deg);
+}
+
+.harrlm .LL-rt {
+    transform: translate(10.4em, 4.5em) scale(1, 1) rotate(-45deg);
+}
+
+.harrlm .LL-rb {
+    transform: translate(10.4em, 6.6em) scale(1, -1) rotate(-45deg);
+}
+
+/*
+sign ⇌ reversible(normal and large type)
+ */
+.reversible.narrow {
+    min-width: 7.0em;
+}
+
+.reversible.narrow .tangram, .reversible.narrow .tangram3d {
+    margin-left: -3.5em;
+}
+
+.reversible .SL-rt {
+    transform: translate(7.6em, 4.1em) scale(1, 1) rotate(-45deg);
+}
+
+.reversible .LL-lu {
+    transform: translate(5.0em, 4.8em) scale(1, 1) rotate(90deg);
+}
+
+.reversible .SL-ru {
+    transform: translate(8.5em, 5.3em) scale(-1, 1) rotate(90deg);
+}
+
+.reversible .LL-ld {
+    transform: translate(5.0em, 6.2em) scale(1, -1) rotate(90deg);
+}
+
+.reversible .SL-rd {
+    transform: translate(8.5em, 6.7em) scale(1, 1) rotate(-90deg);
+}
+
+.reversible .SL-lb {
+    transform: translate(5.4em, 7.9em) scale(1, 1) rotate(135deg);
+}
+
+.reversible-large.narrow {
+    min-width: 10.0em;
+}
+
+.reversible-large.narrow .tangram, .reversible-large.narrow .tangram3d {
+    margin-left: -2.5em;
+}
+
+.reversible-large .SL-lt {
+    transform: translate(3.5em, 5.3em) scale(1, 1) rotate(-90deg);
+}
+
+.reversible-large .LL-lu {
+    transform: translate(6.0em, 4.8em) scale(1, 1) rotate(90deg);
+}
+
+.reversible-large .LL-ru {
+    transform: translate(10.0em, 4.8em) scale(-1, 1) rotate(90deg);
+}
+
+.reversible-large .SL-rt {
+    transform: translate(9.6em, 4.1em) scale(1, 1) rotate(-45deg);
+}
+
+.reversible-large .SL-lb {
+    transform: translate(4.5em, 7.9em) scale(1, 1) rotate(135deg);
+}
+
+.reversible-large .LL-ld {
+    transform: translate(4.0em, 6.2em) scale(-1, 1) rotate(-90deg);
+}
+
+.reversible-large .LL-rd {
+    transform: translate(8.0em, 6.2em) scale(1, 1) rotate(-90deg);
+}
+
+.reversible-large .SL-rb {
+    transform: translate(10.5em, 6.7em) scale(1, 1) rotate(90deg);
+}
+
+/*
+sign arrows on 8 dirs
+← ↑ → ↓ and diagonal ones
+ */
+.arrow-up.narrow, .arrow-down.narrow {
+    min-width: 6.8em;
+}
+
+.arrow-up.narrow .tangram, .arrow-up.narrow .tangram3d, .arrow-down.narrow .tangram, .arrow-down.narrow .tangram3d {
+    margin-left: -4.1em;
+}
+
+.arrow-up .MT {
+    transform: translate(5.5em, 1.0em) scale(1, 1) rotate(180deg);
+}
+
+.arrow-up .SL-l {
+    transform: translate(5.0em, 4.2em) scale(1, -1) rotate(-45deg);
+}
+
+.arrow-up .SL-r {
+    transform: translate(9.0em, 4.2em) scale(1, 1) rotate(135deg);
+}
+
+.arrow-up .LL-m {
+    transform: translate(7.0em, 5.0em) scale(1, 1) rotate(0);
+}
+
+.arrow-up .LL-d {
+    transform: translate(7.0em, 8.0em) scale(1, 1) rotate(180deg);
+}
+
+.arrow-down .MT {
+    transform: translate(5.5em, 10.0em) scale(1, 1) rotate(0);
+}
+
+.arrow-down .SL-l {
+    transform: translate(5.0em, 7.8em) scale(1, 1) rotate(-45deg);
+}
+
+.arrow-down .SL-r {
+    transform: translate(9.0em, 7.8em) scale(1, -1) rotate(135deg);
+}
+
+.arrow-down .LL-m {
+    transform: translate(7.0em, 6.0em) scale(1, 1) rotate(180deg);
+}
+
+.arrow-down .LL-t {
+    transform: translate(7.0em, 3.0em) scale(1, 1) rotate(0);
+}
+
+.arrow-left.narrow, .arrow-right.narrow {
+    min-width: 9.0em;
+}
+
+.arrow-left.narrow .tangram, .arrow-left.narrow .tangram3d, .arrow-right.narrow .tangram, .arrow-right.narrow .tangram3d {
+    margin-left: -3.0em;
+}
+
+.arrow-left .MT {
+    transform: translate(1.0em, 5.5em) scale(1, 1) rotate(90deg);
+}
+
+.arrow-left .SL-t {
+    transform: translate(5.2em, 4.0em) scale(1, 1) rotate(45deg);
+}
+
+.arrow-left .SL-b {
+    transform: translate(5.2em, 8.0em) scale(1, -1) rotate(45deg);
+}
+
+.arrow-left .LL-m {
+    transform: translate(6.5em, 5.5em) scale(1, 1) rotate(-90deg);
+}
+
+.arrow-left .LL-r {
+    transform: translate(9.5em, 5.5em) scale(1, 1) rotate(90deg);
+}
+
+.arrow-right .MT {
+    transform: translate(10.0em, 5.5em) scale(1, 1) rotate(-90deg);
+}
+
+.arrow-right .SL-t {
+    transform: translate(8.8em, 4.0em) scale(-1, 1) rotate(45deg);
+}
+
+.arrow-right .SL-b {
+    transform: translate(8.8em, 8.0em) scale(-1, -1) rotate(45deg);
+}
+
+.arrow-right .LL-m {
+    transform: translate(7.5em, 5.5em) scale(1, 1) rotate(90deg);
+}
+
+.arrow-right .LL-l {
+    transform: translate(4.5em, 5.5em) scale(1, 1) rotate(-90deg);
+}
+
+.arrow-left-up.narrow, .arrow-right-up.narrow,
+.arrow-left-down.narrow, .arrow-right-down.narrow {
+    min-width: 6.6em;
+}
+
+.arrow-left-up.narrow .tangram, .arrow-left-up.narrow .tangram3d, .arrow-left-down.narrow .tangram, .arrow-left-down.narrow .tangram3d {
+    margin-left: -4.0em;
+}
+
+.arrow-right-up.narrow .tangram, .arrow-right-up.narrow .tangram3d, .arrow-right-down.narrow .tangram, .arrow-right-down.narrow .tangram3d {
+    margin-left: -4.4em;
+}
+
+.arrow-left-up .MT {
+    transform: translate(2.0em, 2.0em) scale(1, 1) rotate(135deg);
+}
+
+.arrow-left-up .SL-t {
+    transform: translate(6.8em, 3.0em) scale(1, 1) rotate(90deg);
+}
+
+.arrow-left-up .SL-l {
+    transform: translate(4.0em, 5.8em) scale(-1, 1) rotate(180deg);
+}
+
+.arrow-left-up .LL-m {
+    transform: translate(6.3em, 4.8em) scale(1, 1) rotate(-45deg);
+}
+
+.arrow-left-up .LL-d {
+    transform: translate(8.4em, 6.9em) scale(1, 1) rotate(135deg);
+}
+
+.arrow-right-up .MT {
+    transform: translate(9.0em, 2.0em) scale(1, 1) rotate(-135deg);
+}
+
+.arrow-right-up .SL-t {
+    transform: translate(7.2em, 3.0em) scale(-1, 1) rotate(90deg);
+}
+
+.arrow-right-up .SL-r {
+    transform: translate(10.0em, 5.8em) scale(1, 1) rotate(180deg);
+}
+
+.arrow-right-up .LL-m {
+    transform: translate(7.7em, 4.8em) scale(-1, 1) rotate(-45deg);
+}
+
+.arrow-right-up .LL-d {
+    transform: translate(5.6em, 6.9em) scale(-1, 1) rotate(135deg);
+}
+
+.arrow-left-down .MT {
+    transform: translate(2.0em, 9.0em) scale(1, 1) rotate(45deg);
+}
+
+.arrow-left-down .SL-l {
+    transform: translate(4.0em, 6.2em) scale(1, 1) rotate(0);
+}
+
+.arrow-left-down .SL-b {
+    transform: translate(6.8em, 9.0em) scale(1, -1) rotate(90deg);
+}
+
+.arrow-left-down .LL-m {
+    transform: translate(6.3em, 6.2em) scale(1, -1) rotate(-45deg);
+}
+
+.arrow-left-down .LL-u {
+    transform: translate(8.4em, 4.1em) scale(1, -1) rotate(135deg);
+}
+
+.arrow-right-down .MT {
+    transform: translate(9.0em, 9.0em) scale(1, 1) rotate(-45deg);
+}
+
+.arrow-right-down .SL-b {
+    transform: translate(7.2em, 9.0em) scale(1, 1) rotate(-90deg);
+}
+
+.arrow-right-down .SL-r {
+    transform: translate(10.0em, 6.2em) scale(1, -1) rotate(180deg);
+}
+
+.arrow-right-down .LL-m {
+    transform: translate(7.7em, 6.2em) scale(1, 1) rotate(135deg);
+}
+
+.arrow-right-down .LL-d {
+    transform: translate(5.6em, 4.1em) scale(1, 1) rotate(-45deg);
+}
+
+/*
+sign ➤ arrowhead in 4 directions
+ */
+.uarrh.narrow, .darrh.narrow {
+    min-width: 4.4em;
+}
+
+.uarrh.narrow .tangram, .uarrh.narrow .tangram3d, .darrh.narrow .tangram, .darrh.narrow .tangram3d {
+    margin-left: -5.3em;
+}
+
+.uarrh .LT-l {
+    transform: translate(6.6em, 5.5em) scale(1, 1) rotate(-67.5deg);
+}
+
+.uarrh .LT-r {
+    transform: translate(4.4em, 5.5em) scale(-1, 1) rotate(-67.5deg);
+}
+
+.darrh .LT-l {
+    transform: translate(6.6em, 5.5em) scale(1, -1) rotate(-67.5deg);
+}
+
+.darrh .LT-r {
+    transform: translate(4.4em, 5.5em) scale(-1, -1) rotate(-67.5deg);
+}
+
+.larrh.narrow, .rarrh.narrow {
+    min-width: 5.2em;
+}
+
+.larrh.narrow .tangram, .larrh.narrow .tangram3d, .rarrh.narrow .tangram, .rarrh.narrow .tangram3d {
+    margin-left: -4.9em;
+}
+
+.larrh .LT-u {
+    transform: translate(5.5em, 4.4em) scale(1, 1) rotate(-157.5deg);
+}
+
+.larrh .LT-d {
+    transform: translate(5.5em, 6.6em) scale(-1, 1) rotate(22.5deg);
+}
+
+.rarrh .LT-u {
+    transform: translate(5.5em, 4.4em) scale(-1, 1) rotate(-157.5deg);
+}
+
+.rarrh .LT-d {
+    transform: translate(5.5em, 6.6em) scale(1, 1) rotate(22.5deg);
+}
+
+/*
+two opposite-headed arrows such like
+↔ and ↕
+ */
+.arrow-up-down .MT-t {
+    transform: translate(5.5em, .0em) scale(1, 1) rotate(180deg);
+}
+
+.arrow-up-down .SL-lu {
+    transform: translate(5.0em, 3.2em) scale(1, -1) rotate(-45deg);
+}
+
+.arrow-up-down .SL-ru {
+    transform: translate(9.0em, 3.2em) scale(1, 1) rotate(135deg);
+}
+
+.arrow-up-down .LL-mu {
+    transform: translate(7.0em, 4.0em) scale(1, 1) rotate(0);
+}
+
+.arrow-up-down .LL-md {
+    transform: translate(7.0em, 7.0em) scale(1, 1) rotate(180deg);
+}
+
+.arrow-up-down .SL-ld {
+    transform: translate(5.0em, 8.8em) scale(1, 1) rotate(-45deg);
+}
+
+.arrow-up-down .MT-b {
+    transform: translate(5.5em, 11.0em) scale(1, 1) rotate(0);
+}
+
+.arrow-up-down .SL-rd {
+    transform: translate(9.0em, 8.8em) scale(1, -1) rotate(135deg);
+}
+
+.arrow-left-right .MT-l {
+    transform: translate(.0em, 5.5em) scale(1, 1) rotate(90deg);
+}
+
+.arrow-left-right .SL-lt {
+    transform: translate(4.2em, 4.0em) scale(1, 1) rotate(45deg);
+}
+
+.arrow-left-right .SL-lb {
+    transform: translate(4.2em, 8.0em) scale(1, -1) rotate(45deg);
+}
+
+.arrow-left-right .LL-ml {
+    transform: translate(5.5em, 5.5em) scale(1, 1) rotate(-90deg);
+}
+
+.arrow-left-right .LL-mr {
+    transform: translate(8.5em, 5.5em) scale(1, 1) rotate(90deg);
+}
+
+.arrow-left-right .SL-rt {
+    transform: translate(9.8em, 4.0em) scale(-1, 1) rotate(45deg);
+}
+
+.arrow-left-right .SL-rb {
+    transform: translate(9.8em, 8.0em) scale(-1, -1) rotate(45deg);
+}
+
+.arrow-left-right .MT-r {
+    transform: translate(11.0em, 5.5em) scale(1, 1) rotate(-90deg);
+}
+
+.arrow-lu-rd .MT-lt {
+    transform: translate(1.7em, 1.7em) scale(1, 1) rotate(135deg);
+}
+
+.arrow-lu-rd .SL-t {
+    transform: translate(6.5em, 2.7em) scale(1, 1) rotate(90deg);
+}
+
+.arrow-lu-rd .SL-l {
+    transform: translate(3.7em, 5.5em) scale(-1, 1) rotate(180deg);
+}
+
+.arrow-lu-rd .LL-mlu {
+    transform: translate(6.0em, 4.5em) scale(1, 1) rotate(-45deg);
+}
+
+.arrow-lu-rd .LL-mrd {
+    transform: translate(8.1em, 6.6em) scale(1, 1) rotate(135deg);
+}
+
+.arrow-lu-rd .SL-b {
+    transform: translate(7.6em, 9.4em) scale(1, 1) rotate(-90deg);
+}
+
+.arrow-lu-rd .SL-r {
+    transform: translate(10.4em, 6.6em) scale(1, -1) rotate(180deg);
+}
+
+.arrow-lu-rd .MT-rb {
+    transform: translate(9.4em, 9.4em) scale(1, 1) rotate(-45deg);
+}
+
+.arrow-ru-ld .MT-ru {
+    transform: translate(9.3em, 1.7em) scale(1, 1) rotate(-135deg);
+}
+
+.arrow-ru-ld .SL-t {
+    transform: translate(7.5em, 2.7em) scale(-1, 1) rotate(90deg);
+}
+
+.arrow-ru-ld .SL-r {
+    transform: translate(10.3em, 5.5em) scale(1, 1) rotate(180deg);
+}
+
+.arrow-ru-ld .LL-mru {
+    transform: translate(8.0em, 4.5em) scale(-1, 1) rotate(-45deg);
+}
+
+.arrow-ru-ld .LL-mrd {
+    transform: translate(5.9em, 6.6em) scale(-1, 1) rotate(135deg);
+}
+
+.arrow-ru-ld .SL-l {
+    transform: translate(3.7em, 6.5em) scale(1, 1) rotate(0);
+}
+
+.arrow-ru-ld .SL-b {
+    transform: translate(6.5em, 9.3em) scale(1, -1) rotate(90deg);
+}
+
+.arrow-ru-ld .MT-ld {
+    transform: translate(1.7em, 9.3em) scale(1, 1) rotate(45deg);
+}
+
+/*
+sign many kinds of arrows all point to the up
+↟ dblhead(double heads)
+↥ bar-end
+⇤ bar-cap
+↩ hook
+↫ hook(entire)
+↰ turn
+↴ corner
+⇞ bones
+⇚ triple
+⇑ double
+ */
+.arrows.narrow {
+    min-width: 7.1em;
+}
+
+.arrows.narrow .tangram, .arrows.narrow .tangram3d {
+    margin-left: -4.3em;
+}
+
+.arrows .MT {
+    transform: translate(5.5em, 1.0em) scale(-1, 1) rotate(180deg);
+}
+
+.arrows .SL-hl {
+    transform: translate(5.0em, 4.2em) scale(1, -1) rotate(-45deg);
+}
+
+.arrows .SL-hr {
+    transform: translate(9.0em, 4.2em) scale(1, 1) rotate(135deg);
+}
+
+.arrows .LL-hm {
+    transform: translate(7.0em, 5.0em) scale(1, 1) rotate(0);
+}
+
+.arrows .SL-ht {
+    transform: translate(7.0em, 8.0em) scale(1, 1) rotate(180deg);
+}
+
+/*
+these classes are all based on class "arrows"
+ */
+.dblhead .LL-lm {
+    transform: translate(5.5em, 5.5em) scale(1, 1) rotate(-135deg);
+}
+
+.dblhead .LL-rm {
+    transform: translate(8.5em, 5.5em) scale(1, -1) rotate(45deg);
+}
+
+.dblhead .SL-b {
+    transform: translate(7.0em, 11.0em) scale(1, 1) rotate(0);
+}
+
+.bar-end .SL-lb {
+    transform: translate(6.0em, 10.0em) scale(1, 1) rotate(-90deg);
+}
+
+.bar-end .SL-rb {
+    transform: translate(8.0em, 10.0em) scale(1, 1) rotate(90deg);
+}
+
+.bar-cap .SL-lt {
+    transform: translate(6.0em, 1.0em) scale(1, 1) rotate(-90deg);
+}
+
+.bar-cap .SL-rt {
+    transform: translate(8.0em, 1.0em) scale(1, 1) rotate(90deg);
+}
+
+.tails .LL-lb {
+    transform: translate(5.5em, 9.3em) scale(1, 1) rotate(-135deg);
+}
+
+.tails .LL-rb {
+    transform: translate(8.5em, 9.3em) scale(1, -1) rotate(45deg);
+}
+
+.turn .LL-b {
+    transform: translate(8.5em, 9.5em) scale(-1, 1) rotate(-90deg);
+}
+
+.corner .SL-bm {
+    transform: translate(9.0em, 7.0em) scale(1, -1) rotate(-90deg);
+}
+
+.corner .LL-b {
+    transform: translate(11.5em, 6.5em) scale(-1, 1) rotate(-90deg);
+}
+
+.hook .SL-b {
+    transform: translate(8.0em, 10.0em) scale(-1, 1) rotate(-90deg);
+}
+
+.hook .SL-rb {
+    transform: translate(10.0em, 9.0em) scale(-1, 1) rotate(0);
+}
+
+.hook .SL-rc {
+    transform: translate(9.0em, 7.0em) scale(-1, 1) rotate(90deg);
+}
+
+.hook .SL-lc {
+    transform: translate(5.0em, 7.0em) scale(1, 1) rotate(90deg);
+}
+
+.bones .SL-lu {
+    transform: translate(5.0em, 7.0em) scale(1, 1) rotate(90deg);
+}
+
+.bones .SL-ru {
+    transform: translate(9.0em, 7.0em) scale(1, -1) rotate(-90deg);
+}
+
+.bones .SL-ld {
+    transform: translate(5.0em, 9.0em) scale(1, 1) rotate(90deg);
+}
+
+.bones .SL-rd {
+    transform: translate(9.0em, 9.0em) scale(1, -1) rotate(-90deg);
+}
+
+.bones .SL-b {
+    transform: translate(7.0em, 11.0em) scale(1, 1) rotate(0);
+}
+
+.feather .PR-lb {
+    transform: translate(5.3em, 8.3em) scale(-1, 1) rotate(-45deg);
+}
+
+.feather .PR-rb {
+    transform: translate(7.7em, 8.3em) scale(1, 1) rotate(-45deg);
+}
+
+.triple .SL-bt {
+    transform: translate(7.0em, 11.0em) scale(1, 1) rotate(0);
+}
+
+.triple .LL-lu {
+    transform: translate(5.5em, 5.4em) scale(1, -1) rotate(0);
+}
+
+.triple .LL-ld {
+    transform: translate(5.5em, 9.4em) scale(1, 1) rotate(0);
+}
+
+.triple .LL-ru {
+    transform: translate(8.5em, 5.4em) scale(1, 1) rotate(180deg);
+}
+
+.triple .LL-rd {
+    transform: translate(8.5em, 9.4em) scale(-1, 1) rotate(0);
+}
+
+.double .SL-lu {
+    transform: translate(5.9em, 5.0em) scale(-1, 1) rotate(180deg);
+}
+
+.double .SL-lm {
+    transform: translate(5.9em, 8.0em) scale(-1, 1) rotate(0);
+}
+
+.double .SL-ld {
+    transform: translate(5.9em, 10.0em) scale(-1, 1) rotate(180deg);
+}
+
+.double .SL-ru {
+    transform: translate(8.1em, 5.0em) scale(1, 1) rotate(180deg);
+}
+
+.double .SL-rm {
+    transform: translate(8.1em, 8.0em) scale(1, 1) rotate(0);
+}
+
+.double .SL-rd {
+    transform: translate(8.1em, 10.0em) scale(1, 1) rotate(180deg);
+}
+
+/*
+sign ⇔ twi-arrows
+ */
+.twi-arrows .ST-t {
+    transform: translate(6.5em, 2.3em) scale(1, 1) rotate(45deg);
+}
+
+.twi-arrows .LL-hl {
+    transform: translate(5.3em, 2.3em) scale(1, -1) rotate(-45deg);
+}
+
+.twi-arrows .LL-hr {
+    transform: translate(8.7em, 2.3em) scale(1, 1) rotate(135deg);
+}
+
+.twi-arrows .LL-lu {
+    transform: translate(6.2em, 3.5em) scale(1, -1) rotate(0deg);
+}
+
+.twi-arrows .LL-ru {
+    transform: translate(7.8em, 3.5em) scale(1, 1) rotate(180deg);
+}
+
+.twi-arrows .LL-ld {
+    transform: translate(6.2em, 7.5em) scale(1, 1) rotate(0deg);
+}
+
+.twi-arrows .LL-rd {
+    transform: translate(7.8em, 7.5em) scale(-1, 1) rotate(0deg);
+}
+
+.twi-arrows .LL-tl {
+    transform: translate(5.3em, 8.7em) scale(1, 1) rotate(-45deg);
+}
+
+.twi-arrows .LL-tr {
+    transform: translate(8.7em, 8.7em) scale(-1, 1) rotate(-45deg);
+}
+
+.twi-arrows .ST-b {
+    transform: translate(6.5em, 10.7em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+sign ↺ arrow-circle
+ */
+.arrow-circle, .arrow-semicircle {
+    transition: all linear 1s;
+}
+
+.arrow-circle:hover, .arrow-semicircle:hover {
+    transform: rotate(360deg);
+}
+
+.arrow-circle.chars3d:hover, .arrow-semicircle.chars3d:hover {
+    transform: rotateX(-30deg) rotateY(-30deg) rotateZ(360deg);
+}
+
+.arrow-circle .SL-t {
+    transform: translate(6.5em, 2.4em) scale(1, 1) rotate(-90deg);
+}
+
+.arrow-circle .SL-rt {
+    transform: translate(9.7em, 3.3em) scale(1, 1) rotate(-45deg);
+}
+
+.arrow-circle .LL-r {
+    transform: translate(10.6em, 5.5em) scale(1, 1) rotate(0);
+}
+
+.arrow-circle .SL-rb {
+    transform: translate(9.7em, 8.7em) scale(1, 1) rotate(45deg);
+}
+
+.arrow-circle .LL-b {
+    transform: translate(7.0em, 9.1em) scale(1, 1) rotate(90deg);
+}
+
+.arrow-circle .SL-lb {
+    transform: translate(4.3em, 8.7em) scale(1, 1) rotate(135deg);
+}
+
+.arrow-circle .LL-l {
+    transform: translate(3.4em, 5.5em) scale(1, 1) rotate(180deg);
+}
+
+.arrow-circle .SL-lt {
+    transform: translate(4.3em, 3.3em) scale(1, 1) rotate(-135deg);
+}
+
+.arrow-circle .SL-hl {
+    transform: translate(8.8em, 4.1em) scale(1, 1) rotate(180deg);
+}
+
+.arrow-circle .SL-hr {
+    transform: translate(10.5em, 2.4em) scale(-1, 1) rotate(-90deg);
+}
+
+/*
+sign ↷ arrow-semicircle
+ */
+.arrow-semicircle .SL-l {
+    transform: translate(3.9em, 6.0em) scale(-1, 1) rotate(0);
+}
+
+.arrow-semicircle .SL-lt {
+    transform: translate(4.8em, 3.8em) scale(-1, 1) rotate(-45deg);
+}
+
+.arrow-semicircle .SL-t {
+    transform: translate(7.0em, 2.9em) scale(-1, 1) rotate(-90deg);
+}
+
+.arrow-semicircle .SL-rt {
+    transform: translate(9.2em, 3.8em) scale(-1, 1) rotate(-135deg);
+}
+
+.arrow-semicircle .LL-r {
+    transform: translate(10.1em, 6.0em) scale(-1, 1) rotate(180deg);
+}
+
+.arrow-semicircle .SL-hl {
+    transform: translate(8.9em, 7.1em) scale(-1, 1) rotate(45deg);
+}
+
+.arrow-semicircle .SL-hr {
+    transform: translate(11.3em, 7.1em) scale(1, 1) rotate(45deg);
+}
+
+/*
+stars 4,5,6 are all based on class uarrh
+these are best to auto-rebuilt by LESS.
+ */
+.stars>div {
+    position: absolute;
+    transform-origin: 7.5em 7.5em;
+}
+
+.star4 .star4-1 {
+    transform: rotate(0) translate(0, -3.0em);
+}
+
+.star4 .star4-2 {
+    transform: rotate(90deg) translate(0, -3.0em);
+}
+
+.star4 .star4-3 {
+    transform: rotate(180deg) translate(0, -3.0em);
+}
+
+.star4 .star4-4 {
+    transform: rotate(-90deg) translate(0, -3.0em);
+}
+
+.star5 .star5-1 {
+    transform: rotate(0) translate(0, -3.0em);
+}
+
+.star5 .star5-2 {
+    transform: rotate(72deg) translate(0, -3.0em);
+}
+
+.star5 .star5-3 {
+    transform: rotate(144deg) translate(0, -3.0em);
+}
+
+.star5 .star5-4 {
+    transform: rotate(-144deg) translate(0, -3.0em);
+}
+
+.star5 .star5-5 {
+    transform: rotate(-72deg) translate(0, -3.0em);
+}
+
+.star6 .star6-1 {
+    transform: rotate(0) translate(0, -3.0em);
+}
+
+.star6 .star6-2 {
+    transform: rotate(60deg) translate(0, -3.0em);
+}
+
+.star6 .star6-3 {
+    transform: rotate(120deg) translate(0, -3.0em);
+}
+
+.star6 .star6-4 {
+    transform: rotate(180deg) translate(0, -3.0em);
+}
+
+.star6 .star6-5 {
+    transform: rotate(-120deg) translate(0, -3.0em);
+}
+
+.star6 .star6-6 {
+    transform: rotate(-60deg) translate(0, -3.0em);
+}

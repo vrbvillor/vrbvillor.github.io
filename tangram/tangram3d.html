@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title>3D七巧板演示</title>
+    <link rel="stylesheet" href="tangram3d.css">
+</head>
+
+<body>
+    <div class="bricks" style="display:none;">
+        <div class="tangram brickST" title="小三角形"></div>
+        <div class="tangram brickST deep" title="深色·小三角形"></div>
+        <div class="tangram brickMT" title="中三角形"></div>
+        <div class="tangram brickMT deep" title="深色·中三角形"></div>
+        <div class="tangram brickLT" title="大三角形"></div>
+        <div class="tangram brickLT deep" title="深色·大三角形"></div>
+        <div class="tangram brickSL" title="短梯形"></div>
+        <div class="tangram brickSL deep" title="深色·短梯形"></div>
+        <div class="tangram brickLL" title="长梯形"></div>
+        <div class="tangram brickLL deep" title="深色·长梯形"></div>
+        <div class="tangram brickSQ" title="正方形"></div>
+        <div class="tangram brickSQ deep" title="深色·正方形"></div>
+        <div class="tangram brickPR" title="平行四边形"></div>
+        <div class="tangram brickPR deep" title="深色·平行四边形"></div>
+    </div>
+    <div class="tangram3d brickST">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="bevel"></div>
+        <div class="top"></div>
+    </div>
+    <div class="tangram3d brickMT">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="top"></div>
+        <div class="right"></div>
+    </div>
+    <div class="tangram3d brickLT">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="bevel"></div>
+        <div class="bottom"></div>
+    </div>
+    <div class="tangram3d brickSL">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+    <div class="tangram3d brickLL">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+    <div class="tangram3d brickPR">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+    <div class="tangram3d brickSQ">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+
+
+    ([\w\d\.\-]+) \.tangram
+    $1 .tangram,$1 .tangram3d
+
+    <div class="tangram brickSL ([\w\d\s\-]+)"></div>
+    <div class="tangram3d brickSL $1">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+</body>
+
+</html>

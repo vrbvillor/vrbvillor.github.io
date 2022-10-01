@@ -1,0 +1,2533 @@
+/*
+all these signs have no narrow type
+ */
+/*
+☉ sun-large
+ */
+.sun-large .LL-t, .earth .LL-t, .quintile .LL-t {
+    transform: translate(7.0em, 1.9em) scale(1, 1) rotate(-90deg);
+}
+
+.sun-large .SL-rt, .earth .SL-rt, .quintile .SL-rt {
+    transform: translate(9.7em, 3.3em) scale(1, 1) rotate(-45deg);
+}
+
+.sun-large .LL-r, .earth .LL-r, .quintile .LL-r {
+    transform: translate(10.6em, 5.5em) scale(1, 1) rotate(0);
+}
+
+.sun-large .SL-rb, .earth .SL-rb, .quintile .SL-rb {
+    transform: translate(9.7em, 8.7em) scale(1, 1) rotate(45deg);
+}
+
+.sun-large .LL-b, .earth .LL-b, .quintile .LL-b {
+    transform: translate(7.0em, 9.1em) scale(1, 1) rotate(90deg);
+}
+
+.sun-large .SL-lb, .earth .SL-lb, .quintile .SL-lb {
+    transform: translate(4.3em, 8.7em) scale(1, 1) rotate(135deg);
+}
+
+.sun-large .LL-l, .earth .LL-l, .quintile .LL-l {
+    transform: translate(3.4em, 5.5em) scale(1, 1) rotate(180deg);
+}
+
+.sun-large .SL-lt, .earth .SL-lt, .quintile .SL-lt {
+    transform: translate(4.3em, 3.3em) scale(1, 1) rotate(-135deg);
+}
+
+.sun-large .SQ {
+    transform: translate(6.5em, 6.5em) scale(1, 1) rotate(45deg);
+}
+
+/*
+☼ the-sun
+ */
+.the-sun .SL-lt {
+    transform: translate(4.8em, 3.8em) scale(-1, 1) rotate(-45deg);
+}
+
+.the-sun .SL-t {
+    transform: translate(7.0em, 2.9em) scale(-1, 1) rotate(-90deg);
+}
+
+.the-sun .SL-rt {
+    transform: translate(9.2em, 3.8em) scale(-1, 1) rotate(-135deg);
+}
+
+.the-sun .SL-r {
+    transform: translate(10.1em, 6.0em) scale(-1, 1) rotate(180deg);
+}
+
+.the-sun .SL-rb {
+    transform: translate(9.2em, 8.2em) scale(-1, 1) rotate(135deg);
+}
+
+.the-sun .SL-b {
+    transform: translate(7.0em, 9.1em) scale(-1, 1) rotate(90deg);
+}
+
+.the-sun .SL-lb {
+    transform: translate(4.8em, 8.2em) scale(-1, 1) rotate(45deg);
+}
+
+.the-sun .SL-l {
+    transform: translate(3.9em, 6.0em) scale(-1, 1) rotate(0);
+}
+
+.the-sun .SL-lt2 {
+    transform: translate(3.4em, 2.4em) scale(-1, 1) rotate(-135deg);
+}
+
+.the-sun .SL-t2 {
+    transform: translate(7.0em, .9em) scale(-1, 1) rotate(180deg);
+}
+
+.the-sun .SL-rt2 {
+    transform: translate(10.6em, 2.4em) scale(-1, 1) rotate(135deg);
+}
+
+.the-sun .SL-r2 {
+    transform: translate(12.1em, 6.0em) scale(-1, 1) rotate(90deg);
+}
+
+.the-sun .SL-rb2 {
+    transform: translate(10.6em, 9.6em) scale(-1, 1) rotate(45deg);
+}
+
+.the-sun .SL-b2 {
+    transform: translate(7.0em, 11.1em) scale(-1, 1) rotate(0);
+}
+
+.the-sun .SL-lb2 {
+    transform: translate(3.4em, 9.6em) scale(-1, 1) rotate(-45deg);
+}
+
+.the-sun .SL-l2 {
+    transform: translate(1.9em, 6.0em) scale(-1, 1) rotate(-90deg);
+}
+
+/*
+☽ moon
+ */
+.moon-large .MT-t {
+    transform: translate(4.0em, 3.5em) scale(1, 1) rotate(0);
+}
+
+.moon-large .SL-u {
+    transform: translate(6.0em, 4.5em) scale(1, -1) rotate(0);
+}
+
+.moon-large .SL-d {
+    transform: translate(6.0em, 7.5em) scale(1, 1) rotate(0);
+}
+
+.moon-large .MT-b {
+    transform: translate(4.0em, 7.5em) scale(1, 1) rotate(180deg);
+}
+
+.moon-large .LL-u {
+    transform: translate(8.5em, 3.3em) scale(-1, 1) rotate(45deg);
+}
+
+.moon-large .ST {
+    transform: translate(8.1em, 6.5em) scale(1, 1) rotate(135deg);
+}
+
+.moon-large .LL-d {
+    transform: translate(8.5em, 7.7em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+☿ MERCURY
+*/
+.mercury .SL-lt {
+    transform: translate(4.7em, 1.8em) scale(-1, 1) rotate(-135deg);
+}
+
+.mercury .SL-rt {
+    transform: translate(9.4em, 1.9em) scale(1, 1) rotate(-135deg);
+}
+
+.mercury .SL-lu {
+    transform: translate(5.6em, 3.7em) scale(1, 1) rotate(45deg);
+}
+
+.mercury .SL-ru {
+    transform: translate(7.7em, 3.0em) scale(1, 1) rotate(135deg);
+}
+
+.mercury .SL-ld {
+    transform: translate(6.3em, 5.8em) scale(1, 1) rotate(-45deg);
+}
+
+.mercury .SL-rd {
+    transform: translate(8.4em, 5.1em) scale(1, 1) rotate(-135deg);
+}
+
+.mercury .SL-bu, .venus .SL-bu {
+    transform: translate(7.0em, 8.0em) scale(1, 1) rotate(0);
+}
+
+.mercury .SL-bd, .venus .SL-bd {
+    transform: translate(7.0em, 10.0em) scale(1, 1) rotate(180deg);
+}
+
+.mercury .LL-l, .venus .LL-l {
+    transform: translate(4.5em, 7.5em) scale(1, 1) rotate(90deg);
+}
+
+.mercury .LL-r, .venus .LL-r {
+    transform: translate(9.5em, 7.5em) scale(-1, 1) rotate(90deg);
+}
+
+/*
+♀ VENUS
+*/
+.venus .LL-lt {
+    transform: translate(5.2em, 2.1em) scale(1, 1) rotate(45deg);
+}
+
+.venus .LL-rt {
+    transform: translate(8.0em, 1.4em) scale(1, 1) rotate(135deg);
+}
+
+.venus .LL-lb {
+    transform: translate(5.9em, 4.9em) scale(1, 1) rotate(-45deg);
+}
+
+.venus .LL-rb {
+    transform: translate(8.7em, 4.2em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+♁ EARTH
+*/
+.earth .SL-ct {
+    transform: translate(7.0em, 4.4em) scale(1, 1) rotate(0deg);
+}
+
+.earth .SL-cr {
+    transform: translate(8.6em, 6.0em) scale(1, 1) rotate(90deg);
+}
+
+.earth .SL-cb {
+    transform: translate(7.0em, 7.6em) scale(1, 1) rotate(180deg);
+}
+
+.earth .SL-cl {
+    transform: translate(5.4em, 6.0em) scale(1, 1) rotate(-90deg);
+}
+
+/*
+another earth
+ */
+.earth2 .SL-tl {
+    transform: translate(5.0em, 2.0em) scale(1, 1) rotate(90deg);
+}
+
+.earth2 .LL {
+    transform: translate(7.0em, 1.0em) scale(1, 1) rotate(180deg);
+}
+
+.earth2 .SL-tr {
+    transform: translate(9.0em, 2.0em) scale(1, 1) rotate(-90deg);
+}
+
+.earth2 .SL-lt {
+    transform: translate(4.8em, 4.9em) scale(-1, 1) rotate(-45deg);
+}
+
+.earth2 .SL-t {
+    transform: translate(7.0em, 4.0em) scale(-1, 1) rotate(-90deg);
+}
+
+.earth2 .SL-rt {
+    transform: translate(9.2em, 4.9em) scale(-1, 1) rotate(-135deg);
+}
+
+.earth2 .SL-r {
+    transform: translate(10.1em, 7.1em) scale(-1, 1) rotate(180deg);
+}
+
+.earth2 .SL-rb {
+    transform: translate(9.2em, 9.3em) scale(-1, 1) rotate(135deg);
+}
+
+.earth2 .SL-b {
+    transform: translate(7.0em, 10.2em) scale(-1, 1) rotate(90deg);
+}
+
+.earth2 .SL-lb {
+    transform: translate(4.8em, 9.3em) scale(-1, 1) rotate(45deg);
+}
+
+.earth2 .SL-l {
+    transform: translate(3.9em, 7.1em) scale(-1, 1) rotate(0);
+}
+
+/*
+♂ marse
+*/
+.marse .MT {
+    transform: translate(9.9em, 1.1em) scale(1, 1) rotate(-135deg);
+}
+
+.marse .LL-t {
+    transform: translate(7.6em, 1.6em) scale(-1, 1) rotate(90deg);
+}
+
+.marse .LL-ru {
+    transform: translate(8.6em, 3.9em) scale(-1, 1) rotate(-45deg);
+}
+
+.marse .LL-r {
+    transform: translate(10.9em, 4.9em) scale(1, 1) rotate(180deg);
+}
+
+.marse .LL-lt, .comet .LL-lt, .conjunction .LL-lt {
+    transform: translate(3.7em, 6.0em) scale(1, 1) rotate(45deg);
+}
+
+.marse .LL-rt, .comet .LL-rt, .conjunction .LL-rt {
+    transform: translate(6.5em, 5.3em) scale(1, 1) rotate(135deg);
+}
+
+.marse .LL-lb, .comet .LL-lb, .conjunction .LL-lb {
+    transform: translate(4.4em, 8.8em) scale(1, 1) rotate(-45deg);
+}
+
+.marse .LL-rb, .comet .LL-rb, .conjunction .LL-rb {
+    transform: translate(7.2em, 8.1em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+♃ JUPITER
+*/
+.jupiter .ST-lt {
+    transform: translate(4.0em, 3.0em) scale(1, 1) rotate(0);
+}
+
+.jupiter .ST-t {
+    transform: translate(5.0em, 2.0em) scale(1, 1) rotate(45deg);
+}
+
+.jupiter .ST-tm {
+    transform: translate(6.0em, 3.0em) scale(1, 1) rotate(90deg);
+}
+
+.jupiter .MT-c {
+    transform: translate(7.0em, 4.0em) scale(1, 1) rotate(-90deg);
+}
+
+.jupiter .MT-lc {
+    transform: translate(5.0em, 7.0em) scale(1, 1) rotate(-45deg);
+}
+
+.jupiter .SL-dl {
+    transform: translate(5.0em, 8.0em) scale(1, -1) rotate(90deg);
+}
+
+.jupiter .SL-dm {
+    transform: translate(8.0em, 8.0em) scale(1, 1) rotate(-90deg);
+}
+
+.jupiter .LL-dr {
+    transform: translate(10.5em, 7.5em) scale(1, 1) rotate(90deg);
+}
+
+.jupiter .SL-rt {
+    transform: translate(10.0em, 3.0em) scale(1, 1) rotate(0);
+}
+
+.jupiter .LL-rm {
+    transform: translate(10.0em, 5.0em) scale(1, 1) rotate(180deg);
+}
+
+.jupiter .SL-rb {
+    transform: translate(10.0em, 10.0em) scale(-1, 1) rotate(0);
+}
+
+/*
+♄ SATURN
+*/
+.saturn .LL-l {
+    transform: translate(3.5em, 2.5em) scale(-1, 1) rotate(90deg);
+}
+
+.saturn .LL-r {
+    transform: translate(7.5em, 2.5em) scale(-1, 1) rotate(90deg);
+}
+
+.saturn .SL-1 {
+    transform: translate(5.0em, 2.0em) scale(1, 1) rotate(0);
+}
+
+.saturn .SL-2 {
+    transform: translate(5.0em, 5.0em) scale(1, 1) rotate(0);
+}
+
+.saturn .SL-3 {
+    transform: translate(5.0em, 7.0em) scale(1, 1) rotate(180deg);
+}
+
+.saturn .SL-4 {
+    transform: translate(5.0em, 9.0em) scale(1, 1) rotate(0);
+}
+
+.saturn .ST-1 {
+    transform: translate(6.0em, 6.0em) scale(1, 1) rotate(0);
+}
+
+.saturn .ST-2 {
+    transform: translate(7.0em, 6.4em) scale(1, 1) rotate(45deg);
+}
+
+.saturn .ST-3 {
+    transform: translate(7.4em, 7.4em) scale(1, 1) rotate(90deg);
+}
+
+.saturn .ST-4 {
+    transform: translate(7.0em, 8.4em) scale(1, 1) rotate(135deg);
+}
+
+.saturn .ST-5 {
+    transform: translate(7.0em, 9.8em) scale(1, 1) rotate(-45deg);
+}
+
+.saturn .ST-6 {
+    transform: translate(8.0em, 10.8em) scale(1, 1) rotate(-90deg);
+}
+
+.saturn .ST-7 {
+    transform: translate(9.0em, 10.4em) scale(1, 1) rotate(-135deg);
+}
+
+.saturn .ST-8 {
+    transform: translate(9.4em, 9.4em) scale(1, 1) rotate(180deg);
+}
+
+/*
+♅ URANUS
+ */
+.uranus .LL {
+    transform: translate(7.0em, 1.0em) scale(1, 1) rotate(180deg);
+}
+
+.uranus .SL-xlt {
+    transform: translate(4.5em, 2.8em) scale(1, 1) rotate(-45deg);
+}
+
+.uranus .SL-xlu {
+    transform: translate(6.0em, 4.0em) scale(1, 1) rotate(-90deg);
+}
+
+.uranus .SL-xlm {
+    transform: translate(4.5em, 5.2em) scale(1, -1) rotate(-45deg);
+}
+
+.uranus .SL-xrt {
+    transform: translate(9.6em, 2.8em) scale(-1, 1) rotate(-45deg);
+}
+
+.uranus .SL-xru {
+    transform: translate(8.0em, 4.0em) scale(1, 1) rotate(90deg);
+}
+
+.uranus .SL-xrm {
+    transform: translate(9.5em, 5.2em) scale(1, 1) rotate(135deg);
+}
+
+.uranus .SL-xc {
+    transform: translate(7.0em, 6.0em) scale(1, 1) rotate(0);
+}
+
+.uranus .SL-olt {
+    transform: translate(5.6em, 9.0em) scale(1, 1) rotate(45deg);
+}
+
+.uranus .SL-ort {
+    transform: translate(7.7em, 8.3em) scale(1, 1) rotate(135deg);
+}
+
+.uranus .SL-olb {
+    transform: translate(6.3em, 11.1em) scale(1, 1) rotate(-45deg);
+}
+
+.uranus .SL-orb {
+    transform: translate(8.4em, 10.4em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+⛢ URANUS2
+*/
+.uranus2 .ST {
+    transform: translate(6.5em, 2.0em) scale(1, 1) rotate(45deg);
+}
+
+.uranus2 .LL-l {
+    transform: translate(5.2em, 2.1em) scale(-1, 1) rotate(135deg);
+}
+
+.uranus2 .LL-r {
+    transform: translate(8.8em, 2.1em) scale(1, 1) rotate(135deg);
+}
+
+.uranus2 .SL-tl {
+    transform: translate(6.5em, 3.0em) scale(-1, 1) rotate(180deg);
+}
+
+.uranus2 .SL-tr {
+    transform: translate(7.5em, 3.0em) scale(1, 1) rotate(180deg);
+}
+
+.uranus2 .SL-lt {
+    transform: translate(4.8em, 5.9em) scale(-1, 1) rotate(-45deg);
+}
+
+.uranus2 .SL-t {
+    transform: translate(7.0em, 5.0em) scale(-1, 1) rotate(-90deg);
+}
+
+.uranus2 .SL-rt {
+    transform: translate(9.2em, 5.9em) scale(-1, 1) rotate(-135deg);
+}
+
+.uranus2 .SL-r {
+    transform: translate(10.1em, 8.1em) scale(-1, 1) rotate(180deg);
+}
+
+.uranus2 .SL-rb {
+    transform: translate(9.2em, 10.3em) scale(-1, 1) rotate(135deg);
+}
+
+.uranus2 .SL-b {
+    transform: translate(7.0em, 11.2em) scale(-1, 1) rotate(90deg);
+}
+
+.uranus2 .SL-lb {
+    transform: translate(4.8em, 10.3em) scale(-1, 1) rotate(45deg);
+}
+
+.uranus2 .SL-l {
+    transform: translate(3.9em, 8.1em) scale(-1, 1) rotate(0);
+}
+
+.uranus2 .SQ {
+    transform: translate(6.5em, 8.5em) scale(1, 1) rotate(45deg);
+}
+
+/*
+♆ NEPTUNE
+*/
+.neptune .ST-l {
+    transform: translate(3.5em, 3.0em) scale(1, 1) rotate(45deg);
+}
+
+.neptune .ST-m {
+    transform: translate(6.5em, 3.0em) scale(1, 1) rotate(45deg);
+}
+
+.neptune .ST-r {
+    transform: translate(9.5em, 3.0em) scale(1, 1) rotate(45deg);
+}
+
+.neptune .SL-lt {
+    transform: translate(4.0em, 4.0em) scale(1, 1) rotate(0);
+}
+
+.neptune .SL-mt {
+    transform: translate(7.0em, 4.0em) scale(1, 1) rotate(0);
+}
+
+.neptune .SL-rt {
+    transform: translate(10.0em, 4.0em) scale(-1, 1) rotate(0);
+}
+
+.neptune .SL-mu {
+    transform: translate(7.0em, 6.0em) scale(1, 1) rotate(180deg);
+}
+
+.neptune .PR-l {
+    transform: translate(5.0em, 5.0em) scale(-1, 1) rotate(0);
+}
+
+.neptune .PR-r {
+    transform: translate(8.0em, 5.0em) scale(1, 1) rotate(0);
+}
+
+.neptune .SL-bu, .pluto .SL-bu {
+    transform: translate(7.0em, 9.0em) scale(1, 1) rotate(0);
+}
+
+.neptune .SL-bd, .pluto .SL-bd {
+    transform: translate(7.0em, 11.0em) scale(1, 1) rotate(180deg);
+}
+
+.neptune .LL-l, .pluto .LL-l {
+    transform: translate(4.5em, 8.5em) scale(1, 1) rotate(90deg);
+}
+
+.neptune .LL-r, .pluto .LL-r {
+    transform: translate(9.5em, 8.5em) scale(-1, 1) rotate(90deg);
+}
+
+/*
+PLUTO(I can't find the symbol.)
+ */
+.pluto .SL-olt {
+    transform: translate(5.6em, 2.5em) scale(1, 1) rotate(45deg);
+}
+
+.pluto .SL-ort {
+    transform: translate(7.7em, 1.8em) scale(1, 1) rotate(135deg);
+}
+
+.pluto .SL-olb {
+    transform: translate(6.3em, 4.6em) scale(1, 1) rotate(-45deg);
+}
+
+.pluto .SL-orb {
+    transform: translate(8.4em, 3.9em) scale(1, 1) rotate(-135deg);
+}
+
+.pluto .ST-l {
+    transform: translate(3.5em, 4.5em) scale(1, 1) rotate(-45deg);
+}
+
+.pluto .ST-lu {
+    transform: translate(4.5em, 6.0em) scale(1, 1) rotate(-90deg);
+}
+
+.pluto .ST-r {
+    transform: translate(9.5em, 4.5em) scale(1, 1) rotate(135deg);
+}
+
+.pluto .ST-ru {
+    transform: translate(8.5em, 6.0em) scale(1, 1) rotate(180deg);
+}
+
+.pluto .SL-cr {
+    transform: translate(5.5em, 7.0em) scale(1, 1) rotate(-90deg);
+}
+
+.pluto .LL {
+    transform: translate(8.0em, 6.5em) scale(1, 1) rotate(90deg);
+}
+
+/*
+♇ PLUTO2
+*/
+.pluto2 .ST-lt {
+    transform: translate(4.4em, 3.0em) scale(1, 1) rotate(90deg);
+}
+
+.pluto2 .PR-u {
+    transform: translate(4.7em, 3.7em) scale(1, 1) rotate(-45deg);
+}
+
+.pluto2 .PR-m {
+    transform: translate(4.7em, 6.5em) scale(1, 1) rotate(-45deg);
+}
+
+.pluto2 .ST-ld {
+    transform: translate(4.0em, 9.6em) scale(1, 1) rotate(135deg);
+}
+
+.pluto2 .ST-lb {
+    transform: translate(4.4em, 10.6em) scale(1, 1) rotate(180deg);
+}
+
+.pluto2 .LL-b {
+    transform: translate(7.9em, 10.1em) scale(1, 1) rotate(-90deg);
+}
+
+.pluto2 .ST-rb {
+    transform: translate(9.4em, 10.6em) scale(1, 1) rotate(180deg);
+}
+
+.pluto2 .SL-t {
+    transform: translate(7.4em, 2.0em) scale(1, -1) rotate(-90deg);
+}
+
+.pluto2 .LL-rt {
+    transform: translate(9.7em, 2.1em) scale(1, 1) rotate(135deg);
+}
+
+.pluto2 .SL-ru {
+    transform: translate(9.3em, 5.1em) scale(-1, 1) rotate(-45deg);
+}
+
+.pluto2 .SL-mu {
+    transform: translate(7.4em, 5.3em) scale(1, 1) rotate(-90deg);
+}
+
+/*
+⚳ CERES
+*/
+.ceres .ST-l {
+    transform: translate(4.7em, 5.0em) scale(1, 1) rotate(0);
+}
+
+.ceres .ST-tl {
+    transform: translate(5.1em, 4.0em) scale(1, 1) rotate(45deg);
+}
+
+.ceres .ST-t {
+    transform: translate(6.5em, 2.6em) scale(1, 1) rotate(-135deg);
+}
+
+.ceres .ST-tr {
+    transform: translate(7.9em, 4.0em) scale(1, 1) rotate(45deg);
+}
+
+.ceres .ST-r {
+    transform: translate(8.3em, 5.0em) scale(1, 1) rotate(90deg);
+}
+
+.ceres .LL-c {
+    transform: translate(8.0em, 6.0em) scale(-1, 1) rotate(-45deg);
+}
+
+.ceres .SL-ld, .lilith .SL-ld, .pallas .SL-ld, .juno .SL-ld {
+    transform: translate(5.0em, 9.0em) scale(1, -1) rotate(90deg);
+}
+
+.ceres .LL-b, .lilith .LL-b, .pallas .LL-b, .juno .LL-b {
+    transform: translate(7.0em, 9.0em) scale(1, 1) rotate(0);
+}
+
+.ceres .SL-rd, .lilith .SL-rd, .pallas .SL-rd, .juno .SL-rd {
+    transform: translate(9.0em, 9.0em) scale(1, 1) rotate(-90deg);
+}
+
+/*
+⚸ BLACK MOON LILITH
+*/
+.lilith .SL-t {
+    transform: translate(8.0em, 2.4em) scale(1, 1) rotate(90deg);
+}
+
+.lilith .ST-t {
+    transform: translate(6.0em, 3.4em) scale(1, 1) rotate(0);
+}
+
+.lilith .ST-lt {
+    transform: translate(5.0em, 3.8em) scale(1, 1) rotate(-45deg);
+}
+
+.lilith .ST-lu {
+    transform: translate(3.6em, 5.2em) scale(-1, 1) rotate(-45deg);
+}
+
+.lilith .ST-lm {
+    transform: translate(5.0em, 6.6em) scale(1, 1) rotate(-45deg);
+}
+
+.lilith .ST-m {
+    transform: translate(6.0em, 7.0em) scale(1, 1) rotate(-90deg);
+}
+
+.lilith .SL-c {
+    transform: translate(8.0em, 7.0em) scale(1, -1) rotate(90deg);
+}
+
+/*
+⚴ PALLAS
+*/
+.pallas .ST-t {
+    transform: translate(6.5em, 2.4em) scale(1, 1) rotate(45deg);
+}
+
+.pallas .SL-l {
+    transform: translate(5.6em, 2.6em) scale(-1, 1) rotate(135deg);
+}
+
+.pallas .SL-r {
+    transform: translate(8.4em, 2.6em) scale(1, 1) rotate(135deg);
+}
+
+.pallas .LL-l {
+    transform: translate(8.7em, 4.6em) scale(-1, 1) rotate(-45deg);
+}
+
+.pallas .LL-r {
+    transform: translate(5.3em, 4.6em) scale(1, 1) rotate(-45deg);
+}
+
+.pallas .ST-b {
+    transform: translate(6.5em, 6.6em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+⚵ JUNO
+*/
+.juno .LL-t {
+    transform: translate(7.0em, 2.0em) scale(1, 1) rotate(0);
+}
+
+.juno .LL-c {
+    transform: translate(7.0em, 5.0em) scale(1, 1) rotate(180deg);
+}
+
+.juno .SL-lu {
+    transform: translate(5.1em, 2.9em) scale(1, 1) rotate(-45deg);
+}
+
+.juno .SL-lm {
+    transform: translate(5.0em, 4.1em) scale(1, 1) rotate(-90deg);
+}
+
+.juno .SL-lb {
+    transform: translate(5.8em, 5.0em) scale(1, 1) rotate(-135deg);
+}
+
+.juno .SL-ru {
+    transform: translate(8.9em, 2.9em) scale(-1, 1) rotate(-45deg);
+}
+
+.juno .SL-rm {
+    transform: translate(9.0em, 4.1em) scale(-1, 1) rotate(-90deg);
+}
+
+.juno .SL-rb {
+    transform: translate(8.2em, 5.0em) scale(-1, 1) rotate(-135deg);
+}
+
+/*
+☄ comet
+*/
+.comet .SL-t {
+    transform: translate(6.4em, 1.0em) scale(1, 1) rotate(180deg);
+}
+
+.comet .SL-u {
+    transform: translate(6.4em, 4.0em) scale(1, 1) rotate(0);
+}
+
+.comet .SL-rt {
+    transform: translate(10.3em, 2.7em) scale(-1, 1) rotate(-45deg);
+}
+
+.comet .LL, .conjunction .LL-c {
+    transform: translate(8.6em, 3.9em) scale(1, -1) rotate(-45deg);
+}
+
+.comet .SL-mr {
+    transform: translate(9.0em, 6.6em) scale(1, -1) rotate(90deg);
+}
+
+.comet .SL-r {
+    transform: translate(12.0em, 6.6em) scale(-1, 1) rotate(90deg);
+}
+
+/*
+☊ ASCENDING NODE
+*/
+.ascending-node .ST {
+    transform: translate(6.5em, 2.4em) scale(1, 1) rotate(45deg);
+}
+
+.ascending-node .PR-lt {
+    transform: translate(4.5em, 1.0em) scale(-1, 1) rotate(90deg);
+}
+
+.ascending-node .PR-rt {
+    transform: translate(8.5em, 1.0em) scale(1, 1) rotate(90deg);
+}
+
+.ascending-node .SL-l {
+    transform: translate(3.5em, 4.0em) scale(1, 1) rotate(0);
+}
+
+.ascending-node .PR-ml {
+    transform: translate(4.5em, 5.0em) scale(-1, 1) rotate(0);
+}
+
+.ascending-node .PR-mr {
+    transform: translate(8.5em, 5.0em) scale(1, 1) rotate(0);
+}
+
+.ascending-node .SL-r {
+    transform: translate(10.5em, 4.0em) scale(-1, 1) rotate(0);
+}
+
+.ascending-node .SL-llt {
+    transform: translate(3.2em, 6.8em) scale(-1, 1) rotate(135deg);
+}
+
+.ascending-node .SL-lrt {
+    transform: translate(5.3em, 7.5em) scale(-1, 1) rotate(45deg);
+}
+
+.ascending-node .SL-llb {
+    transform: translate(2.5em, 8.9em) scale(-1, 1) rotate(-135deg);
+}
+
+.ascending-node .SL-lrb {
+    transform: translate(4.6em, 9.6em) scale(-1, 1) rotate(-45deg);
+}
+
+.ascending-node .SL-rlt {
+    transform: translate(8.7em, 7.5em) scale(1, 1) rotate(45deg);
+}
+
+.ascending-node .SL-rrt {
+    transform: translate(10.8em, 6.8em) scale(1, 1) rotate(135deg);
+}
+
+.ascending-node .SL-rlb {
+    transform: translate(9.4em, 9.6em) scale(1, 1) rotate(-45deg);
+}
+
+.ascending-node .SL-rrb {
+    transform: translate(11.5em, 8.9em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+☋ DESCENDING NODE
+*/
+.descending-node .SL-llt {
+    transform: translate(3.7em, 1.4em) scale(-1, 1) rotate(135deg);
+}
+
+.descending-node .SL-lrt {
+    transform: translate(5.8em, 2.1em) scale(-1, 1) rotate(45deg);
+}
+
+.descending-node .SL-llb {
+    transform: translate(3.0em, 3.5em) scale(-1, 1) rotate(-135deg);
+}
+
+.descending-node .SL-lrb {
+    transform: translate(5.1em, 4.2em) scale(-1, 1) rotate(-45deg);
+}
+
+.descending-node .SL-rlt {
+    transform: translate(8.2em, 2.1em) scale(1, 1) rotate(45deg);
+}
+
+.descending-node .SL-rrt {
+    transform: translate(10.3em, 1.4em) scale(1, 1) rotate(135deg);
+}
+
+.descending-node .SL-rlb {
+    transform: translate(8.9em, 4.2em) scale(1, 1) rotate(-45deg);
+}
+
+.descending-node .SL-rrb {
+    transform: translate(11.0em, 3.5em) scale(1, 1) rotate(-135deg);
+}
+
+.descending-node .PR-l {
+    transform: translate(5.0em, 5.0em) scale(1, 1) rotate(0);
+}
+
+.descending-node .PR-r {
+    transform: translate(8.0em, 5.0em) scale(-1, 1) rotate(0);
+}
+
+.descending-node .ST-l {
+    transform: translate(4.0em, 7.9em) scale(1, 1) rotate(-45deg);
+}
+
+.descending-node .ST-ld {
+    transform: translate(5.0em, 9.0em) scale(1, 1) rotate(-90deg);
+}
+
+.descending-node .ST-b {
+    transform: translate(6.5em, 10.0em) scale(1, 1) rotate(-135deg);
+}
+
+.descending-node .ST-rd {
+    transform: translate(8.0em, 9.0em) scale(1, 1) rotate(180deg);
+}
+
+.descending-node .ST-r {
+    transform: translate(9.0em, 8.0em) scale(1, 1) rotate(135deg);
+}
+
+/*
+Hygiea(I can't find that symbol.)
+ */
+.hygiea .ST-lt {
+    transform: translate(3.0em, 1.6em) scale(1, 1) rotate(-45deg);
+}
+
+.hygiea .ST-l {
+    transform: translate(3.0em, 3.0em) scale(1, 1) rotate(-90deg);
+}
+
+.hygiea .ST-rt {
+    transform: translate(10.0em, 1.6em) scale(1, 1) rotate(135deg);
+}
+
+.hygiea .ST-r {
+    transform: translate(10.0em, 3.0em) scale(1, 1) rotate(180deg);
+}
+
+.hygiea .SL-t {
+    transform: translate(7.0em, 2.0em) scale(1, 1) rotate(180deg);
+}
+
+.hygiea .SL-tl {
+    transform: translate(5.0em, 4.0em) scale(1, -1) rotate(90deg);
+}
+
+.hygiea .SL-tr {
+    transform: translate(9.0em, 4.0em) scale(1, 1) rotate(-90deg);
+}
+
+.hygiea .LL-c {
+    transform: translate(7.0em, 5.0em) scale(1, 1) rotate(0);
+}
+
+.hygiea .LL-b {
+    transform: translate(7.0em, 8.0em) scale(1, 1) rotate(180deg);
+}
+
+.hygiea .LL-lu {
+    transform: translate(4.5em, 5.5em) scale(1, 1) rotate(90deg);
+}
+
+.hygiea .LL-ru {
+    transform: translate(9.5em, 5.5em) scale(1, -1) rotate(-90deg);
+}
+
+.hygiea .LL-ld {
+    transform: translate(4.5em, 6.5em) scale(1, -1) rotate(90deg);
+}
+
+.hygiea .LL-rd {
+    transform: translate(9.5em, 6.5em) scale(1, 1) rotate(-90deg);
+}
+
+.hygiea .SL-lu {
+    transform: translate(5.0em, 9.0em) scale(1, 1) rotate(90deg);
+}
+
+.hygiea .SL-ru {
+    transform: translate(9.0em, 9.0em) scale(1, -1) rotate(-90deg);
+}
+
+.hygiea .SL-ld {
+    transform: translate(5.0em, 10.0em) scale(1, -1) rotate(90deg);
+}
+
+.hygiea .SL-rd {
+    transform: translate(9.0em, 10.0em) scale(1, 1) rotate(-90deg);
+}
+
+/*
+⚶ VESTA
+*/
+.vesta .LL-t {
+    transform: translate(7.0em, 2.0em) scale(1, 1) rotate(0);
+}
+
+.vesta .SL-u {
+    transform: translate(8.2em, 4.5em) scale(-1, 1) rotate(-135deg);
+}
+
+.vesta .SL-c {
+    transform: translate(7.5em, 6.6em) scale(1, 1) rotate(45deg);
+}
+
+.vesta .SL-ml {
+    transform: translate(5.6em, 7.7em) scale(-1, 1) rotate(-135deg);
+}
+
+.vesta .LL-mr {
+    transform: translate(8.1em, 7.6em) scale(1, 1) rotate(-135deg);
+}
+
+.vesta .SL-l {
+    transform: translate(3.4em, 9.0em) scale(-1, 1) rotate(-90deg);
+}
+
+.vesta .SL-lm {
+    transform: translate(5.6em, 9.9em) scale(-1, 1) rotate(-135deg);
+}
+
+.vesta .LL-rm {
+    transform: translate(8.1em, 9.8em) scale(1, 1) rotate(-135deg);
+}
+
+.vesta .SL-r {
+    transform: translate(10.7em, 9.0em) scale(1, 1) rotate(-90deg);
+}
+
+/*
+⚷ CHIRON
+*/
+.chiron .LL-t {
+    transform: translate(7.0em, 2.0em) scale(1, 1) rotate(0);
+}
+
+.chiron .LL-rt {
+    transform: translate(9.3em, 1.1em) scale(1, -1) rotate(-45deg);
+}
+
+.chiron .LL-r {
+    transform: translate(8.5em, 3.8em) scale(-1, 1) rotate(-135deg);
+}
+
+.chiron .SL-c {
+    transform: translate(7.0em, 5.0em) scale(1, 1) rotate(180deg);
+}
+
+.chiron .SL-lt {
+    transform: translate(5.6em, 7.9em) scale(1, 1) rotate(45deg);
+}
+
+.chiron .SL-rt {
+    transform: translate(7.7em, 7.2em) scale(1, 1) rotate(135deg);
+}
+
+.chiron .SL-lb {
+    transform: translate(6.3em, 10.0em) scale(1, 1) rotate(-45deg);
+}
+
+.chiron .SL-rb {
+    transform: translate(8.4em, 9.3em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+Astraea(I can't find the symbol.)
+ */
+.astraea .ST-l {
+    transform: translate(2.1em, 4.6em) scale(1, 1) rotate(-135deg);
+}
+
+.astraea .SL-1 {
+    transform: translate(3.3em, 3.4em) scale(-1, 1) rotate(-45deg);
+}
+
+.astraea .SL-2 {
+    transform: translate(5.5em, 2.5em) scale(-1, 1) rotate(-90deg);
+}
+
+.astraea .SL-3 {
+    transform: translate(8.5em, 2.5em) scale(1, 1) rotate(-90deg);
+}
+
+.astraea .SL-4 {
+    transform: translate(10.7em, 3.4em) scale(1, 1) rotate(-45deg);
+}
+
+.astraea .ST-r {
+    transform: translate(10.9em, 4.6em) scale(1, 1) rotate(-135deg);
+}
+
+.astraea .LL-u {
+    transform: translate(7.0em, 4.5em) scale(1, 1) rotate(0);
+}
+
+.astraea .SL-d {
+    transform: translate(7.0em, 7.5em) scale(1, 1) rotate(180deg);
+}
+
+.astraea .ST-b {
+    transform: translate(6.5em, 9.5em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+eye-of-providence(I can't find the symbol.)
+apple-of-discord(I can't find the symbol.)
+ */
+.eye-of-providence .LL-n, .apple-of-discord .LL-n, .ixion .LL-n {
+    transform: translate(7.1em, 1.3em) scale(1, 1) rotate(-90deg);
+}
+
+.eye-of-providence .LL-ne, .apple-of-discord .LL-ne, .ixion .LL-ne {
+    transform: translate(10.1em, 2.6em) scale(1, 1) rotate(-45deg);
+}
+
+.eye-of-providence .LL-e, .apple-of-discord .LL-e, .ixion .LL-e {
+    transform: translate(11.3em, 5.6em) scale(1, 1) rotate(0);
+}
+
+.eye-of-providence .LL-se, .apple-of-discord .LL-se, .ixion .LL-se {
+    transform: translate(10.0em, 8.6em) scale(1, 1) rotate(45deg);
+}
+
+.eye-of-providence .LL-s, .apple-of-discord .LL-s, .ixion .LL-s {
+    transform: translate(7.0em, 9.8em) scale(1, 1) rotate(90deg);
+}
+
+.eye-of-providence .LL-sw, .apple-of-discord .LL-sw, .ixion .LL-sw {
+    transform: translate(4.0em, 8.5em) scale(1, 1) rotate(135deg);
+}
+
+.eye-of-providence .LL-w, .apple-of-discord .LL-w, .ixion .LL-w {
+    transform: translate(2.8em, 5.5em) scale(1, 1) rotate(180deg);
+}
+
+.eye-of-providence .LL-nw, .apple-of-discord .LL-nw, .ixion .LL-nw {
+    transform: translate(4.1em, 2.5em) scale(1, 1) rotate(-135deg);
+}
+
+.eye-of-providence .MT {
+    transform: translate(5.5em, 2.2em) scale(1, 1) rotate(180deg);
+}
+
+.eye-of-providence .LL-cl {
+    transform: translate(5.0em, 6.2em) scale(1, 1) rotate(0deg);
+}
+
+.eye-of-providence .LL-cr {
+    transform: translate(9.0em, 6.2em) scale(-1, 1) rotate(0);
+}
+
+.eye-of-providence .SQ {
+    transform: translate(6.5em, 7.0em) scale(1, 1) rotate(-135deg);
+}
+
+.apple-of-discord .SL {
+    transform: translate(5.2em, 4.0em) scale(1, -1) rotate(0);
+}
+
+.apple-of-discord .LL-krt {
+    transform: translate(5.2em, 7.0em) scale(1, 1) rotate(0);
+}
+
+.apple-of-discord .LL-klb {
+    transform: translate(7.5em, 4.5em) scale(1, -1) rotate(135deg);
+}
+
+.apple-of-discord .LL-krb {
+    transform: translate(7.5em, 6.6em) scale(1, 1) rotate(135deg);
+}
+
+/*
+hand-of-eris(I can't find the symbol.)
+ */
+.hand-of-eris .SL-t {
+    transform: translate(7.0em, 1.5em) scale(1, 1) rotate(0);
+}
+
+.hand-of-eris .LL-u {
+    transform: translate(7.0em, 3.5em) scale(1, 1) rotate(180deg);
+}
+
+.hand-of-eris .LL-d {
+    transform: translate(7.0em, 7.5em) scale(1, 1) rotate(0);
+}
+
+.hand-of-eris .SL-b {
+    transform: translate(7.0em, 10.5em) scale(1, 1) rotate(180deg);
+}
+
+.hand-of-eris .SL-lto {
+    transform: translate(3.6em, 3.0em) scale(1, 1) rotate(-90deg);
+}
+
+.hand-of-eris .SL-lti {
+    transform: translate(5.8em, 3.9em) scale(-1, 1) rotate(45deg);
+}
+
+.hand-of-eris .SL-rto {
+    transform: translate(10.4em, 3.0em) scale(-1, 1) rotate(-90deg);
+}
+
+.hand-of-eris .SL-rti {
+    transform: translate(8.2em, 3.9em) scale(1, 1) rotate(45deg);
+}
+
+.hand-of-eris .SL-lbo {
+    transform: translate(3.6em, 9.0em) scale(1, -1) rotate(-90deg);
+}
+
+.hand-of-eris .SL-lbi {
+    transform: translate(5.8em, 8.1em) scale(1, 1) rotate(-135deg);
+}
+
+.hand-of-eris .SL-rbo {
+    transform: translate(10.4em, 9.0em) scale(1, 1) rotate(90deg);
+}
+
+.hand-of-eris .SL-rbi {
+    transform: translate(8.2em, 8.1em) scale(1, -1) rotate(45deg);
+}
+
+/*
+Urania(I can't find the symbol.)
+ */
+.urania .ST-t {
+    transform: translate(6.5em, .6em) scale(1, 1) rotate(-135deg);
+}
+
+.urania .LL-tl {
+    transform: translate(6.5em, 2.0em) scale(1, 1) rotate(180deg);
+}
+
+.urania .LL-tr {
+    transform: translate(7.5em, 2.0em) scale(-1, 1) rotate(180deg);
+}
+
+.urania .ST-l {
+    transform: translate(2.1em, 4.0em) scale(1, 1) rotate(135deg);
+}
+
+.urania .SL-lu {
+    transform: translate(4.5em, 3.0em) scale(1, -1) rotate(90deg);
+}
+
+.urania .SL-ld {
+    transform: translate(4.5em, 4.0em) scale(1, 1) rotate(90deg);
+}
+
+.urania .ST-r {
+    transform: translate(10.9em, 4.0em) scale(1, 1) rotate(-45deg);
+}
+
+.urania .SL-ru {
+    transform: translate(9.5em, 3.0em) scale(1, 1) rotate(-90deg);
+}
+
+.urania .SL-rd {
+    transform: translate(9.5em, 4.0em) scale(1, -1) rotate(-90deg);
+}
+
+.urania .ST-cl {
+    transform: translate(6.5em, 6.0em) scale(1, 1) rotate(0);
+}
+
+.urania .ST-cr {
+    transform: translate(6.5em, 6.0em) scale(1, 1) rotate(180deg);
+}
+
+.urania .LL-lt {
+    transform: translate(5.3em, 7.7em) scale(1, 1) rotate(45deg);
+}
+
+.urania .LL-rt {
+    transform: translate(8.1em, 7.0em) scale(1, 1) rotate(135deg);
+}
+
+.urania .LL-lb {
+    transform: translate(6.0em, 10.5em) scale(1, 1) rotate(-45deg);
+}
+
+.urania .LL-rb {
+    transform: translate(8.8em, 9.8em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+Makemake(I can't find the symbol.)
+ */
+.makemake .SL-t {
+    transform: translate(7.0em, 3.0em) scale(1, 1) rotate(0);
+}
+
+.makemake .SL-u {
+    transform: translate(7.0em, 5.0em) scale(1, 1) rotate(180deg);
+}
+
+.makemake .SL-d {
+    transform: translate(7.0em, 8.0em) scale(1, 1) rotate(0);
+}
+
+.makemake .SL-b {
+    transform: translate(7.0em, 10.0em) scale(1, 1) rotate(180deg);
+}
+
+.makemake .SL-tl {
+    transform: translate(5.0em, 2.0em) scale(1, 1) rotate(90deg);
+}
+
+.makemake .LL-lt {
+    transform: translate(2.8em, 2.0em) scale(-1, 1) rotate(135deg);
+}
+
+.makemake .LL-l {
+    transform: translate(1.5em, 5.0em) scale(1, 1) rotate(180deg);
+}
+
+.makemake .SL-lb {
+    transform: translate(2.5em, 8.2em) scale(1, 1) rotate(135deg);
+}
+
+.makemake .SL-tr {
+    transform: translate(9.0em, 2.0em) scale(-1, 1) rotate(90deg);
+}
+
+.makemake .LL-rt {
+    transform: translate(11.2em, 2.0em) scale(1, 1) rotate(135deg);
+}
+
+.makemake .LL-r {
+    transform: translate(12.5em, 5.0em) scale(-1, 1) rotate(180deg);
+}
+
+.makemake .SL-rb {
+    transform: translate(11.6em, 8.2em) scale(-1, 1) rotate(135deg);
+}
+
+.makemake .SL-llt {
+    transform: translate(3.6em, 3.8em) scale(-1, 1) rotate(135deg);
+}
+
+.makemake .SL-lrt {
+    transform: translate(5.7em, 4.5em) scale(-1, 1) rotate(45deg);
+}
+
+.makemake .SL-llb {
+    transform: translate(2.9em, 5.9em) scale(-1, 1) rotate(-135deg);
+}
+
+.makemake .SL-lrb {
+    transform: translate(5.0em, 6.6em) scale(-1, 1) rotate(-45deg);
+}
+
+.makemake .SL-rlt {
+    transform: translate(8.3em, 4.5em) scale(1, 1) rotate(45deg);
+}
+
+.makemake .SL-rrt {
+    transform: translate(10.4em, 3.8em) scale(1, 1) rotate(135deg);
+}
+
+.makemake .SL-rlb {
+    transform: translate(9.0em, 6.6em) scale(1, 1) rotate(-45deg);
+}
+
+.makemake .SL-rrb {
+    transform: translate(11.1em, 5.9em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+Haumea(I can't find the symbol)
+ */
+.haumea .SL-ult {
+    transform: translate(5.6em, 1.4em) scale(1, 1) rotate(45deg);
+}
+
+.haumea .SL-urt {
+    transform: translate(7.7em, .7em) scale(1, 1) rotate(135deg);
+}
+
+.haumea .SL-ulb {
+    transform: translate(6.3em, 3.5em) scale(1, 1) rotate(-45deg);
+}
+
+.haumea .SL-urb {
+    transform: translate(8.4em, 2.8em) scale(1, 1) rotate(-135deg);
+}
+
+.haumea .SL-1 {
+    transform: translate(3.5em, 5.0em) scale(1, 1) rotate(-90deg);
+}
+
+.haumea .SL-2 {
+    transform: translate(5.5em, 5.0em) scale(1, 1) rotate(90deg);
+}
+
+.haumea .SL-3 {
+    transform: translate(8.5em, 5.0em) scale(1, 1) rotate(-90deg);
+}
+
+.haumea .SL-4 {
+    transform: translate(10.5em, 5.0em) scale(1, 1) rotate(90deg);
+}
+
+.haumea .LL-ld {
+    transform: translate(4.0em, 7.0em) scale(-1, 1) rotate(0);
+}
+
+.haumea .LL-lb {
+    transform: translate(3.5em, 9.7em) scale(1, 1) rotate(-135deg);
+}
+
+.haumea .LL-rd {
+    transform: translate(10.0em, 7.0em) scale(1, 1) rotate(0);
+}
+
+.haumea .LL-rb {
+    transform: translate(10.5em, 9.7em) scale(-1, 1) rotate(-135deg);
+}
+
+.haumea .SL-dlt {
+    transform: translate(5.6em, 7.2em) scale(1, 1) rotate(45deg);
+}
+
+.haumea .SL-drt {
+    transform: translate(7.7em, 6.5em) scale(1, 1) rotate(135deg);
+}
+
+.haumea .SL-dlb {
+    transform: translate(6.3em, 9.3em) scale(1, 1) rotate(-45deg);
+}
+
+.haumea .SL-drb {
+    transform: translate(8.4em, 8.6em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+Ixion(I can't find the symbol)
+ */
+.ixion .SL-lt {
+    transform: translate(3.6em, 1.8em) scale(1, 1) rotate(-90deg);
+}
+
+.ixion .SL-rt {
+    transform: translate(10.5em, 1.8em) scale(1, -1) rotate(90deg);
+}
+
+.ixion .SL-xlt {
+    transform: translate(5.6em, 4.6em) scale(-1, 1) rotate(-135deg);
+}
+
+.ixion .SL-xrt {
+    transform: translate(8.4em, 4.6em) scale(1, 1) rotate(-135deg);
+}
+
+.ixion .SL-xlb {
+    transform: translate(5.6em, 7.4em) scale(1, 1) rotate(45deg);
+}
+
+.ixion .LL-xrb {
+    transform: translate(8.1em, 6.6em) scale(-1, 1) rotate(45deg);
+}
+
+/*
+Sedna
+ */
+.sedna .SL-lt {
+    transform: translate(1.0em, 1.2em) scale(1, 1) rotate(45deg);
+}
+
+.sedna .SL-rt {
+    transform: translate(3.1em, .5em) scale(1, 1) rotate(135deg);
+}
+
+.sedna .SL-lb {
+    transform: translate(1.7em, 3.3em) scale(1, 1) rotate(-45deg);
+}
+
+.sedna .SL-rb {
+    transform: translate(3.8em, 2.6em) scale(1, 1) rotate(-135deg);
+}
+
+.sedna .LL-t {
+    transform: translate(5.5em, .5em) scale(1, 1) rotate(180deg);
+}
+
+.sedna .LL-u {
+    transform: translate(5.1em, 3.0em) scale(1, 1) rotate(90deg);
+}
+
+.sedna .SL-c {
+    transform: translate(5.5em, 5.5em) scale(1, 1) rotate(0);
+}
+
+.sedna .LL-c {
+    transform: translate(8.0em, 6.0em) scale(1, 1) rotate(-90deg);
+}
+
+.sedna .LL-d {
+    transform: translate(11.0em, 7.3em) scale(1, 1) rotate(-45deg);
+}
+
+.sedna .LL-b {
+    transform: translate(12.2em, 10.3em) scale(1, 1) rotate(0);
+}
+
+/*
+Quaoar
+ */
+.quaoar .LL-lt {
+    transform: translate(3.5em, 4.4em) scale(-1, 1) rotate(-45deg);
+}
+
+.quaoar .LL-tl {
+    transform: translate(6.0em, 1.9em) scale(1, 1) rotate(-135deg);
+}
+
+.quaoar .LL-tr {
+    transform: translate(8.1em, 1.9em) scale(-1, 1) rotate(-135deg);
+}
+
+.quaoar .LL-rt {
+    transform: translate(10.6em, 4.4em) scale(1, 1) rotate(-45deg);
+}
+
+.quaoar .SL-rb {
+    transform: translate(11.0em, 6.7em) scale(1, -1) rotate(-45deg);
+}
+
+.quaoar .SL-br {
+    transform: translate(7.8em, 9.9em) scale(1, 1) rotate(45deg);
+}
+
+.quaoar .LL-bl {
+    transform: translate(6.0em, 9.0em) scale(1, -1) rotate(-135deg);
+}
+
+.quaoar .LL-lb {
+    transform: translate(3.5em, 6.5em) scale(1, 1) rotate(135deg);
+}
+
+.quaoar .MT-u {
+    transform: translate(6.0em, 6.1em) scale(1, 1) rotate(135deg);
+}
+
+.quaoar .MT-d {
+    transform: translate(9.6em, 9.6em) scale(1, 1) rotate(-45deg);
+}
+
+/*
+Typhon(I can't find the symbol.)
+ */
+.typhon .SL-lt {
+    transform: translate(4.8em, 3.8em) scale(-1, 1) rotate(-45deg);
+}
+
+.typhon .SL-t {
+    transform: translate(7.0em, 2.9em) scale(-1, 1) rotate(-90deg);
+}
+
+.typhon .SL-rt {
+    transform: translate(9.2em, 3.8em) scale(-1, 1) rotate(-135deg);
+}
+
+.typhon .SL-r {
+    transform: translate(10.1em, 6.0em) scale(-1, 1) rotate(180deg);
+}
+
+.typhon .SL-rb {
+    transform: translate(9.2em, 8.2em) scale(-1, 1) rotate(135deg);
+}
+
+.typhon .SL-b {
+    transform: translate(7.0em, 9.1em) scale(-1, 1) rotate(90deg);
+}
+
+.typhon .SL-lb {
+    transform: translate(4.8em, 8.2em) scale(-1, 1) rotate(45deg);
+}
+
+.typhon .SL-l {
+    transform: translate(3.9em, 6.0em) scale(-1, 1) rotate(0);
+}
+
+.typhon .SL-tl {
+    transform: translate(4.1em, 3.1em) scale(1, 1) rotate(45deg);
+}
+
+.typhon .SL-tm {
+    transform: translate(6.2em, 1.0em) scale(1, 1) rotate(-135deg);
+}
+
+.typhon .SL-tt {
+    transform: translate(8.4em, .1em) scale(1, 1) rotate(-90deg);
+}
+
+.typhon .SL-br {
+    transform: translate(9.9em, 8.9em) scale(1, 1) rotate(-135deg);
+}
+
+.typhon .SL-bm {
+    transform: translate(7.8em, 11.0em) scale(1, 1) rotate(45deg);
+}
+
+.typhon .SL-bb {
+    transform: translate(5.6em, 11.9em) scale(1, 1) rotate(90deg);
+}
+
+/*
+☌ CONJUNCTION
+*/
+.conjunction .LL-end {
+    transform: translate(10.7em, 1.8em) scale(-1, 1) rotate(-45deg);
+}
+
+/*
+⚺ SEMISEXTILE
+*/
+.semisextile .LL-lt {
+    transform: translate(4.7em, 3.4em) scale(1, 1) rotate(160deg);
+}
+
+.semisextile .LL-lm {
+    transform: translate(6.1em, 7.1em) scale(1, 1) rotate(-20deg);
+}
+
+.semisextile .LL-rt {
+    transform: translate(9.3em, 3.1em) scale(1, -1) rotate(-25deg);
+}
+
+.semisextile .LL-rm {
+    transform: translate(7.6em, 6.7em) scale(1, 1) rotate(25deg);
+}
+
+.semisextile .LL-lb {
+    transform: translate(5.5em, 9.5em) scale(1, 1) rotate(-90deg);
+}
+
+.semisextile .LL-rb {
+    transform: translate(8.5em, 9.5em) scale(1, 1) rotate(90deg);
+}
+
+/*
+∠ Semi-square
+ */
+.semisquare .LL-rt {
+    transform: translate(8.1em, 3.7em) scale(-1, 1) rotate(-45deg);
+}
+
+.semisquare .LL-c {
+    transform: translate(6.0em, 5.8em) scale(-1, 1) rotate(135deg);
+}
+
+.semisquare .SL {
+    transform: translate(3.5em, 8.8em) scale(-1, 1) rotate(-45deg);
+}
+
+.semisquare .LL-mb {
+    transform: translate(5.5em, 8.5em) scale(1, 1) rotate(90deg);
+}
+
+.semisquare .LL-rb {
+    transform: translate(9.5em, 8.5em) scale(-1, 1) rotate(90deg);
+}
+
+/*
+⚹ SEXTILE
+ */
+.sextile .SL-lt {
+    transform: translate(3.5em, 3.0em) scale(1, 1) rotate(135deg);
+}
+
+.sextile .SL-lu {
+    transform: translate(5.6em, 5.1em) scale(1, 1) rotate(-45deg);
+}
+
+.sextile .SL-l {
+    transform: translate(2.5em, 6.3em) scale(1, 1) rotate(90deg);
+}
+
+.sextile .LL {
+    transform: translate(6.0em, 5.8em) scale(1, 1) rotate(-90deg);
+}
+
+.sextile .SL-lb {
+    transform: translate(3.6em, 9.6em) scale(-1, 1) rotate(-45deg);
+}
+
+.sextile .SL-ld {
+    transform: translate(5.7em, 7.5em) scale(-1, 1) rotate(135deg);
+}
+
+.sextile .SL-rt {
+    transform: translate(10.5em, 3.0em) scale(-1, 1) rotate(135deg);
+}
+
+.sextile .SL-ru {
+    transform: translate(8.4em, 5.1em) scale(-1, 1) rotate(-45deg);
+}
+
+.sextile .SL-r {
+    transform: translate(11.5em, 6.3em) scale(1, 1) rotate(-90deg);
+}
+
+.sextile .SL-rm {
+    transform: translate(8.5em, 6.3em) scale(1, 1) rotate(90deg);
+}
+
+.sextile .SL-rb {
+    transform: translate(10.6em, 9.6em) scale(1, 1) rotate(-45deg);
+}
+
+.sextile .SL-rd {
+    transform: translate(8.5em, 7.5em) scale(1, 1) rotate(135deg);
+}
+
+/*
+Quintile
+ */
+.quintile .LL-c {
+    transform: translate(7.8em, 6.5em) scale(1, 1) rotate(135deg);
+}
+
+.quintile .SL {
+    transform: translate(11.0em, 10.2em) scale(1, 1) rotate(-45deg);
+}
+
+/*
+Trine
+ */
+.trine .LL-lt, .quincunx .LL-lm {
+    transform: translate(6.0em, 3.8em) scale(-1, 1) rotate(160deg);
+}
+
+.trine .LL-lm, .quincunx .LL-lb {
+    transform: translate(4.6em, 7.6em) scale(-1, 1) rotate(-20deg);
+}
+
+.trine .LL-rt, .quincunx .LL-rm {
+    transform: translate(7.5em, 4.2em) scale(-1, 1) rotate(-156deg);
+}
+
+.trine .LL-rm, .quincunx .LL-rb {
+    transform: translate(9.1em, 7.8em) scale(1, 1) rotate(336deg);
+}
+
+.trine .LL-lb {
+    transform: translate(5.2em, 9.5em) scale(1, 1) rotate(90deg);
+}
+
+.trine .SL {
+    transform: translate(8.7em, 10.0em) scale(-1, 1) rotate(90deg);
+}
+
+/*
+⚼ Sesquiquadrate
+ */
+.sesquiquadrate .LL-tl {
+    transform: translate(5.2em, .9em) scale(1, 1) rotate(-90deg);
+}
+
+.sesquiquadrate .LL-tr {
+    transform: translate(7.8em, .9em) scale(1, 1) rotate(90deg);
+}
+
+.sesquiquadrate .LL-rt {
+    transform: translate(10.3em, 2.4em) scale(1, 1) rotate(0);
+}
+
+.sesquiquadrate .LL-rb {
+    transform: translate(10.3em, 5.0em) scale(1, 1) rotate(180deg);
+}
+
+.sesquiquadrate .LL-br {
+    transform: translate(9.3em, 8.0em) scale(1, 1) rotate(90deg);
+}
+
+.sesquiquadrate .LL-bl {
+    transform: translate(5.7em, 8.0em) scale(1, 1) rotate(-90deg);
+}
+
+.sesquiquadrate .LL-lb {
+    transform: translate(3.7em, 6.0em) scale(1, 1) rotate(180deg);
+}
+
+.sesquiquadrate .LL-lt {
+    transform: translate(3.7em, 3.4em) scale(1, 1) rotate(0);
+}
+
+.sesquiquadrate .LL-md {
+    transform: translate(7.8em, 7.2em) scale(-1, 1) rotate(135deg);
+}
+
+.sesquiquadrate .SL-ml {
+    transform: translate(5.3em, 10.2em) scale(-1, 1) rotate(-45deg);
+}
+
+.sesquiquadrate .LL-mb {
+    transform: translate(7.3em, 9.9em) scale(1, 1) rotate(90deg);
+}
+
+/*
+⚻ Quincunx
+ */
+.quincunx .LL-lt {
+    transform: translate(5.5em, 1.5em) scale(-1, 1) rotate(90deg);
+}
+
+.quincunx .LL-rt {
+    transform: translate(8.5em, 1.5em) scale(-1, 1) rotate(-90deg);
+}
+
+/*
+☐ square(the same as another square-large but frame only)
+ */
+.square-large .LL-tl {
+    transform: translate(6.2em, 2.2em) scale(1, 1) rotate(-90deg);
+}
+
+.square-large .LL-tr {
+    transform: translate(8.8em, 2.2em) scale(1, 1) rotate(90deg);
+}
+
+.square-large .LL-rt {
+    transform: translate(10.3em, 4.7em) scale(1, 1) rotate(0);
+}
+
+.square-large .LL-rb {
+    transform: translate(10.3em, 7.3em) scale(1, 1) rotate(180deg);
+}
+
+.square-large .LL-br {
+    transform: translate(7.8em, 8.8em) scale(1, 1) rotate(90deg);
+}
+
+.square-large .LL-bl {
+    transform: translate(5.2em, 8.8em) scale(1, 1) rotate(-90deg);
+}
+
+.square-large .LL-lb {
+    transform: translate(3.7em, 6.3em) scale(1, 1) rotate(180deg);
+}
+
+.square-large .LL-lt {
+    transform: translate(3.7em, 3.7em) scale(1, 1) rotate(0);
+}
+
+/*
+☍ OPPOSITION
+*/
+.opposition .SL-ult {
+    transform: translate(8.8em, 2.2em) scale(1, 1) rotate(45deg);
+}
+
+.opposition .SL-urt {
+    transform: translate(10.9em, 1.5em) scale(1, 1) rotate(135deg);
+}
+
+.opposition .SL-ulb {
+    transform: translate(9.5em, 4.3em) scale(1, 1) rotate(-45deg);
+}
+
+.opposition .SL-urb {
+    transform: translate(11.6em, 3.6em) scale(1, 1) rotate(-135deg);
+}
+
+.opposition .SL-cru {
+    transform: translate(7.7em, 5.3em) scale(1, 1) rotate(45deg);
+}
+
+.opposition .SL-cld {
+    transform: translate(6.3em, 6.7em) scale(1, 1) rotate(-135deg);
+}
+
+.opposition .SL-dlt {
+    transform: translate(2.5em, 8.5em) scale(1, 1) rotate(45deg);
+}
+
+.opposition .SL-drt {
+    transform: translate(4.6em, 7.8em) scale(1, 1) rotate(135deg);
+}
+
+.opposition .SL-dlb {
+    transform: translate(3.2em, 10.6em) scale(1, 1) rotate(-45deg);
+}
+
+.opposition .SL-drb {
+    transform: translate(5.3em, 9.9em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+♈ ARIES
+*/
+.aries .ST-lu {
+    transform: translate(3.3em, 5.0em) scale(1, 1) rotate(0);
+}
+
+.aries .ST-lt {
+    transform: translate(3.7em, 4.0em) scale(1, 1) rotate(45deg);
+}
+
+.aries .ST-ru {
+    transform: translate(9.6em, 5.0em) scale(1, 1) rotate(90deg);
+}
+
+.aries .ST-rt {
+    transform: translate(9.3em, 4.0em) scale(1, 1) rotate(45deg);
+}
+
+.aries .SL-tl {
+    transform: translate(5.6em, 2.8em) scale(1, 1) rotate(135deg);
+}
+
+.aries .SL-tr {
+    transform: translate(8.4em, 2.8em) scale(-1, 1) rotate(135deg);
+}
+
+.aries .LL-ml {
+    transform: translate(6.5em, 5.0em) scale(-1, 1) rotate(180deg);
+}
+
+.aries .LL-mr {
+    transform: translate(7.5em, 5.0em) scale(1, 1) rotate(180deg);
+}
+
+.aries .SL-dl {
+    transform: translate(6.5em, 9.0em) scale(-1, 1) rotate(0deg);
+}
+
+.aries .SL-dr {
+    transform: translate(7.5em, 9.0em) scale(1, 1) rotate(0);
+}
+
+.aries .ST-b {
+    transform: translate(6.5em, 11.4em) scale(1, 1) rotate(45deg);
+}
+
+/*
+♉ TAURUS
+*/
+.taurus .ST-lt {
+    transform: translate(4.7em, 3.0em) scale(1, 1) rotate(-90deg);
+}
+
+.taurus .ST-rt {
+    transform: translate(8.3em, 3.0em) scale(1, 1) rotate(180deg);
+}
+
+.taurus .ST-tl {
+    transform: translate(5.1em, 4.0em) scale(1, 1) rotate(-135deg);
+}
+
+.taurus .PR {
+    transform: translate(7.2em, 3.7em) scale(1, 1) rotate(45deg);
+}
+
+.taurus .LL-lt {
+    transform: translate(5.2em, 6.2em) scale(1, 1) rotate(45deg);
+}
+
+.taurus .LL-rt {
+    transform: translate(8.0em, 5.5em) scale(1, 1) rotate(135deg);
+}
+
+.taurus .LL-lb {
+    transform: translate(5.9em, 9.0em) scale(1, 1) rotate(-45deg);
+}
+
+.taurus .LL-rb {
+    transform: translate(8.7em, 8.3em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+♊ GEMINI
+*/
+.gemini .LL-lt {
+    transform: translate(5.5em, 2.0em) scale(1, 1) rotate(-90deg);
+}
+
+.gemini .LL-rt {
+    transform: translate(8.5em, 2.0em) scale(1, 1) rotate(90deg);
+}
+
+.gemini .SL-lu {
+    transform: translate(6.0em, 4.5em) scale(1, 1) rotate(0);
+}
+
+.gemini .SL-ru {
+    transform: translate(8.0em, 4.5em) scale(-1, 1) rotate(0);
+}
+
+.gemini .LL-ld {
+    transform: translate(6.0em, 6.5em) scale(1, 1) rotate(180deg);
+}
+
+.gemini .LL-rd {
+    transform: translate(8.0em, 6.5em) scale(-1, 1) rotate(180deg);
+}
+
+.gemini .LL-lb {
+    transform: translate(5.5em, 9.0em) scale(1, 1) rotate(-90deg);
+}
+
+.gemini .LL-rb {
+    transform: translate(8.5em, 9.0em) scale(1, 1) rotate(90deg);
+}
+
+/*
+♋ CANCER
+*/
+.cancer .SL-ult {
+    transform: translate(4.4em, 3.5em) scale(1, 1) rotate(45deg);
+}
+
+.cancer .SL-urt {
+    transform: translate(6.5em, 2.8em) scale(1, 1) rotate(135deg);
+}
+
+.cancer .SL-ulb {
+    transform: translate(5.1em, 5.6em) scale(1, 1) rotate(-45deg);
+}
+
+.cancer .SL-urb {
+    transform: translate(7.2em, 4.9em) scale(1, 1) rotate(-135deg);
+}
+
+.cancer .SL-ru {
+    transform: translate(8.0em, 2.6em) scale(-1, 1) rotate(-90deg);
+}
+
+.cancer .ST-rt {
+    transform: translate(9.0em, 4.0em) scale(1, 1) rotate(135deg);
+}
+
+.cancer .ST-lb {
+    transform: translate(4.0em, 9.0em) scale(1, 1) rotate(-45deg);
+}
+
+.cancer .SL-ld {
+    transform: translate(6.0em, 9.4em) scale(-1, 1) rotate(90deg);
+}
+
+.cancer .SL-dlt {
+    transform: translate(6.8em, 7.1em) scale(1, 1) rotate(45deg);
+}
+
+.cancer .SL-drt {
+    transform: translate(8.9em, 6.4em) scale(1, 1) rotate(135deg);
+}
+
+.cancer .SL-dlb {
+    transform: translate(7.5em, 9.2em) scale(1, 1) rotate(-45deg);
+}
+
+.cancer .SL-drb {
+    transform: translate(9.6em, 8.5em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+♌ LEO
+*/
+.leo .SL-olt {
+    transform: translate(3.2em, 6.6em) scale(1, 1) rotate(45deg);
+}
+
+.leo .SL-ort {
+    transform: translate(5.3em, 5.9em) scale(1, 1) rotate(135deg);
+}
+
+.leo .SL-olb {
+    transform: translate(3.9em, 8.7em) scale(1, 1) rotate(-45deg);
+}
+
+.leo .SL-orb {
+    transform: translate(6.0em, 8.0em) scale(1, 1) rotate(-135deg);
+}
+
+.leo .LL {
+    transform: translate(5.6em, 4.3em) scale(-1, 1) rotate(45deg);
+}
+
+.leo .SL-tl {
+    transform: translate(6.0em, 2.4em) scale(1, 1) rotate(-135deg);
+}
+
+.leo .SL-tr {
+    transform: translate(7.4em, 2.4em) scale(-1, 1) rotate(-135deg);
+}
+
+.leo .ST-mu {
+    transform: translate(8.3em, 5.0em) scale(1, 1) rotate(-45deg);
+}
+
+.leo .PR {
+    transform: translate(7.9em, 6.0em) scale(-1, 1) rotate(0);
+}
+
+.leo .ST-md {
+    transform: translate(8.9em, 9.0em) scale(1, 1) rotate(-90deg);
+}
+
+.leo .ST-mb {
+    transform: translate(10.0em, 10.0em) scale(1, 1) rotate(-135deg);
+}
+
+.leo .ST-rb {
+    transform: translate(11.1em, 9.0em) scale(1, 1) rotate(180deg);
+}
+
+/*
+♍ VIRGO
+*/
+.virgo .ST-mlt, .scorpio .ST-mlt {
+    transform: translate(2.0em, 3.0em) scale(1, 1) rotate(180deg);
+}
+
+.virgo .LL-mlu, .scorpio .LL-mlu {
+    transform: translate(4.0em, 4.0em) scale(1, 1) rotate(0);
+}
+
+.virgo .LL-mlb, .scorpio .LL-mlb {
+    transform: translate(4.0em, 7.0em) scale(1, 1) rotate(180deg);
+}
+
+.virgo .SL-mmt, .scorpio .SL-mmt {
+    transform: translate(5.2em, 3.2em) scale(1, 1) rotate(45deg);
+}
+
+.virgo .LL-mmm, .scorpio .LL-mmm {
+    transform: translate(6.1em, 4.0em) scale(-1, 1) rotate(180deg);
+}
+
+.virgo .SL-mmb, .scorpio .SL-mmb {
+    transform: translate(6.1em, 8.0em) scale(1, 1) rotate(0);
+}
+
+.virgo .SL-mtr, .scorpio .SL-mtr {
+    transform: translate(7.3em, 3.2em) scale(1, 1) rotate(45deg);
+}
+
+.virgo .LL-mmr, .scorpio .LL-mmr {
+    transform: translate(8.2em, 4.0em) scale(1, -1) rotate(0);
+}
+
+.virgo .LL-mrb {
+    transform: translate(9.5em, 7.0em) scale(1, 1) rotate(135deg);
+}
+
+.virgo .SL-r {
+    transform: translate(10.2em, 4.6em) scale(-1, 1) rotate(90deg);
+}
+
+.virgo .SL-rd {
+    transform: translate(10.6em, 5.8em) scale(-1, 1) rotate(135deg);
+}
+
+.virgo .SL-rb {
+    transform: translate(7.8em, 8.6em) scale(-1, 1) rotate(-45deg);
+}
+
+/*
+♎ LIBRA
+*/
+.libra .ST-lb {
+    transform: translate(5.0em, 7.0em) scale(1, 1) rotate(-90deg);
+}
+
+.libra .ST-l {
+    transform: translate(4.0em, 5.5em) scale(1, 1) rotate(-45deg);
+}
+
+.libra .ST-lt {
+    transform: translate(5.0em, 4.0em) scale(1, 1) rotate(0);
+}
+
+.libra .ST-t {
+    transform: translate(6.5em, 3.0em) scale(1, 1) rotate(45deg);
+}
+
+.libra .ST-rt {
+    transform: translate(8.0em, 4.0em) scale(1, 1) rotate(90deg);
+}
+
+.libra .ST-r {
+    transform: translate(9.0em, 5.5em) scale(-1, 1) rotate(-45deg);
+}
+
+.libra .ST-rb {
+    transform: translate(8.0em, 7.0em) scale(1, 1) rotate(180deg);
+}
+
+.libra .SL-l {
+    transform: translate(5.0em, 8.0em) scale(1, 1) rotate(90deg);
+}
+
+.libra .SL-r {
+    transform: translate(9.0em, 8.0em) scale(-1, 1) rotate(90deg);
+}
+
+.libra .LL-l {
+    transform: translate(5.0em, 9.5em) scale(1, 1) rotate(90deg);
+}
+
+.libra .LL-r {
+    transform: translate(9.0em, 9.5em) scale(-1, 1) rotate(90deg);
+}
+
+/*
+♏ scorpio
+*/
+.scorpio .SL-mrb {
+    transform: translate(8.2em, 8.0em) scale(1, 1) rotate(0);
+}
+
+.scorpio .SL-e {
+    transform: translate(10.1em, 8.8em) scale(-1, 1) rotate(-45deg);
+}
+
+.scorpio .MT {
+    transform: translate(11.0em, 5.7em) scale(-1, 1) rotate(135deg);
+}
+
+/*
+♐ SAGITTARIUS
+*/
+.sagittarius .ST {
+    transform: translate(9.0em, 4.0em) scale(1, 1) rotate(90deg);
+}
+
+.sagittarius .LL-t {
+    transform: translate(7.5em, 2.5em) scale(-1, 1) rotate(90deg);
+}
+
+.sagittarius .LL-l {
+    transform: translate(10.0em, 5.0em) scale(1, 1) rotate(180deg);
+}
+
+.sagittarius .SL-11 {
+    transform: translate(8.1em, 4.2em) scale(-1, 1) rotate(135deg);
+}
+
+.sagittarius .SL-12 {
+    transform: translate(8.8em, 4.9em) scale(1, 1) rotate(-135deg);
+}
+
+.sagittarius .SL-21 {
+    transform: translate(6.0em, 6.3em) scale(1, 1) rotate(45deg);
+}
+
+.sagittarius .SL-22 {
+    transform: translate(6.7em, 7.0em) scale(-1, 1) rotate(-45deg);
+}
+
+.sagittarius .SL-l {
+    transform: translate(3.9em, 5.6em) scale(1, 1) rotate(135deg);
+}
+
+.sagittarius .SL-b {
+    transform: translate(7.4em, 9.1em) scale(-1, 1) rotate(45deg);
+}
+
+.sagittarius .LL-31 {
+    transform: translate(4.3em, 7.5em) scale(1, 1) rotate(-135deg);
+}
+
+.sagittarius .LL-32 {
+    transform: translate(5.0em, 8.2em) scale(-1, 1) rotate(135deg);
+}
+
+/*
+♑ CAPRICORN
+*/
+.capricorn .ST-lu {
+    transform: translate(3.0em, 5.0em) scale(1, 1) rotate(0);
+}
+
+.capricorn .ST-lt {
+    transform: translate(3.5em, 4.0em) scale(1, 1) rotate(45deg);
+}
+
+.capricorn .LL-y {
+    transform: translate(5.5em, 5.0em) scale(1, 1) rotate(0);
+}
+
+.capricorn .ST-mt {
+    transform: translate(6.5em, 4.0em) scale(1, 1) rotate(45deg);
+}
+
+.capricorn .ST-mu {
+    transform: translate(7.0em, 5.0em) scale(1, 1) rotate(90deg);
+}
+
+.capricorn .LL-c {
+    transform: translate(8.0em, 6.0em) scale(1, 1) rotate(180deg);
+}
+
+.capricorn .SL-br {
+    transform: translate(9.0em, 9.0em) scale(-1, 1) rotate(-90deg);
+}
+
+.capricorn .SL-rb {
+    transform: translate(11.0em, 8.0em) scale(-1, 1) rotate(0);
+}
+
+.capricorn .SL-r {
+    transform: translate(10.0em, 6.0em) scale(-1, 1) rotate(90deg);
+}
+
+.capricorn .SL-md {
+    transform: translate(6.8em, 7.5em) scale(1, 1) rotate(-135deg);
+}
+
+.capricorn .SL-lb {
+    transform: translate(4.7em, 9.6em) scale(-1, 1) rotate(-45deg);
+}
+
+/*
+another symbol of Capricorn
+ */
+.capricorn2 .SL-t1 {
+    transform: translate(3.5em, 1.0em) scale(1, 1) rotate(-90deg);
+}
+
+.capricorn2 .SL-t2 {
+    transform: translate(5.5em, 1.0em) scale(1, 1) rotate(90deg);
+}
+
+.capricorn2 .SL-t3 {
+    transform: translate(8.5em, 1.0em) scale(1, 1) rotate(-90deg);
+}
+
+.capricorn2 .SL-t4 {
+    transform: translate(10.5em, 1.0em) scale(1, 1) rotate(90deg);
+}
+
+.capricorn2 .SL-tm {
+    transform: translate(7.4em, 2.2em) scale(-1, 1) rotate(135deg);
+}
+
+.capricorn2 .SL-lu {
+    transform: translate(5.3em, 4.3em) scale(1, 1) rotate(45deg);
+}
+
+.capricorn2 .SL-lt {
+    transform: translate(6.0em, 5.0em) scale(-1, 1) rotate(-45deg);
+}
+
+.capricorn2 .SL-t {
+    transform: translate(8.2em, 4.1em) scale(-1, 1) rotate(-90deg);
+}
+
+.capricorn2 .SL-rt {
+    transform: translate(10.4em, 5.0em) scale(-1, 1) rotate(-135deg);
+}
+
+.capricorn2 .SL-r {
+    transform: translate(11.3em, 7.2em) scale(-1, 1) rotate(180deg);
+}
+
+.capricorn2 .SL-rb {
+    transform: translate(10.4em, 9.4em) scale(-1, 1) rotate(135deg);
+}
+
+.capricorn2 .SL-b {
+    transform: translate(8.2em, 10.3em) scale(-1, 1) rotate(90deg);
+}
+
+.capricorn2 .SL-lb {
+    transform: translate(6.0em, 9.4em) scale(-1, 1) rotate(45deg);
+}
+
+.capricorn2 .SL-l {
+    transform: translate(5.1em, 7.2em) scale(-1, 1) rotate(0);
+}
+
+.capricorn2 .LL {
+    transform: translate(3.6em, 7.0em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+♒ AQUARIUS
+*/
+.aquarius .ST-u1 {
+    transform: translate(2.7em, 5.0em) scale(1, 1) rotate(0);
+}
+
+.aquarius .ST-u2 {
+    transform: translate(3.7em, 4.0em) scale(1, 1) rotate(45deg);
+}
+
+.aquarius .ST-u3 {
+    transform: translate(5.1em, 4.0em) scale(1, 1) rotate(-135deg);
+}
+
+.aquarius .ST-u4 {
+    transform: translate(6.5em, 4.0em) scale(1, 1) rotate(45deg);
+}
+
+.aquarius .ST-u5 {
+    transform: translate(7.9em, 4.0em) scale(1, 1) rotate(-135deg);
+}
+
+.aquarius .ST-u6 {
+    transform: translate(9.3em, 4.0em) scale(1, 1) rotate(45deg);
+}
+
+.aquarius .ST-u7 {
+    transform: translate(10.3em, 5.0em) scale(1, 1) rotate(90deg);
+}
+
+.aquarius .ST-d1 {
+    transform: translate(2.7em, 8.5em) scale(1, 1) rotate(0);
+}
+
+.aquarius .ST-d2 {
+    transform: translate(3.7em, 7.5em) scale(1, 1) rotate(45deg);
+}
+
+.aquarius .ST-d3 {
+    transform: translate(5.1em, 7.5em) scale(1, 1) rotate(-135deg);
+}
+
+.aquarius .ST-d4 {
+    transform: translate(6.5em, 7.5em) scale(1, 1) rotate(45deg);
+}
+
+.aquarius .ST-d5 {
+    transform: translate(7.9em, 7.5em) scale(1, 1) rotate(-135deg);
+}
+
+.aquarius .ST-d6 {
+    transform: translate(9.3em, 7.5em) scale(1, 1) rotate(45deg);
+}
+
+.aquarius .ST-d7 {
+    transform: translate(10.3em, 8.5em) scale(1, 1) rotate(90deg);
+}
+
+/*
+♓ PISCES
+*/
+.pisces .ST-lt1 {
+    transform: translate(3.0em, 3.6em) scale(1, 1) rotate(90deg);
+}
+
+.pisces .ST-lt2 {
+    transform: translate(4.0em, 4.0em) scale(1, 1) rotate(135deg);
+}
+
+.pisces .ST-lt3 {
+    transform: translate(4.4em, 5.0em) scale(1, 1) rotate(180deg);
+}
+
+.pisces .ST-rt1 {
+    transform: translate(10.0em, 3.6em) scale(1, 1) rotate(0);
+}
+
+.pisces .ST-rt2 {
+    transform: translate(9.0em, 4.0em) scale(1, 1) rotate(-45deg);
+}
+
+.pisces .ST-rt3 {
+    transform: translate(8.6em, 5.0em) scale(1, 1) rotate(-90deg);
+}
+
+.pisces .SL-1 {
+    transform: translate(3.5em, 6.0em) scale(1, 1) rotate(-90deg);
+}
+
+.pisces .SL-2 {
+    transform: translate(5.5em, 6.0em) scale(1, 1) rotate(90deg);
+}
+
+.pisces .SL-3 {
+    transform: translate(8.5em, 6.0em) scale(1, 1) rotate(-90deg);
+}
+
+.pisces .SL-4 {
+    transform: translate(10.5em, 6.0em) scale(1, 1) rotate(90deg);
+}
+
+.pisces .ST-lb1 {
+    transform: translate(4.4em, 8.0em) scale(1, 1) rotate(90deg);
+}
+
+.pisces .ST-lb2 {
+    transform: translate(4.0em, 9.0em) scale(1, 1) rotate(135deg);
+}
+
+.pisces .ST-lb3 {
+    transform: translate(3.0em, 9.3em) scale(1, 1) rotate(180deg);
+}
+
+.pisces .ST-rb1 {
+    transform: translate(8.6em, 8.0em) scale(1, 1) rotate(0);
+}
+
+.pisces .ST-rb2 {
+    transform: translate(9.0em, 9.0em) scale(1, 1) rotate(-45deg);
+}
+
+.pisces .ST-rb3 {
+    transform: translate(10.0em, 9.4em) scale(1, 1) rotate(-90deg);
+}

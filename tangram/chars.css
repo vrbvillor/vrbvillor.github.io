@@ -1,0 +1,2540 @@
+/*
+sign · middot
+ */
+.middot.narrow {
+    min-width: 2.8em;
+}
+
+.middot.narrow .tangram, .middot.narrow .tangram3d {
+    margin-left: -6.1em;
+}
+
+.middot .SQ {
+    transform: translate(6.5em, 6.5em) scale(1, 1) rotate(45deg);
+}
+
+/*
+sign « angle quotation mark left
+sign » angle quotation mark right
+ */
+.laquo.narrow, .raquo.narrow {
+    min-width: 5.6em;
+}
+
+.laquo.narrow .tangram, .laquo.narrow .tangram3d, .raquo.narrow .tangram, .raquo.narrow .tangram3d {
+    margin-left: -4.7em;
+}
+
+.laquo .SL-l {
+    transform: translate(6.4em, 4.5em) scale(-1, 1) rotate(135deg);
+}
+
+.laquo .SL-r {
+    transform: translate(8.4em, 4.5em) scale(-1, 1) rotate(135deg);
+}
+
+.laquo .LL-l {
+    transform: translate(6.0em, 6.6em) scale(1, 1) rotate(-45deg);
+}
+
+.laquo .LL-r {
+    transform: translate(8.0em, 6.6em) scale(1, 1) rotate(-45deg);
+}
+
+.raquo .SL-l {
+    transform: translate(5.6em, 4.5em) scale(1, 1) rotate(135deg);
+}
+
+.raquo .SL-r {
+    transform: translate(7.6em, 4.5em) scale(1, 1) rotate(135deg);
+}
+
+.raquo .LL-l {
+    transform: translate(6.0em, 6.6em) scale(-1, 1) rotate(-45deg);
+}
+
+.raquo .LL-r {
+    transform: translate(8.0em, 6.6em) scale(-1, 1) rotate(-45deg);
+}
+
+/*
+sign ¢ cent
+sign € euro
+ */
+.cent.narrow {
+    min-width: 6.1em;
+}
+
+.cent.narrow .tangram, .cent.narrow .tangram3d {
+    margin-left: -3.9em;
+}
+
+.euro.narrow {
+    min-width: 7.2em;
+}
+
+.euro.narrow .tangram, .euro.narrow .tangram3d {
+    margin-left: -2.8em;
+}
+
+.cent .ST-lt, .euro .ST-lt {
+    transform: translate(5.0em, 2.5em) scale(1, 1) rotate(0);
+}
+
+.cent .ST-rt, .euro .ST-rt {
+    transform: translate(8.0em, 2.5em) scale(1, 1) rotate(90deg);
+}
+
+.cent .ST-lb, .euro .ST-lb {
+    transform: translate(5.0em, 8.0em) scale(1, 1) rotate(-90deg);
+}
+
+.cent .ST-rb, .euro .ST-rb {
+    transform: translate(8.0em, 8.0em) scale(1, 1) rotate(180deg);
+}
+
+.cent .SL-lu {
+    transform: translate(3.9em, 3.1em) scale(-1, 1) rotate(180deg);
+}
+
+.cent .SL-ld {
+    transform: translate(3.9em, 6.2em) scale(1, 1) rotate(0);
+}
+
+.cent .SL-ct {
+    transform: translate(7.0em, .7em) scale(1, 1) rotate(180deg);
+}
+
+.cent .SL-cu {
+    transform: translate(7.0em, 3.8em) scale(1, 1) rotate(0);
+}
+
+.cent .SL-cd {
+    transform: translate(7.0em, 6.0em) scale(1, 1) rotate(180deg);
+}
+
+.cent .SL-cb {
+    transform: translate(7.0em, 9.1em) scale(1, 1) rotate(0);
+}
+
+.euro .ST-t {
+    transform: translate(6.5em, 2.6em) scale(1, 1) rotate(45deg);
+}
+
+.euro .ST-b {
+    transform: translate(6.5em, 7.9em) scale(1, 1) rotate(-135deg);
+}
+
+.euro .ST-lu {
+    transform: translate(3.9em, 3.6em) scale(1, 1) rotate(-45deg);
+}
+
+.euro .ST-ld {
+    transform: translate(3.9em, 6.7em) scale(1, 1) rotate(-45deg);
+}
+
+.euro .ST-cu {
+    transform: translate(2.8em, 4.1em) scale(1, -1) rotate(0);
+}
+
+.euro .ST-cd {
+    transform: translate(2.8em, 6.2em) scale(1, 1) rotate(0);
+}
+
+.euro .LL-cu {
+    transform: translate(6.5em, 3.2em) scale(1, 1) rotate(-90deg);
+}
+
+.euro .LL-cd {
+    transform: translate(6.5em, 5.2em) scale(1, -1) rotate(-90deg);
+}
+
+/*
+sign £ pound
+ */
+.pound.narrow {
+    min-width: 8.2em;
+}
+
+.pound.narrow .tangram, .pound.narrow .tangram3d {
+    margin-left: -1.9em;
+}
+
+.pound .ST-rt {
+    transform: translate(6.5em, 1.7em) scale(1, 1) rotate(90deg);
+}
+
+.pound .ST-t {
+    transform: translate(5.4em, 2.2em) scale(1, 1) rotate(45deg);
+}
+
+.pound .ST-lu {
+    transform: translate(5.0em, 3.3em) scale(1, 1) rotate(0);
+}
+
+.pound .LL {
+    transform: translate(5.0em, 4.5em) scale(1, -1) rotate(0);
+}
+
+.pound .SL-lm {
+    transform: translate(2.9em, 4.0em) scale(-1, 1) rotate(-90deg);
+}
+
+.pound .SL-rm {
+    transform: translate(7.1em, 4.0em) scale(1, 1) rotate(-90deg);
+}
+
+.pound .ST-lb {
+    transform: translate(3.8em, 7.6em) scale(1, 1) rotate(-135deg);
+}
+
+.pound .SL-b {
+    transform: translate(6.0em, 8.0em) scale(1, 1) rotate(90deg);
+}
+
+.pound .ST-rb {
+    transform: translate(8.1em, 8.0em) scale(1, 1) rotate(0);
+}
+
+/*
+sign ¤ currency
+ */
+.currency.narrow {
+    min-width: 6.8em;
+}
+
+.currency.narrow .tangram, .currency.narrow .tangram3d {
+    margin-left: -4.1em;
+}
+
+.currency .SL-lt {
+    transform: translate(4.3em, 2.0em) scale(-1, 1) rotate(-135deg);
+}
+
+.currency .SL-rt {
+    transform: translate(9.7em, 2.0em) scale(1, 1) rotate(-135deg);
+}
+
+.currency .SL-ld {
+    transform: translate(4.3em, 7.4em) scale(1, 1) rotate(45deg);
+}
+
+.currency .SL-rd {
+    transform: translate(9.7em, 7.4em) scale(-1, 1) rotate(45deg);
+}
+
+.currency .SL-u {
+    transform: translate(6.5em, 3.1em) scale(1, 1) rotate(90deg);
+}
+
+.currency .SL-l {
+    transform: translate(5.4em, 5.2em) scale(1, 1) rotate(0);
+}
+
+.currency .SL-r {
+    transform: translate(8.6em, 4.2em) scale(1, 1) rotate(180deg);
+}
+
+.currency .SL-d {
+    transform: translate(7.5em, 6.3em) scale(1, 1) rotate(-90deg);
+}
+
+/*
+sign ¥ yen
+ */
+.yen.narrow {
+    min-width: 8.0em;
+}
+
+.yen.narrow .tangram, .yen.narrow .tangram3d {
+    margin-left: -3.5em;
+}
+
+.yen .PR-l {
+    transform: translate(4.4em, 1.8em) scale(1, 1) rotate(90deg);
+}
+
+.yen .PR-r {
+    transform: translate(8.6em, 1.8em) scale(-1, 1) rotate(90deg);
+}
+
+.yen .SL-lm {
+    transform: translate(4.9em, 4.0em) scale(-1, 1) rotate(-90deg);
+}
+
+.yen .SL-rm {
+    transform: translate(9.1em, 4.0em) scale(1, 1) rotate(-90deg);
+}
+
+.yen .SL-c {
+    transform: translate(7.0em, 4.8em) scale(1, 1) rotate(0);
+}
+
+.yen .SL-ld {
+    transform: translate(4.9em, 6.0em) scale(-1, 1) rotate(-90deg);
+}
+
+.yen .SL-rd {
+    transform: translate(9.1em, 6.0em) scale(1, 1) rotate(-90deg);
+}
+
+.yen .SL-b {
+    transform: translate(7.0em, 7.0em) scale(1, 1) rotate(180deg);
+}
+
+/*
+sign § section of three types
+normal large1 large2
+ */
+.section.narrow {
+    min-width: 5.7em;
+}
+
+.section.narrow .tangram, .section.narrow .tangram3d {
+    margin-left: -4.7em;
+}
+
+.section .LL-t {
+    transform: translate(7.7em, 1.0em) scale(-1, 1) rotate(90deg);
+}
+
+.section .LL-b {
+    transform: translate(6.4em, 7.5em) scale(-1, 1) rotate(-90deg);
+}
+
+.section .ST-lu {
+    transform: translate(5.1em, 3.2em) scale(1, 1) rotate(-45deg);
+}
+
+.section .ST-ul {
+    transform: translate(6.2em, 3.6em) scale(1, 1) rotate(-90deg);
+}
+
+.section .ST-ur {
+    transform: translate(6.9em, 4.1em) scale(1, 1) rotate(90deg);
+}
+
+.section .ST-ru {
+    transform: translate(8.0em, 4.5em) scale(1, 1) rotate(135deg);
+}
+
+.section .ST-ld {
+    transform: translate(5.1em, 6.0em) scale(1, 1) rotate(-45deg);
+}
+
+.section .ST-dl {
+    transform: translate(6.2em, 6.4em) scale(1, 1) rotate(-90deg);
+}
+
+.section .ST-dr {
+    transform: translate(6.9em, 6.9em) scale(1, 1) rotate(90deg);
+}
+
+.section .ST-rd {
+    transform: translate(8.0em, 7.3em) scale(1, 1) rotate(135deg);
+}
+
+.section-large1.narrow {
+    min-width: 6.4em;
+}
+
+.section-large1.narrow .tangram, .section-large1.narrow .tangram3d {
+    margin-left: -4.2em;
+}
+
+.section-large1 .ST-lu {
+    transform: translate(4.6em, 3.5em) scale(1, 1) rotate(-45deg);
+}
+
+.section-large1 .ST-lm {
+    transform: translate(4.6em, 6.3em) scale(1, 1) rotate(-45deg);
+}
+
+.section-large1 .ST-ld {
+    transform: translate(4.5em, 9.2em) scale(1, 1) rotate(-90deg);
+}
+
+.section-large1 .ST-ru {
+    transform: translate(8.3em, 3.8em) scale(1, 1) rotate(90deg);
+}
+
+.section-large1 .ST-rm {
+    transform: translate(8.2em, 6.6em) scale(1, 1) rotate(135deg);
+}
+
+.section-large1 .ST-rd {
+    transform: translate(8.2em, 9.4em) scale(1, 1) rotate(135deg);
+}
+
+.section-large1 .ST-l1 {
+    transform: translate(5.7em, 2.5em) scale(1, 1) rotate(0);
+}
+
+.section-large1 .ST-l2 {
+    transform: translate(5.7em, 4.5em) scale(1, 1) rotate(-90deg);
+}
+
+.section-large1 .ST-l3 {
+    transform: translate(5.7em, 7.3em) scale(1, 1) rotate(-90deg);
+}
+
+.section-large1 .ST-l4 {
+    transform: translate(5.7em, 10.3em) scale(1, 1) rotate(-135deg);
+}
+
+.section-large1 .ST-r1 {
+    transform: translate(7.1em, 2.7em) scale(1, 1) rotate(45deg);
+}
+
+.section-large1 .ST-r2 {
+    transform: translate(7.1em, 5.7em) scale(1, 1) rotate(90deg);
+}
+
+.section-large1 .ST-r3 {
+    transform: translate(7.1em, 8.5em) scale(1, 1) rotate(90deg);
+}
+
+.section-large1 .ST-r4 {
+    transform: translate(7.1em, 10.5em) scale(1, 1) rotate(180deg);
+}
+
+.section-large2.narrow {
+    min-width: 6.0em;
+}
+
+.section-large2.narrow .tangram, .section-large2.narrow .tangram3d {
+    margin-left: -4.5em;
+}
+
+.section-large2 .ST-lt {
+    transform: translate(5.0em, 3.5em) scale(1, 1) rotate(0);
+}
+
+.section-large2 .ST-t {
+    transform: translate(6.5em, 2.4em) scale(1, 1) rotate(45deg);
+}
+
+.section-large2 .ST-rt {
+    transform: translate(8.0em, 3.5em) scale(1, 1) rotate(90deg);
+}
+
+.section-large2 .SL-lu {
+    transform: translate(6.1em, 4.8em) scale(1, 1) rotate(-45deg);
+}
+
+.section-large2 .ST-cu {
+    transform: translate(7.0em, 5.8em) scale(1, 1) rotate(90deg);
+}
+
+.section-large2 .ST-ru {
+    transform: translate(8.1em, 6.3em) scale(1, 1) rotate(135deg);
+}
+
+.section-large2 .ST-ld {
+    transform: translate(4.9em, 6.9em) scale(1, 1) rotate(-45deg);
+}
+
+.section-large2 .ST-cd {
+    transform: translate(6.0em, 7.3em) scale(1, 1) rotate(-90deg);
+}
+
+.section-large2 .SL-rd {
+    transform: translate(7.9em, 7.3em) scale(1, 1) rotate(135deg);
+}
+
+.section-large2 .ST-lb {
+    transform: translate(5.0em, 9.5em) scale(1, 1) rotate(-90deg);
+}
+
+.section-large2 .ST-b {
+    transform: translate(6.5em, 10.6em) scale(1, 1) rotate(-135deg);
+}
+
+.section-large2 .ST-rb {
+    transform: translate(8.0em, 9.5em) scale(1, 1) rotate(180deg);
+}
+
+/*
+sign ○ circle-large
+sign © copyright(copy)
+sign ® registered trademark(reg)
+ */
+.circle-large.narrow,
+.copy.narrow, .copyright.narrow,
+.reg.narrow, .registered.narrow {
+    min-width: 7.5em;
+}
+
+.circle-large.narrow .tangram, .circle-large.narrow .tangram3d,
+.copy.narrow .tangram, .copy.narrow .tangram3d, .copyright.narrow,
+.reg.narrow .tangram, .reg.narrow .tangram3d, .registered.narrow {
+    margin-left: -3.8em;
+}
+
+.circle-large .SL-lt,
+.copy .SL-lt, .copyright .SL-lt,
+.reg .SL-lt, .registered .SL-lt {
+    transform: translate(4.7em, 3.7em) scale(-1, 1) rotate(-45deg);
+}
+
+.circle-large .SL-t,
+.copy .SL-t, .copyright .SL-t,
+.reg .SL-t, .registered .SL-t {
+    transform: translate(7.1em, 2.8em) scale(-1, 1) rotate(-90deg);
+}
+
+.circle-large .SL-rt,
+.copy .SL-rt, .copyright .SL-rt,
+.reg .SL-rt, .registered .SL-rt {
+    transform: translate(9.4em, 3.7em) scale(-1, 1) rotate(-135deg);
+}
+
+.circle-large .SL-r,
+.copy .SL-r, .copyright .SL-r,
+.reg .SL-r, .registered .SL-r {
+    transform: translate(10.3em, 6.0em) scale(-1, 1) rotate(180deg);
+}
+
+.circle-large .SL-rb,
+.copy .SL-rb, .copyright .SL-rb,
+.reg .SL-rb, .registered .SL-rb {
+    transform: translate(9.4em, 8.3em) scale(-1, 1) rotate(135deg);
+}
+
+.circle-large .SL-b,
+.copy .SL-b, .copyright .SL-b,
+.reg .SL-b, .registered .SL-b {
+    transform: translate(7.0em, 9.2em) scale(-1, 1) rotate(90deg);
+}
+
+.circle-large .SL-lb,
+.copy .SL-lb, .copyright .SL-lb,
+.reg .SL-lb, .registered .SL-lb {
+    transform: translate(4.7em, 8.3em) scale(-1, 1) rotate(45deg);
+}
+
+.circle-large .SL-l,
+.copy .SL-l, .copyright .SL-l,
+.reg .SL-l, .registered .SL-l {
+    transform: translate(3.8em, 6.0em) scale(-1, 1) rotate(0);
+}
+
+.copy .SL-cu, .copyright .SL-cu {
+    transform: translate(7.6em, 5.0em) scale(-1, 1) rotate(90deg);
+}
+
+.copy .SL-cd, .copyright .SL-cd {
+    transform: translate(7.6em, 7.0em) scale(1, 1) rotate(-90deg);
+}
+
+.copy .ST, .copyright .ST {
+    transform: translate(5.5em, 6.5em) scale(1, 1) rotate(-45deg);
+}
+
+.reg .LL, .registered .LL {
+    transform: translate(6.0em, 5.5em) scale(-1, 1) rotate(0);
+}
+
+.reg .ST-u, .registered .ST-u {
+    transform: translate(7.0em, 5.5em) scale(1, 1) rotate(90deg);
+}
+
+.reg .ST-d, .registered .ST-d {
+    transform: translate(7.0em, 7.5em) scale(1, 1) rotate(90deg);
+}
+
+/*
+sign ¶ paragraph and paragraph-large
+ */
+.para.narrow, .paragraph.narrow {
+    min-width: 5.1em;
+}
+
+.para.narrow .tangram, .para.narrow .tangram3d, .paragraph.narrow .tangram, .paragraph.narrow .tangram3d {
+    margin-left: -4.9em;
+}
+
+.para .MT, .paragraph .MT {
+    transform: translate(2.9em, 2.8em) scale(1, 1) rotate(90deg);
+}
+
+.para .SL-t, .paragraph .SL-t {
+    transform: translate(8.0em, 1.7em) scale(-1, 1) rotate(90deg);
+}
+
+.para .LL-lu, .paragraph .LL-lu {
+    transform: translate(7.5em, 3.8em) scale(1, 1) rotate(0);
+}
+
+.para .LL-ru, .paragraph .LL-ru {
+    transform: translate(9.0em, 3.8em) scale(1, 1) rotate(0);
+}
+
+.para .SL-ld, .paragraph .SL-ld {
+    transform: translate(7.5em, 7.0em) scale(1, 1) rotate(180deg);
+}
+
+.para .SL-rd, .paragraph .SL-rd {
+    transform: translate(9.0em, 7.0em) scale(1, 1) rotate(180deg);
+}
+
+.para-large.narrow, .paragraph-large.narrow {
+    min-width: 6.9em;
+}
+
+.para-large.narrow .tangram, .para-large.narrow .tangram3d, .paragraph-large.narrow .tangram, .paragraph-large.narrow .tangram3d {
+    margin-left: -2.1em;
+}
+
+.para-large .LT, .paragraph-large .LT {
+    transform: translate(2.9em, 3.1em) scale(1, 1) rotate(-45deg);
+}
+
+.para-large .LL-t, .paragraph-large .LL-t {
+    transform: translate(6.5em, .8em) scale(-1, 1) rotate(90deg);
+}
+
+.para-large .LL-lu, .paragraph-large .LL-lu {
+    transform: translate(6.5em, 3.4em) scale(1, 1) rotate(0);
+}
+
+.para-large .LL-ru, .paragraph-large .LL-ru {
+    transform: translate(8.0em, 3.4em) scale(1, 1) rotate(0);
+}
+
+.para-large .SL-ld, .paragraph-large .SL-ld {
+    transform: translate(6.5em, 6.6em) scale(1, 1) rotate(180deg);
+}
+
+.para-large .LL-rd, .paragraph-large .LL-rd {
+    transform: translate(8.0em, 6.6em) scale(1, 1) rotate(180deg);
+}
+
+.para-large .SL-e, .paragraph-large .SL-e {
+    transform: translate(5.6em, 8.9em) scale(1, -1) rotate(-45deg);
+}
+
+.para-large .LL-e, .paragraph-large .LL-e {
+    transform: translate(6.8em, 9.8em) scale(1, -1) rotate(-45deg);
+}
+
+/*
+sign ※ reference
+ */
+.reference.narrow {
+    min-width: 8.8em;
+}
+
+.reference.narrow .tangram, .reference.narrow .tangram3d {
+    margin-left: -3.1em;
+}
+
+.reference .SL-lt {
+    transform: translate(5.5em, 4.5em) scale(1, 1) rotate(135deg);
+}
+
+.reference .SL-rt {
+    transform: translate(8.5em, 4.5em) scale(-1, 1) rotate(135deg);
+}
+
+.reference .SL-lb {
+    transform: translate(5.5em, 7.5em) scale(-1, 1) rotate(-45deg);
+}
+
+.reference .LL {
+    transform: translate(8.1em, 6.6em) scale(1, 1) rotate(-45deg);
+}
+
+.reference .SQ-t {
+    transform: translate(6.5em, 3.5em) scale(1, 1) rotate(45deg);
+}
+
+.reference .SQ-r {
+    transform: translate(9.5em, 6.5em) scale(1, 1) rotate(45deg);
+}
+
+.reference .SQ-b {
+    transform: translate(3.5em, 6.5em) scale(1, 1) rotate(45deg);
+}
+
+.reference .SQ-l {
+    transform: translate(6.5em, 9.5em) scale(1, 1) rotate(45deg);
+}
+
+.reference .SL-olt {
+    transform: translate(4.0em, 3.0em) scale(1, 1) rotate(-45deg);
+}
+
+.reference .SL-ort {
+    transform: translate(10.0em, 3.0em) scale(-1, 1) rotate(-45deg);
+}
+
+.reference .SL-olb {
+    transform: translate(4.0em, 9.0em) scale(-1, 1) rotate(135deg);
+}
+
+.reference .SL-orb {
+    transform: translate(10.0em, 9.0em) scale(1, 1) rotate(135deg);
+}
+
+/*
+sign 【】 boldface square brackets solid
+ */
+.lbfsbs.narrow, .rbfsbs.narrow {
+    min-width: 4.0em;
+}
+
+.lbfsbs.narrow .tangram, .lbfsbs.narrow .tangram3d, .rbfsbs.narrow .tangram, .rbfsbs.narrow .tangram3d {
+    margin-left: -5.5em;
+}
+
+.lbfsbs .LT-t {
+    transform: translate(5.5em, 3.3em) scale(1, 1) rotate(0);
+}
+
+.lbfsbs .MT {
+    transform: translate(3.5em, 5.5em) scale(1, 1) rotate(90deg);
+}
+
+.lbfsbs .LT-b {
+    transform: translate(5.5em, 7.7em) scale(1, 1) rotate(-90deg);
+}
+
+.rbfsbs .LT-t {
+    transform: translate(5.5em, 3.3em) scale(-1, 1) rotate(0);
+}
+
+.rbfsbs .MT {
+    transform: translate(7.5em, 5.5em) scale(-1, 1) rotate(90deg);
+}
+
+.rbfsbs .LT-b {
+    transform: translate(5.5em, 7.7em) scale(-1, 1) rotate(-90deg);
+}
+
+/*
+sign 〖〗 boldface square brackets hollow
+ */
+.lbfsbh.narrow, .rbfsbh.narrow {
+    min-width: 4.6em;
+}
+
+.lbfsbh.narrow .tangram, .lbfsbh.narrow .tangram3d, .rbfsbh.narrow .tangram, .rbfsbh.narrow .tangram3d {
+    margin-left: -5.2em;
+}
+
+.lbfsbh .LL-u {
+    transform: translate(5.2em, 4.0em) scale(1, 1) rotate(0);
+}
+
+.lbfsbh .LL-d {
+    transform: translate(5.2em, 7.1em) scale(1, 1) rotate(180deg);
+}
+
+.lbfsbh .SL-lt {
+    transform: translate(6.2em, 1.9em) scale(1, 1) rotate(-90deg);
+}
+
+.lbfsbh .SL-rt {
+    transform: translate(7.9em, 2.1em) scale(1, -1) rotate(-45deg);
+}
+
+.lbfsbh .SL-ru {
+    transform: translate(7.0em, 4.5em) scale(1, 1) rotate(180deg);
+}
+
+.lbfsbh .SL-rd {
+    transform: translate(7.0em, 7.6em) scale(-1, 1) rotate(0);
+}
+
+.lbfsbh .SL-rb {
+    transform: translate(7.9em, 10.0em) scale(1, 1) rotate(-45deg);
+}
+
+.lbfsbh .SL-lb {
+    transform: translate(6.2em, 10.2em) scale(-1, 1) rotate(90deg);
+}
+
+.rbfsbh .LL-u {
+    transform: translate(8.8em, 4.0em) scale(-1, 1) rotate(0);
+}
+
+.rbfsbh .LL-d {
+    transform: translate(8.8em, 7.1em) scale(-1, 1) rotate(180deg);
+}
+
+.rbfsbh .SL-rt {
+    transform: translate(7.8em, 1.9em) scale(-1, 1) rotate(-90deg);
+}
+
+.rbfsbh .SL-lt {
+    transform: translate(6.1em, 2.1em) scale(1, 1) rotate(135deg);
+}
+
+.rbfsbh .SL-lu {
+    transform: translate(7.0em, 4.5em) scale(-1, 1) rotate(180deg);
+}
+
+.rbfsbh .SL-ld {
+    transform: translate(7.0em, 7.6em) scale(1, 1) rotate(0);
+}
+
+.rbfsbh .SL-lb {
+    transform: translate(6.1em, 10.0em) scale(-1, 1) rotate(-45deg);
+}
+
+.rbfsbh .SL-rb {
+    transform: translate(7.8em, 10.2em) scale(1, 1) rotate(90deg);
+}
+
+/*
+sign ‘’ single quotation 6 and 9
+sign “” double quotation 66 and 99
+ */
+.lsq6.narrow, .rsq9.narrow {
+    min-width: 2.8em;
+}
+
+.lsq6.narrow .tangram, .lsq6.narrow .tangram3d, .rsq9.narrow .tangram, .rsq9.narrow .tangram3d {
+    margin-left: -6.1em;
+}
+
+.lsq6 .SL {
+    transform: translate(6.3em, 2.0em) scale(1, 1) rotate(45deg);
+}
+
+.lsq6 .SQ {
+    transform: translate(6.5em, 4.1em) scale(1, 1) rotate(45deg);
+}
+
+.rsq9 .SQ {
+    transform: translate(6.5em, 2.5em) scale(1, 1) rotate(45deg);
+}
+
+.rsq9 .SL {
+    transform: translate(7.7em, 3.6em) scale(1, 1) rotate(-135deg);
+}
+
+.ldq66.narrow, .rdq99.narrow {
+    min-width: 5.8em;
+}
+
+.ldq66.narrow .tangram, .ldq66.narrow .tangram3d, .rdq99.narrow .tangram, .rdq99.narrow .tangram3d {
+    margin-left: -4.6em;
+}
+
+.ldq66 .SL-l {
+    transform: translate(4.8em, 2.0em) scale(1, 1) rotate(45deg);
+}
+
+.ldq66 .SQ-l {
+    transform: translate(5.0em, 4.1em) scale(1, 1) rotate(45deg);
+}
+
+.ldq66 .SL-r {
+    transform: translate(7.8em, 2.0em) scale(1, 1) rotate(45deg);
+}
+
+.ldq66 .SQ-r {
+    transform: translate(8.0em, 4.1em) scale(1, 1) rotate(45deg);
+}
+
+.rdq99 .SQ-l {
+    transform: translate(5.0em, 2.5em) scale(1, 1) rotate(45deg);
+}
+
+.rdq99 .SL-l {
+    transform: translate(6.2em, 3.6em) scale(1, 1) rotate(-135deg);
+}
+
+.rdq99 .SQ-r {
+    transform: translate(8.0em, 2.5em) scale(1, 1) rotate(45deg);
+}
+
+.rdq99 .SL-r {
+    transform: translate(9.2em, 3.6em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+sign ＜＞ single bookname
+sign 《》 double bookname
+ */
+.lsbn.narrow, .rsbn.narrow {
+    min-width: 4.4em;
+}
+
+.lsbn.narrow .tangram, .lsbn.narrow .tangram3d, .rsbn.narrow .tangram, .rsbn.narrow .tangram3d {
+    margin-left: -5.4em;
+}
+
+.lsbn .LL-t {
+    transform: translate(7.5em, 3.6em) scale(1, 1) rotate(45deg);
+}
+
+.lsbn .ST {
+    transform: translate(5.8em, 6.5em) scale(1, 1) rotate(-45deg);
+}
+
+.lsbn .LL-b {
+    transform: translate(7.5em, 7.4em) scale(1, -1) rotate(45deg);
+}
+
+.rsbn .LL-t {
+    transform: translate(6.7em, 3.6em) scale(-1, 1) rotate(45deg);
+}
+
+.rsbn .ST {
+    transform: translate(7.4em, 6.5em) scale(1, 1) rotate(135deg);
+}
+
+.rsbn .LL-b {
+    transform: translate(6.7em, 7.4em) scale(1, 1) rotate(-135deg);
+}
+
+.ldbn.narrow, .rdbn.narrow {
+    min-width: 6.4em;
+}
+
+.ldbn.narrow .tangram, .ldbn.narrow .tangram3d, .rdbn.narrow .tangram, .rdbn.narrow .tangram3d {
+    margin-left: -4.4em;
+}
+
+.ldbn .LL-lt {
+    transform: translate(6.5em, 3.6em) scale(1, 1) rotate(45deg);
+}
+
+.ldbn .LL-rt {
+    transform: translate(8.5em, 3.6em) scale(1, 1) rotate(45deg);
+}
+
+.ldbn .ST-l {
+    transform: translate(4.8em, 6.5em) scale(1, 1) rotate(-45deg);
+}
+
+.ldbn .ST-r {
+    transform: translate(6.8em, 6.5em) scale(1, 1) rotate(-45deg);
+}
+
+.ldbn .LL-lb {
+    transform: translate(6.5em, 7.4em) scale(1, -1) rotate(45deg);
+}
+
+.ldbn .LL-rb {
+    transform: translate(8.5em, 7.4em) scale(1, -1) rotate(45deg);
+}
+
+.rdbn .LL-lt {
+    transform: translate(5.7em, 3.6em) scale(-1, 1) rotate(45deg);
+}
+
+.rdbn .LL-rt {
+    transform: translate(7.7em, 3.6em) scale(-1, 1) rotate(45deg);
+}
+
+.rdbn .ST-l {
+    transform: translate(6.4em, 6.5em) scale(1, 1) rotate(135deg);
+}
+
+.rdbn .ST-r {
+    transform: translate(8.4em, 6.5em) scale(1, 1) rotate(135deg);
+}
+
+.rdbn .LL-lb {
+    transform: translate(5.7em, 7.4em) scale(1, 1) rotate(-135deg);
+}
+
+.rdbn .LL-rb {
+    transform: translate(7.7em, 7.4em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+sign … ellipsis
+ */
+.ellipsis.narrow {
+    min-width: 9.0em;
+}
+
+.ellipsis.narrow .tangram, .ellipsis.narrow .tangram3d {
+    margin-left: -3.0em;
+}
+
+.ellipsis .SQ-l {
+    transform: translate(3.5em, 6.5em) scale(1, 1) rotate(45deg);
+}
+
+.ellipsis .SQ-m {
+    transform: translate(6.5em, 6.5em) scale(1, 1) rotate(45deg);
+}
+
+.ellipsis .SQ-r {
+    transform: translate(9.5em, 6.5em) scale(1, 1) rotate(45deg);
+}
+
+/*
+sign † dagger
+sign ‡ daggers
+ */
+.dagger.narrow, .daggers.narrow {
+    min-width: 7.2em;
+}
+
+.dagger.narrow .tangram, .dagger.narrow .tangram3d, .daggers.narrow .tangram, .daggers.narrow .tangram3d {
+    margin-left: -3.9em;
+}
+
+.dagger .LL-t, .daggers .LL-t {
+    transform: translate(7.0em, 1.0em) scale(1, 1) rotate(0);
+}
+
+.dagger .SL-lu, .daggers .SL-lu {
+    transform: translate(4.9em, 3.1em) scale(1, 1) rotate(90deg);
+}
+
+.dagger .SL-ru, .daggers .SL-ru {
+    transform: translate(9.1em, 3.1em) scale(-1, 1) rotate(90deg);
+}
+
+.dagger .SL-mu, .daggers .SL-mu {
+    transform: translate(7.0em, 4.1em) scale(1, 1) rotate(180deg);
+}
+
+.dagger .SL-md, .daggers .SL-md {
+    transform: translate(7.0em, 7.2em) scale(1, 1) rotate(0);
+}
+
+.dagger .LL-b, .daggers .LL-b {
+    transform: translate(7.0em, 9.3em) scale(1, 1) rotate(180deg);
+}
+
+.daggers .SL-ld {
+    transform: translate(4.9em, 8.2em) scale(-1, 1) rotate(-90deg);
+}
+
+.daggers .SL-rd {
+    transform: translate(9.1em, 8.2em) scale(1, 1) rotate(-90deg);
+}
+
+/*
+sign ™ trade(trademark)
+ */
+.trade.narrow, .trademark.narrow {
+    min-width: 6.3em;
+}
+
+.trade.narrow .tangram, .trade.narrow .tangram3d, .trademark.narrow .tangram, .trademark.narrow .tangram3d {
+    margin-left: -3.7em;
+}
+
+.trade .SL-tt, .trademark .SL-tt {
+    transform: translate(4.7em, 0) scale(1, 1) rotate(90deg);
+}
+
+.trade .SL-tb, .trademark .SL-tb {
+    transform: translate(5.0em, 2.1em) scale(-1, 1) rotate(0);
+}
+
+.trade .LL-ml, .trademark .LL-ml {
+    transform: translate(6.8em, 1.0em) scale(1, 1) rotate(180deg);
+}
+
+.trade .ST-mt, .trademark .ST-mt {
+    transform: translate(7.4em, 0) scale(1, -1) rotate(45deg);
+}
+
+.trade .LL-mr, .trademark .LL-mr {
+    transform: translate(9.0em, 1.0em) scale(-1, 1) rotate(180deg);
+}
+
+/*
+sign ℡ tel(ephone)
+ */
+.tel.narrow, .telephone.narrow {
+    min-width: 9.6em;
+}
+
+.tel.narrow .tangram, .tel.narrow .tangram3d, .telephone.narrow .tangram, .telephone.narrow .tangram3d {
+    margin-left: -2.7em;
+}
+
+.tel .SL-tt, .telephone .SL-tt {
+    transform: translate(3.7em, 0) scale(1, 1) rotate(90deg);
+}
+
+.tel .SL-tb, .telephone .SL-tb {
+    transform: translate(4.0em, 2.1em) scale(-1, 1) rotate(0);
+}
+
+.tel .ST-t, .telephone .ST-t {
+    transform: translate(6.9em, 1.0em) scale(1, 1) rotate(90deg);
+}
+
+.tel .ST-c, .telephone .ST-c {
+    transform: translate(5.9em, 1.6em) scale(1, 1) rotate(135deg);
+}
+
+.tel .LL-e, .telephone .LL-e {
+    transform: translate(5.8em, 1.0em) scale(-1, 1) rotate(0);
+}
+
+.tel .SL-e, .telephone .SL-e {
+    transform: translate(7.0em, 3.0em) scale(1, 1) rotate(90deg);
+}
+
+.tel .LL-l, .telephone .LL-l {
+    transform: translate(9.1em, 1.0em) scale(-1, 1) rotate(0);
+}
+
+.tel .SL-l, .telephone .SL-l {
+    transform: translate(10.3em, 3.0em) scale(1, 1) rotate(90deg);
+}
+
+/*
+sign  correct(checked, the opposite to &times;)
+ */
+.correct.narrow {
+    min-width: 7.1em;
+}
+
+.correct.narrow .tangram, .correct.narrow .tangram3d {
+    margin-left: -4.3em;
+}
+
+.correct .LL {
+    transform: translate(5.5em, 6.2em) scale(-1, 1) rotate(45deg);
+}
+
+.correct .SL-b {
+    transform: translate(7.4em, 7.0em) scale(1, 1) rotate(45deg);
+}
+
+.correct .SL-t {
+    transform: translate(9.6em, 4.8em) scale(-1, 1) rotate(135deg);
+}
+
+/*
+sign ☯ yinyang and taiji
+ */
+.yinyang.narrow {
+    min-width: 6.3em;
+}
+
+.yinyang.narrow .tangram, .yinyang.narrow .tangram3d {
+    margin-left: -4.3em;
+}
+
+.yinyang .MT-t {
+    transform: translate(2.3em, 4.4em) scale(1, 1) rotate(90deg);
+}
+
+.yinyang .LL-t {
+    transform: translate(6.4em, 4.4em) scale(-1, 1) rotate(0deg);
+}
+
+.yinyang .SL-t {
+    transform: translate(7.5em, 4.4em) scale(-1, 1) rotate(0deg);
+}
+
+.yinyang .PR-t {
+    transform: translate(8.6em, 4.4em) scale(-1, 1) rotate(0deg);
+}
+
+.yinyang .MT-b {
+    transform: translate(8.6em, 6.6em) scale(1, 1) rotate(-90deg);
+}
+
+.yinyang .LL-b {
+    transform: translate(7.5em, 6.6em) scale(-1, 1) rotate(180deg);
+}
+
+.yinyang .SL-b {
+    transform: translate(6.4em, 7.6em) scale(-1, 1) rotate(180deg);
+}
+
+.yinyang .PR-b {
+    transform: translate(4.3em, 6.6em) scale(-1, 1) rotate(0deg);
+}
+
+.taiji.narrow {
+    min-width: 9.9em;
+}
+
+.taiji.narrow .tangram, .taiji.narrow .tangram3d {
+    margin-left: -2.5em;
+}
+
+.taiji .LL-n {
+    transform: translate(7.1em, 1.0em) scale(1, 1) rotate(-90deg);
+}
+
+.taiji .LL-ne {
+    transform: translate(10.2em, 2.4em) scale(1, 1) rotate(-45deg);
+}
+
+.taiji .LL-e {
+    transform: translate(11.4em, 5.6em) scale(1, 1) rotate(0);
+}
+
+.taiji .LL-se {
+    transform: translate(10.1em, 8.8em) scale(1, 1) rotate(45deg);
+}
+
+.taiji .LL-s {
+    transform: translate(6.9em, 10.1em) scale(1, 1) rotate(90deg);
+}
+
+.taiji .LL-sw {
+    transform: translate(3.8em, 8.7em) scale(1, 1) rotate(135deg);
+}
+
+.taiji .LL-w {
+    transform: translate(2.5em, 5.5em) scale(1, 1) rotate(180deg);
+}
+
+.taiji .LL-nw {
+    transform: translate(3.9em, 2.4em) scale(1, 1) rotate(-135deg);
+}
+
+.taiji .SL-1 {
+    transform: translate(3.8em, 5.6em) scale(1, 1) rotate(45deg);
+}
+
+.taiji .SL-2 {
+    transform: translate(6.0em, 4.8em) scale(1, 1) rotate(135deg);
+}
+
+.taiji .SL-3 {
+    transform: translate(8.0em, 7.2em) scale(1, 1) rotate(-45deg);
+}
+
+.taiji .SL-4 {
+    transform: translate(10.1em, 6.3em) scale(1, 1) rotate(-135deg);
+}
+
+.taiji .SQ-rt {
+    transform: translate(8.2em, 5.2em) scale(1, 1) rotate(45deg);
+}
+
+.taiji .SQ-ld {
+    transform: translate(4.8em, 7.9em) scale(1, 1) rotate(45deg);
+}
+
+/*
+sign ▣ checked square radio
+sign ◈ checked rhombus radio
+sign ◉ checked circle radio
+sign ◽ square
+sign ◾ square solid
+ */
+.square.narrow {
+    min-width: 5.0em;
+}
+
+.square.narrow .tangram, .square.narrow .tangram3d {
+    margin-left: -5.0em;
+}
+
+.square .LL-t {
+    transform: translate(6.5em, 3.4em) scale(1, 1) rotate(90deg);
+}
+
+.square .LL-r {
+    transform: translate(9.1em, 5.0em) scale(1, 1) rotate(180deg);
+}
+
+.square .LL-b {
+    transform: translate(7.5em, 7.6em) scale(1, 1) rotate(-90deg);
+}
+
+.square .LL-l {
+    transform: translate(4.9em, 6.0em) scale(1, 1) rotate(0);
+}
+
+.radio.square .SQ {
+    transform: translate(6.5em, 6.5em) scale(1, 1) rotate(0);
+}
+
+.square .MT-l {
+    transform: translate(4.0em, 7.0em) scale(1, 1) rotate(45deg);
+}
+
+.square .MT-r {
+    transform: translate(7.0em, 4.0em) scale(1, 1) rotate(-135deg);
+}
+
+.rhombus.narrow {
+    min-width: 5.8em;
+}
+
+.rhombus.narrow .tangram, .rhombus.narrow .tangram3d {
+    margin-left: -4.6em;
+}
+
+.rhombus .LL-lt {
+    transform: translate(5.2em, 4.4em) scale(1, 1) rotate(45deg);
+}
+
+.rhombus .LL-rt {
+    transform: translate(8.1em, 3.6em) scale(1, 1) rotate(135deg);
+}
+
+.rhombus .LL-rb {
+    transform: translate(8.9em, 6.6em) scale(1, 1) rotate(-135deg);
+}
+
+.rhombus .LL-lb {
+    transform: translate(6.0em, 7.4em) scale(1, 1) rotate(-45deg);
+}
+
+.radio.rhombus .SQ {
+    transform: translate(6.5em, 6.5em) scale(1, 1) rotate(45deg);
+}
+
+.rhombus .MT-l {
+    transform: translate(3.5em, 5.5em) scale(1, 1) rotate(90deg);
+}
+
+.rhombus .MT-r {
+    transform: translate(7.6em, 5.5em) scale(1, 1) rotate(-90deg);
+}
+
+.tornado.narrow {
+    min-width: 7.6em;
+}
+
+.tornado.narrow .tangram, .tornado.narrow .tangram3d {
+    margin-left: -3.7em;
+}
+
+.tornado .LL-lt {
+    transform: translate(6.5em, 3.5em) scale(1, 1) rotate(45deg);
+}
+
+.tornado .LL-rt {
+    transform: translate(9.0em, 5.0em) scale(1, 1) rotate(135deg);
+}
+
+.tornado .LL-rb {
+    transform: translate(7.5em, 7.5em) scale(1, 1) rotate(-135deg);
+}
+
+.tornado .LL-lb {
+    transform: translate(5.0em, 6.0em) scale(1, 1) rotate(-45deg);
+}
+
+.tornado .SQ {
+    transform: translate(6.5em, 6.5em) scale(1, 1) rotate(45deg);
+}
+
+/*
+sign ☐ default checkbox
+sign ☑ checked checkedbox
+sign ☒ unchecked checkedbox
+ */
+.checkbox.narrow {
+    min-width: 7.3em;
+}
+
+.checkbox.narrow .tangram, .checkbox.narrow .tangram3d {
+    margin-left: -3.8em;
+}
+
+.checkbox .SL-t {
+    transform: translate(4.9em, 2.9em) scale(-1, 1) rotate(-90deg);
+}
+
+.checkbox .LL-t {
+    transform: translate(8.5em, 2.4em) scale(1, 1) rotate(-90deg);
+}
+
+.checkbox .SL-r {
+    transform: translate(10.1em, 4.0em) scale(1, -1) rotate(0);
+}
+
+.checkbox .LL-r {
+    transform: translate(10.1em, 7.1em) scale(1, 1) rotate(0);
+}
+
+.checkbox .SL-b {
+    transform: translate(9.0em, 9.2em) scale(-1, 1) rotate(90deg);
+}
+
+.checkbox .LL-b {
+    transform: translate(5.4em, 8.7em) scale(1, 1) rotate(90deg);
+}
+
+.checkbox .SL-l {
+    transform: translate(3.8em, 8.1em) scale(-1, 1) rotate(0);
+}
+
+.checkbox .LL-l {
+    transform: translate(3.8em, 4.0em) scale(1, 1) rotate(180deg);
+}
+
+.checkbox.checked .SL-lc {
+    transform: translate(5.9em, 6.1em) scale(1, 1) rotate(135deg);
+}
+
+.checkbox.checked .SL-rc {
+    transform: translate(8.1em, 5.3em) scale(-1, 1) rotate(135deg);
+}
+
+.checkbox.unchecked .SL-lt {
+    transform: translate(6.0em, 5.0em) scale(1, 1) rotate(135deg);
+}
+
+.checkbox.unchecked .SL-rt {
+    transform: translate(8.0em, 5.0em) scale(1, -1) rotate(-45deg);
+}
+
+.checkbox.unchecked .SL-rb {
+    transform: translate(8.0em, 7.0em) scale(1, 1) rotate(-45deg);
+}
+
+.checkbox.unchecked .SL-lb {
+    transform: translate(6.0em, 7.0em) scale(-1, 1) rotate(-45deg);
+}
+
+/*
+sign ◻ ◼ square(and solid)
+ */
+.square-middle.narrow {
+    min-width: 6.3em;
+}
+
+.square-middle.narrow .tangram, .square-middle.narrow .tangram3d {
+    margin-left: -4.4em;
+}
+
+.square-middle .SL-tl {
+    transform: translate(6.5em, 3.3em) scale(1, 1) rotate(-90deg);
+}
+
+.square-middle .SL-tr {
+    transform: translate(8.7em, 3.3em) scale(1, 1) rotate(90deg);
+}
+
+.square-middle .SL-rt {
+    transform: translate(9.7em, 5.4em) scale(1, 1) rotate(0);
+}
+
+.square-middle .SL-rb {
+    transform: translate(9.7em, 7.6em) scale(1, 1) rotate(180deg);
+}
+
+.square-middle .SL-br {
+    transform: translate(7.6em, 8.6em) scale(1, 1) rotate(90deg);
+}
+
+.square-middle .SL-bl {
+    transform: translate(5.4em, 8.6em) scale(1, 1) rotate(-90deg);
+}
+
+.square-middle .SL-lb {
+    transform: translate(4.4em, 6.5em) scale(1, 1) rotate(180deg);
+}
+
+.square-middle .SL-lt {
+    transform: translate(4.4em, 4.3em) scale(1, 1) rotate(0);
+}
+
+.square-middle .LT-l {
+    transform: translate(5.5em, 5.4em) scale(1, 1) rotate(0deg);
+}
+
+.square-middle .LT-r {
+    transform: translate(5.6em, 5.5em) scale(1, 1) rotate(180deg);
+}
+
+.rhombus-middle.narrow {
+    min-width: 8.8em;
+}
+
+.rhombus-middle.narrow .tangram, .rhombus-middle.narrow .tangram3d {
+    margin-left: -3.1em;
+}
+
+.rhombus-middle .SL-lt {
+    transform: translate(4.0em, 5.2em) scale(1, -1) rotate(135deg);
+}
+
+.rhombus-middle .SL-tl {
+    transform: translate(6.2em, 3.0em) scale(1, 1) rotate(-135deg);
+}
+
+.rhombus-middle .SL-tr {
+    transform: translate(7.7em, 3.0em) scale(-1, 1) rotate(-135deg);
+}
+
+.rhombus-middle .SL-rt {
+    transform: translate(9.9em, 5.2em) scale(1, 1) rotate(-45deg);
+}
+
+.rhombus-middle .SL-rb {
+    transform: translate(9.9em, 6.8em) scale(1, -1) rotate(-45deg);
+}
+
+.rhombus-middle .SL-br {
+    transform: translate(7.7em, 9.0em) scale(1, 1) rotate(45deg);
+}
+
+.rhombus-middle .SL-bl {
+    transform: translate(6.2em, 9.0em) scale(-1, 1) rotate(45deg);
+}
+
+.rhombus-middle .SL-lb {
+    transform: translate(4.0em, 6.8em) scale(1, 1) rotate(135deg);
+}
+
+.rhombus-middle .LT-l {
+    transform: translate(5.4em, 5.5em) scale(1, 1) rotate(-45deg);
+}
+
+.rhombus-middle .LT-r {
+    transform: translate(5.5em, 5.5em) scale(1, 1) rotate(135deg);
+}
+
+.square-large.narrow {
+    min-width: 8.0em;
+}
+
+.square-large.narrow .tangram, .square-large.narrow .tangram3d {
+    margin-left: -3.5em;
+}
+
+.square-large .LL-tl {
+    transform: translate(6.2em, 2.0em) scale(1, 1) rotate(-90deg);
+}
+
+.square-large .LL-tr {
+    transform: translate(9.0em, 2.0em) scale(1, 1) rotate(90deg);
+}
+
+.square-large .LL-rt {
+    transform: translate(10.5em, 4.6em) scale(1, 1) rotate(0);
+}
+
+.square-large .LL-rb {
+    transform: translate(10.5em, 7.5em) scale(1, 1) rotate(180deg);
+}
+
+.square-large .LL-br {
+    transform: translate(7.9em, 9.0em) scale(1, 1) rotate(90deg);
+}
+
+.square-large .LL-bl {
+    transform: translate(5.0em, 9.0em) scale(1, 1) rotate(-90deg);
+}
+
+.square-large .LL-lb {
+    transform: translate(3.5em, 6.4em) scale(1, 1) rotate(180deg);
+}
+
+.square-large .LL-lt {
+    transform: translate(3.5em, 3.5em) scale(1, 1) rotate(0);
+}
+
+.square-large .LT-t {
+    transform: translate(5.5em, 2.6em) scale(1, 1) rotate(-135deg);
+}
+
+.square-large .LT-r {
+    transform: translate(8.4em, 5.5em) scale(1, 1) rotate(-45deg);
+}
+
+.square-large .LT-b {
+    transform: translate(5.5em, 8.4em) scale(1, 1) rotate(45deg);
+}
+
+.square-large .LT-l {
+    transform: translate(2.6em, 5.5em) scale(1, 1) rotate(135deg);
+}
+
+.rhombus-large.narrow {
+    min-width: 11.3em;
+}
+
+.rhombus-large.narrow .tangram, .rhombus-large.narrow .tangram3d {
+    margin-left: -1.9em;
+}
+
+.rhombus-large .LL-lt {
+    transform: translate(3.2em, 4.2em) scale(-1, 1) rotate(-45deg);
+}
+
+.rhombus-large .LL-tl {
+    transform: translate(5.9em, 1.5em) scale(1, 1) rotate(-135deg);
+}
+
+.rhombus-large .LL-tr {
+    transform: translate(8.2em, 1.5em) scale(-1, 1) rotate(-135deg);
+}
+
+.rhombus-large .LL-rt {
+    transform: translate(10.9em, 4.2em) scale(1, 1) rotate(-45deg);
+}
+
+.rhombus-large .LL-rb {
+    transform: translate(10.9em, 6.5em) scale(-1, 1) rotate(135deg);
+}
+
+.rhombus-large .LL-br {
+    transform: translate(8.2em, 9.2em) scale(1, 1) rotate(45deg);
+}
+
+.rhombus-large .LL-bl {
+    transform: translate(5.9em, 9.2em) scale(1, -1) rotate(-135deg);
+}
+
+.rhombus-large .LL-lb {
+    transform: translate(3.2em, 6.5em) scale(1, 1) rotate(135deg);
+}
+
+.rhombus-large .LT-t {
+    transform: translate(3.5em, 3.3em) scale(1, 1) rotate(180deg);
+}
+
+.rhombus-large .LT-r {
+    transform: translate(7.6em, 3.3em) scale(1, 1) rotate(-90deg);
+}
+
+.rhombus-large .LT-b {
+    transform: translate(7.6em, 7.4em) scale(1, 1) rotate(0deg);
+}
+
+.rhombus-large .LT-l {
+    transform: translate(3.5em, 7.4em) scale(1, 1) rotate(90deg);
+}
+
+/*
+sign 「」 single quotation of Chinese in vertical direction
+sign 『』 double quotation of Chinese in vertical direction
+ */
+.up-squot.narrow, .down-squot.narrow,
+.up-dquot.narrow, .down-dquot.narrow {
+    min-width: 7.4em;
+}
+
+.up-squot.narrow .tangram, .up-squot.narrow .tangram3d, .down-squot.narrow .tangram, .down-squot.narrow .tangram3d,
+.up-dquot.narrow .tangram, .up-dquot.narrow .tangram3d, .down-dquot.narrow .tangram, .down-dquot.narrow .tangram3d {
+    margin-left: -3.8em;
+}
+
+.up-squot .SL-l, .up-dquot .SL-u {
+    transform: translate(4.8em, 3.0em) scale(1, 1) rotate(-90deg);
+}
+
+.up-squot .LL, .up-dquot .LL-u {
+    transform: translate(7.5em, 2.5em) scale(1, 1) rotate(90deg);
+}
+
+.up-squot .SL-r, .up-dquot .SL-r {
+    transform: translate(10.1em, 4.0em) scale(-1, 1) rotate(0);
+}
+
+.down-squot .SL-l, .down-dquot .SL-l {
+    transform: translate(3.9em, 8.0em) scale(-1, 1) rotate(180deg);
+}
+
+.down-squot .LL, .down-dquot .LL-d {
+    transform: translate(6.5em, 8.5em) scale(1, 1) rotate(-90deg);
+}
+
+.down-squot .SL-r, .down-dquot .SL-d {
+    transform: translate(9.2em, 9.0em) scale(1, 1) rotate(90deg);
+}
+
+.up-dquot .SL-d {
+    transform: translate(4.8em, 4.1em) scale(1, -1) rotate(-90deg);
+}
+
+.up-dquot .LL-d {
+    transform: translate(7.5em, 3.6em) scale(1, -1) rotate(90deg);
+}
+
+.down-dquot .LL-u {
+    transform: translate(6.5em, 7.4em) scale(1, -1) rotate(-90deg);
+}
+
+.down-dquot .SL-u {
+    transform: translate(9.2em, 7.9em) scale(1, -1) rotate(90deg);
+}
+
+/*
+sign ♮ natural sign of music note
+ */
+.natural-music.narrow {
+    min-width: 3.2em;
+}
+
+.natural-music.narrow .tangram, .natural-music.narrow .tangram3d {
+    margin-left: -5.8em;
+}
+
+.natural-music .SL-lt {
+    transform: translate(5.8em, 3.3em) scale(1, 1) rotate(180deg);
+}
+
+.natural-music .SL-lc {
+    transform: translate(5.8em, 6.4em) scale(-1, 1) rotate(0);
+}
+
+.natural-music .SL-lb {
+    transform: translate(6.7em, 7.4em) scale(1, 1) rotate(-135deg);
+}
+
+.natural-music .SL-rt {
+    transform: translate(7.1em, 4.6em) scale(1, 1) rotate(45deg);
+}
+
+.natural-music .SL-rc {
+    transform: translate(8.0em, 5.6em) scale(1, -1) rotate(0);
+}
+
+.natural-music .SL-rb {
+    transform: translate(8.0em, 8.7em) scale(1, 1) rotate(0);
+}
+
+/*
+sign ♯ sharp sign of music note
+ */
+.sharp-music.narrow {
+    min-width: 4.2em;
+}
+
+.sharp-music.narrow .tangram, .sharp-music.narrow .tangram3d {
+    margin-left: -5.4em;
+}
+
+.sharp-music .LL-t {
+    transform: translate(6.2em, 4.7em) scale(1, -1) rotate(0);
+}
+
+.sharp-music .LL-r {
+    transform: translate(8.1em, 3.4em) scale(1, 1) rotate(-135deg);
+}
+
+.sharp-music .LL-b {
+    transform: translate(7.9em, 6.2em) scale(-1, 1) rotate(0);
+}
+
+.sharp-music .LL-l {
+    transform: translate(5.9em, 7.6em) scale(1, 1) rotate(45deg);
+}
+
+.sharp-music .SL-t {
+    transform: translate(7.9em, 3.1em) scale(1, -1) rotate(0);
+}
+
+.sharp-music .SL-r {
+    transform: translate(8.4em, 5.6em) scale(1, 1) rotate(-135deg);
+}
+
+.sharp-music .SL-b {
+    transform: translate(6.2em, 8.8em) scale(-1, 1) rotate(0);
+}
+
+.sharp-music .SL-l {
+    transform: translate(5.6em, 6.4em) scale(1, 1) rotate(45deg);
+}
+
+/*
+sign ♭ flat sign of music note
+ */
+.flat-music.narrow {
+    min-width: 3.6em;
+}
+
+.flat-music.narrow .tangram, .flat-music.narrow .tangram3d {
+    margin-left: -5.8em;
+}
+
+.flat-music .SL-lt {
+    transform: translate(5.8em, 2.7em) scale(1, 1) rotate(180deg);
+}
+
+.flat-music .LL {
+    transform: translate(5.8em, 5.8em) scale(-1, 1) rotate(0);
+}
+
+.flat-music .SL-ru {
+    transform: translate(7.5em, 5.6em) scale(-1, 1) rotate(-135deg);
+}
+
+.flat-music .SL-rb {
+    transform: translate(6.7em, 7.8em) scale(-1, 1) rotate(-45deg);
+}
+
+/*
+sign № number
+ */
+.number.narrow {
+    min-width: 9.3em;
+}
+
+.number.narrow .tangram, .number.narrow .tangram3d {
+    margin-left: -3.0em;
+}
+
+.number .SL-lt {
+    transform: translate(4.0em, 2.8em) scale(1, 1) rotate(180deg);
+}
+
+.number .SL-lm {
+    transform: translate(4.0em, 5.9em) scale(-1, 1) rotate(0);
+}
+
+.number .ST-lb {
+    transform: translate(3.0em, 8.0em) scale(1, 1) rotate(180deg);
+}
+
+.number .PR {
+    transform: translate(5.1em, 4.5em) scale(-1, 1) rotate(0);
+}
+
+.number .ST-rt {
+    transform: translate(7.2em, 2.7em) scale(1, 1) rotate(0);
+}
+
+.number .SL-rm {
+    transform: translate(7.2em, 3.9em) scale(1, -1) rotate(0);
+}
+
+.number .SL-rb {
+    transform: translate(7.2em, 7.0em) scale(1, 1) rotate(0);
+}
+
+.number .SQ {
+    transform: translate(9.3em, 6.4em) scale(1, 1) rotate(45deg);
+}
+
+.number .LL {
+    transform: translate(9.8em, 7.5em) scale(1, 1) rotate(-90deg);
+}
+
+/*
+sign ℃ degree celcius(centigrade)
+ */
+.celcius.narrow, .centigrade.narrow {
+    min-width: 7.4em;
+}
+
+.celcius.narrow .tangram, .celcius.narrow .tangram3d, .centigrade.narrow .tangram, .centigrade.narrow .tangram3d {
+    margin-left: -2.6em;
+}
+
+.celcius .SQ, .centigrade .SQ {
+    transform: translate(3.0em, 2.0em) scale(1, 1) rotate(45deg);
+}
+
+.celcius .ST-lt, .centigrade .ST-lt {
+    transform: translate(5.0em, 3.6em) scale(1, 1) rotate(0);
+}
+
+.celcius .ST-mt, .centigrade .ST-mt {
+    transform: translate(6.5em, 3.7em) scale(1, 1) rotate(45deg);
+}
+
+.celcius .ST-rt, .centigrade .ST-rt {
+    transform: translate(8.0em, 3.6em) scale(1, 1) rotate(90deg);
+}
+
+.celcius .MT, .centigrade .MT {
+    transform: translate(2.0em, 4.8em) scale(1, 1) rotate(90deg);
+}
+
+.celcius .ST-lb, .centigrade .ST-lb {
+    transform: translate(5.0em, 8.0em) scale(1, 1) rotate(-90deg);
+}
+
+.celcius .ST-mb, .centigrade .ST-mb {
+    transform: translate(6.5em, 7.9em) scale(1, 1) rotate(-135deg);
+}
+
+.celcius .ST-rb, .centigrade .ST-rb {
+    transform: translate(8.0em, 8.0em) scale(1, 1) rotate(180deg);
+}
+
+/*
+sign ♀ female
+ */
+.female.narrow {
+    min-width: 7.2em;
+}
+
+.female.narrow .tangram, .female.narrow .tangram3d {
+    margin-left: -3.9em;
+}
+
+.female .SL-lt {
+    transform: translate(5.5em, 1.4em) scale(1, 1) rotate(45deg);
+}
+
+.female .SL-rt {
+    transform: translate(7.8em, .7em) scale(1, 1) rotate(135deg);
+}
+
+.female .SL-lm {
+    transform: translate(6.2em, 3.7em) scale(1, 1) rotate(-45deg);
+}
+
+.female .SL-rm {
+    transform: translate(8.5em, 3.0em) scale(1, 1) rotate(-135deg);
+}
+
+.female .SL-lb {
+    transform: translate(4.9em, 6.0em) scale(-1, 1) rotate(-90deg);
+}
+
+.female .LL {
+    transform: translate(7.0em, 6.0em) scale(-1, 1) rotate(0);
+}
+
+.female .SL-rb {
+    transform: translate(9.1em, 6.0em) scale(-1, 1) rotate(90deg);
+}
+
+/*
+sign ♂ male
+ */
+.male.narrow {
+    min-width: 5.9em;
+}
+
+.male.narrow .tangram, .male.narrow .tangram3d {
+    margin-left: -4.6em;
+}
+
+.male .LL-l {
+    transform: translate(5.9em, .7em) scale(1, 1) rotate(-135deg);
+}
+
+.male .LL-r {
+    transform: translate(8.2em, .7em) scale(-1, 1) rotate(-135deg);
+}
+
+.male .SL-ul {
+    transform: translate(6.5em, 2.5em) scale(-1, 1) rotate(180deg);
+}
+
+.male .SL-ur {
+    transform: translate(7.6em, 2.5em) scale(1, 1) rotate(180deg);
+}
+
+.male .SL-ml {
+    transform: translate(5.5em, 5.5em) scale(1, 1) rotate(45deg);
+}
+
+.male .SL-mr {
+    transform: translate(7.8em, 4.8em) scale(1, 1) rotate(135deg);
+}
+
+.male .SL-bl {
+    transform: translate(6.2em, 7.8em) scale(1, 1) rotate(-45deg);
+}
+
+.male .SL-br {
+    transform: translate(8.5em, 7.1em) scale(1, 1) rotate(-135deg);
+}
+
+/*
+sign ♠ spade
+sign ♥ heart
+sign ♣ club
+sign ♦ diamond
+ */
+.spade.narrow {
+    min-width: 7.4em;
+}
+
+.spade.narrow .tangram, .spade.narrow .tangram3d {
+    margin-left: -3.8em;
+}
+
+.spade .ST-1 {
+    transform: translate(6.5em, 4.3em) scale(1, 1) rotate(45deg);
+}
+
+.spade .ST-2 {
+    transform: translate(6.5em, 5.9em) scale(1, 1) rotate(45deg);
+}
+
+.spade .ST-3 {
+    transform: translate(6.5em, 7.5em) scale(1, 1) rotate(45deg);
+}
+
+.spade .ST-4 {
+    transform: translate(6.5em, 9.0em) scale(1, 1) rotate(45deg);
+}
+
+.spade .LL-l {
+    transform: translate(5.1em, 4.5em) scale(-1, 1) rotate(135deg);
+}
+
+.spade .LL-r {
+    transform: translate(8.9em, 4.5em) scale(1, 1) rotate(135deg);
+}
+
+.spade .SL-l {
+    transform: translate(5.4em, 6.3em) scale(-1, 1) rotate(135deg);
+}
+
+.spade .SL-r {
+    transform: translate(8.6em, 6.3em) scale(1, 1) rotate(135deg);
+}
+
+.heart.narrow {
+    min-width: 6.2em;
+}
+
+.heart.narrow .tangram, .heart.narrow .tangram3d {
+    margin-left: -4.4em;
+}
+
+.heart .ST-l {
+    transform: translate(4.9em, 4.9em) scale(1, 1) rotate(45deg);
+}
+
+.heart .ST-r {
+    transform: translate(8.1em, 4.9em) scale(1, 1) rotate(45deg);
+}
+
+.heart .LL {
+    transform: translate(8.1em, 4.5em) scale(1, 1) rotate(90deg);
+}
+
+.heart .SL {
+    transform: translate(5.4em, 5.0em) scale(1, 1) rotate(-90deg);
+}
+
+.heart .LT {
+    transform: translate(5.5em, 5.1em) scale(1, 1) rotate(-135deg);
+}
+
+.club.narrow {
+    min-width: 7.8em;
+}
+
+.club.narrow .tangram, .club.narrow .tangram3d {
+    margin-left: -3.6em;
+}
+
+.club .MT-t {
+    transform: translate(5.5em, 1.9em) scale(1, 1) rotate(180deg);
+}
+
+.club .MT-u {
+    transform: translate(5.5em, 6.0em) scale(1, 1) rotate(0);
+}
+
+.club .SL-l {
+    transform: translate(4.5em, 6.5em) scale(1, 1) rotate(-45deg);
+}
+
+.club .SL-lm {
+    transform: translate(5.4em, 5.8em) scale(1, 1) rotate(135deg);
+}
+
+.club .SL-rm {
+    transform: translate(8.6em, 5.8em) scale(-1, 1) rotate(135deg);
+}
+
+.club .SL-r {
+    transform: translate(9.5em, 6.5em) scale(-1, 1) rotate(-45deg);
+}
+
+.club .MT-b {
+    transform: translate(5.5em, 6.0em) scale(1, 1) rotate(180deg);
+}
+
+.diamond.narrow {
+    min-width: 5.8em;
+}
+
+.diamond.narrow .tangram, .diamond.narrow .tangram3d {
+    margin-left: -4.6em;
+}
+
+.diamond .SL-lt {
+    transform: translate(6.2em, 4.0em) scale(1, 1) rotate(-135deg);
+}
+
+.diamond .LL-rt {
+    transform: translate(8.1em, 3.8em) scale(-1, 1) rotate(-135deg);
+}
+
+.diamond .SQ {
+    transform: translate(6.5em, 6.0em) scale(1, 1) rotate(45deg);
+}
+
+.diamond .LL-lb {
+    transform: translate(5.8em, 6.1em) scale(-1, 1) rotate(45deg);
+}
+
+.diamond .SL-rb {
+    transform: translate(7.8em, 7.0em) scale(1, 1) rotate(45deg);
+}
+
+.spade-large.narrow {
+    min-width: 8.8em;
+}
+
+.spade-large.narrow .tangram, .spade-large.narrow .tangram3d {
+    margin-left: -3.1em;
+}
+
+.spade-large .SQ {
+    transform: translate(6.5em, 2.6em) scale(1, 1) rotate(45deg);
+}
+
+.spade-large .PR-l {
+    transform: translate(5.7em, 3.8em) scale(1, 1) rotate(-45deg);
+}
+
+.spade-large .PR-r {
+    transform: translate(7.3em, 3.8em) scale(-1, 1) rotate(-45deg);
+}
+
+.spade-large .MT-l {
+    transform: translate(1.9em, 3.8em) scale(1, 1) rotate(90deg);
+}
+
+.spade-large .SL-l {
+    transform: translate(4.0em, 5.8em) scale(1, 1) rotate(-45deg);
+}
+
+.spade-large .MT-r {
+    transform: translate(9.1em, 3.8em) scale(1, 1) rotate(-90deg);
+}
+
+.spade-large .SL-r {
+    transform: translate(10.0em, 5.8em) scale(-1, 1) rotate(-45deg);
+}
+
+.spade-large .MT-b {
+    transform: translate(5.5em, 6.0em) scale(1, 1) rotate(180deg);
+}
+
+.heart-large.narrow {
+    min-width: 8.1em;
+}
+
+.heart-large.narrow .tangram, .heart-large.narrow .tangram3d {
+    margin-left: -3.5em;
+}
+
+.heart-large .MT-l {
+    transform: translate(3.5em, .8em) scale(1, 1) rotate(180deg);
+}
+
+.heart-large .MT-r {
+    transform: translate(7.6em, .8em) scale(1, 1) rotate(180deg);
+}
+
+.heart-large .LL-l {
+    transform: translate(5.0em, 3.4em) scale(1, 1) rotate(-90deg);
+}
+
+.heart-large .LL-r {
+    transform: translate(9.1em, 3.4em) scale(-1, 1) rotate(-90deg);
+}
+
+.heart-large .LT-l {
+    transform: translate(3.5em, 6.0em) scale(1, 1) rotate(90deg);
+}
+
+.heart-large .LT-r {
+    transform: translate(7.6em, 6.0em) scale(1, 1) rotate(0);
+}
+
+.club-large.narrow {
+    min-width: 8.0em;
+}
+
+.club-large.narrow .tangram, .club-large.narrow .tangram3d {
+    margin-left: -3.5em;
+}
+
+.club-large .LT {
+    transform: translate(5.5em, 2.7em) scale(1, 1) rotate(45deg);
+}
+
+.club-large .SL-lu {
+    transform: translate(5.4em, 3.8em) scale(-1, 1) rotate(-90deg);
+}
+
+.club-large .SL-ru {
+    transform: translate(8.6em, 3.8em) scale(1, 1) rotate(-90deg);
+}
+
+.club-large .SL-ld {
+    transform: translate(6.4em, 5.9em) scale(-1, 1) rotate(0);
+}
+
+.club-large .SL-rd {
+    transform: translate(7.6em, 5.9em) scale(1, 1) rotate(0);
+}
+
+.club-large .SQ-l {
+    transform: translate(3.8em, 6.5em) scale(1, 1) rotate(45deg);
+}
+
+.club-large .SQ-r {
+    transform: translate(9.2em, 6.5em) scale(1, 1) rotate(45deg);
+}
+
+.club-large .MT {
+    transform: translate(5.5em, 6.0em) scale(1, 1) rotate(180deg);
+}
+
+.diamond-large.narrow {
+    min-width: 8.3em;
+}
+
+.diamond-large.narrow .tangram, .diamond-large.narrow .tangram3d {
+    margin-left: -3.3em;
+}
+
+.diamond-large .MT-t {
+    transform: translate(5.5em, -.3em) scale(1, 1) rotate(180deg);
+}
+
+.diamond-large .MT-r {
+    transform: translate(9.6em, 3.9em) scale(1, 1) rotate(-90deg);
+}
+
+.diamond-large .MT-b {
+    transform: translate(5.5em, 8.0em) scale(1, 1) rotate(0);
+}
+
+.diamond-large .MT-l {
+    transform: translate(1.3em, 3.9em) scale(1, 1) rotate(90deg);
+}
+
+.diamond-large .LT-l {
+    transform: translate(5.4em, 3.8em) scale(1, 1) rotate(0);
+}
+
+.diamond-large .LT-r {
+    transform: translate(5.5em, 3.9em) scale(1, 1) rotate(180deg);
+}
+
+/*
+sign ☉ (normal) based on circle-large
+ */
+.sun.narrow {
+    min-width: 7.2em;
+}
+
+.sun.narrow .tangram, .sun.narrow .tangram3d {
+    margin-left: -3.9em;
+}
+
+.sun .SL-lt {
+    transform: translate(4.7em, 2.4em) scale(-1, 1) rotate(-45deg);
+}
+
+.sun .SL-t {
+    transform: translate(7.0em, 1.4em) scale(-1, 1) rotate(-90deg);
+}
+
+.sun .SL-rt {
+    transform: translate(9.3em, 2.4em) scale(-1, 1) rotate(-135deg);
+}
+
+.sun .SL-r {
+    transform: translate(10.3em, 4.7em) scale(-1, 1) rotate(180deg);
+}
+
+.sun .SL-rb {
+    transform: translate(9.3em, 7.0em) scale(-1, 1) rotate(135deg);
+}
+
+.sun .SL-b {
+    transform: translate(7.0em, 8.0em) scale(-1, 1) rotate(90deg);
+}
+
+.sun .SL-lb {
+    transform: translate(4.7em, 7.0em) scale(-1, 1) rotate(45deg);
+}
+
+.sun .SL-l {
+    transform: translate(3.7em, 4.7em) scale(-1, 1) rotate(0);
+}
+
+.sun .SQ {
+    transform: translate(6.5em, 5.2em) scale(1, 1) rotate(45deg);
+}
+
+/*
+sign ☽  (normal)
+ */
+.moon.narrow {
+    min-width: 5.0em;
+}
+
+.moon.narrow .tangram, .moon.narrow .tangram3d {
+    margin-left: -5.0em;
+}
+
+.moon .ST-t {
+    transform: translate(5.3em, 1.5em) scale(1, 1) rotate(-135deg);
+}
+
+.moon .ST-c {
+    transform: translate(7.5em, 5.2em) scale(1, 1) rotate(135deg);
+}
+
+.moon .ST-b {
+    transform: translate(5.3em, 9.0em) scale(1, 1) rotate(45deg);
+}
+
+.moon .SL-u {
+    transform: translate(6.2em, 3.2em) scale(1, -1) rotate(0);
+}
+
+.moon .SL-d {
+    transform: translate(6.2em, 6.3em) scale(1, 1) rotate(0);
+}
+
+.moon .LL-u {
+    transform: translate(8.4em, 2.3em) scale(1, -1) rotate(-135deg);
+}
+
+.moon .LL-d {
+    transform: translate(8.4em, 6.2em) scale(1, 1) rotate(-135deg);
+}
+
+/*************************************************
+all the signs in this file has no "narrow" class
+they always get used in monoscope style
+**************************************************/
+/*
+fraction like ¼ ½ ¾ and extended into music patterns
+1/2 2/2 1/4 3/4 4/4 5/4 6/4 1/8 3/8 5/8 6/8 7/8 9/8 12/8
+
+.fraction.narrow {
+    min-width: 6.0em;
+}
+
+.fraction.narrow .tangram,.fraction.narrow .tangram3d {
+    margin-left: -4.0em;
+}
+*/
+.fraction .SL-rt {
+    transform: translate(9.9em, 3.0em) scale(-1, 1) rotate(135deg);
+}
+
+.fraction .SL-rm {
+    transform: translate(7.7em, 5.2em) scale(-1, 1) rotate(-45deg);
+}
+
+.fraction .SL-lm {
+    transform: translate(6.2em, 6.7em) scale(-1, 1) rotate(135deg);
+}
+
+.fraction .SL-lb {
+    transform: translate(4.0em, 8.9em) scale(-1, 1) rotate(-45deg);
+}
+
+.molecule {
+    position: absolute;
+}
+
+.m1 .SL-t {
+    transform: translate(4.1em, 2.9em) scale(1, 1) rotate(45deg);
+}
+
+.m1 .SL-m {
+    transform: translate(5.0em, 3.9em) scale(-1, 1) rotate(180deg);
+}
+
+.m1 .SL-b {
+    transform: translate(4.9em, 6.0em) scale(1, 1) rotate(-90deg);
+}
+
+.m1.m12 .SL-t {
+    transform: translate(1.1em, 2.9em) scale(1, 1) rotate(45deg);
+}
+
+.m1.m12 .SL-m {
+    transform: translate(2.0em, 3.9em) scale(-1, 1) rotate(180deg);
+}
+
+.m1.m12 .SL-b {
+    transform: translate(1.9em, 6.0em) scale(1, 1) rotate(-90deg);
+}
+
+.m2 .ST-l {
+    transform: translate(3.5em, 3.7em) scale(1, 1) rotate(45deg);
+}
+
+.m2 .ST-r {
+    transform: translate(4.7em, 3.3em) scale(1, 1) rotate(90deg);
+}
+
+.m2 .SL-d {
+    transform: translate(4.8em, 4.7em) scale(-1, 1) rotate(-45deg);
+}
+
+.m2 .SL-b {
+    transform: translate(4.9em, 6.0em) scale(1, 1) rotate(-90deg);
+}
+
+.m3 .ST-t {
+    transform: translate(4.1em, 2.9em) scale(1, 1) rotate(45deg);
+}
+
+.m3 .ST-r {
+    transform: translate(5.6em, 4.4em) scale(1, 1) rotate(135deg);
+}
+
+.m3 .ST-b {
+    transform: translate(4.1em, 5.9em) scale(1, 1) rotate(-135deg);
+}
+
+.m3 .SL {
+    transform: translate(4.5em, 4.0em) scale(-1, 1) rotate(-90deg);
+}
+
+.m4 .LL-l {
+    transform: translate(3.8em, 2.9em) scale(1, 1) rotate(-135deg);
+}
+
+.m4 .SL-r {
+    transform: translate(5.5em, 2.7em) scale(1, 1) rotate(180deg);
+}
+
+.m4 .LL-c {
+    transform: translate(4.8em, 4.3em) scale(1, 1) rotate(90deg);
+}
+
+.m4 .SL-b {
+    transform: translate(4.6em, 6.1em) scale(-1, 1) rotate(135deg);
+}
+
+.m5 .SL-t {
+    transform: translate(6.0em, 1.7em) scale(-1, 1) rotate(90deg);
+}
+
+/* .m5 .SL-l {
+    transform: translate(3.9em, 2.7em) scale(-1, 1) rotate(180deg);
+} */
+.m5 .ST-l {
+    transform: translate(3.9em, 3.2em) scale(1, 1) rotate(-45deg);
+}
+
+.m5 .SL-c {
+    transform: translate(6.0em, 3.7em) scale(1, -1) rotate(-90deg);
+}
+
+.m5 .LL {
+    transform: translate(5.7em, 4.9em) scale(-1, 1) rotate(135deg);
+}
+
+.m6 .ST-t {
+    transform: translate(4.8em, 2.7em) scale(1, 1) rotate(45deg);
+}
+
+.m6 .ST-r {
+    transform: translate(5.3em, 4.5em) scale(1, 1) rotate(90deg);
+}
+
+.m6 .LL {
+    transform: translate(4.4em, 3.8em) scale(-1, 1) rotate(0);
+}
+
+.m6 .SL-l {
+    transform: translate(3.3em, 4.0em) scale(-1, 1) rotate(180deg);
+}
+
+.m6 .SL-rb {
+    transform: translate(5.3em, 5.8em) scale(-1, 1) rotate(-45deg);
+}
+
+.m7 .LL {
+    transform: translate(6.0em, 2.0em) scale(1, 1) rotate(-90deg);
+}
+
+.m7 .SL-c {
+    transform: translate(7.4em, 3.5em) scale(1, 1) rotate(-135deg);
+}
+
+.m7 .SL-b {
+    transform: translate(5.2em, 5.7em) scale(1, 1) rotate(45deg);
+}
+
+.m9 .SL {
+    transform: translate(6.0em, 1.4em) scale(-1, 1) rotate(90deg);
+}
+
+.m9 .ST-l {
+    transform: translate(3.9em, 3.0em) scale(1, 1) rotate(-45deg);
+}
+
+.m9 .ST-c {
+    transform: translate(5.0em, 3.5em) scale(1, 1) rotate(-90deg);
+}
+
+.m9 .ST-r {
+    transform: translate(6.1em, 3.5em) scale(1, 1) rotate(90deg);
+}
+
+.m9 .LL {
+    transform: translate(5.7em, 4.7em) scale(-1, 1) rotate(135deg);
+}
+
+.denominator {
+    position: absolute;
+}
+
+.d2 .ST-rt {
+    transform: translate(9.0em, 7.2em) scale(1, 1) rotate(90deg);
+}
+
+.d2 .ST-rb {
+    transform: translate(9.3em, 9.8em) scale(1, 1) rotate(180deg);
+}
+
+.d2 .SL-lt {
+    transform: translate(7.7em, 7.2em) scale(1, 1) rotate(45deg);
+}
+
+.d2 .SL-c {
+    transform: translate(9.0em, 8.5em) scale(-1, 1) rotate(-45deg);
+}
+
+.d2 .SL-b {
+    transform: translate(8.2em, 9.8em) scale(1, 1) rotate(-90deg);
+}
+
+.d4 .SL {
+    transform: translate(9.3em, 6.9em) scale(1, 1) rotate(180deg);
+}
+
+.d4 .LL-l {
+    transform: translate(7.6em, 7.1em) scale(1, 1) rotate(-135deg);
+}
+
+.d4 .LL-d {
+    transform: translate(8.6em, 8.5em) scale(1, 1) rotate(90deg);
+}
+
+.d4 .ST {
+    transform: translate(8.2em, 11.5em) scale(1, 1) rotate(45deg);
+}
+
+.d8 .SQ {
+    transform: translate(8.8em, 7.2em) scale(1, 1) rotate(45deg);
+}
+
+.d8 .ST-l {
+    transform: translate(7.7em, 9.2em) scale(1, 1) rotate(-45deg);
+}
+
+.d8 .ST-b {
+    transform: translate(8.8em, 9.7em) scale(1, 1) rotate(180deg);
+}
+
+.d8 .ST-r {
+    transform: translate(9.9em, 9.2em) scale(1, 1) rotate(135deg);
+}

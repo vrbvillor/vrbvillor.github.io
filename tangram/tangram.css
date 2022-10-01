@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+i, s, u, b {
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+}
+
+/*colors*/
+.red {
+    background-color: #FF2E12;
+}
+
+.red.deep {
+    background-color: #B81B1B;
+}
+
+.orange {
+    background-color: #FF7D23;
+}
+
+.orange.deep {
+    background-color: #E56C19;
+}
+
+.yellow {
+    background-color: #F4B300;
+}
+
+.yellow.deep {
+    background-color: #D39D09;
+}
+
+.green {
+    background-color: #91D100;
+}
+
+.green.deep {
+    background-color: #78BA00;
+}
+
+.grass {
+    background-color: #00C13F;
+}
+
+.grass.deep {
+    background-color: #15992A;
+}
+
+.cyan {
+    background-color: #00D8CC;
+}
+
+.cyan.deep {
+    background-color: #00AAAA;
+}
+
+.aqua {
+    background-color: #56C5FF;
+}
+
+.aqua.deep {
+    background-color: #569CE3;
+}
+
+.lake {
+    background-color: #1FAEFF;
+}
+
+.lake.deep {
+    background-color: #006AC1;
+}
+
+.blue {
+    background-color: #2673EC;
+}
+
+.blue.deep {
+    background-color: #1B58B8;
+}
+
+.purple {
+    background-color: #AA40FF;
+}
+
+.purple.deep {
+    background-color: #7200AC;
+}
+
+.pink {
+    background-color: #FF76BC;
+}
+
+.pink.deep {
+    background-color: #B81B6C;
+}
+
+.rose {
+    background-color: #FF1D77;
+}
+
+.rose.deep {
+    background-color: #C1004F;
+}
+
+.bricks {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+}
+
+/*shapes*/
+.tangram {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.tangram::before,
+.tangram::after {
+    content: "";
+    position: relative;
+    display: block;
+}
+
+/*small triangle*/
+.tangram.brickST {
+    width: 2em;
+    height: 2em;
+}
+
+.tangram.brickST::before {
+    width: 0;
+    height: 0;
+    border: 1em solid;
+    border-color: #FF2E12 transparent transparent #FF2E12;
+}
+
+.tangram.brickST.deep::before {
+    border-color: #E064B7 transparent transparent #E064B7;
+}
+
+/*middle triangle*/
+.tangram.brickMT {
+    width: 4em;
+    height: 4em;
+}
+
+.tangram.brickMT::before {
+    width: 0;
+    height: 0;
+    border: 2em solid transparent;
+    border-top-color: #FF981D;
+}
+
+.tangram.brickMT.deep::before {
+    border-top-color: #FF7D23;
+}
+
+/*large triangle*/
+.tangram.brickLT {
+    width: 4em;
+    height: 4em;
+}
+
+.tangram.brickLT::before {
+    width: 0;
+    height: 0;
+    border: 2em solid;
+    border-color: #FF1D77 transparent transparent #FF1D77;
+}
+
+.tangram.brickLT.deep::before {
+    border-color: #E064B7 transparent transparent #E064B7;
+}
+
+/*short ladder*/
+.tangram.brickSL {
+    width: 1em;
+    height: 3em;
+}
+
+.tangram.brickSL::before {
+    width: 1em;
+    height: 2em;
+    background-color: #2673EC;
+}
+
+.tangram.brickSL.deep::before {
+    background-color: #006AC1;
+}
+
+.tangram.brickSL::after {
+    width: 0;
+    height: 0;
+    border: .5em solid;
+    border-color: #2673EC #2673EC transparent transparent;
+}
+
+.tangram.brickSL.deep::after {
+    border-color: #006AC1 #006AC1 transparent transparent;
+}
+
+/*long ladder*/
+.tangram.brickLL {
+    width: 1em;
+    height: 4em;
+}
+
+.tangram.brickLL::before {
+    width: 1em;
+    height: 3em;
+    background-color: #AA40FF;
+}
+
+.tangram.brickLL.deep::before {
+    background-color: #691BB8;
+}
+
+.tangram.brickLL::after {
+    width: 0;
+    height: 0;
+    border: 0.5em solid;
+    border-color: #AA40FF #AA40FF transparent transparent;
+}
+
+.tangram.brickLL.deep::after {
+    border-color: #691BB8 #691BB8 transparent transparent;
+}
+
+/*square*/
+.tangram.brickSQ {
+    width: 2em;
+    height: 2em;
+    background-color: #00C13F;
+}
+
+.tangram.brickSQ.deep {
+    background-color: #78BA00;
+}
+
+/*parallel*/
+.tangram.brickPR {
+    width: 2em;
+    height: 4em;
+}
+
+.tangram.brickPR::before,
+.tangram.brickPR::after {
+    width: 0;
+    height: 0;
+    border: 1em solid;
+}
+
+.tangram.brickPR::before {
+    border-color: transparent #00D8CC #00D8CC transparent;
+}
+
+.tangram.brickPR.deep::before {
+    border-color: transparent #00AAAA #00AAAA transparent;
+}
+
+.tangram.brickPR::after {
+    border-color: #00D8CC transparent transparent #00D8CC;
+}
+
+.tangram.brickPR.deep::after {
+    border-color: #00AAAA transparent transparent #00AAAA;
+}
+
+/*
+common charactors with tangram;
+default each char is in monoscope type;
+.narrow each char has the least width with a little margin left and right;
+ */
+.chars {
+    display: inline-block;
+    width: 15em;
+    height: 15em;
+    vertical-align: middle;
+    position: relative;
+    font-size: 10px;
+    text-align: left;
+}
+
+.chars.x2 {
+    font-size: 15px;
+}
+
+.chars.x3 {
+    font-size: 20px;
+}
+
+.chars.x4 {
+    font-size: 25px;
+}
+
+.chars.x5 {
+    font-size: 30px;
+}
+
+/*
+ ruler lines
+ ::before       as the vertical
+ ::after        as the horizontal
+*/
+.chars.test {
+    border: 1px solid black;
+}
+
+.chars.test::before,
+.chars.test::after {
+    content: "";
+    display: block;
+    z-index: 0;
+    border: dotted gray;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.chars.test::before {
+    width: 5em;
+    height: 100%;
+    left: 50%;
+    margin-left: -2.5em;
+    border-width: 0 .1em;
+}
+
+.chars.test::after {
+    width: 100%;
+    height: 5em;
+    top: 5em;
+    border-width: .1em 0;
+}
+
+/*after testing you must comment the passage above about .test*/
+.chars.narrow {
+    width: auto;
+}
+
+.chars .tangram {
+    position: absolute;
+    z-index: 1;
+}
+
+.chars.blank {
+    width: 2em;
+}
