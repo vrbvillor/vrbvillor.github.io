@@ -2304,6 +2304,84 @@ sign ☽  (normal)
     transform: translate(8.4em, 6.2em) scale(1, 1) rotate(-135deg);
 }
 
+/*
+the heart logo
+ */
+.logo.narrow {
+    min-width: 8.6em;
+}
+
+.logo.narrow .tangram, .logo.narrow .tangram3d {
+    margin-left: -3.2em;
+}
+
+.logo .ST {
+    transform: translate(79px, 30px) scale(1, 1) rotate(-45deg);
+}
+
+.logo .MT {
+    transform: translate(70px, 34px) scale(1, 1) rotate(45deg);
+}
+
+.logo .LT {
+    transform: translate(55px, 50px) scale(1, 1) rotate(-135deg);
+}
+
+.logo .SL {
+    transform: translate(41px, 47px) scale(1, 1) rotate(-45deg);
+}
+
+.logo .LL {
+    transform: translate(52px, 38px) scale(1, 1) rotate(-45deg);
+}
+
+.logo .SQ {
+    transform: translate(51px, 30px) scale(1, 1) rotate(-135deg);
+}
+
+.logo .PR {
+    transform: translate(87px, 42px) scale(1, 1) rotate(-135deg);
+}
+
+/*
+jewel
+ */
+.jewel.narrow {
+    min-width: 8.4em;
+}
+
+.jewel.narrow .tangram, .jewel.narrow .tangram3d {
+    margin-left: -3.3em;
+}
+
+.jewel .ST {
+    transform: translate(5.4em, 3.9em) scale(1, 1) rotate(180deg);
+}
+
+.jewel .MT {
+    transform: translate(9.7em, 4.0em) scale(1, 1) rotate(-90deg);
+}
+
+.jewel .LT {
+    transform: translate(3.4em, 6.0em) scale(1, 1) rotate(90deg);
+}
+
+.jewel .SL {
+    transform: translate(8.6em, 6.0em) scale(-1, 1) rotate(0deg);
+}
+
+.jewel .LL {
+    transform: translate(7.5em, 6.0em) scale(-1, 1) rotate(0);
+}
+
+.jewel .SQ {
+    transform: translate(7.6em, 3.9em) scale(1, 1) rotate(0deg);
+}
+
+.jewel .PR {
+    transform: translate(4.3em, 2.9em) scale(-1, 1) rotate(90deg);
+}
+
 /*************************************************
 all the signs in this file has no "narrow" class
 they always get used in monoscope style
