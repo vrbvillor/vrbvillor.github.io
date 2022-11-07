@@ -309,7 +309,7 @@ default each char is in monoscope type;
  ruler lines
  ::before       as the vertical
  ::after        as the horizontal
-*/
+
 .chars.test {
     border: 1px solid black;
 }
@@ -338,7 +338,7 @@ default each char is in monoscope type;
     top: 5em;
     border-width: .1em 0;
 }
-
+*/
 /*after testing you must comment the passage above about .test*/
 .chars.narrow {
     width: auto;

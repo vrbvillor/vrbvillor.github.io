@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>test</title>
+    <style>
+        .mydiv {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            animation: myAnim 2s forwards alternate infinite;
+        }
+
+        .mydiv:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes myAnim {
+            from {
+                transform: translate(0, 0);
+            }
+
+            to {
+                transform: translate(100px, 100px);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="myDiv" class="mydiv">
+        <input type="radio" name="myboxes" value="1" id="box1">
+        <input type="radio" name="myboxes" value="2" id="box2" checked>
+        <input type="radio" name="myboxes" value="3" id="box3">
+        <input type="radio" name="myboxes" value="4" id="box4">
+        <input type="radio" name="myboxes" value="5" id="box5">
+    </div>
+    <div id="yourDiv" class="mydiv">123456</div>
+    <div id="btnDiv" class="mydiv"><input type="button" value="点我刷新"></div>
+    <script>
+        document.getElementById("btnDiv").onclick = function() {
+            location.href = location.href;
+        }
+    </script>
+</body>
+
+</html>

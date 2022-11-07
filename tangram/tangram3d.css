@@ -4,12 +4,6 @@ This is another tangram style of 3D-like.
 .tangram3d {
     transform-style: preserve-3d;
     position: relative;
-    transition: transform linear 3s;
-}
-
-.tangram3d:hover {
-    transform: rotateY(360deg) rotateX(240deg) rotateZ(45deg);
-    /* transform: rotateY(180deg); */
 }
 
 .tangram3d>div {
@@ -429,6 +423,94 @@ This is another tangram style of 3D-like.
     background-color: #004D60;
 }
 
+.brickPM {
+    width: 2em;
+    height: 2em;
+}
+
+.brickPM .back, .brickPM .left, .brickPM .bottom {
+    width: 0;
+    height: 0;
+    border-width: 1em;
+    border-style: solid;
+}
+
+.brickPM .back {
+    transform: translate3d(0, 0, -1em) rotateY(180deg);
+    border-color: transparent #4E0038 #4E0038 transparent;
+}
+
+.brickPM .left {
+    transform: translate3d(-1em, 0, 0) rotateY(-90deg);
+    border-color: transparent transparent #C1004F #C1004F;
+}
+
+.brickPM .bottom {
+    transform: translate3d(0, 1em, 0) rotateX(-90deg);
+    border-color: transparent transparent #C1004F #C1004F;
+}
+
+.brickPM .bevel {
+    border-width: 2.449em 1.414em;
+    border-style: solid;
+    border-color: transparent transparent #FF1D77 transparent;
+    transform-origin: left bottom;
+    transform: translate3d(0, -2.899em, 1em) rotateY(45deg) rotateX(35.264deg);
+}
+
+.brickRT {
+    width: 2em;
+    height: 4em;
+}
+
+.brickRT .front,
+.brickRT .back,
+.brickRT .left,
+.brickRT .right {
+    width: 2em;
+    height: 4em;
+}
+
+.brickRT .top,
+.brickRT .bottom {
+    width: 2em;
+    height: 2em;
+}
+
+.brickRT .front {
+    transform: translate3d(0, 0, 1em);
+    background-color: #00C13F;
+}
+
+.brickRT.deep .front {
+    background-color: #78BA00;
+}
+
+.brickRT .back {
+    transform: translate3d(0, 0, -1em) rotateY(180deg);
+    background-color: #00C13F;
+}
+
+.brickRT .left {
+    transform: translate3d(-1em, 0, 0) rotateY(-90deg);
+    background-color: #15992A;
+}
+
+.brickRT .right {
+    transform: translate3d(1em, 0, 0) rotateY(90deg);
+    background-color: #15992A;
+}
+
+.brickRT .top {
+    transform: translate3d(0, -1em, 0) rotateX(90deg);
+    background-color: #004A00;
+}
+
+.brickRT .bottom {
+    transform: translate3d(0, 3em, 0) rotateX(-90deg);
+    background-color: #004A00;
+}
+
 /*
 common charactors with tangram;
 default each char is in monoscope type;
@@ -442,7 +524,6 @@ default each char is in monoscope type;
     position: relative;
     font-size: 10px;
     transform-style: preserve-3d;
-    transform: rotateX(-15deg) rotateY(-15deg);
     text-align: left;
 }
 
@@ -466,7 +547,7 @@ default each char is in monoscope type;
  ruler lines
  ::before       as the vertical
  ::after        as the horizontal
-*/
+
 .chars3d.test {
     border: 1px solid black;
 }
@@ -495,7 +576,7 @@ default each char is in monoscope type;
     top: 5em;
     border-width: .1em 0;
 }
-
+*/
 /*after testing you must comment the passage above about .test*/
 .chars3d.narrow {
     width: auto;

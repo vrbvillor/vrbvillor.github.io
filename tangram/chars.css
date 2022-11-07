@@ -2316,31 +2316,31 @@ the heart logo
 }
 
 .logo .ST {
-    transform: translate(79px, 30px) scale(1, 1) rotate(-45deg);
+    transform: translate(7.9em, 3.0em) scale(1, 1) rotate(-45deg);
 }
 
 .logo .MT {
-    transform: translate(70px, 34px) scale(1, 1) rotate(45deg);
+    transform: translate(7.0em, 3.4em) scale(1, 1) rotate(45deg);
 }
 
 .logo .LT {
-    transform: translate(55px, 50px) scale(1, 1) rotate(-135deg);
+    transform: translate(5.5em, 5.0em) scale(1, 1) rotate(-135deg);
 }
 
 .logo .SL {
-    transform: translate(41px, 47px) scale(1, 1) rotate(-45deg);
+    transform: translate(4.1em, 4.7em) scale(1, 1) rotate(-45deg);
 }
 
 .logo .LL {
-    transform: translate(52px, 38px) scale(1, 1) rotate(-45deg);
+    transform: translate(5.2em, 3.8em) scale(1, 1) rotate(-45deg);
 }
 
 .logo .SQ {
-    transform: translate(51px, 30px) scale(1, 1) rotate(-135deg);
+    transform: translate(5.1em, 3.0em) scale(1, 1) rotate(-135deg);
 }
 
 .logo .PR {
-    transform: translate(87px, 42px) scale(1, 1) rotate(-135deg);
+    transform: translate(8.7em, 4.2em) scale(1, 1) rotate(-135deg);
 }
 
 /*

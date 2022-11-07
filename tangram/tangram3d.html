@@ -3,6 +3,17 @@
 <head>
     <title>3D七巧板演示</title>
     <link rel="stylesheet" href="tangram3d.css">
+    <style media="screen">
+        .tangram3d {
+            font-size: 50px;
+            margin-left: 50px;
+            transition: transform 2s
+        }
+
+        .tangram3d:hover {
+            transform: rotateX(120deg) rotateY(180deg) rotateZ(240deg);
+        }
+    </style>
 </head>
 
 <body>
@@ -75,7 +86,20 @@
         <div class="top"></div>
         <div class="bottom"></div>
     </div>
-
+    <div class="tangram3d brickPM">
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="bottom"></div>
+        <div class="bevel"></div>
+    </div>
+    <div class="tangram3d brickRT">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
 
     ([\w\d\.\-]+) \.tangram
     $1 .tangram,$1 .tangram3d
