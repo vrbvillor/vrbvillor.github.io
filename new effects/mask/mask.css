@@ -1,0 +1,104 @@
+html, body, ul, ol, li, figure {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+.mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1200px;
+    height: 520px;
+    margin: auto;
+}
+
+.mask ul {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    font-size: 0;
+}
+
+.mask li {
+    width: 256px;
+    height: 160px;
+    flex: 0 0 auto;
+}
+
+.mask a {
+    display: block;
+    width: 256px;
+    height: 160px;
+}
+
+.mask figure {
+    position: relative;
+}
+
+.mask img {
+    width: 256px;
+    height: 160px;
+}
+
+.mask figcaption {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.mask figure, .mask figcaption {
+    width: 100%;
+    height: 100%;
+}
+
+.mask figcaption {
+    transition: all linear .5s;
+}
+
+.mask figcaption.left {
+    left: -100%;
+}
+
+.mask figcaption.top {
+    top: -100%;
+}
+
+.mask figcaption.right {
+    left: 100%;
+}
+
+.mask figcaption.bottom {
+    top: 100%;
+}
+
+.mask figcaption.left.pure {
+    top: 0;
+}
+
+.mask figcaption.top.pure {
+    left: 0;
+}
+
+.mask figcaption.right.pure {
+    top: 0;
+}
+
+.mask figcaption.bottom.pure {
+    left: 0;
+}
+
+.mask figcaption.on {
+    top: 0;
+    left: 0;
+}

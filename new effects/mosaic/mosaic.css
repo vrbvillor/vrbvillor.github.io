@@ -1,0 +1,34 @@
+body, html, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+.mosaic {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-size: 0;
+}
+
+.mosaic, .mosaic a, .mosaic img {
+    width: 1024px;
+    height: 640px;
+}
+
+.mosaic li {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.mosaic a {
+    display: block;
+    position: relative;
+}

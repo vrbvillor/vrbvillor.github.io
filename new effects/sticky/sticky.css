@@ -1,0 +1,120 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    font-size: 0;
+}
+
+nav, menu {
+    clear: both;
+    float: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav a, menu a {
+    display: block;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #1b58b8;
+    color: #fff;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+nav a:hover, menu a:hover {
+    background-color: #fff;
+    color: #1b58b8;
+}
+
+nav.sticky, menu.sticky {
+    width: 100%;
+    position: fixed;
+    display: none;
+}
+
+nav.sticky {
+    top: 0;
+}
+
+menu.sticky {
+    bottom: 0;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.about {
+    float: left;
+    width: 600px;
+    font-size: 16px;
+    line-height: 150%;
+    height: 300px;
+    background-color: #691bb8;
+}
+
+.news {
+    float: left;
+    width: 600px;
+    height: 300px;
+    background-color: #f4b300;
+}
+
+.product {
+    float: left;
+    width: 1000px;
+    height: 200px;
+    background-color: #78ba00;
+}
+
+.clerks {
+    width: 600px;
+    height: 400px;
+    float: left;
+    background-color: #ae113d;
+}
+
+.contact {
+    width: 400px;
+    height: 400px;
+    float: left;
+    background-color: #56c5ff;
+}
+
+.tools {
+    width: 200px;
+    height: 200px;
+    background-color: #199900;
+}
+
+.tools.static {
+    float: left;
+}
+
+.tools.sticky {
+    margin-top: 30px;
+    top: 0;
+    position: fixed;
+}
+
+.tools.cloned {
+    float: left;
+    margin-top: 200px;
+}
+
+footer {
+    clear: both;
+    float: none;
+    height: 600px;
+    background-color: #252525;
+}

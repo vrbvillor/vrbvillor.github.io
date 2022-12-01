@@ -1,0 +1,56 @@
+.pages {
+    width: 500px;
+    height: 310px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: fixed;
+    overflow: hidden;
+}
+
+.pages ul {
+    width: 500px;
+    height: 310px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pages img {
+    width: 500px;
+    height: 310px;
+}
+
+.pages .controllers {
+    position: absolute;
+    bottom: 0px;
+    width: 500px;
+    height: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.pages .controllers i {
+    flex: 1 1 40px;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    color: #fff;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.pages .controllers i.cur {
+    font-weight: bold;
+}
+
+.pages .controllers i:hover {
+    background-color: #ccc;
+    color: #000;
+}

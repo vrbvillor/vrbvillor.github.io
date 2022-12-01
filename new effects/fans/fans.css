@@ -1,0 +1,55 @@
+.fans {
+    width: 1200px;
+    height: 640px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: fixed;
+}
+
+.fans a {
+    display: block;
+    transform-origin: 50% 120%;
+    width: 480px;
+    height: 640px;
+    overflow: hidden;
+    position: absolute;
+    left: 360px;
+    outline: 3px solid #fff;
+}
+
+.fans a img {
+    width: 1024px;
+    height: 640px;
+}
+
+.fan1 {
+    transform: rotate(-30deg) translateX(-100px);
+}
+
+.fan2 {
+    transform: rotate(-15deg) translateX(-50px);
+}
+
+.fan3 {
+    transform: rotate(0) translateX(0);
+}
+
+.fan4 {
+    transform: rotate(15deg) translateX(50px);
+}
+
+.fan5 {
+    transform: rotate(30deg) translateX(100px);
+}
+
+.fans a:hover {
+    transition: all 1s;
+    width: 1024px;
+    height: 640px;
+    z-index: 9;
+    left: 90px;
+    transform: rotate(0) translateX(0);
+}

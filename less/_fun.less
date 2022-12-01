@@ -25,7 +25,8 @@
 	background-color: transparent\9;
 	filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{argbcolor},endColorstr=@{argbcolor})\9";
 }
-.bg-i(@url) when (@url = none){
+
+.bg-i(false){
 	background-image: none;
 }
 .bg-i(@url) when (default()){
@@ -34,29 +35,24 @@
 .bg-p(...){
 	background-position: @arguments;
 }
-.bg-r(@d) when(@d = x){
+.bg-r(x){
 	background-repeat: repeat-x;
 }
-.bg-r(@d) when(@d = y){
+.bg-r(y){
 	background-repeat: repeat-y;
 }
-.bg-r(@d) when(@d = no), (@d = false){
+.bg-r(no){
 	background-repeat: no-repeat;
 }
-.bg-r(@d) when(@d = yes), (@d = true){
+.bg-r(true){
 	background-repeat: repeat;
 }
+
 //背景静止
-.bg-f(@b : true) when(@b = true), (@b = yes){
+.bg-a(fixed){
 	background-attachment: fixed;
 }
-.bg-f(@b : true) when(@b = false), (@b = no){
-	background-attachment: scroll;
-}
-.bg-a(@d) when(@d = true), (@d = yes){
-	background-attachment: fixed;
-}
-.bg-a(@d) when(@d = false), (@d = no){
+.bg-a(scroll){
 	background-attachment: scroll;
 }
 //背景尺寸
@@ -80,6 +76,26 @@
 	@argbcolor2 : argb(@rgbacolor);
 	background-color: transparent\9;
 	filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{argbcolor1},endColorstr=@{argbcolor2})\9";
+}
+// 背景源头
+.bg-o(pbox){
+    background-origin: padding-box;
+}
+.bg-o(cbox){
+    background-origin: content-box;
+}
+.bg-o(bbox){
+    background-origin: border-box;
+}
+// 背景切割
+.bg-cl(pbox){
+    background-clip: padding-box;
+}
+.bg-cl(cbox){
+    background-clip: content-box;
+}
+.bg-cl(bbox){
+    background-clip: border-box;
 }
 
 //边框部分
@@ -154,8 +170,6 @@
 .round(){
 	border-radius: 50%;
 }
-
-
 //效果，一些杂七杂八的效果
 //低端IE8-用的透明
 .alpha(@num){
@@ -178,26 +192,8 @@
 .cur(@shape){
 	cursor: @shape;
 }
-.c-d(){
-	cursor: default;
-}
-.c-w(){
-	cursor: wait;
-}
-.c-h(){
-	cursor: help;
-}
-.c-p(){
+.pointer(){
 	cursor: pointer;
-}
-.c-n(){
-	cursor: not-allowed;
-}
-.c-t(){
-	cursor: text;
-}
-.c-m(){
-	cursor: move;
 }
 
 //盒模型，尺寸/边距/填充
@@ -205,7 +201,7 @@
 .h(@height : auto){
 	height: @height;
 }
-.line(@n : normal){
+.line(@n : 120%){
 	line-height: @n;
 }
 .hline(@h){
@@ -290,6 +286,10 @@
 .o(@way : hidden){
 	overflow: @way;
 }
+.o(@xway,@yway){
+	overflow-x:@xway;
+	overflow-y:@yway;
+}
 .o-s(){
 	overflow: scroll;
 }
@@ -317,14 +317,14 @@
 .none(){
 	display: none;
 }
-.display(@w : default){
+.dis(@w : default){
 	display: @w;
 }
 //可见
-.visible(){
+.vis(true){
 	visibility: visible;
 }
-.hidden(){
+.vis(false){
 	visibility: hidden;
 }
 //盒式
@@ -375,6 +375,19 @@
 	right: @r;
 	bottom: @b;
 }
+.center1{
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	margin:auto;
+}
+.center2{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+}
 .z(@z){
 	z-index: @z;
 }
@@ -403,26 +416,26 @@
 .size(@s : 12px){
 	font-size: @s;
 }
-.bold(@bool : true) when (@bool = true){
+.bold(true){
 	font-weight: bold;
 }
-.bold(@bool : true) when (@bool = false){
+.bold(false){
 	font-weight: normal;
 }
-.italic(@bool : true) when (@bool = true){
+.italic(true){
 	font-style: oblique;
 	font-style: italic;
 }
-.italic(@bool : true) when (@bool = false){
+.italic(false){
 	font-style: normal;
 }
-.tl(){
+.txt(left){
 	text-align: left;
 }
-.tc(){
+.txt(center){
 	text-align: center;
 }
-.tr(){
+.txt(right){
 	text-align: right;
 }
 .nowrap(){
@@ -477,26 +490,26 @@
 }
 //可调整大小
 //关键字：none, horizontal, vertical, both
-.resize(@dir : none){
-	resize: none !important;
+.resize(@a : none){
+	resize: @a !important;
 }
 
 .FILTER(){
 	//灰度效果，0为无效果
 	.grayscale(@float: 1){
 		@per: percentage(@float);
-		-webkit-filter:grayscale(@per);
-		-moz-filter:grayscale(@per);
-		-ms-filter:grayscale(@per);
-		-o-filter:grayscale(@per);
-		filter:grayscale(@per);
-		filter:Gray\9;
+		-webkit-filter: grayscale(@per);
+		-moz-filter: grayscale(@per);
+		-ms-filter: grayscale(@per);
+		-o-filter: grayscale(@per);
+		filter: grayscale(@per);
+		filter: Gray\9;
 	}
 	//图片古典化效果，0为无效果
 	.sepia(@float: 1){
 		@per: percentage(@float);
 	    -webkit-filter: sepia(@per);
-	    -moz-filter:sepia(@per);
+	    -moz-filter: sepia(@per);
 	    -ms-filter: sepia(@per);
 		-o-filter: sepia(@per);
 	    filter: sepia(@per);
@@ -550,7 +563,7 @@
 		-o-filter: hue-rotate(@deg);
 	    filter: hue-rotate(@deg);
     }
-    /**  格式，filer: drop-shadow(x-offset y-offset 阴影模糊半径 阴影颜色)
+    /**  格式，filter: drop-shadow(x-offset y-offset 阴影模糊半径 阴影颜色)
      *  x-offset和y-offset为阴影的相对于元素左上角的位移距离；
      * 注意：
      *     1. 阴影的外观受border-radius样式的影响；
@@ -670,6 +683,10 @@
 	-webkit-transform-origin:@x @y @z; /* Safari and Chrome */
 	transform-origin:@x @y @z;
 }
+// 保持3D效果
+.threeD(){
+    transform-style: preserve-3D;
+}
 // 透视
 .pers(@z){
 	-webkit-perspective: @z;
@@ -682,9 +699,148 @@
 	perspective-origin: @z;
 }
 //3D背面显示性
-.backface(@b : true) when (@b = true){
+.backface(true){
 	backface-visibility: visible;
 }
-.backface(@b : true) when (@b = false){
+.backface(false){
 	backface-visibility: hidden;
+}
+// 字母大小写
+.upper() {
+    text-transform: uppercase;
+}
+.lower() {
+    text-transform: lowercase;
+}
+.capital() {
+    text-transform: capitalize;
+}
+.small() {
+    font-variant: small-caps;
+}
+// 字、单词间隔
+.l-sp(@px) {
+    letter-spacing: @px;
+}
+.w-sp(@px) {
+    word-spacing: @px;
+}
+// 数字次数的循环
+// @mixin:{};一定要按这个格式写，不能丢了尾分号
+.for(@mixin, @end, @begin : 1, @delta : 1) {
+    .for-inner-loop(@counter : @begin) when(@counter <= @end) {
+        @mixin();
+        .for-inner-loop(@counter + @delta);
+    }
+    .for-inner-loop();
+}
+// 一个数组的循环
+// 由于LESS变量作用域的问题，导致无法把长度跟项目元素设置成局部变量
+// 所以要自己在@mixin里边使用length跟extract获取长度跟项目元素
+.each(@mixin, @array) {
+    .each-inner-loop(@counter : 1) when(@counter <= length(@array)) {
+        @mixin();
+        .each-inner-loop(@counter + 1);
+    }
+    .each-inner-loop();
+}
+// 用于移动端的表单组件外形
+.app(@s : none) {
+    -webkit-appearance: @s;
+    -moz-appearance : @s;
+}
+.order(@n) {
+    -webkit-order: @n;
+    -moz-order : @n;
+    order : @n;
+}
+.flex() {
+    display: -webkit-flex;
+    display: flex;
+}
+.flex-row() {
+    -webkit-flex-direction: row;
+    -moz-flex-direction : row;
+    -ms-flex-direction : row;
+    flex-direction : row;
+}
+.flex-row-rev() {
+    -webkit-flex-direction: row-reverse;
+    -moz-flex-direction : row-reverse;
+    -ms-flex-direction : row-reverse;
+    flex-direction : row-reverse;
+}
+.flex-col() {
+    -webkit-flex-direction: column;
+    -moz-flex-direction : column;
+    -ms-flex-direction : column;
+    flex-direction : column;
+}
+.flex-col-rev() {
+    -webkit-flex-direction: column-reverse;
+    -moz-flex-direction : column-reverse;
+    -ms-flex-direction : column-reverse;
+    flex-direction : column-reverse;
+}
+.flex-wrap() {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap : wrap;
+    -ms-flex-wrap : wrap;
+    flex-wrap : wrap;
+}
+.flex-nowrap() {
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap : nowrap;
+    -ms-flex-wrap : nowrap;
+    flex-wrap : nowrap;
+}
+.flex-wrap-rev() {
+    -webkit-flex-wrap: wrap-reverse;
+    -moz-flex-wrap : wrap-reverse;
+    -ms-flex-wrap : wrap-reverse;
+    flex-wrap : wrap-reverse;
+}
+.flex-just(@way : flex-start) {
+    -webkit-justify-content: @way;
+    -moz-justify-content : @way;
+    -ms-justify-content : @way;
+    justify-content : @way;
+}
+.flex-items(@way : flex-start) {
+    -webkit-align-items: @way;
+    -moz-align-items : @way;
+    -ms-align-items : @way;
+    align-items : @way;
+}
+.flex-aligns(@way : flex-start) {
+    -webkit-align-content: @way;
+    -moz-align-content : @way;
+    -ms-align-content : @way;
+    align-content : @way;
+}
+.flex(@args) {
+    -webkit-flex: @args;
+    -moz-flex : @args;
+    -ms-flex : @args;
+    flex : @args;
+}
+.flex-none() {
+    // 0 0 none
+    -webkit-flex: none;
+    -moz-flex : none;
+    -ms-flex : none;
+    flex : none;
+}
+.flex-auto() {
+    // 1 1 auto
+    -webkit-flex: auto;
+    -moz-flex : auto;
+    -ms-flex : auto;
+    flex : auto;
+}
+.flex-self(@way : auto) {
+    -webkit-align-self: @way;
+    -moz-align-self : @way;
+    -ms-align-self : @way;
+    align-self : @way;
 }

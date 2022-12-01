@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    flex-wrap: nowrap;
+    background: #111;
+}
+
+body {
+    display: flex;
+}
+
+aside {
+    flex: 0 0 320px;
+    box-sizing: border-box;
+    padding-left: 1rem;
+}
+
+@keyframes logoSpinning {
+    from {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+
+    50% {
+        transform: rotateX(180deg) rotateY(240deg) rotateZ(360deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(720deg);
+    }
+}
+
+aside .chars3d {
+    display: block;
+    margin: 0 auto;
+    animation: logoSpinning 5s infinite linear;
+}
+
+aside h1 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    text-align: center;
+    border-bottom: 1px #eee solid;
+    color: #fff;
+}
+
+aside h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #ccc
+}
+
+.part {
+    width: 300px;
+    background-color: #1FAEFF;
+    border-bottom: 1px solid #eee;
+    padding: .5rem 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+}
+
+.part a {
+    font-size: 1rem;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.part a span {
+    display: inline-block;
+    width: 1rem;
+    background-color: #1B58B8;
+    padding: 0 .5rem;
+    border-radius: 3px;
+    margin-right: 1rem;
+    color: #fff !important;
+}
+
+.part.cur {
+    background-color: #fff;
+}
+
+.part.cur a {
+    color: #1FAEFF;
+}
+
+.paragraph {}
+
+.paragraph li {
+    font-size: .8rem;
+    line-height: 2rem;
+    background-color: #00C13F;
+    border-bottom: 1px solid #eee;
+    padding-left: 1rem;
+}
+
+.paragraph span {
+    display: inline-block;
+    background-color: #199900;
+    line-height: 1.2rem;
+    padding: 0 .5rem;
+    border-radius: 3px;
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.paragraph a {
+    color: #fff;
+}
+
+.paragraph li.cur {
+    background-color: #fff;
+}
+
+.paragraph li.cur a {
+    color: #00C13F;
+}
+
+main {
+    flex: 1 1 auto;
+    background-color: #fff;
+    overflow: auto;
+    padding: 1rem;
+    margin: 1rem 1rem 1rem 0;
+    font-size: 2rem;
+}
+
+pre {
+    padding: 1rem;
+    background-color: #252525;
+    color: #fff;
+}
+
+code {
+    padding: .5rem 1rem;
+    margin: 0 .5rem;
+    background: #252525;
+    color: #fff;
+}

@@ -1,0 +1,26 @@
+.scroll {
+    height: 900px;
+    width: 500px;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.scroll ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+}
+
+.scroll li {
+    font-size: 0;
+}
+
+.scroll img {
+    max-width: 500px;
+}

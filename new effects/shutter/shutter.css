@@ -1,0 +1,35 @@
+html, body, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+.shutter {
+    width: 1024px;
+    height: 640px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-size: 0;
+}
+
+.shutter .group {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+
+.shutter .group div {
+    position: absolute;
+    transition: all linear .5s;
+    /* transform-origin: 50% 50% -100px; */
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+}

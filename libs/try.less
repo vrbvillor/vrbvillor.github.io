@@ -1,0 +1,12 @@
+@mixin:{
+    div{
+        width: @current * 100px;
+    }
+};
+
+.loop(@current:0) when (@current < 5){
+    @mixin();
+    .loop(@current+1)
+}
+
+.loop();

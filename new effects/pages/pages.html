@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>边界型分页效果</title>
+    <script type="text/javascript" src="../../libs/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="pages.css">
+</head>
+
+<body>
+    <div class="pages">
+        <ul>
+            <li><img src="../images/500_313.jpg" alt=""></li>
+            <li><img src="../images/800_500.jpg" alt=""></li>
+            <li><img src="../images/1024_640-1.jpg" alt=""></li>
+            <li><img src="../images/1024_640-2.jpg" alt=""></li>
+            <li><img src="../images/1024_640-3.jpg" alt=""></li>
+            <li><img src="../images/1024_640-4.jpg" alt=""></li>
+            <li><img src="../images/1024_576-1.jpg" alt=""></li>
+            <li><img src="../images/1024_576-2.jpg" alt=""></li>
+            <li><img src="../images/1024_576-3.jpg" alt=""></li>
+        </ul>
+        <div class="controllers">
+            <i>&lt;-</i>
+            <i>1</i>
+            <i>2</i>
+            <i>3</i>
+            <i>4</i>
+            <i>5</i>
+            <i>6</i>
+            <i>7</i>
+            <i>8</i>
+            <i>9</i>
+            <i>-&gt;</i>
+        </div>
+    </div>
+</body>
+<script src="pages.js" charset="utf-8"></script>
+<script>
+var pages = vrbPages(".pages", 2000, ".pages .controllers i:first", ".pages .controllers i:last", ".pages .controllers i:not(:first):not(:last)");
+
+</script>
+
+</html>

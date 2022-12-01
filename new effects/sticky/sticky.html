@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>仿制的粘性定位</title>
+    <link rel="stylesheet" href="sticky.css">
+    <script src="sticky.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../libs/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+    <header><img src="../images/1024_576-2.jpg" height="400" alt=""></header>
+    <nav class="static">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Product</a>
+        <a href="#">News</a>
+        <a href="#">Clerks</a>
+        <a href="#">Contact</a>
+    </nav>
+    <nav class="sticky">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Product</a>
+        <a href="#">News</a>
+        <a href="#">Clerks</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="about"></div>
+        <div class="news"></div>
+        <div class="product"></div>
+        <div class="tools static"></div>
+        <div class="clerks"></div>
+        <div class="contact"></div>
+        <div class="product"></div>
+        <div class="clerks"></div>
+        <div class="contact"></div>
+        <div class="tools cloned"></div>
+        <div class="about"></div>
+        <div class="news"></div>
+    </div>
+    <menu class="sticky">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Product</a>
+        <a href="#">News</a>
+        <a href="#">Clerks</a>
+        <a href="#">Contact</a>
+    </menu>
+    <menu class="static">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Product</a>
+        <a href="#">News</a>
+        <a href="#">Clerks</a>
+        <a href="#">Contact</a>
+    </menu>
+    <div class="tools sticky"></div>
+    <footer></footer>
+</body>
+<script type="text/javascript">
+vrbSticky("nav", $("nav.static").position().top);
+vrbSticky("menu", 0, $("menu.static").position().top - $(window).height() + $("menu.static").height());
+$(".tools.sticky").css("left", $(".tools.static").position().left);
+vrbSticky(".tools", $(".tools.static").position().top - $("nav").height(), $(".news").last().position().top - $(".tools.static").height() - $("nav").height())
+
+</script>
+
+</html>
