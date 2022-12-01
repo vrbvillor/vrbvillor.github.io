@@ -14,7 +14,7 @@ body {
     }
 
     to {
-        transform: rotateX(-15deg) rotateY(-359deg);
+        transform: rotateX(-15deg) rotateY(-360deg);
     }
 }
 
